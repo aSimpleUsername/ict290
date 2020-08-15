@@ -1,0 +1,3 @@
+C:\school\20s2\ict290\week2\shayLearyALL\CAMPUS TOUR\Debug\shaysWorld.exe
+C:\school\20s2\ict290\week2\shayLearyALL\CAMPUS TOUR\Debug\shaysWorld.pdb
+C:\school\20s2\ict290\week2\shayLearyALL\CAMPUS TOUR\Debug\shaysWorld.vcxprojAssemblyReference.cache
