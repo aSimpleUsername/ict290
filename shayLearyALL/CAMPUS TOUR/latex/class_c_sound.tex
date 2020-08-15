@@ -1,0 +1,184 @@
+\hypertarget{class_c_sound}{}\doxysection{C\+Sound Class Reference}
+\label{class_c_sound}\index{CSound@{CSound}}
+
+
+{\ttfamily \#include $<$Sound.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_sound_a57c4b63acfa422461526dee33fc317d8}{C\+Sound}} (char $\ast$filename, int i\+Sound\+ID)
+\item 
+virtual \mbox{\hyperlink{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}{$\sim$\+C\+Sound}} ()
+\item 
+bool \mbox{\hyperlink{class_c_sound_a17f9bef660b17787ac312ce02446ac96}{Play}} (\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} start, \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} length)
+\item 
+bool \mbox{\hyperlink{class_c_sound_a413a563864ccdfaeab232a3c36025a0a}{Play}} ()
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \mbox{\hyperlink{class_c_sound_a366c42ebc2c48e56e0788caa72f226df}{Stop}} ()
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \mbox{\hyperlink{class_c_sound_a81b39696be6a9aff2aa09f1fed26e750}{Get\+Length}} ()
+\item 
+int \mbox{\hyperlink{class_c_sound_ac08135b722291ee5222067bbed669994}{Get\+Sound\+ID}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uint8 $\ast$ \mbox{\hyperlink{class_c_sound_a3f49133f65666c8edd9f46d7c9f49161}{m\+\_\+data}}
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \mbox{\hyperlink{class_c_sound_aa1b6ed3838420f7d7c99ca7805106829}{m\+\_\+pos}}
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \mbox{\hyperlink{class_c_sound_a1e31a63957e73925bee5871f85e5f2f6}{m\+\_\+len}}
+\item 
+\mbox{\Hypertarget{class_c_sound_a26b1e9f2a8e7b3a8b2ba313ff56fa199}\label{class_c_sound_a26b1e9f2a8e7b3a8b2ba313ff56fa199}} 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} {\bfseries m\+\_\+stop}
+\item 
+S\+D\+L\+\_\+\+Audio\+Spec \mbox{\hyperlink{class_c_sound_ac41facd6fbd54c78f6b2d19608aa3217}{m\+\_\+spec}}
+\item 
+int \mbox{\hyperlink{class_c_sound_a267778ee9ca3f7fed5b344a09a24f2eb}{m\+\_\+i\+Sound\+ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_c_sound}{C\+Sound}}\+: This class is the sound object, and it allow to play, stop, etc
+
+\begin{DoxyAuthor}{Author}
+Shannon, Grahan and Shay 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_sound_a57c4b63acfa422461526dee33fc317d8}\label{class_c_sound_a57c4b63acfa422461526dee33fc317d8}} 
+\index{CSound@{CSound}!CSound@{CSound}}
+\index{CSound@{CSound}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{CSound()}{CSound()}}
+{\footnotesize\ttfamily C\+Sound\+::\+C\+Sound (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int}]{i\+Sound\+ID }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_c_sound}{C\+Sound}}\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+{\em i\+Sound\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}\label{class_c_sound_afe00e938f0c637e80ae2e3d30faa5add}} 
+\index{CSound@{CSound}!````~CSound@{$\sim$CSound}}
+\index{````~CSound@{$\sim$CSound}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{$\sim$CSound()}{~CSound()}}
+{\footnotesize\ttfamily C\+Sound\+::$\sim$\+C\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+$\sim$\+C\+Sound\+:
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_sound_a81b39696be6a9aff2aa09f1fed26e750}\label{class_c_sound_a81b39696be6a9aff2aa09f1fed26e750}} 
+\index{CSound@{CSound}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} C\+Sound\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+Length\+:
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_ac08135b722291ee5222067bbed669994}\label{class_c_sound_ac08135b722291ee5222067bbed669994}} 
+\index{CSound@{CSound}!GetSoundID@{GetSoundID}}
+\index{GetSoundID@{GetSoundID}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{GetSoundID()}{GetSoundID()}}
+{\footnotesize\ttfamily int C\+Sound\+::\+Get\+Sound\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get\+Sound\+ID\+:
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_a413a563864ccdfaeab232a3c36025a0a}\label{class_c_sound_a413a563864ccdfaeab232a3c36025a0a}} 
+\index{CSound@{CSound}!Play@{Play}}
+\index{Play@{Play}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool C\+Sound\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Play\+:
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_a17f9bef660b17787ac312ce02446ac96}\label{class_c_sound_a17f9bef660b17787ac312ce02446ac96}} 
+\index{CSound@{CSound}!Play@{Play}}
+\index{Play@{Play}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool C\+Sound\+::\+Play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}}]{start,  }\item[{\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}}]{length }\end{DoxyParamCaption})}
+
+Play\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_a366c42ebc2c48e56e0788caa72f226df}\label{class_c_sound_a366c42ebc2c48e56e0788caa72f226df}} 
+\index{CSound@{CSound}!Stop@{Stop}}
+\index{Stop@{Stop}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} C\+Sound\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop\+:
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_sound_a3f49133f65666c8edd9f46d7c9f49161}\label{class_c_sound_a3f49133f65666c8edd9f46d7c9f49161}} 
+\index{CSound@{CSound}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily Uint8$\ast$ C\+Sound\+::m\+\_\+data}
+
+m\+\_\+data\+: \mbox{\Hypertarget{class_c_sound_a267778ee9ca3f7fed5b344a09a24f2eb}\label{class_c_sound_a267778ee9ca3f7fed5b344a09a24f2eb}} 
+\index{CSound@{CSound}!m\_iSoundID@{m\_iSoundID}}
+\index{m\_iSoundID@{m\_iSoundID}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{m\_iSoundID}{m\_iSoundID}}
+{\footnotesize\ttfamily int C\+Sound\+::m\+\_\+i\+Sound\+ID}
+
+m\+\_\+i\+Sound\+ID\+: \mbox{\Hypertarget{class_c_sound_a1e31a63957e73925bee5871f85e5f2f6}\label{class_c_sound_a1e31a63957e73925bee5871f85e5f2f6}} 
+\index{CSound@{CSound}!m\_len@{m\_len}}
+\index{m\_len@{m\_len}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{m\_len}{m\_len}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} C\+Sound\+::m\+\_\+len}
+
+m\+\_\+len\+: \mbox{\Hypertarget{class_c_sound_aa1b6ed3838420f7d7c99ca7805106829}\label{class_c_sound_aa1b6ed3838420f7d7c99ca7805106829}} 
+\index{CSound@{CSound}!m\_pos@{m\_pos}}
+\index{m\_pos@{m\_pos}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{m\_pos}{m\_pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} C\+Sound\+::m\+\_\+pos}
+
+m\+\_\+pos\+: \mbox{\Hypertarget{class_c_sound_ac41facd6fbd54c78f6b2d19608aa3217}\label{class_c_sound_ac41facd6fbd54c78f6b2d19608aa3217}} 
+\index{CSound@{CSound}!m\_spec@{m\_spec}}
+\index{m\_spec@{m\_spec}!CSound@{CSound}}
+\doxysubsubsection{\texorpdfstring{m\_spec}{m\_spec}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Audio\+Spec C\+Sound\+::m\+\_\+spec}
+
+m\+\_\+spec\+: 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sound.\+h\item 
+Sound.\+cpp\end{DoxyCompactItemize}
