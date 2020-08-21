@@ -12,8 +12,10 @@
 
 // USE THESE STTEINGS TO CHANGE SPEED (on different spec computers)
 // Set speed (steps)
-GLdouble movementSpeed = 10.0;
-GLdouble rotationSpeed = 0.005;
+GLdouble movementSpeed = 15.0;
+GLdouble xrotationSpeed = 0.0015;
+GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
+
 
 // TEXTURE IMAGE AXISES
 #define XY		0
@@ -406,16 +408,17 @@ int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowPosition(100,100);
-	glutInitWindowSize(800,500);
-	glutCreateWindow("Murdoch University Campus Tour");
+	//glutInitWindowPosition(100,100);
+	//glutInitWindowSize(800,500);
+	//glutCreateWindow("Murdoch University Campus Tour");
+	glutGameModeString("1920x1080:32@60");
+	glutEnterGameMode();
 
 	myinit();
 
-	glutIgnoreKeyRepeat(1);
-	glutSpecialFunc(movementKeys);
-	glutSpecialUpFunc(releaseKey);
-	glutKeyboardUpFunc (releaseKeys);
+	glutIgnoreKeyRepeat(1); 
+	//glutSpecialUpFunc(releaseKey);
+	glutKeyboardUpFunc(releaseKeys);
 	glutKeyboardFunc(keys);
 
 	glutDisplayFunc(Display);
@@ -423,8 +426,8 @@ int main(int argc, char **argv)
 	glutMouseFunc(Mouse);
 	
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
-	//glutPassiveMotionFunc(mouseMove);
-	//ShowCursor(FALSE);
+	glutPassiveMotionFunc(mouseMove);
+	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
 
 	glutReshapeFunc(reshape);
 	glutMainLoop();
@@ -499,7 +502,7 @@ void Display()
 				// set the movement and rotation speed according to frame count
 		IncrementFrameCount();
 		cam.SetMoveSpeed (stepIncrement);
-		cam.SetRotateSpeed (angleIncrement);
+
 		// display images
 		DrawBackdrop();
 	glPopMatrix();
@@ -531,7 +534,7 @@ void reshape(int w, int h)
 //--------------------------------------------------------------------------------------
 // Keyboard Functions
 //--------------------------------------------------------------------------------------
-void movementKeys(int key, int x, int y)
+/*void movementKeys(int key, int x, int y)
 {
 	switch (key)
 	{
@@ -569,7 +572,7 @@ void releaseKey(int key, int x, int y)
 			cam.DirectionFB(0);
 		break;
 	}
-}
+}*/
 
 //--------------------------------------------------------------------------------------
 void keys(unsigned char key, int x, int y)
@@ -578,93 +581,99 @@ void keys(unsigned char key, int x, int y)
 	switch (key)
 	{
 		// step left
-		case 'Z':
-		case 'z':
-			cam.DirectionLR(-1);
-			break;
+	case 'A':
+	case 'a':
+		cam.DirectionLR(-1);
+		break;
 		// step right
-		case 'X':
-		case 'x':
-			cam.DirectionLR(1);
+	case 'D':
+	case 'd':
+		cam.DirectionLR(1);
 		break;
-		// look up
-		case 'Q':
-		case 'q':
-			cam.DirectionLookUD(1);
-			break;
-		// look down
-		case 'A':
-		case 'a':
-			cam.DirectionLookUD(-1);
+		// step forward
+	case 'W':
+		cam.DirectionFB(2);
 		break;
+	case 'w':
+		cam.DirectionFB(1);
+		break;
+		// step backward
+	case 'S':
+	case 's':
+		cam.DirectionFB(-1);
+		break;
+
 		// display campus map
-		case 'm':
-		case 'M':
+	case 'm':
+	case 'M':
+	{
+		if (DisplayMap)
 		{
-			if (DisplayMap)
-			{
-				DisplayMap = false;
-			}
-			else
-			{
-				DisplayMap = true;
-			}
+			DisplayMap = false;
 		}
-		break;
-		// exit tour (escape key)
-		case 27:
-			{
-				cam.SetRotateSpeed (0.0f);
-				cam.SetMoveSpeed (0.0f);
-				DisplayExit = true;
-			}
-		break;
-		// display welcome page (space key)
-		case ' ':
-			{
-				if (DisplayWelcome)
-				{
-					cam.SetRotateSpeed (rotationSpeed);
-					cam.SetMoveSpeed (movementSpeed);
-					DisplayWelcome = false;
-				}
-				else
-				{
-					cam.SetRotateSpeed (0.0f);
-					cam.SetMoveSpeed (0.0f);
-					DisplayWelcome = true;
-				}
-			}
-		break;
-		// display light fittings
-		case 'l':
-		case 'L':
+		else
 		{
-			if (lightsOn)
-			{
-				lightsOn = false;
-			}
-			else
-			{
-				lightsOn = true;
-			}
+			DisplayMap = true;
 		}
-		break;
+	}
+	break;
+	// exit tour (escape key)
+	case 27:
+	{
+		cam.SetXRotateSpeed(0.0f);
+		cam.SetYRotateSpeed(0.0f);
+		cam.SetMoveSpeed(0.0f);
+		DisplayExit = true;
+	}
+	break;
+	// display welcome page (space key)
+	case ' ':
+	{
+		if (DisplayWelcome)		//if info screen is up don't allow player to look around
+		{
+			cam.SetXRotateSpeed(xrotationSpeed);
+			cam.SetYRotateSpeed(yrotationSpeed);
+			cam.SetMoveSpeed(movementSpeed);
+			DisplayWelcome = false;
+		}
+		else
+		{
+			cam.SetXRotateSpeed(0.0f);
+			cam.SetYRotateSpeed(0.0f);
+			cam.SetMoveSpeed(0.0f);
+			DisplayWelcome = true;
+		}
+	}
+	break;
+	// display light fittings
+	case 'l':
+	case 'L':
+	{
+		if (lightsOn)
+		{
+			lightsOn = false;
+		}
+		else
+		{
+			lightsOn = true;
+		}
+	}
+	break;
 		
-		case 'P':
-		case 'p':
+	case 'P':
+	case 'p':
+	{
+		// Display ECL Block
+		if (displayECL)
 		{
-			// Display ECL Block
-			if (displayECL)
-			{
-				displayECL = false;
-			}
-			else
-			{
-				displayECL = true;
-			}
+			displayECL = false;
 		}
-		break;
+		else
+		{
+			displayECL = true;
+		}
+	}
+	break;
 		
 	}
 }
@@ -675,18 +684,18 @@ void releaseKeys(unsigned char key, int x, int y)
 	switch (key)
 	{
 		// step left or right
-		case 'x' :
-		case 'X' :
-		case 'z' :
-		case 'Z' :
-			cam.DirectionLR(0);
-		break;
-		// look left up or down
 		case 'a' :
 		case 'A' :
-		case 'q' :
-		case 'Q' :
-			cam.DirectionLookUD(0);
+		case 'd' :
+		case 'D' :
+			cam.DirectionLR(0);
+		break;
+		// step forward or backward
+		case 'w' :
+		case 'W' :
+		case 's' :
+		case 'S' :
+			cam.DirectionFB(0);
 		break;
 	}
 }
@@ -709,44 +718,12 @@ void Mouse(int button, int state, int x, int y)
 }
 
 //--------------------------------------------------------------------------------------
-//  Mouse Movements (NOT USED)
-//  Can be used to rotate around screen using mouse, but keyboard used instead
+//	used to rotate around screen using mouse
 //--------------------------------------------------------------------------------------
 void mouseMove(int x, int y)
 {
-		if (x < 0)
-			cam.DirectionRotateLR(0);
-		else if (x > width)
-			cam.DirectionRotateLR(0);
-		else if (x > width/2.0)
-		{
-			cam.DirectionRotateLR(1);
-			Display();
-			glutWarpPointer(width/2.0,height/2.0);
-		}
-		else if (x < width/2.0)
-		{
-			cam.DirectionRotateLR(-1);
-			Display();
-			glutWarpPointer(width/2.0,height/2.0);
-		}
-		else
-			cam.DirectionRotateLR(0);
-		if (y < 0 || y > height)
-			cam.DirectionLookUD(0);
-
-		else if (y > height/2.0) {
-			cam.DirectionLookUD(-1);
-			Display();
-			glutWarpPointer(width/2.0,height/2.0);
-		}
-		else if (y < height/2.0) {
-			cam.DirectionLookUD(1);
-			Display();
-			glutWarpPointer(width/2.0,height/2.0);
-		}
-		else
-			cam.DirectionLookUD(0);
+	cam.RotateCamera(x, y, width, height);
+	glutWarpPointer(width / 2, height / 2);
 }
 
 //--------------------------------------------------------------------------------------

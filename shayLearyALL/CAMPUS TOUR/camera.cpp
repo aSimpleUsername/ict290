@@ -16,7 +16,9 @@
 //--------------------------------------------------------------------------------------
 Camera::Camera()
 {
-	m_rotateSpeed = 0.0f;
+	m_xrotateSpeed = 0.0f;		//change sensitivity from main.cpp
+	m_yrotateSpeed = 0.0f;
+
 	m_moveSpeed = 0.0f;
 
 	ResetXYZ();
@@ -74,17 +76,6 @@ void Camera::DirectionUD(int const & tempMove)
 	m_deltaMoveUD = tempMove;
 }
 
-//--------------------------------------------------------------------------------------
-void Camera::DirectionRotateLR(GLdouble const & tempMove)
-{
-	m_deltaAngleLR = tempMove * m_rotateSpeed;
-}
-
-//--------------------------------------------------------------------------------------
-void Camera::DirectionLookUD(int const & tempMove)
-{
-	m_deltaAngleUD = tempMove * m_rotateSpeed;
-}
 
 
 //--------------------------------------------------------------------------------------
@@ -138,39 +129,7 @@ bool Camera::MoveUDOK()
 	return tempReturn;
 }
 
-//--------------------------------------------------------------------------------------
-// Is ok to rotate sideways
-//--------------------------------------------------------------------------------------
-bool Camera::RotateLROK()
-{
-	bool tempReturn;
-	if ((m_deltaAngleLR/m_rotateSpeed) < 0 || (m_deltaAngleLR/m_rotateSpeed) > 0)
-	{
-		tempReturn = true;
-	}
-	else
-	{
-		tempReturn = false;
-	}
-	return tempReturn;
-}
 
-//--------------------------------------------------------------------------------------
-// Is ok to rotate up and down
-//--------------------------------------------------------------------------------------
-bool Camera::LookUDOK()
-{
-	bool tempReturn;
-	if ((m_deltaAngleUD/m_rotateSpeed) < 0 || (m_deltaAngleUD/m_rotateSpeed) > 0)
-	{
-		tempReturn = true;
-	}
-	else
-	{
-		tempReturn = false;
-	}
-	return tempReturn;
-}
 
 //--------------------------------------------------------------------------------------
 // Move camera backwards and forwards
@@ -224,8 +183,8 @@ void Camera::MoveLR()
 	m_xLast = m_x;
 
 	// set movement step
-	GLdouble moveZ = (m_deltaMoveLR * (m_lookZZ) * m_moveSpeed);
-	GLdouble moveX = (m_deltaMoveLR * (m_lookXX) * m_moveSpeed);
+	GLdouble moveZ = (m_deltaMoveLR * (m_lookZZ) * (m_moveSpeed * 0.5));	// * 0.5 so strafing wouldn't be faster than running forward
+	GLdouble moveX = (m_deltaMoveLR * (m_lookXX) * (m_moveSpeed * 0.5));
 
 	if (m_CollisionDetectionOn)
 	{
@@ -278,6 +237,8 @@ void Camera::SetPlains(const int & moveX, const int & moveZ)
 				{
 					stepSound->Play();
 				}
+				else
+					stepSound->Stop();
 
 
 				m_plainNo = i;
@@ -338,27 +299,30 @@ void Camera::MoveUD()
 }
 
 //----------------------------------------------------------------------------------------
-// Rotates camera left and right
+// Rotates camera
 //----------------------------------------------------------------------------------------
-void Camera::RotateLR()
+void Camera::RotateCamera(int x, int y, int width, int height)
 {
-	m_rotateAngleLR += m_deltaAngleLR;
+	m_deltaAngleLR = x - (width/2);
+	m_deltaAngleUD = y - (height/2);
+	m_rotateAngleLR = m_rotateAngleLR + m_deltaAngleLR * m_xrotateSpeed;
+	m_rotateAngleUD = m_rotateAngleUD + m_deltaAngleUD * m_yrotateSpeed;
+
+	m_lookX = sin(m_rotateAngleUD) * sin(m_rotateAngleLR);
+	m_lookY = cos(m_rotateAngleUD);
+	m_lookZ = -sin(m_rotateAngleUD) * cos(m_rotateAngleLR);
+
+	m_lookXX = sin(m_rotateAngleLR + (float)PI / 2.0);		// Shay's unexplained code, assuming the half pi calculates 90 degree angle for strafing
+	m_lookZZ = -cos(m_rotateAngleLR + (float)PI / 2.0);
+
+	/*m_rotateAngleLR += m_deltaAngleLR;
 	m_lookX = sin(m_rotateAngleLR);
 	m_lookZ = -cos(m_rotateAngleLR);
 	m_lookXX = sin(m_rotateAngleLR + (float) PI/2.0);
-	m_lookZZ = -cos(m_rotateAngleLR + (float) PI/2.0);
+	m_lookZZ = -cos(m_rotateAngleLR + (float) PI/2.0);*/
 	callGLLookAt();
 }
 
-//----------------------------------------------------------------------------------------
-//  Rotates camera up and down
-//----------------------------------------------------------------------------------------
-void Camera::LookUD()
-{
-	m_rotateAngleUD += m_deltaAngleUD;
-	m_lookY = sin(m_rotateAngleUD);
-	callGLLookAt();
-}
 
 //----------------------------------------------------------------------------------------
 // Positions camera at co-ordinates of parameters
@@ -393,8 +357,6 @@ void Camera::CheckCamera()
 	if (MoveFBOK()) MoveFB();
 	if (MoveLROK()) MoveLR();
 	if (MoveUDOK()) MoveUD();
-	if (RotateLROK()) RotateLR();
-	if (LookUDOK()) LookUD();
 }
 
 

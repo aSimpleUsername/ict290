@@ -38,7 +38,8 @@ public:
 	void SetAABBMinZ(const int & tempIndex, const GLdouble &tempZ) {m_colDetect.SetAABBMinZ(tempIndex, tempZ);}
 
 	// set step and rotation size
-	void SetRotateSpeed (const GLdouble &tempSpeed) {m_rotateSpeed = tempSpeed;}
+	void SetXRotateSpeed (const GLdouble &tempSpeed) {m_xrotateSpeed = tempSpeed;}
+	void SetYRotateSpeed(const GLdouble& tempSpeed) {m_yrotateSpeed = tempSpeed;}
 	void SetMoveSpeed (const GLdouble &tempSpeed) {m_moveSpeed = tempSpeed;}
 
 	// COLLSION DETECTION FUNCTIONS
@@ -84,8 +85,9 @@ public:
 	void DirectionFB(int const & tempMove);
 	void DirectionLR(int const & tempMove);
 	void DirectionUD(int const & tempMove);
-	void DirectionRotateLR(GLdouble const & tempMove);
-	void DirectionLookUD(int const & tempMove);
+
+	// Rotates the camera
+	void RotateCamera(int x, int y, int width, int height);
 
 	// display map
 	void DisplayMap(const int & screenWidth, const int & screenHeight, 
@@ -122,22 +124,19 @@ private:
 	GLdouble m_direction;
 
 	// movement speed (step size)
-	GLdouble m_rotateSpeed;
+	GLdouble m_xrotateSpeed;
+	GLdouble m_yrotateSpeed;
 	GLdouble m_moveSpeed;
 	
 	// is it ok to move
 	bool MoveFBOK();
 	bool MoveLROK();
 	bool MoveUDOK();
-	bool RotateLROK();
-	bool LookUDOK();
 
 	// move around the world
 	void MoveFB();
 	void MoveLR();
 	void MoveUD();
-	void RotateLR();
-	void LookUD();
 	
 	// overloaded function for setting plain
 	void SetPlains(const int & moveX, const int & moveZ);
