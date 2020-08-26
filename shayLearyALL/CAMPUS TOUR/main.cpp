@@ -456,7 +456,7 @@ void myinit()
 	// turn collision detection on
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
-	cam.SetNoBoundingBoxes(19);
+	cam.SetNoBoundingBoxes(20);
 	// set starting position of user
 	cam.Position(32720.0, 9536.0,	
 				 4800.0, 180.0);
@@ -478,6 +478,9 @@ void myinit()
 //--------------------------------------------------------------------------------------
 void Display()
 {
+	// print postion to assist development
+	cam.printPosition();
+
 	// check for movement
 	cam.CheckCamera();
 	
@@ -577,7 +580,6 @@ void releaseKey(int key, int x, int y)
 //--------------------------------------------------------------------------------------
 void keys(unsigned char key, int x, int y)
 {
-	int i = 0;
 	switch (key)
 	{
 		// step left
@@ -592,10 +594,11 @@ void keys(unsigned char key, int x, int y)
 		break;
 		// step forward
 	case 'W':
-		cam.DirectionFB(2);
-		break;
 	case 'w':
-		cam.DirectionFB(1);
+		if (glutGetModifiers() && GLUT_ACTIVE_SHIFT)		//sprint
+			cam.DirectionFB(8);
+		else
+			cam.DirectionFB(1);
 		break;
 		// step backward
 	case 'S':
@@ -806,7 +809,7 @@ void CreateBoundingBoxes()
 	// Canteen block
 	cam.SetAABBMaxX(12, 2608.0);
 	cam.SetAABBMinX(12, 0.0);
-	cam.SetAABBMaxZ(12, 49046.0);
+	cam.SetAABBMaxZ(12, 41189.0);
 	cam.SetAABBMinZ(12, 0.0);
 
 	// Telephones
@@ -832,7 +835,13 @@ void CreateBoundingBoxes()
 	cam.SetAABBMinX(16, 31444.0);
 	cam.SetAABBMaxZ(16, 10395.0);
 	cam.SetAABBMinZ(16, 4590.0);
-}
+
+	// Book Shop
+	cam.SetAABBMaxX(17, 2608.0);
+	cam.SetAABBMinX(17, 0.0);
+	cam.SetAABBMaxZ(17, 50000.0);
+	cam.SetAABBMinZ(17, 42958.0);
+	}
 
 //--------------------------------------------------------------------------------------
 // Set up co-ordinates of different plains

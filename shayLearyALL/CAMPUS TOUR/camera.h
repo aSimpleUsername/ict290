@@ -10,6 +10,7 @@
 
 #define PI 3.1415962654
 
+#include <stdio.h>	// for printPostion()
 #include "collision.h"
 #include "cameraMap.h"
 #include "PlainLinkedList.h"
@@ -77,6 +78,9 @@ public:
 				   GLdouble const & tempY,
 				   GLdouble const & tempZ,
 				   GLdouble const & tempAngle);
+	
+	// print postion to camera
+	void printPosition(void);
 
 	// check whether ok to move
 	void CheckCamera();
