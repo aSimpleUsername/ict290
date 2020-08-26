@@ -350,6 +350,14 @@ void Camera::Position (GLdouble const & tempX, GLdouble const & tempY,
 }
 
 //----------------------------------------------------------------------------------------
+// Prints the current postion of camera to assist in development
+//----------------------------------------------------------------------------------------
+void Camera::printPosition(void)
+{
+	std::cout << "Current positon = X: " << m_x << ", Y: " << m_y << ", Z: " << m_z << std::endl;
+}
+
+//----------------------------------------------------------------------------------------
 // Check ok to move
 //----------------------------------------------------------------------------------------
 void Camera::CheckCamera()
