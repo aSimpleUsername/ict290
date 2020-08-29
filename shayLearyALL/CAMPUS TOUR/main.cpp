@@ -208,7 +208,7 @@ GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
 #define ENTRANCE					157
 #define ENTRANCE_2					158
 #define EXIT_EAST					159
-#define EXIT_WEST					220
+//#define EXIT_WEST					220
 #define CHANC_DOOR_1				160
 #define CHANC_DOOR_2				161
 #define WINDOW_2D					162
@@ -1469,8 +1469,8 @@ void CreateTextures()
 	image = tp.LoadTexture("data/windows/exiteast.raw", 512, 512);
 	tp.CreateTexture(EXIT_EAST, image, 512, 512);
 
-	image = tp.LoadTexture("data/windows/exitwest.raw", 256, 512);
-	tp.CreateTexture(EXIT_WEST, image, 256, 512);
+	//image = tp.LoadTexture("data/windows/exitwest.raw", 256, 512);
+	//tp.CreateTexture(EXIT_WEST, image, 256, 512);
 
 	image = tp.LoadTexture("data/windows/window1.raw", 256, 256);
 	tp.CreateTexture(WINDOW_1, image, 256, 256);
@@ -2755,7 +2755,7 @@ void DrawPavement ()
 	tp.CreateDisplayList (XZ, 244, 64.0, 128.0, 8189.0, 10000.0, 42928.0, 44.8, 1.80); // library door way
 	tp.CreateDisplayList (XZ, 243, 64.0, 128.0, 2576.0, 10000.0, 42928.0, 36.0, 21.0);	// entrance to IT block
 	tp.CreateDisplayList (XZ, 242, 64.0, 128.0, 4848.0, 10000.0, 42928.0, 27.5, 21.0);	// entrance to IT block
-	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, 2096.0, 10000.0, 41168.0, 4.5, 29.0);	// entance to psch block
+	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, -11017.0, 10000.0, 41168.0, 107.0, 29.0);	// entance to  block (bookshop walkway)
 	tp.CreateDisplayList (XZ, 240, 128.0, 64.0, 31568.0, 10000.0, 40816.0, 1.0, 1.0);	// corner space filler
 
 	// PAVEMENT_JOINS
@@ -3036,7 +3036,7 @@ void DrawBricks ()
 	tp.CreateDisplayList (YZ, 122, 128.0, 128.0, 2608.0, 10000.0, 10000.0, 7.0, 243.5);		// long downstairs panel
 	tp.CreateDisplayList (YZ, 123, 128.0, 128.0, 2608.0, 10000.0, 42960.0, 7.0, 21.0);		// end downstairs panel
 	tp.CreateDisplayList (YZ, 124, 128.0, 128.0, 2608.0, 11088.0, 10000.0, 7.0, 278.5);		// long upstairs panel
-	tp.CreateDisplayList (XY, 136, 128.0, 128.0, 2096.0, 10000.0, 42960.0, 4.0, 7.0);		// corner exit to psc block from canteen
+	tp.CreateDisplayList (XY, 136, 128.0, 128.0, -11017.0, 10000.0, 42960.0, 106.5, 7.0);	// corner exit to psc block from canteen (bookshop)
 
 	// WALL_BRICK_USD_YZ
 	tp.CreateDisplayList (YZ, 200, 128.0, 128.0, 33808.0, 10576.0, 25344.0, 2.0, 1.0);		// panel 1 (around rusty man)
@@ -4585,8 +4585,8 @@ void DisplayLargerTextures ()
 	glCallList(423);
 
 	// West Exit
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(EXIT_WEST));
-	glCallList(450);
+	/*glBindTexture(GL_TEXTURE_2D, tp.GetTexture(EXIT_WEST));
+	glCallList(450);*/
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_WINDOW_BLOCK_CHANC));
 	glCallList(451);
 	// window next to steps
