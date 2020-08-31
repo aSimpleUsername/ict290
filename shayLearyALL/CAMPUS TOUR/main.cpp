@@ -325,9 +325,11 @@ void reshape(int w, int h);
 void keys(unsigned char key, int x, int y);
 
 // keyboard and mouse functions
-void movementKeys(int key, int x, int y);
-void releaseKey(int key, int x, int y);
-void releaseKeys(unsigned char key, int x, int y);
+bool* keyStates = new bool[256];
+void initKeyStates();
+void keyPressed(unsigned char, int x, int y);
+void releaseKey(unsigned char key, int x, int y);
+void processKeys();
 void Mouse(int button, int state, int x, int y);
 void mouseMove(int x, int y);
 
@@ -417,9 +419,8 @@ int main(int argc, char **argv)
 	myinit();
 
 	glutIgnoreKeyRepeat(1); 
-	//glutSpecialUpFunc(releaseKey);
-	glutKeyboardUpFunc(releaseKeys);
-	glutKeyboardFunc(keys);
+	glutKeyboardUpFunc(releaseKey);
+	glutKeyboardFunc(keyPressed);
 
 	glutDisplayFunc(Display);
 	glutIdleFunc(Display);
@@ -471,6 +472,8 @@ void myinit()
 	// load texture images and create display lists
 	CreateTextureList();
 	CreateTextures();
+
+	initKeyStates();	//clear keystate array
 }
 
 //--------------------------------------------------------------------------------------
@@ -478,6 +481,8 @@ void myinit()
 //--------------------------------------------------------------------------------------
 void Display()
 {
+	//process user input
+	processKeys();
 	// print postion to assist development
 	cam.printPosition();
 
@@ -578,59 +583,18 @@ void releaseKey(int key, int x, int y)
 }*/
 
 //--------------------------------------------------------------------------------------
-void keys(unsigned char key, int x, int y)
+void initKeyStates()
 {
-	switch (key)
-	{
-		// step left
-	case 'A':
-	case 'a':
-		cam.DirectionLR(-1);
-		break;
-		// step right
-	case 'D':
-	case 'd':
-		cam.DirectionLR(1);
-		break;
-		// step forward
-	case 'W':
-	case 'w':
-		if (glutGetModifiers() && GLUT_ACTIVE_SHIFT)		//sprint
-			cam.DirectionFB(8);
-		else
-			cam.DirectionFB(1);
-		break;
-		// step backward
-	case 'S':
-	case 's':
-		cam.DirectionFB(-1);
-		break;
+	for (int i = 0; i < 256; i++)
+		keyStates[i] = false;
+}
 
-		// display campus map
-	case 'm':
-	case 'M':
-	{
-		if (DisplayMap)
-		{
-			DisplayMap = false;
-		}
-		else
-		{
-			DisplayMap = true;
-		}
-	}
-	break;
-	// exit tour (escape key)
-	case 27:
-	{
-		cam.SetXRotateSpeed(0.0f);
-		cam.SetYRotateSpeed(0.0f);
-		cam.SetMoveSpeed(0.0f);
-		DisplayExit = true;
-	}
-	break;
+void keyPressed(unsigned char key, int x, int y)
+{
+	keyStates[key] = true;	//set keystate to pressed
+
 	// display welcome page (space key)
-	case ' ':
+	if (key == ' ')
 	{
 		if (DisplayWelcome)		//if info screen is up don't allow player to look around
 		{
@@ -647,10 +611,57 @@ void keys(unsigned char key, int x, int y)
 			DisplayWelcome = true;
 		}
 	}
-	break;
+}
+
+void releaseKey(unsigned char key, int x, int y)
+{
+	keyStates[key] = false;		//set keystate to released
+}
+
+void processKeys()
+{
+	int speed = 3;
+
+	if(keyStates['a'] || keyStates['A'])		//step left
+		cam.DirectionLR(-speed);
+
+	if (keyStates['d'] || keyStates['D'])		//step right
+		cam.DirectionLR(speed);
+
+	if ((keyStates['w'] || keyStates['W'])) 	//step forward
+		cam.DirectionFB(speed);
+
+	if (keyStates['s'] || keyStates['S'])	// step backward
+		cam.DirectionFB(-speed);
+
+	if(!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D'])	//stops player LR
+		cam.DirectionLR(0);
+
+	if (!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S'])	//stops player FB
+		cam.DirectionFB(0);
+
+	if (keyStates['m'] || keyStates['M'])	// display campus map
+	{
+		if (DisplayMap)
+		{
+			DisplayMap = false;
+		}
+		else
+		{
+			DisplayMap = true;
+		}
+	}
+	
+	if(keyStates[27])	// exit tour (escape key)
+	{
+		cam.SetXRotateSpeed(0.0f);
+		cam.SetYRotateSpeed(0.0f);
+		cam.SetMoveSpeed(0.0f);
+		DisplayExit = true;
+	}
+
 	// display light fittings
-	case 'l':
-	case 'L':
+	if(keyStates['l'] || keyStates['L'])
 	{
 		if (lightsOn)
 		{
@@ -661,10 +672,8 @@ void keys(unsigned char key, int x, int y)
 			lightsOn = true;
 		}
 	}
-	break;
 		
-	case 'P':
-	case 'p':
+	if (keyStates['p'] || keyStates['P'])
 	{
 		// Display ECL Block
 		if (displayECL)
@@ -676,13 +685,11 @@ void keys(unsigned char key, int x, int y)
 			displayECL = true;
 		}
 	}
-	break;
 		
-	}
 }
 
 //--------------------------------------------------------------------------------------
-void releaseKeys(unsigned char key, int x, int y)
+/*void releaseKeys(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
@@ -701,7 +708,7 @@ void releaseKeys(unsigned char key, int x, int y)
 			cam.DirectionFB(0);
 		break;
 	}
-}
+}*/
 
 //--------------------------------------------------------------------------------------
 //  Mouse Buttons
