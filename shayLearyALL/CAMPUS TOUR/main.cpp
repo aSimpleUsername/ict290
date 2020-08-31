@@ -838,9 +838,10 @@ void CreateBoundingBoxes()
 
 	// Book Shop
 	cam.SetAABBMaxX(17, 2608.0);
-	cam.SetAABBMinX(17, 0.0);
+	cam.SetAABBMinX(17, -11017.0);
 	cam.SetAABBMaxZ(17, 50000.0);
 	cam.SetAABBMinZ(17, 42958.0);
+
 	}
 
 //--------------------------------------------------------------------------------------
@@ -2893,10 +2894,10 @@ void DisplayBricks ()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(WALL_BRICK_XY));
 	for (int i = 135; i < 165; i++) glCallList(i);
 	for (int i = 217; i < 222; i++) glCallList(i);
-	glPushMatrix();
-		glTranslatef(0.0, 0.0, -1792.0);
-		glCallList(136);
-	glPopMatrix();
+	/*glPushMatrix();
+		glTranslatef(0.0, 0.0, -1792.0);	// creates a 2nd parallell wall accross from bookstore
+		glCallList(136);					// we don't need that anymore
+	glPopMatrix();*/
 	glPushMatrix();
 		glTranslatef(0.0, 1024.0, 0.0);
 		glCallList(152);
