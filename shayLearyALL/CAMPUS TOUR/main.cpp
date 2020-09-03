@@ -344,6 +344,10 @@ void DisplayCylinders ();
 void DisplayDoorPaving ();
 void DisplayDoorPosts ();
 void DisplayEntranceSteps ();
+//MID
+void DisplayBookSteps();
+void DisplayBookStepsTwo();
+// TEST
 void DisplayExtras ();
 void DisplayGrass ();
 void DisplayLargerTextures ();
@@ -376,6 +380,10 @@ void DrawPavement ();
 void DrawExtras ();
 void DrawRoof();
 void DrawEntranceSteps ();
+//MID
+void DrawBookSteps();
+void DrawBookStepsTwo();
+//Mid
 void DrawLargerTextures ();
 void DrawLights ();
 void DrawBench ();
@@ -886,20 +894,58 @@ void CreatePlains()
 	//entance steps
 	step = 10450.0;
 	stepLength = 9808.0;
-	for (int i = 0; i < 18 ; i ++)
+	for (int i = 0; i < 18; i++)
 	{
-		cam.SetPlains (FLAT_PLAIN, 31582.0, 33835, step, step, stepLength, stepLength + 42.0);		
+		cam.SetPlains(FLAT_PLAIN, 31582.0, 33835, step, step, stepLength, stepLength + 42.0);
 		step -= 48.0;
 		stepLength -= 142.0;
-		if ((i+3) % 5 == 0) 
+		if ((i + 3) % 5 == 0)
 		{
 			stepLength -= 500.0;
 			step -= 48.0;
 		}
 	}
 
+	//mid steps
+	step = 11300.0;
+	stepLength = 19808.0;
+	for (int i = 0; i < 18; i++)
+	{
+		cam.SetPlains(FLAT_PLAIN, 25482.0, 26232.0, step, step, stepLength, stepLength + 42.0);
+		step -= 48.0;
+		stepLength -= 142.0;
+	}
+
+	//large step mid
+
+	step = 10825.0;
+	stepLength = 19950.0;
+	cam.SetPlains(FLAT_PLAIN, 25482.0, 26232.0, step, step, stepLength, stepLength + 142.0);
+
+	//mid step 2
+	//step = 11600.0;
+	step = 12000.0;
+	stepLength = 19808.0;
+	for (int i = 546; i < 562; i++)
+	{
+		cam.SetPlains(FLAT_PLAIN, 25482.0 + 700, 26232.0 + 700, step, step, stepLength - 2125, (stepLength - 2125) + 42);
+		step -= 48.0;
+		stepLength += 142.0;
+	}
+
+	//large mid step 2
+	step = 10825.0;
+	stepLength = 19950.0;
+	//for (int i = 292; i < 293; i++)
+	for (int i = 580; i < 581; i++)
+	{
+		cam.SetPlains(FLAT_PLAIN, 25482.0 + 700, 26232.0 + 700, step, step, stepLength - 2125, (stepLength - 2125) + 142);
+		step -= 239.0;
+		stepLength += 1068.0;
+	}
+
 	// temp plain to take down to ECL1
-	cam.SetPlains (ZY_PLAIN, 3200.0, 4800.0 , 10450.0, 9370.0, 53400.0, 57900.0);
+	cam.SetPlains(ZY_PLAIN, 3200.0, 4800.0, 10450.0, 9370.0, 53400.0, 57900.0);
 }
 
 //--------------------------------------------------------------------------------------
@@ -1611,6 +1657,10 @@ void DrawBackdrop()
 	DisplayDoorPaving ();
 	DisplayDoorPosts ();
 	DisplayEntranceSteps ();
+	//Mid
+	DisplayBookSteps();
+	DisplayBookStepsTwo();
+	//Mid
 	DisplayExtras ();
 	DisplayGrass ();
 	DisplayLargerTextures ();
@@ -3642,23 +3692,28 @@ void DrawAngledRoofBeam2 (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdoub
 	glEndList();
 }
 
+
 //--------------------------------------------------------------------------------------
 // Display Steps
 //--------------------------------------------------------------------------------------
-void DisplayEntranceSteps ()
+void DisplayEntranceSteps()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
-	for (int i = 258; i < 274 ; i ++) glCallList(i);
-	
+
+	for (int i = 258; i < 274; i++) glCallList(i);
+	//for (int i = 508; i < 524 ; i ++) glCallList(i);
+
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
-	for (int i = 274; i < 290 ; i ++) glCallList(i);
+	for (int i = 274; i < 290; i++) glCallList(i);
+	//for (int i = 524; i < 540 ; i ++) glCallList(i);
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
-	for (int i = 290; i < 293 ; i ++) glCallList(i);
+	for (int i = 290; i < 293; i++) glCallList(i);
+	//for (int i = 540; i < 543 ; i ++) glCallList(i);
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
-	for (int i = 293; i < 296 ; i ++) glCallList(i);
-
+	for (int i = 293; i < 296; i++) glCallList(i);
+	//for (int i = 543; i < 546 ; i ++) glCallList(i);
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEPS_LIBRARY));
 	step = 0.0;
@@ -3666,35 +3721,74 @@ void DisplayEntranceSteps ()
 	for (int i = 0; i < 10; i++)
 	{
 		glPushMatrix();
-			glTranslatef(step, step2, 0.0);
-			glCallList(206);
+		glTranslatef(step, step2, 0.0);
+		glCallList(206);
 		glPopMatrix();
 		glPushMatrix();
-			glTranslatef(step, step2, 965.0);
-			glCallList(206);
+		glTranslatef(step, step2, 965.0);
+		glCallList(206);
 		glPopMatrix();
 		step += 128.0;
 		step2 += -51.0;
 	}
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEPS_LIBRARY_TOP));
 	glCallList(207);
-		glPushMatrix();
-			glTranslatef(0.0, 0.0, 965.0);
-			glCallList(207);
-		glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0, 0.0, 965.0);
+	glCallList(207);
+	glPopMatrix();
 }
 
-void DrawEntranceSteps ()
+//Author: Vlad Kennebury
+// Date: 31/08/2020
+// Progress on stairs
+void DisplayBookSteps()
+{
+	//glPushMatrix();
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
+	//glRotatef(90, 0, 1, 0);
+	for (int i = 508; i < 524; i++) glCallList(i);
+	//glPopMatrix();
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
+	for (int i = 524; i < 540; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
+	for (int i = 540; i < 541; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
+	for (int i = 541; i < 544; i++) glCallList(i);
+}
+
+//Author: Vlad Kennebury
+// Date: 31/08/2020
+// Progress on stairs
+void DisplayBookStepsTwo()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
+	for (int i = 546; i < 562; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
+	for (int i = 562; i < 578; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
+	for (int i = 578; i < 579; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
+	for (int i = 579; i < 582; i++) glCallList(i);
+}
+
+void DrawEntranceSteps()
 {
 	step = 10000.0;
 	stepLength = 9808.0;
-	for (int i = 258; i < 274 ; i ++)
+	for (int i = 258; i < 274; i++)
 	{
-		tp.CreateDisplayList (XZ, i, 1024.0, 512.0, 31582.0, step, stepLength, 2.2, 0.277);
-		tp.CreateDisplayList (XY,  i + 16, 64.0, 64.0, 31582.0, step - 64.0, stepLength, 35.0, 1.0);
+		tp.CreateDisplayList(XZ, i, 1024.0, 512.0, 31582.0, step, stepLength, 2.2, 0.277);
+		tp.CreateDisplayList(XY, i + 16, 64.0, 64.0, 31582.0, step - 64.0, stepLength, 35.0, 1.0);
 		step -= 48.0;
 		stepLength -= 142.0;
-		if ((i+3) % 4 == 0) 
+		if ((i + 3) % 4 == 0)
 		{
 			stepLength -= 500.0;
 			step -= 48.0;
@@ -3702,20 +3796,81 @@ void DrawEntranceSteps ()
 	}
 	step = 9808.0;
 	stepLength = 8882.0;
-	for (int i = 290; i < 293 ; i ++)
+	for (int i = 290; i < 293; i++)
 	{
-		tp.CreateDisplayList (XZ, i, 1024.0, 512.0, 31582.0, step, stepLength, 2.2, 1.0);
-		tp.CreateDisplayList (XY,  i + 3, 64.0, 64.0, 31582.0, step - 64.0, stepLength, 35.0, 1.0);
+		tp.CreateDisplayList(XZ, i, 1024.0, 512.0, 31582.0, step, stepLength, 2.2, 1.0);
+		tp.CreateDisplayList(XY, i + 3, 64.0, 64.0, 31582.0, step - 64.0, stepLength, 35.0, 1.0);
 		step -= 239.0;
 		stepLength -= 1068.0;
 	}
 
 	// steps next to GCL1
-	tp.CreateDisplayList (XZ, 206, 128.0, 1024.0, 34508.0, 10000.0, 41127, 1.0, 0.942);
-	tp.CreateDisplayList (XZ, 207, 256.0, 1024.0, 34352.0, 10000.0, 41127, 0.609, 0.942);
-	
+	tp.CreateDisplayList(XZ, 206, 128.0, 1024.0, 34508.0, 10000.0, 41127, 1.0, 0.942);
+	tp.CreateDisplayList(XZ, 207, 256.0, 1024.0, 34352.0, 10000.0, 41127, 0.609, 0.942);
+
 }
 
+//Author: Vlad Kennebury
+// Date: 31/08/2020
+// Progress on stairs
+void DrawBookSteps()
+{
+	GLdouble xLocation = 25482.0;
+
+	step = 10775.0;
+	//step = 10823.0;
+	stepLength = 19808.0;
+	//for (int i = 258; i < 274; i++)
+	for (int i = 508; i < 524; i++)
+	{
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 3.2, 0.277);
+		tp.CreateDisplayList(XY, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 10.0, 1.0);
+		step -= 48.0;
+		stepLength -= 142.0;
+	}
+
+	step = 10825.0;
+	stepLength = 19950.0;
+	//for (int i = 292; i < 293; i++)
+	for (int i = 542; i < 543; i++)
+	{
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 6.4, 1.0);
+		tp.CreateDisplayList(XY, i + 3, 64.0, 64.0, xLocation, step - 64.0, stepLength, 20.0, 1.0);
+		step -= 239.0;
+		stepLength -= 1068.0;
+	}
+}
+
+//Author: Vlad Kennebury
+// Date: 31/08/2020
+// Progress on stairs
+void DrawBookStepsTwo()
+{
+	GLdouble xLocation = 25482.0;
+
+	//step = 10775.0;
+	step = 11600.0;
+	stepLength = 19808.0;
+	//for (int i = 258; i < 274; i++)
+	for (int i = 546; i < 562; i++)
+	{
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation + 700, step, stepLength - 2125, 3.2, 0.277);
+		tp.CreateDisplayList(XY, i + 16, 64.0, 64.0, xLocation + 700, step - 64.0, stepLength - 1985, 10.0, 1.0);
+		step -= 48.0;
+		stepLength += 142.0;
+	}
+
+	step = 10825.0;
+	stepLength = 19950.0;
+	//for (int i = 292; i < 293; i++)
+	for (int i = 580; i < 581; i++)
+	{
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 6.4, 1.0);
+		tp.CreateDisplayList(XY, i + 3, 64.0, 64.0, xLocation, step - 64.0, stepLength, 20.0, 1.0);
+		step -= 239.0;
+		stepLength += 1068.0;
+	}
+}
 //--------------------------------------------------------------------------------------
 // Display Bench
 //--------------------------------------------------------------------------------------
@@ -5108,7 +5263,9 @@ void CreateTextureList()
 	DrawRoof();					// 1-10, 97-100, 170-179, 202-205, 214-222, 250-257, 296-299, 426-427
 	DrawEntranceSteps ();		// 258-295, 206-207
 	//MID
-
+	DrawBookSteps();				// 508-546, 547-548
+	DrawBookStepsTwo();			// 
+	//MID
 	DrawExtras ();				// 300-349, 388, 395, 419-421, 429, 435
 	DrawLargerTextures ();		// 350-375, 379-387, 389, 414-418, 422-423, 450-453
 	DrawLights ();				// 376-378
