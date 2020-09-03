@@ -5109,7 +5109,6 @@ void CreateTextureList()
 	DrawEntranceSteps ();		// 258-295, 206-207
 	//MID
 
-	//MID
 	DrawExtras ();				// 300-349, 388, 395, 419-421, 429, 435
 	DrawLargerTextures ();		// 350-375, 379-387, 389, 414-418, 422-423, 450-453
 	DrawLights ();				// 376-378
