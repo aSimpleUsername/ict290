@@ -465,7 +465,7 @@ void myinit()
 	// turn collision detection on
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
-	cam.SetNoBoundingBoxes(20);
+	cam.SetNoBoundingBoxes(25);
 
 	
 	// set starting position of user
@@ -553,49 +553,6 @@ void reshape(int w, int h)
 	gluPerspective(45,ratio,1,250000);	
 	glMatrixMode(GL_MODELVIEW);
 }
-
-//--------------------------------------------------------------------------------------
-// Keyboard Functions
-//--------------------------------------------------------------------------------------
-/*void movementKeys(int key, int x, int y)
-{
-	switch (key)
-	{
-		case GLUT_KEY_LEFT :
-			cam.DirectionRotateLR(-1);
-			break;
-
-		case GLUT_KEY_RIGHT : 
-			cam.DirectionRotateLR(1);
-			break;
-
-		case GLUT_KEY_UP : 
-			cam.DirectionFB(1);
-			break;
-
-		case GLUT_KEY_DOWN : 
-			cam.DirectionFB(-1);
-			break;
-	}
-}
-
-//--------------------------------------------------------------------------------------
-void releaseKey(int key, int x, int y)
-{
-	switch (key)
-	{
-		// rotate left or right
-		case GLUT_KEY_LEFT : 
-		case GLUT_KEY_RIGHT : 
-			cam.DirectionRotateLR(0);			
-		break;
-		// move backwards or forwards
-		case GLUT_KEY_UP : 
-		case GLUT_KEY_DOWN : 
-			cam.DirectionFB(0);
-		break;
-	}
-}*/
 
 //--------------------------------------------------------------------------------------
 void initKeyStates()
@@ -704,28 +661,6 @@ void processKeys()
 }
 
 //--------------------------------------------------------------------------------------
-/*void releaseKeys(unsigned char key, int x, int y)
-{
-	switch (key)
-	{
-		// step left or right
-		case 'a' :
-		case 'A' :
-		case 'd' :
-		case 'D' :
-			cam.DirectionLR(0);
-		break;
-		// step forward or backward
-		case 'w' :
-		case 'W' :
-		case 's' :
-		case 'S' :
-			cam.DirectionFB(0);
-		break;
-	}
-}*/
-
-//--------------------------------------------------------------------------------------
 //  Mouse Buttons
 //--------------------------------------------------------------------------------------
 void Mouse(int button, int state, int x, int y)
@@ -831,9 +766,7 @@ void CreateBoundingBoxes()
 	// Canteen block
 	cam.SetAABBMaxX(12, 2608.0);
 	cam.SetAABBMinX(12, 2508.0);
-	//cam.SetAABBMinX(12, 0.0);
-	//cam.SetAABBMaxZ(12, 41189.0);
-	cam.SetAABBMaxZ(12, 31189.0);
+	cam.SetAABBMaxZ(12, 41180.0);
 	cam.SetAABBMinZ(12, 0.0);
 
 	// Telephones
@@ -862,10 +795,35 @@ void CreateBoundingBoxes()
 
 	// Book Shop
 	cam.SetAABBMaxX(17, 2608.0);
-	cam.SetAABBMinX(17, -11017.0);
+	cam.SetAABBMinX(17, -17000.0);
 	cam.SetAABBMaxZ(17, 50000.0);
-	cam.SetAABBMinZ(17, 42958.0);
+	cam.SetAABBMinZ(17, 42960.0);
 
+	// Stairs wall near bookshop
+	cam.SetAABBMaxX(18, 2904.0);
+	cam.SetAABBMinX(18, -200.0);
+	cam.SetAABBMaxZ(18, 41180.0);
+	cam.SetAABBMinZ(18, 40783.0);
+
+	// courtyard "canteen block" wall
+	cam.SetAABBMaxX(19, 2904.0);
+	cam.SetAABBMinX(19, -200.0);
+	cam.SetAABBMaxZ(19, 39484.0);
+	cam.SetAABBMinZ(19, 26000.0);
+
+	// courtyard wall opposite bookshop
+	cam.SetAABBMaxX(20, -200.0);
+	cam.SetAABBMinX(20, -17000);
+	cam.SetAABBMaxZ(20, 26000.0);
+	cam.SetAABBMinZ(20, 25900.0);
+
+	// far courtyard wall parrallel to bushcourt
+	cam.SetAABBMaxX(21, -17000);
+	cam.SetAABBMinX(21, -18000);
+	cam.SetAABBMaxZ(21, 41180.0);
+	cam.SetAABBMinZ(21, 0.0);
+
+	// current AABB array size = 25
 	}
 
 //--------------------------------------------------------------------------------------
@@ -2781,6 +2739,8 @@ void DisplayPavement ()
 	for (int i = 91; i < 93; i ++) glCallList(i);
 	glCallList(246);
 	glCallList(243);
+	glCallList(590);	//new courtyard calls
+	glCallList(591);
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PAVEMENT_TOP_FLIP));
 	glCallList(74);
 	glCallList(245);
@@ -2835,8 +2795,11 @@ void DrawPavement ()
 	tp.CreateDisplayList (XZ, 244, 64.0, 128.0, 8189.0, 10000.0, 42928.0, 44.8, 1.80); // library door way
 	tp.CreateDisplayList (XZ, 243, 64.0, 128.0, 2576.0, 10000.0, 42928.0, 36.0, 21.0);	// entrance to IT block
 	tp.CreateDisplayList (XZ, 242, 64.0, 128.0, 4848.0, 10000.0, 42928.0, 27.5, 21.0);	// entrance to IT block
-	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, -11017.0, 10000.0, 41168.0, 107.0, 29.0);	// entance to  block (bookshop walkway)
+	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, -17000.0, 10000.0, 41168.0, 153.2, 29.0);	// entance to  block (bookshop walkway)
 	tp.CreateDisplayList (XZ, 240, 128.0, 64.0, 31568.0, 10000.0, 40816.0, 1.0, 1.0);	// corner space filler
+	tp.CreateDisplayList(XZ, 590, 128.0, 64.0, -1500, 10000.0, 26000, 32.1, 237.0);	// courtyard - bushcourt side
+	tp.CreateDisplayList(XZ, 591, 128.0, 64.0, -17000, 10000.0, 26000, 12.0, 237.0);	// courtyard - not bushcourt side
+
 
 	// PAVEMENT_JOINS
 	glNewList(89, GL_COMPILE);
@@ -2948,6 +2911,7 @@ void DisplayBricks ()
 	for (int i = 101; i < 111; i ++) glCallList(i);
 	for (int i = 112; i < 126; i ++) glCallList(i);
 	for (int i = 191; i < 195; i ++) glCallList(i);
+	for (int i = 583; i < 586; i++) glCallList(i);	// new courtyard calls
 	glPushMatrix();
 		glTranslatef(0.0, 0.0, 1920.0);
 		glCallList(109);
@@ -2973,16 +2937,14 @@ void DisplayBricks ()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(WALL_BRICK_XY));
 	for (int i = 135; i < 165; i++) glCallList(i);
 	for (int i = 217; i < 222; i++) glCallList(i);
-	/*glPushMatrix();
-		glTranslatef(0.0, 0.0, -1792.0);	// creates a 2nd parallell wall accross from bookstore
-		glCallList(136);					// we don't need that anymore
-	glPopMatrix();*/
+	for (int i = 586; i < 590; i++) glCallList(i);		// new courtyard calls
 	glPushMatrix();
 		glTranslatef(0.0, 1024.0, 0.0);
 		glCallList(152);
 	glPopMatrix();
 	for (int i = 195; i < 198; i++) glCallList(i);
 	glCallList(392);
+
 	for (int i = 430; i < 434; i++) glCallList(i);
 	// Brick with map on
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAP_2));
@@ -3116,7 +3078,16 @@ void DrawBricks ()
 	tp.CreateDisplayList (YZ, 122, 128.0, 128.0, 2608.0, 10000.0, 10000.0, 7.0, 243.5);		// long downstairs panel
 	tp.CreateDisplayList (YZ, 123, 128.0, 128.0, 2608.0, 10000.0, 42960.0, 7.0, 21.0);		// end downstairs panel
 	tp.CreateDisplayList (YZ, 124, 128.0, 128.0, 2608.0, 11088.0, 10000.0, 7.0, 278.5);		// long upstairs panel
-	tp.CreateDisplayList (XY, 136, 128.0, 128.0, -11017.0, 10000.0, 42960.0, 106.5, 7.0);	// corner exit to psc block from canteen (bookshop)
+
+	// -------- (Small courtyard near bookshop) -------
+	tp.CreateDisplayList(XY, 136, 128.0, 128.0, -17000.0, 10000.0, 42960.0, 153.2, 7.0);		// corner exit to psc block from canteen (bookshop)
+	tp.CreateDisplayList(YZ, 583, 128.0, 128.0, -200.0, 10000.0, 26000, 7.0, 105.5);		// "Canteen Block" lower downstairs panel
+	tp.CreateDisplayList(XY, 586, 128.0, 128.0, -200.0, 10000.0, 39499.0, 21.95, 7.0);		// inner downstairs wall
+	tp.CreateDisplayList(XY, 587, 128.0, 128.0, -200.0, 10000.0, 41168.5, 21.95, 7.0);		// stairs outerwall (bookshop side) downstairs
+	tp.CreateDisplayList(XY, 588, 128.0, 128.0, -200.0, 10000.0, 40790.0, 21.95, 7.0);		// stairs inner wall (bookshop side) downstairs wall
+	tp.CreateDisplayList(XY, 589, 128.0, 128.0, -17000.0, 10000.0, 26000, 131.25, 7.0);		// courtyard wall parrallel to bookshop
+	tp.CreateDisplayList(YZ, 584, 128.0, 128.0, -200.0, 10000.0, 40790.0, 7.0, 3.0);		// stairs wall joiner
+	tp.CreateDisplayList(YZ, 585, 128.0, 128.0, -17000.0, 10000.0, 26000, 7.0, 118.5);		// courtyard wall parrallel to bushcourt
 
 	// WALL_BRICK_USD_YZ
 	tp.CreateDisplayList (YZ, 200, 128.0, 128.0, 33808.0, 10576.0, 25344.0, 2.0, 1.0);		// panel 1 (around rusty man)
@@ -4844,6 +4815,7 @@ void DisplayGrass ()
 	glCallList(111);
 	glCallList(460);
 	glCallList(477);
+	glCallList(592);
 	for (int i = 461; i < 477; i++) glCallList(i);
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GRASS_2));
@@ -4858,6 +4830,7 @@ void DrawGrass ()
 {
 	tp.CreateDisplayList (XZ, 79, 64.0, 64.0, 4848.0, 9086.0, 3408.0, 417.5, 45.0);
 	tp.CreateDisplayList (XZ, 111, 64.0, 64.0, 4848.0, 10000.0, 10000.0, 417.5, 481.5);
+	tp.CreateDisplayList(XZ, 592, 64.0, 64.0, -15470, 10000.0, 26000, 218.3, 237.0);
 
 	// Slope ate the entrance
 	tp.CreateAngledPolygon(198, 64.0, 64.0,  4848.0, 31568.0,  31568.0,  4848.0,
@@ -5249,7 +5222,7 @@ void DrawMapExit ()
 //--------------------------------------------------------------------------------------
 void CreateTextureList()
 {
-	DrawGrass ();				// 79, 111, 198, 460-477
+	DrawGrass ();				// 79, 111, 198, 460-477, 592
 	DrawChancPosts ();			// 11-15, 235-237
 	DrawDoorPosts ();			// 25-27, 199
 	DrawAboveWindowBlock ();	// 20-24, 39, 43-46, 49-50, 53-56, 64-72, 95-96 208-213, 223-234, 238-239, 415, 424-425
@@ -5259,8 +5232,8 @@ void CreateTextureList()
 	DrawDoorPaving ();			// 47-48
 	DrawLibraryPosts ();		// 57-63, 442-447
 	DrawMainPosts ();			// 18-19, 51-52
-	DrawPavement ();			// 28, 73-94, 240-249, 428, 436
-	DrawBricks ();				// 101-110, 112-169, 180-197, 200-201, 390-399, 430-434
+	DrawPavement ();			// 28, 73-94, 240-249, 428, 436, 590-591
+	DrawBricks ();				// 101-110, 112-169, 180-197, 200-201, 390-399, 430-434, 583-589
 	DrawRoof();					// 1-10, 97-100, 170-179, 202-205, 214-222, 250-257, 296-299, 426-427
 	DrawEntranceSteps ();		// 258-295, 206-207
 	//bookshop steps
@@ -5275,6 +5248,8 @@ void CreateTextureList()
 	DrawCylinders ();			// 437-441
 	DrawMapExit ();				// 448-449, 454
 	// 455-459
+
+	//last number used: 592
 }
 
 
