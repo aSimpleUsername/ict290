@@ -823,6 +823,19 @@ void CreateBoundingBoxes()
 	cam.SetAABBMaxZ(21, 41180.0);
 	cam.SetAABBMinZ(21, 0.0);
 
+	// invisible wall in front of stairs
+	cam.SetAABBMaxX(22, -100.0);
+	cam.SetAABBMinX(22, -200.0);
+	cam.SetAABBMaxZ(22, 40135.0);
+	cam.SetAABBMinZ(22, 39501.0);
+	
+	// invisible wall in between stairs
+	cam.SetAABBMaxX(23, 2080.0);
+	cam.SetAABBMinX(23, -200.0);
+	cam.SetAABBMaxZ(23, 40100.0);
+	cam.SetAABBMinZ(23, 40000.0);
+
+
 	// current AABB array size = 25
 	}
 
@@ -1648,7 +1661,7 @@ void DrawBackdrop()
 
 
 //--------------------------------------------------------------------------------------
-// Display the chancellery windoe and door posts
+// Display the chancellery window and door posts
 //--------------------------------------------------------------------------------------
 void DisplayChancPosts ()
 {
