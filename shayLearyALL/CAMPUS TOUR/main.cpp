@@ -836,9 +836,12 @@ void CreatePlains()
 
 	// flat land (pavement and grass)
 	cam.SetPlains (FLAT_PLAIN, 0.0, 36000.0 , 10450.0, 10450.0, 10000.0, 17000.0);
-	cam.SetPlains (FLAT_PLAIN, 0.0, 6500.0 , 10450.0, 10450.0, 17000.0, 40000.0);
+	//Collided with stairs before
+	cam.SetPlains (FLAT_PLAIN, 0.0, 6500.0 , 10450.0, 10450.0, 17000.0, 30000.0);
 	cam.SetPlains (FLAT_PLAIN, 27000.0, 36000.0 , 10450.0, 10450.0, 17000.0, 40000.0);
-	cam.SetPlains (FLAT_PLAIN, 0.0, 36000.0 , 10450.0, 10450.0, 40000.0, 50000.0);
+	//Collied with stairs before
+	//cam.SetPlains (FLAT_PLAIN, 0.0, 36000.0 , 10450.0, 10450.0, 40000.0, 50000.0);
+	cam.SetPlains(FLAT_PLAIN, 3000.0, 36000.0, 10450.0, 10450.0, 40000.0, 50000.0);
 	
 	// top of lower hill
 	cam.SetPlains (FLAT_PLAIN, 9000.0, 22000.0 , 10650.0, 10650.0, 19000.0, 23000.0);
@@ -873,17 +876,15 @@ void CreatePlains()
 		}
 	}
 	
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	//Author: Vlad Kennebury
+	//Date: 07/09/2020
+	//Fixed stairs collision
+
 	//bookshop steps
 
-	/*
-	GLdouble xLocation = 25500;
-
-	step = 11125.0;
-	stepLength = 19800.0;
-	*/
-
 	GLdouble xLocation = 1950;
-	step = 11405.0;
+	step = 11105.0;
 	stepLength = 40150.0;
 	for (int i = 0; i < 18; i++)
 	{
@@ -894,35 +895,25 @@ void CreatePlains()
 
 	//large bookshop step
 
-	/*
-	xLocation = 25642;
-	step = 11189.0;
-	stepLength = 19800.0;
-	*/
 	xLocation = 2092;
 	step = 11069.0;
 	stepLength = 39500;
 	cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 142, step + 400, step + 400, stepLength, stepLength + 750);
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	//bookshop 2nd steps
 
-	/*
-	xLocation = 23800;
-	step = 12125.0;
-	stepLength = 19050.0;
-	*/
 	xLocation = -175;
 	step = 12090.0;
-	//stepLength = 39500;
-	stepLength = 39000;
+	stepLength = 39500;
 	for (int i = 0; i < 18; i++)
 	{
 		cam.SetPlains(FLAT_PLAIN, xLocation - 42, xLocation, step + 400, step + 400, stepLength, stepLength + 750);
 		step -= 64.0;
 		xLocation += 142.0;
 	}
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// temp plain to take down to ECL1
 	cam.SetPlains(ZY_PLAIN, 3200.0, 4800.0, 10450.0, 9370.0, 53400.0, 57900.0);
@@ -3801,9 +3792,6 @@ void DrawEntranceSteps()
 // Updated Stairs
 void DrawBookSteps()
 {
-	/*GLdouble xLocation = 25500;
-	step = 11125.0;
-	stepLength = 19800.0;*/
 
 	GLdouble xLocation = 1950;
 	step = 11005.0;
