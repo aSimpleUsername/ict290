@@ -411,6 +411,8 @@ void CreatePlains();
 // deletes image and clears memory
 void DeleteImageFromMemory(unsigned char* tempImage);
 
+void checkPlayerPosition();
+
 //--------------------------------------------------------------------------------------
 //  Main function 
 //--------------------------------------------------------------------------------------
@@ -491,6 +493,20 @@ void myinit()
 	initKeyStates();	//clear keystate array
 }
 
+void checkPlayerPosition()
+{
+	if (cam.GetLR() < 50 && cam.GetLR() > -175)
+	{
+		if (cam.GetFB() < 40250 && cam.GetFB() > 39500)
+		{
+			if (cam.GetUD() < 12400 && cam.GetUD() > 12350)
+			{
+				cam.Position(3652.0, 10450.0, 42133.0, 90.0);
+			}
+		}
+	}
+}
+
 //--------------------------------------------------------------------------------------
 //  Main Display Function
 //--------------------------------------------------------------------------------------
@@ -498,6 +514,9 @@ void Display()
 {
 	//process user input
 	processKeys();
+
+	checkPlayerPosition();
+
 	// print postion to assist development
 	cam.printPosition();
 
