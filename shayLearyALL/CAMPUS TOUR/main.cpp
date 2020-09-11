@@ -5,6 +5,7 @@
 //#include <windows.h> // only used if mouse is required (not portable)
 #include "camera.h"
 #include "texturedPolygons.h"
+#include "Portal.h"
 
 //--------------------------------------------------------------------------------------
 
@@ -411,7 +412,8 @@ void CreatePlains();
 // deletes image and clears memory
 void DeleteImageFromMemory(unsigned char* tempImage);
 
-void checkPlayerPosition();
+void stairsPortal();
+void stairsReturnPortal();
 
 //--------------------------------------------------------------------------------------
 //  Main function 
@@ -493,19 +495,47 @@ void myinit()
 	initKeyStates();	//clear keystate array
 }
 
-void checkPlayerPosition()
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//Author: Vlad Kennebury
+//Date: 11/09/2020
+// Progress on portals
+
+void stairsPortal()
 {
-	if (cam.GetLR() < 50 && cam.GetLR() > -175)
+	Portal steps;
+
+	steps.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	steps.portalDimensions(-200, -50, -750);
+	if (steps.createPortal(75, 12400, 40250) == true)
 	{
-		if (cam.GetFB() < 40250 && cam.GetFB() > 39500)
-		{
-			if (cam.GetUD() < 12400 && cam.GetUD() > 12350)
-			{
-				cam.Position(3652.0, 10450.0, 42133.0, 90.0);
-			}
-		}
+		cam.Position(3652, 10450, 37133, 0);
 	}
 }
+
+void drawPortal()
+{
+	tp.CreateDisplayList(YZ, 593, 750.0, 650.0, -50, 12090, 39500, 1.0, 1.0);
+}
+
+void displayPortal()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CHANC_DOOR_1));
+	glCallList(593);
+}
+
+void stairsReturnPortal()
+{
+	Portal stepsReturn;
+
+	stepsReturn.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	stepsReturn.portalDimensions(-1000, -100, -1000);
+	if (stepsReturn.createPortal(4052.0, 10500.0, 35133.0) == true)
+	{
+		cam.Position(275, 12234, 39810, 0);
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //--------------------------------------------------------------------------------------
 //  Main Display Function
@@ -515,7 +545,8 @@ void Display()
 	//process user input
 	processKeys();
 
-	checkPlayerPosition();
+	stairsPortal();
+	stairsReturnPortal();
 
 	// print postion to assist development
 	cam.printPosition();
@@ -1675,6 +1706,7 @@ void DrawBackdrop()
 	DisplayRedPosts ();
 	DisplayRoof();
 	DisplayStepBricks ();
+	displayPortal(); //TEST
 	if (lightsOn) DisplayLights ();
 }
 
@@ -5268,12 +5300,10 @@ void CreateTextureList()
 	DrawCylinders ();			// 437-441
 	DrawMapExit ();				// 448-449, 454
 	// 455-459
+	drawPortal(); //TEST
 
 	//last number used: 592
 }
-
-
-
 
 //--------------------------------------------------------------------------------------
 //  Increments frame count used for setting movement speed
