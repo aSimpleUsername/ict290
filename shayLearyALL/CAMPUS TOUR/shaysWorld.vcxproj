@@ -124,6 +124,7 @@
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp" />
     <ClCompile Include="EasySound.cpp" />
+    <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlainLinkedList.cpp" />
     <ClCompile Include="PlainNode.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="cameraMap.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="EasySound.h" />
+    <ClInclude Include="lodepng.h" />
     <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut.h" />
     <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_ext.h" />
     <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_std.h" />
