@@ -1,4 +1,4 @@
-#include <math.h>
+ #include <math.h>
 #include <GL/glut.h>
 #include <time.h>
 
@@ -901,7 +901,7 @@ void CreateBoundingBoxes()
 
 	// Book Shop
 	cam.SetAABBMaxX(17, 2608.0);
-	cam.SetAABBMinX(17, -17000.0);
+	cam.SetAABBMinX(17, -257000.0);
 	cam.SetAABBMaxZ(17, 50000.0);
 	cam.SetAABBMinZ(17, 42960.0);
 
@@ -915,19 +915,19 @@ void CreateBoundingBoxes()
 	cam.SetAABBMaxX(19, 2904.0);
 	cam.SetAABBMinX(19, -200.0);
 	cam.SetAABBMaxZ(19, 39484.0);
-	cam.SetAABBMinZ(19, 26000.0);
+	cam.SetAABBMinZ(19, 29800.0);
 
 	// courtyard wall opposite bookshop
 	cam.SetAABBMaxX(20, -200.0);
-	cam.SetAABBMinX(20, -17000);
-	cam.SetAABBMaxZ(20, 26000.0);
-	cam.SetAABBMinZ(20, 25900.0);
+	cam.SetAABBMinX(20, -25700);
+	cam.SetAABBMaxZ(20, 29800.0);
+	cam.SetAABBMinZ(20, 29700.0);
 
 	// far courtyard wall parrallel to bushcourt
-	cam.SetAABBMaxX(21, -17000);
-	cam.SetAABBMinX(21, -18000);
-	cam.SetAABBMaxZ(21, 41180.0);
-	cam.SetAABBMinZ(21, 0.0);
+	cam.SetAABBMaxX(21, -25700.0);
+	cam.SetAABBMinX(21, -25800.0);
+	cam.SetAABBMaxZ(21, 49800.0);
+	cam.SetAABBMinZ(21, 29800.0);
 
 	// invisible wall in front of stairs
 	cam.SetAABBMaxX(22, 960.0);
@@ -943,6 +943,7 @@ void CreateBoundingBoxes()
 
 
 	// current AABB array size = 25
+	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 	}
 
 //--------------------------------------------------------------------------------------
@@ -2552,7 +2553,7 @@ void DisplayMainPosts ()
 		glPopMatrix();
 		step -= 1940.0;
 	}
-
+	 
 	// first on chanc steps
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAIN_POST));
 	glCallList(51);
@@ -2566,6 +2567,72 @@ void DisplayMainPosts ()
 		glTranslatef(128.0, 0.0, 0.0);
 		glCallList(52);
 	glPopMatrix();
+
+	// courtyard
+
+	step += -1940.0 * 3;			//the gap between library posts and couryard posts
+	for (int i = 0; i < 13; i++)
+	{
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAIN_POST));
+		glPushMatrix();
+		glTranslatef(step, 0.0, 30880.0);
+		glCallList(18);
+		glPopMatrix();
+		glPushMatrix();
+		glTranslatef(step, 0.0, 31008.0);
+		glCallList(18);
+		glPopMatrix();
+
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAIN_POST_2));
+		glPushMatrix();
+		glTranslatef(step, 0.0, 30880.0);
+		glCallList(19);
+		glPopMatrix();
+		glPushMatrix();
+		glTranslatef(step + 128.0, 0.0, 30880.0);
+		glCallList(19);
+		glPopMatrix();
+		step -= 1940.0;
+	}
+
+	GLdouble currentStep = step;
+	step = 0;
+	stepLength = 0.0;
+	step2 = 0.0;
+	for (int j = 0; j < 2; j++)
+	{
+		glPushMatrix();
+		glTranslatef((-1940.0 * 3) + (-1940.0 * 14), 0.0, 1930.0 * 11);			// the last pillar is 3 pillar lengths form the bush court pillar, and the first one is 14 pillar lengths from that one
+		glTranslatef(stepLength, 0.0, step2);
+		for (int i = 0; i < 5; i++)
+		{
+			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAIN_POST));
+			glPushMatrix();
+			glTranslatef(0.0, 0.0, step);
+			glCallList(18);
+			glPopMatrix();
+			glPushMatrix();
+			glTranslatef(0.0, 0.0, step + 128.0);
+			glCallList(18);
+			glPopMatrix();
+
+			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAIN_POST_2));
+			glPushMatrix();
+			glTranslatef(0.0, 0.0, step);
+			glCallList(19);
+			glPopMatrix();
+			glPushMatrix();
+			glTranslatef(128.0, 0.0, step);
+			glCallList(19);
+			glPopMatrix();
+
+			step += 1930.0;
+		}
+		stepLength -= 27192.0 - 1930.0 * 2;		// there's two less pillars then there are bushcourt (parallel to library)
+		step2 -= 32810.0 - (1930.0 * (12));		// there's 12 less pillars then there are bushcourt (perpendicular to library)
+		glPopMatrix();
+	}
+
 }
 
 void DrawMainPosts ()
@@ -2925,6 +2992,7 @@ void DisplayPavement ()
 	glCallList(243);
 	glCallList(590);	//new courtyard calls
 	glCallList(591);
+	glCallList(594);
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PAVEMENT_TOP_FLIP));
 	glCallList(74);
 	glCallList(245);
@@ -2979,10 +3047,11 @@ void DrawPavement ()
 	tp.CreateDisplayList (XZ, 244, 64.0, 128.0, 8189.0, 10000.0, 42928.0, 44.8, 1.80); // library door way
 	tp.CreateDisplayList (XZ, 243, 64.0, 128.0, 2576.0, 10000.0, 42928.0, 36.0, 21.0);	// entrance to IT block
 	tp.CreateDisplayList (XZ, 242, 64.0, 128.0, 4848.0, 10000.0, 42928.0, 27.5, 21.0);	// entrance to IT block
-	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, -17000.0, 10000.0, 41168.0, 153.2, 29.0);	// entance to  block (bookshop walkway)
+	tp.CreateDisplayList (XZ, 241, 128.0, 64.0, -25700.0, 10000.0, 41168.0, 221.2, 29.0);	// courtyard walkway
 	tp.CreateDisplayList (XZ, 240, 128.0, 64.0, 31568.0, 10000.0, 40816.0, 1.0, 1.0);	// corner space filler
-	tp.CreateDisplayList(XZ, 590, 128.0, 64.0, -1500, 10000.0, 26000, 32.1, 237.0);	// courtyard - bushcourt side
-	tp.CreateDisplayList(XZ, 591, 128.0, 64.0, -17000, 10000.0, 26000, 12.0, 237.0);	// courtyard - not bushcourt side
+	tp.CreateDisplayList (XZ, 590, 128.0, 64.0, -1800, 10000.0, 26000, 35.1, 237.0);	// courtyard - bushcourt side 
+	tp.CreateDisplayList (XZ, 591, 128.0, 64.0, -25700.0, 10000.0, 26000, 12.0, 237.0);	// courtyard - not bushcourt side
+	tp.CreateDisplayList(XZ, 594, 128.0, 64.0, -25700.0, 10000.0, 40845.0, 186.75, 5.05);	// courtyard between walkway and grass
 
 
 	// PAVEMENT_JOINS
@@ -3263,15 +3332,15 @@ void DrawBricks ()
 	tp.CreateDisplayList (YZ, 123, 128.0, 128.0, 2608.0, 10000.0, 42960.0, 7.0, 21.0);		// end downstairs panel
 	tp.CreateDisplayList (YZ, 124, 128.0, 128.0, 2608.0, 11088.0, 10000.0, 7.0, 278.5);		// long upstairs panel
 
-	// -------- (Small courtyard near bookshop) -------
-	tp.CreateDisplayList(XY, 136, 128.0, 128.0, -17000.0, 10000.0, 42960.0, 153.2, 7.0);		// corner exit to psc block from canteen (bookshop)
-	tp.CreateDisplayList(YZ, 583, 128.0, 128.0, -200.0, 10000.0, 26000, 7.0, 105.5);		// "Canteen Block" lower downstairs panel
+	// -------- (courtyard near bookshop) -------
+	tp.CreateDisplayList(XY, 136, 128.0, 128.0, -25700.0, 10000.0, 42960.0, 221.2, 7.0);	// corner exit to psc block from canteen (bookshop)
+	tp.CreateDisplayList(YZ, 583, 128.0, 128.0, -200.0, 10000.0, 29800, 7.0, 75.8);			// "Canteen Block" lower downstairs panel
 	tp.CreateDisplayList(XY, 586, 128.0, 128.0, -200.0, 10000.0, 39499.0, 21.95, 7.0);		// inner downstairs wall
 	tp.CreateDisplayList(XY, 587, 128.0, 128.0, -200.0, 10000.0, 41168.5, 21.95, 7.0);		// stairs outerwall (bookshop side) downstairs
 	tp.CreateDisplayList(XY, 588, 128.0, 128.0, -200.0, 10000.0, 40790.0, 21.95, 7.0);		// stairs inner wall (bookshop side) downstairs wall
-	tp.CreateDisplayList(XY, 589, 128.0, 128.0, -17000.0, 10000.0, 26000, 131.25, 7.0);		// courtyard wall parrallel to bookshop
+	tp.CreateDisplayList(XY, 589, 128.0, 128.0, -25700.0, 10000.0, 29800, 200.0, 7.0);		// courtyard wall parrallel to bookshop
 	tp.CreateDisplayList(YZ, 584, 128.0, 128.0, -200.0, 10000.0, 40790.0, 7.0, 3.0);		// stairs wall joiner
-	tp.CreateDisplayList(YZ, 585, 128.0, 128.0, -17000.0, 10000.0, 26000, 7.0, 118.5);		// courtyard wall parrallel to bushcourt
+	tp.CreateDisplayList(YZ, 585, 128.0, 128.0, -25700.0, 10000.0, 29800, 7.0, 90.5);		// courtyard wall parrallel to bushcourt
 
 	// WALL_BRICK_USD_YZ
 	tp.CreateDisplayList (YZ, 200, 128.0, 128.0, 33808.0, 10576.0, 25344.0, 2.0, 1.0);		// panel 1 (around rusty man)
@@ -5019,7 +5088,8 @@ void DrawGrass ()
 {
 	tp.CreateDisplayList (XZ, 79, 64.0, 64.0, 4848.0, 9086.0, 3408.0, 417.5, 45.0);
 	tp.CreateDisplayList (XZ, 111, 64.0, 64.0, 4848.0, 10000.0, 10000.0, 417.5, 481.5);
-	tp.CreateDisplayList(XZ, 592, 64.0, 64.0, -15470, 10000.0, 26000, 218.3, 237.0);
+
+	tp.CreateDisplayList(XZ, 592, 64.0, 64.0, -24165.0, 10000.0, 26000, 349.5, 232.0);		//courtyard
 
 	// Slope ate the entrance
 	tp.CreateAngledPolygon(198, 64.0, 64.0,  4848.0, 31568.0,  31568.0,  4848.0,
@@ -5421,7 +5491,7 @@ void CreateTextureList()
 	DrawDoorPaving ();			// 47-48
 	DrawLibraryPosts ();		// 57-63, 442-447
 	DrawMainPosts ();			// 18-19, 51-52
-	DrawPavement ();			// 28, 73-94, 240-249, 428, 436, 590-591
+	DrawPavement ();			// 28, 73-94, 240-249, 428, 436, 590-591, 594
 	DrawBricks ();				// 101-110, 112-169, 180-197, 200-201, 390-399, 430-434, 583-589
 	DrawRoof();					// 1-10, 97-100, 170-179, 202-205, 214-222, 250-257, 296-299, 426-427
 	DrawEntranceSteps ();		// 258-295, 206-207
@@ -5437,10 +5507,12 @@ void CreateTextureList()
 	DrawCylinders ();			// 437-441
 	DrawMapExit ();				// 448-449, 454
 	// 455-459
+	
+	drawPortal();				//594
 	drawPortal(); //TEST
 	//drawSkyBox();
 
-	//last number used: 592
+	//last number used: 593
 }
 
 //--------------------------------------------------------------------------------------
