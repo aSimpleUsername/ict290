@@ -417,6 +417,11 @@ void DeleteImageFromMemory(unsigned char* tempImage);
 void stairsPortal();
 void stairsReturnPortal();
 
+//void drawSkyBox();
+//void displaySkyBox();
+
+//bool gameWorld = false;
+
 //--------------------------------------------------------------------------------------
 //  Main function 
 //--------------------------------------------------------------------------------------
@@ -523,7 +528,25 @@ void displayPortal()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
 	glCallList(593);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	glCallList(594);
 }
+
+/*
+void drawSkyBox()
+{
+	tp.CreateDisplayList(XZ, 594, 25000, 25000, 0, 34000, 0, 2.0, 2.0);
+	tp.CreateDisplayList(XZ, 595, 25000, 25000, 0, -10000, 0, 2.0, 2.0);
+
+	//tp.CreateDisplayList(YZ, 596, 25000, 25000, 0, -15000, 0, 2.0, 2.0);
+}
+
+void displaySkyBox()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	for (int i = 594; i < 597; i++) glCallList(i);
+}
+*/
 
 void stairsReturnPortal()
 {
@@ -533,7 +556,7 @@ void stairsReturnPortal()
 	stepsReturn.portalDimensions(-1000, -100, -1000);
 	if (stepsReturn.createPortal(4052.0, 10500.0, 35133.0) == true)
 	{
-		cam.Position(275, 12234, 39810, 0);
+		cam.Position(1400, 11234, 39740, 0);
 	}
 }
 
@@ -580,6 +603,7 @@ void Display()
 
 		// display images
 		DrawBackdrop();
+
 	glPopMatrix();
 	glDisable (GL_TEXTURE_2D); 
 
@@ -876,16 +900,16 @@ void CreateBoundingBoxes()
 	cam.SetAABBMinZ(21, 0.0);
 
 	// invisible wall in front of stairs
-	cam.SetAABBMaxX(22, -100.0);
-	cam.SetAABBMinX(22, -200.0);
-	cam.SetAABBMaxZ(22, 40135.0);
+	cam.SetAABBMaxX(22, 960.0);
+	cam.SetAABBMinX(22, 900.0);
+	cam.SetAABBMaxZ(22, 40012.0);
 	cam.SetAABBMinZ(22, 39501.0);
 	
 	// invisible wall in between stairs
-	cam.SetAABBMaxX(23, 2080.0);
-	cam.SetAABBMinX(23, -200.0);
-	cam.SetAABBMaxZ(23, 40100.0);
-	cam.SetAABBMinZ(23, 40000.0);
+	cam.SetAABBMaxX(23, 2092.0);
+	cam.SetAABBMinX(23, 960.0);
+	cam.SetAABBMaxZ(23, 40300.0);
+	cam.SetAABBMinZ(23, 40012.0);
 
 
 	// current AABB array size = 25
@@ -958,31 +982,12 @@ void CreatePlains()
 		xLocation -= 142.0;
 	}
 
-	/*
-	GLdouble xLocation = 1950;
-	step = 11105.0;
-	stepLength = 40150.0;
-	for (int i = 0; i < 18; i++)
-	{
-		cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 42, step + 400, step + 400, stepLength, stepLength + 750);
-		step -= 64.0;
-		xLocation -= 142.0;
-	}
-	*/
-
 	//large bookshop step
 
 	xLocation = 2092;
 	step = 10569.0;
 	stepLength = 39500;
 	cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 142, step + 400, step + 400, stepLength, stepLength + 750);
-
-	/*
-	xLocation = 2092;
-	step = 11069.0;
-	stepLength = 39500;
-	cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 142, step + 400, step + 400, stepLength, stepLength + 750);
-	*/
 
 	//bookshop 2nd steps
 
@@ -995,18 +1000,6 @@ void CreatePlains()
 		step -= 64.0;
 		xLocation += 142.0;
 	}
-
-	/*
-	xLocation = -175;
-	step = 12090.0;
-	stepLength = 39500;
-	for (int i = 0; i < 18; i++)
-	{
-		cam.SetPlains(FLAT_PLAIN, xLocation - 42, xLocation, step + 400, step + 400, stepLength, stepLength + 750);
-		step -= 64.0;
-		xLocation += 142.0;
-	}
-	*/
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1741,6 +1734,7 @@ void DrawBackdrop()
 	DisplayRoof();
 	DisplayStepBricks ();
 	displayPortal(); //TEST
+	//displaySkyBox();
 	if (lightsOn) DisplayLights ();
 }
 
@@ -3703,6 +3697,7 @@ void DrawRoof()
 	tp.CreateDisplayList (XY, 427, 64.0, 128.0, 33808.0, 11999.0, 22096.0, 0.75, 0.75);
 	
 	// Joins where roof slants
+	
 	DrawAngledRoofBeam(1, 33848.0 - 1867.0, 12012.72 - 687.13, 41226.0, 15.21);
 	DrawAngledRoofBeam(2, 33848.0 - 1481.0, 12012.72 - 545.07, 41612.0, 12.0);
 	DrawAngledRoofBeam(3, 33848.0 - 1095.0, 12012.72 - 403.01, 41998.0, 8.78);
@@ -3713,6 +3708,7 @@ void DrawRoof()
 	DrawAngledRoofBeam2(172, 32752.0, 11998.0 - 388.28, 43056.0 - 1055.0, 8.78);
 	DrawAngledRoofBeam2(173, 33138.0, 11998.0 - 246.22, 43056.0 - 669.0,  5.57);
 	DrawAngledRoofBeam2(174, 33524.0, 11998.0 - 104.16, 43056.0 - 283.0,  2.36);
+	
 }
 
 // --------------------------------------------------------------------------------------
@@ -3817,9 +3813,12 @@ void DisplayEntranceSteps()
 	glPopMatrix();
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////
+
 //Author: Vlad Kennebury
 // Date: 05/09/2020
 // Updated Stairs
+// Version 2 - Date: 12/09/2020
 void DisplayBookSteps()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
@@ -3835,9 +3834,6 @@ void DisplayBookSteps()
 	for (int i = 544; i < 546; i++) glCallList(i);
 }
 
-//Author: Vlad Kennebury
-// Date: 05/09/2020
-// Updated Stairs
 void DisplayBookStepsTwo()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_PAVING_1));
@@ -3852,6 +3848,8 @@ void DisplayBookStepsTwo()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
 	for (int i = 579; i < 582; i++) glCallList(i);
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////
 
 void DrawEntranceSteps()
 {
@@ -3885,60 +3883,53 @@ void DrawEntranceSteps()
 
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////
+
 //Author: Vlad Kennebury
 // Date: 05/09/2020
 // Updated Stairs
+// Version 2 - 12/09/2020
 void DrawBookSteps()
 {
 	GLdouble xLocation = 1950;
-	//step = 11005.0;
 	step = 10505.0;
 	stepLength = 40300.0;
-	//stepLength = 40150.0;
-	//for (int i = 508; i < 524; i++)
 	for (int i = 508; i < 518; i++)
 	{
 		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 0.71, 1.0);
 		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 8.0);
-
-		//tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 0.277, 3.2);
-		//tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 10.0);
 
 		step -= 64.0;
 		xLocation -= 142.0;
 	}
 	
 	xLocation = 2092;
-	step = 10569.0; //+500
+	step = 10569.0;
 	stepLength = 39500;
 	for (int i = 542; i < 543; i++)
 	{
 		tp.CreateDisplayList(XZ, i, 512.0, 512.0, xLocation, step, stepLength, 1.0, 2.5);
-		//tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 1.0, 6.4);
 		tp.CreateDisplayList(YZ, i + 3, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 20.0);
 	}
 }
 
-//Author: Vlad Kennebury
-// Date: 05/09/2020
-// Updated Stairs
 void DrawBookStepsTwo()
 {
 	GLdouble xLocation = 1950;
-	step = 11080.0; //12090.0
+	step = 11080.0;
 	stepLength = 39500;
 	for (int i = 546; i < 554; i++)
-	//for (int i = 546; i < 562; i++)
 	{
 		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 990, step, stepLength, 0.71, 1.00);
 		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 848, step - 64.0, stepLength, 1.0, 8.0);
 
-		//tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 2125, step, stepLength, 0.71, 1.25);
-		//tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 1983, step - 64.0, stepLength, 1.0, 10.0);
 		step -= 64.0;
 		xLocation += 142.0;
 	}
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
 
 //--------------------------------------------------------------------------------------
 // Display Bench
@@ -5346,6 +5337,7 @@ void CreateTextureList()
 	DrawMapExit ();				// 448-449, 454
 	// 455-459
 	drawPortal(); //TEST
+	//drawSkyBox();
 
 	//last number used: 592
 }
