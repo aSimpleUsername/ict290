@@ -277,7 +277,8 @@ GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
 #define WELCOME						218
 #define EXIT						219
 #define NO_EXIT						222
-
+//Portal texture
+#define PORTAL						223
 // 223 Next
 
 
@@ -506,8 +507,8 @@ void stairsPortal()
 	Portal steps;
 
 	steps.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
-	steps.portalDimensions(-200, -50, -750);
-	if (steps.createPortal(75, 12400, 40250) == true)
+	steps.portalDimensions(-300, -200, -700);
+	if (steps.createPortal(1360, 11430, 40250) == true)
 	{
 		cam.Position(3652, 10450, 37133, 0);
 	}
@@ -515,12 +516,12 @@ void stairsPortal()
 
 void drawPortal()
 {
-	tp.CreateDisplayList(YZ, 593, 750.0, 650.0, -50, 12090, 39500, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 593, 650.0, 512.0, 960, 11080, 39500, 1.0, 1.0);
 }
 
 void displayPortal()
 {
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CHANC_DOOR_1));
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
 	glCallList(593);
 }
 
@@ -948,6 +949,17 @@ void CreatePlains()
 	//bookshop steps
 
 	GLdouble xLocation = 1950;
+	step = 10605.0;
+	stepLength = 40300.0;
+	for (int i = 0; i < 12; i++)
+	{
+		cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 42, step + 400, step + 400, stepLength, stepLength + 512);
+		step -= 64.0;
+		xLocation -= 142.0;
+	}
+
+	/*
+	GLdouble xLocation = 1950;
 	step = 11105.0;
 	stepLength = 40150.0;
 	for (int i = 0; i < 18; i++)
@@ -956,17 +968,35 @@ void CreatePlains()
 		step -= 64.0;
 		xLocation -= 142.0;
 	}
+	*/
 
 	//large bookshop step
 
 	xLocation = 2092;
-	step = 11069.0;
+	step = 10569.0;
 	stepLength = 39500;
 	cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 142, step + 400, step + 400, stepLength, stepLength + 750);
 
+	/*
+	xLocation = 2092;
+	step = 11069.0;
+	stepLength = 39500;
+	cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 142, step + 400, step + 400, stepLength, stepLength + 750);
+	*/
 
 	//bookshop 2nd steps
 
+	xLocation = 960;
+	step = 11090.0;
+	stepLength = 39500;
+	for (int i = 0; i < 10; i++)
+	{
+		cam.SetPlains(FLAT_PLAIN, xLocation - 42, xLocation, step + 400, step + 400, stepLength, stepLength + 512);
+		step -= 64.0;
+		xLocation += 142.0;
+	}
+
+	/*
 	xLocation = -175;
 	step = 12090.0;
 	stepLength = 39500;
@@ -976,6 +1006,7 @@ void CreatePlains()
 		step -= 64.0;
 		xLocation += 142.0;
 	}
+	*/
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1495,7 +1526,6 @@ void CreateTextures()
 	image = tp.LoadTexture("data/windowledgeLibfb.raw", 1024, 32);
 	tp.CreateTexture(WINDOWLEDGE_LIB_B, image, 1024, 32);
 
-
 	image = tp.LoadTexture("data/windowledgeLibta.raw", 1024, 128);
 	tp.CreateTexture(WINDOWLEDGE_LIB_TOP_A, image, 1024, 128);
 
@@ -1665,6 +1695,9 @@ void CreateTextures()
 	
 	image = tp.LoadTexture("data/windows/windowLibLong.raw", 256, 128);
 	tp.CreateTexture(WINDOW_LIB_LONG, image, 256, 128);
+
+	image = tp.LoadTexture("data/spaceportal.png");
+	tp.CreatePNGTexture(PORTAL, image, 512, 385);
 
 	image = tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
@@ -3857,24 +3890,31 @@ void DrawEntranceSteps()
 // Updated Stairs
 void DrawBookSteps()
 {
-
 	GLdouble xLocation = 1950;
-	step = 11005.0;
-	stepLength = 40150.0;
-	for (int i = 508; i < 524; i++)
+	//step = 11005.0;
+	step = 10505.0;
+	stepLength = 40300.0;
+	//stepLength = 40150.0;
+	//for (int i = 508; i < 524; i++)
+	for (int i = 508; i < 518; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 0.277, 3.2);
-		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 10.0);
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 0.71, 1.0);
+		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 8.0);
+
+		//tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 0.277, 3.2);
+		//tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 10.0);
+
 		step -= 64.0;
 		xLocation -= 142.0;
 	}
 	
 	xLocation = 2092;
-	step = 11069.0;
+	step = 10569.0; //+500
 	stepLength = 39500;
 	for (int i = 542; i < 543; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 1.0, 6.4);
+		tp.CreateDisplayList(XZ, i, 512.0, 512.0, xLocation, step, stepLength, 1.0, 2.5);
+		//tp.CreateDisplayList(XZ, i, 512.0, 200.0, xLocation, step, stepLength, 1.0, 6.4);
 		tp.CreateDisplayList(YZ, i + 3, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 20.0);
 	}
 }
@@ -3885,12 +3925,16 @@ void DrawBookSteps()
 void DrawBookStepsTwo()
 {
 	GLdouble xLocation = 1950;
-	step = 12090.0;
+	step = 11080.0; //12090.0
 	stepLength = 39500;
-	for (int i = 546; i < 562; i++)
+	for (int i = 546; i < 554; i++)
+	//for (int i = 546; i < 562; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 2125, step, stepLength, 0.71, 1.25);
-		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 1983, step - 64.0, stepLength, 1.0, 10.0);
+		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 990, step, stepLength, 0.71, 1.00);
+		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 848, step - 64.0, stepLength, 1.0, 8.0);
+
+		//tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 2125, step, stepLength, 0.71, 1.25);
+		//tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 1983, step - 64.0, stepLength, 1.0, 10.0);
 		step -= 64.0;
 		xLocation += 142.0;
 	}
