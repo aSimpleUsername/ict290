@@ -277,9 +277,32 @@ GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
 #define WELCOME						218
 #define EXIT						219
 #define NO_EXIT						222
-//Portal texture
+//NEW TEXTURES
 #define PORTAL						223
-// 223 Next
+#define BIN_GREEN					224
+#define BIN_RED						225
+#define BOOKSHOP_DOOR			    226
+#define BOOKSHOP_WINDOW_1			227
+#define BOOKSHOP_WINDOW_2			228
+#define BOOKSHOP_WINDOW_3			229
+#define CHARLIE						230
+#define CONNOR						231
+#define COURTYARD_BOARD				232
+#define COURTYARD_BOARD_2			233
+#define COURTYARD_DOOR_1			234
+#define COURTYARD_DOOR_2			235
+#define COURTYARD_DOOR_3			236
+#define COURTYARD_DOOR_4			237
+#define COURTYARD_DOOR_5			238
+#define COURTYARD_EXIT				239
+#define COURTYARD_WINDOW_1			240
+#define FIRE_EXTINGUISHER			241
+#define LEVEL_1_SIGN		    	242
+#define VENDING_MACHINE_1			243
+#define VENDING_MACHINE_2			244
+#define VENDING_MACHINE_3			245
+#define VLAD						246
+// 246 Next
 
 
 //--------------------------------------------------------------------------------------
@@ -527,6 +550,13 @@ void drawPortal()
 void displayPortal()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	/*
+	glPushMatrix();
+	glTranslatef(1360, 11430, 40250);
+	glRotatef(90, 0, 0, 1);
+	*/
+	glPopMatrix();
+
 	glCallList(593);
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
 	glCallList(594);
@@ -1688,9 +1718,80 @@ void CreateTextures()
 	
 	image = tp.LoadTexture("data/windows/windowLibLong.raw", 256, 128);
 	tp.CreateTexture(WINDOW_LIB_LONG, image, 256, 128);
-
+	
+	//NEW TEXTURES
 	image = tp.LoadTexture("data/spaceportal.png");
 	tp.CreatePNGTexture(PORTAL, image, 512, 385);
+	
+	image = tp.LoadTexture("data/bingreen.png");
+	tp.CreatePNGTexture(BIN_GREEN, image, 128, 198);
+
+	image = tp.LoadTexture("data/binred.png");
+	tp.CreatePNGTexture(BIN_RED, image, 134, 198);
+
+	image = tp.LoadTexture("data/bookshopdoor.png");
+	tp.CreatePNGTexture(BOOKSHOP_DOOR, image, 283, 281);
+
+	image = tp.LoadTexture("data/bookshopwindow1.png");
+	tp.CreatePNGTexture(BOOKSHOP_WINDOW_1, image, 397, 292);
+
+	image = tp.LoadTexture("data/bookshopwindow2.png");
+	tp.CreatePNGTexture(BOOKSHOP_WINDOW_2, image, 217, 284);
+
+	image = tp.LoadTexture("data/bookshopwindow3.png");
+	tp.CreatePNGTexture(BOOKSHOP_WINDOW_3, image, 361, 284);
+
+	image = tp.LoadTexture("data/charlie.png");
+	tp.CreatePNGTexture(CHARLIE, image, 512, 512);
+
+	image = tp.LoadTexture("data/connor.png");
+	tp.CreatePNGTexture(CONNOR, image, 512, 512);
+
+	image = tp.LoadTexture("data/courtyardboard.png");
+	tp.CreatePNGTexture(COURTYARD_BOARD, image, 468, 278);
+
+	image = tp.LoadTexture("data/courtyardboard2.png");
+	tp.CreatePNGTexture(COURTYARD_BOARD_2, image, 481, 239);
+
+	image = tp.LoadTexture("data/courtyarddoor1.png");
+	tp.CreatePNGTexture(COURTYARD_DOOR_1, image, 294, 335);
+
+	image = tp.LoadTexture("data/courtyarddoor2.png");
+	tp.CreatePNGTexture(COURTYARD_DOOR_2, image, 136, 293);
+
+	image = tp.LoadTexture("data/courtyarddoor3.png");
+	tp.CreatePNGTexture(COURTYARD_DOOR_3, image, 221, 258);
+
+	image = tp.LoadTexture("data/courtyarddoor4.png");
+	tp.CreatePNGTexture(COURTYARD_DOOR_4, image, 137, 312);
+
+	image = tp.LoadTexture("data/courtyarddoor5.png");
+	tp.CreatePNGTexture(COURTYARD_DOOR_5, image, 404, 321);
+
+	image = tp.LoadTexture("data/courtyardexit.png");
+	tp.CreatePNGTexture(COURTYARD_EXIT, image, 500, 375);
+
+	image = tp.LoadTexture("data/courtyardwindow1.png");
+	tp.CreatePNGTexture(COURTYARD_WINDOW_1, image, 173, 216);
+
+	image = tp.LoadTexture("data/fireextinguisher.png");
+	tp.CreatePNGTexture(FIRE_EXTINGUISHER, image, 126, 335);
+	
+	image = tp.LoadTexture("data/level1sign.png");
+	tp.CreatePNGTexture(LEVEL_1_SIGN, image, 185, 314);
+
+	image = tp.LoadTexture("data/vendingmachine1.png");
+	tp.CreatePNGTexture(VENDING_MACHINE_1, image, 197, 334);
+
+	image = tp.LoadTexture("data/vendingmachine2.png");
+	tp.CreatePNGTexture(VENDING_MACHINE_2, image, 201, 324);
+
+	image = tp.LoadTexture("data/vendingmachine3.png");
+	tp.CreatePNGTexture(VENDING_MACHINE_3, image, 179, 345);
+
+	image = tp.LoadTexture("data/vlad.png");
+	tp.CreatePNGTexture(VLAD, image, 512, 512);
+	// END OF NEW TEXTURES
 
 	image = tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
