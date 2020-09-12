@@ -311,6 +311,7 @@ GLUquadricObj *glu_cylinder;
 
 // Stores raw image file
 unsigned char* image = NULL;
+std::vector<unsigned char>* pngImage;
 
 // objects
 Camera cam;
@@ -1163,8 +1164,8 @@ void CreateTextures()
 	image = tp.LoadTexture("data/glassboardSide.raw", 2, 16);
 	tp.CreateTexture(GLASS_B_SIDE, image, 2, 16);
 
-	image = tp.LoadTexture("data/grass.raw", 64, 64);
-	tp.CreateTexture(GRASS, image, 64, 64);
+	image = tp.LoadTexture("data/grass.png");
+	tp.CreatePNGTexture(GRASS, image, 64, 64);
 
 	image = tp.LoadTexture("data/grass2.raw", 64, 64);
 	tp.CreateTexture(GRASS_2, image, 64, 64);

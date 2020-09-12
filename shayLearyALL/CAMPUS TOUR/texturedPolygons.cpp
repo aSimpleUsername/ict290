@@ -23,11 +23,11 @@ GLubyte* TexturedPolygons::LoadTexture(char* filename, int imgWidth, int imgHeig
 	 std::cout << "Loading image file " << filename << "...\n";
 	return image;
 }
-std::vector<unsigned char> TexturedPolygons::LoadTexture(char* filename)
+GLubyte* TexturedPolygons::LoadTexture(const char* filename)
 {
+	unsigned char* image;
 	unsigned width, height;
-	std::vector<unsigned char> image;
-	unsigned error = lodepng::decode(image, width, height, filename);
+	unsigned error = lodepng_decode32_file(&image, &width, &height, filename);
     if(error) std::cout << "decoder error " << error << ": " << lodepng_error_text(error) << std::endl;
 
     std::cout << "Loading image file " << filename << "...\n";
@@ -90,7 +90,7 @@ void TexturedPolygons::CreateTexture(int textureNo, unsigned char* image, int im
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
 	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, imgWidth, imgHeight, GL_RGB, GL_UNSIGNED_BYTE, image);
 }
-void TexturedPolygons::CreatePNGTexture(int textureNo, std::vector<unsigned char>* image, int imgWidth, int imgHeight)
+void TexturedPolygons::CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight)
 {
 	glBindTexture(GL_TEXTURE_2D, m_texture[textureNo]);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
