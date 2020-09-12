@@ -1,0 +1,293 @@
+\hypertarget{class_c_sound_time}{}\doxysection{C\+Sound\+Time Class Reference}
+\label{class_c_sound_time}\index{CSoundTime@{CSoundTime}}
+
+
+{\ttfamily \#include $<$Sound\+Time.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_sound_time_a62023afd804cc88b62c5e3c252ac34a0}{C\+Sound\+Time}} (Uint32 time=(Uint32) 0)
+\item 
+\mbox{\hyperlink{class_c_sound_time_a2c7d5ed3ab0ca06783843ce011cf1620}{C\+Sound\+Time}} (int min, int sec, int ms)
+\item 
+virtual \mbox{\hyperlink{class_c_sound_time_a642d1ff52e745142940ca9129cc055dd}{$\sim$\+C\+Sound\+Time}} ()
+\item 
+Uint32 \mbox{\hyperlink{class_c_sound_time_a51ef710780c9680f685b39421d605377}{Get\+S\+D\+L\+Time}} ()
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_aad8532b1cbcd5bd11a868387e096011e}{operator+=}} (\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} $\ast$)
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_ad87a113b078f7f943d70332f5a961104}{operator-\/=}} (\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} $\ast$)
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_a7d35c9b41af69c5db3505f99a029f0c9}{operator+=}} (int)
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_a382895ae3c4f835211054afd1d791479}{operator-\/=}} (int)
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_a7d363df0d4380e275660cfe8a553a604}{operator++}} ()
+\item 
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& \mbox{\hyperlink{class_c_sound_time_adb21b0993964903cae5bd427826fd825}{operator-\/-\/}} ()
+\item 
+int \mbox{\hyperlink{class_c_sound_time_ac16e19ca4933f5ca7f316d8c409ca71d}{operator==}} (const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&cst)
+\item 
+void \mbox{\hyperlink{class_c_sound_time_a6f217edcd34b4c555a15b4eecf9cb324}{add\+Min}} (int mins)
+\item 
+void \mbox{\hyperlink{class_c_sound_time_a75adfe86a4342bf30b86d91d425b5f1d}{add\+Sec}} (int seconds)
+\item 
+void \mbox{\hyperlink{class_c_sound_time_ae85160ad6855d23f0dceb27be8375dd0}{add\+MS}} (int milliseconds)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_sound_time_a9108b5290ee14fc575b24831fb16ca5e}{operator==}} (const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&cst1, const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&cst2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\+: The is the time convertion from min\+:sec\+:ms into int value for S\+DL library
+
+\begin{DoxyAuthor}{Author}
+Shannon, Grahan and Shay 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_sound_time_a62023afd804cc88b62c5e3c252ac34a0}\label{class_c_sound_time_a62023afd804cc88b62c5e3c252ac34a0}} 
+\index{CSoundTime@{CSoundTime}!CSoundTime@{CSoundTime}}
+\index{CSoundTime@{CSoundTime}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{CSoundTime()}{CSoundTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily C\+Sound\+Time\+::\+C\+Sound\+Time (\begin{DoxyParamCaption}\item[{Uint32}]{time = {\ttfamily (Uint32)0} }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a2c7d5ed3ab0ca06783843ce011cf1620}\label{class_c_sound_time_a2c7d5ed3ab0ca06783843ce011cf1620}} 
+\index{CSoundTime@{CSoundTime}!CSoundTime@{CSoundTime}}
+\index{CSoundTime@{CSoundTime}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{CSoundTime()}{CSoundTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily C\+Sound\+Time\+::\+C\+Sound\+Time (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{sec,  }\item[{int}]{ms }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & \\
+\hline
+{\em sec} & \\
+\hline
+{\em ms} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a642d1ff52e745142940ca9129cc055dd}\label{class_c_sound_time_a642d1ff52e745142940ca9129cc055dd}} 
+\index{CSoundTime@{CSoundTime}!````~CSoundTime@{$\sim$CSoundTime}}
+\index{````~CSoundTime@{$\sim$CSoundTime}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{$\sim$CSoundTime()}{~CSoundTime()}}
+{\footnotesize\ttfamily C\+Sound\+Time\+::$\sim$\+C\+Sound\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+$\sim$\+C\+Sound\+Time\+:
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_sound_time_a6f217edcd34b4c555a15b4eecf9cb324}\label{class_c_sound_time_a6f217edcd34b4c555a15b4eecf9cb324}} 
+\index{CSoundTime@{CSoundTime}!addMin@{addMin}}
+\index{addMin@{addMin}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{addMin()}{addMin()}}
+{\footnotesize\ttfamily void C\+Sound\+Time\+::add\+Min (\begin{DoxyParamCaption}\item[{int}]{mins }\end{DoxyParamCaption})}
+
+add\+Min\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em mins} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_ae85160ad6855d23f0dceb27be8375dd0}\label{class_c_sound_time_ae85160ad6855d23f0dceb27be8375dd0}} 
+\index{CSoundTime@{CSoundTime}!addMS@{addMS}}
+\index{addMS@{addMS}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{addMS()}{addMS()}}
+{\footnotesize\ttfamily void C\+Sound\+Time\+::add\+MS (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+add\+MS\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em milliseconds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a75adfe86a4342bf30b86d91d425b5f1d}\label{class_c_sound_time_a75adfe86a4342bf30b86d91d425b5f1d}} 
+\index{CSoundTime@{CSoundTime}!addSec@{addSec}}
+\index{addSec@{addSec}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{addSec()}{addSec()}}
+{\footnotesize\ttfamily void C\+Sound\+Time\+::add\+Sec (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+add\+Sec\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a51ef710780c9680f685b39421d605377}\label{class_c_sound_time_a51ef710780c9680f685b39421d605377}} 
+\index{CSoundTime@{CSoundTime}!GetSDLTime@{GetSDLTime}}
+\index{GetSDLTime@{GetSDLTime}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{GetSDLTime()}{GetSDLTime()}}
+{\footnotesize\ttfamily Uint32 C\+Sound\+Time\+::\+Get\+S\+D\+L\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get\+S\+D\+L\+Time\+:
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a7d363df0d4380e275660cfe8a553a604}\label{class_c_sound_time_a7d363df0d4380e275660cfe8a553a604}} 
+\index{CSoundTime@{CSoundTime}!operator++@{operator++}}
+\index{operator++@{operator++}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+operator++\+:
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_aad8532b1cbcd5bd11a868387e096011e}\label{class_c_sound_time_aad8532b1cbcd5bd11a868387e096011e}} 
+\index{CSoundTime@{CSoundTime}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+operator+=\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a7d35c9b41af69c5db3505f99a029f0c9}\label{class_c_sound_time_a7d35c9b41af69c5db3505f99a029f0c9}} 
+\index{CSoundTime@{CSoundTime}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator+= (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+operator+=\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_adb21b0993964903cae5bd427826fd825}\label{class_c_sound_time_adb21b0993964903cae5bd427826fd825}} 
+\index{CSoundTime@{CSoundTime}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+operator-\/-\/\+:
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_ad87a113b078f7f943d70332f5a961104}\label{class_c_sound_time_ad87a113b078f7f943d70332f5a961104}} 
+\index{CSoundTime@{CSoundTime}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+operator-\/=\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_a382895ae3c4f835211054afd1d791479}\label{class_c_sound_time_a382895ae3c4f835211054afd1d791479}} 
+\index{CSoundTime@{CSoundTime}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \& C\+Sound\+Time\+::operator-\/= (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+operator-\/=\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$br$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sound_time_ac16e19ca4933f5ca7f316d8c409ca71d}\label{class_c_sound_time_ac16e19ca4933f5ca7f316d8c409ca71d}} 
+\index{CSoundTime@{CSoundTime}!operator==@{operator==}}
+\index{operator==@{operator==}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily int C\+Sound\+Time\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&}]{cst }\end{DoxyParamCaption})}
+
+operator==\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em cst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_c_sound_time_a9108b5290ee14fc575b24831fb16ca5e}\label{class_c_sound_time_a9108b5290ee14fc575b24831fb16ca5e}} 
+\index{CSoundTime@{CSoundTime}!operator==@{operator==}}
+\index{operator==@{operator==}!CSoundTime@{CSoundTime}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily int operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&}]{cst1,  }\item[{const \mbox{\hyperlink{class_c_sound_time}{C\+Sound\+Time}} \&}]{cst2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+friend operator==\+:
+
+
+\begin{DoxyParams}{Parameters}
+{\em cst1} & \\
+\hline
+{\em cst2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sound\+Time.\+h\item 
+Sound\+Time.\+cpp\end{DoxyCompactItemize}

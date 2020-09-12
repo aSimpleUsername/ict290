@@ -1,0 +1,29 @@
+﻿  AABB.CPP
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\AABB.h(22,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  AABBLinkedList.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\AABBNode.h(13,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  AABBNode.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\AABBNode.h(13,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  camera.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\AABB.h(22,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  cameraMap.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.h(11,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  collision.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\AABB.h(22,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+c1xx : fatal error C1083: Cannot open source file: 'debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp': No such file or directory
+  EasySound.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\EasySound.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  main.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(2,10): fatal error C1083: Cannot open include file: 'GL/glut.h': No such file or directory
+  PlainLinkedList.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\PlainNode.h(15,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  PlainNode.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\PlainNode.h(15,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  Sound.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Sound.h(8,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  SoundTime.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\SoundTime.h(8,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  texturedPolygons.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\texturedPolygons.h(13,10): fatal error C1083: Cannot open include file: 'gl/glut.h': No such file or directory
+  Generating Code...

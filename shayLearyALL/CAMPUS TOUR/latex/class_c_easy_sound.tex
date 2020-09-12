@@ -1,0 +1,172 @@
+\hypertarget{class_c_easy_sound}{}\doxysection{C\+Easy\+Sound Class Reference}
+\label{class_c_easy_sound}\index{CEasySound@{CEasySound}}
+
+
+{\ttfamily \#include $<$Easy\+Sound.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_c_easy_sound_a5cff415b6a13deb64871cfc2dfa33b3c}{$\sim$\+C\+Easy\+Sound}} ()
+\item 
+void \mbox{\hyperlink{class_c_easy_sound_a29fc35523c9eedb3b2589f90f27d03f0}{Call\+Mix\+Audio}} (void $\ast$unused, Uint8 $\ast$stream, int len)
+\item 
+int \mbox{\hyperlink{class_c_easy_sound_aa1d7ffd4f5c4891a863df85d6136daf1}{Load}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{class_c_easy_sound_a88ac4b0af77d561c5fad4016ed9aedcf}{Unload}} (int i\+Sound\+ID)
+\item 
+void \mbox{\hyperlink{class_c_easy_sound_a7d7e9aa0f0b6cc79ab2cdb179ee9d29f}{Unload}} (\mbox{\hyperlink{class_c_sound}{C\+Sound}} $\ast$sound)
+\item 
+\mbox{\hyperlink{class_c_sound}{C\+Sound}} $\ast$ \mbox{\hyperlink{class_c_easy_sound_a871478c0717d884846c2a4f528860a5f}{Get\+Sound}} (int i\+Sound\+ID)
+\item 
+\mbox{\Hypertarget{class_c_easy_sound_a1d5a81eee0c6f787890375f3bc3ec37e}\label{class_c_easy_sound_a1d5a81eee0c6f787890375f3bc3ec37e}} 
+S\+D\+L\+\_\+\+Audio\+Spec {\bfseries Get\+Obtained} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_c_easy_sound}{C\+Easy\+Sound}} $\ast$ \mbox{\hyperlink{class_c_easy_sound_a89e74a3e4cf2bd0e72c3bbf6901dcb7c}{Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_easy_sound_a4a18c7ef207c8a00470c19f07044f8b6}{C\+Easy\+Sound}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{class_c_easy_sound}{C\+Easy\+Sound}}\+: This class is singleton design pattern, and it control all object related to sound. (use S\+DL library)
+
+\begin{DoxyAuthor}{Author}
+Shannon, Graham and Shay 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_easy_sound_a5cff415b6a13deb64871cfc2dfa33b3c}\label{class_c_easy_sound_a5cff415b6a13deb64871cfc2dfa33b3c}} 
+\index{CEasySound@{CEasySound}!````~CEasySound@{$\sim$CEasySound}}
+\index{````~CEasySound@{$\sim$CEasySound}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{$\sim$CEasySound()}{~CEasySound()}}
+{\footnotesize\ttfamily C\+Easy\+Sound\+::$\sim$\+C\+Easy\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+$\sim$\+C\+Easy\+Sound\+:
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_a4a18c7ef207c8a00470c19f07044f8b6}\label{class_c_easy_sound_a4a18c7ef207c8a00470c19f07044f8b6}} 
+\index{CEasySound@{CEasySound}!CEasySound@{CEasySound}}
+\index{CEasySound@{CEasySound}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{CEasySound()}{CEasySound()}}
+{\footnotesize\ttfamily C\+Easy\+Sound\+::\+C\+Easy\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{class_c_easy_sound}{C\+Easy\+Sound}}\+: The construction had to be protected because of Singleton Design Pattern
+
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_easy_sound_a29fc35523c9eedb3b2589f90f27d03f0}\label{class_c_easy_sound_a29fc35523c9eedb3b2589f90f27d03f0}} 
+\index{CEasySound@{CEasySound}!CallMixAudio@{CallMixAudio}}
+\index{CallMixAudio@{CallMixAudio}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{CallMixAudio()}{CallMixAudio()}}
+{\footnotesize\ttfamily void C\+Easy\+Sound\+::\+Call\+Mix\+Audio (\begin{DoxyParamCaption}\item[{void $\ast$}]{unused,  }\item[{Uint8 $\ast$}]{stream,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Call\+Mix\+Audio\+: ? no idea eh
+
+
+\begin{DoxyParams}{Parameters}
+{\em unused} & \\
+\hline
+{\em stream} & \\
+\hline
+{\em len} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_a871478c0717d884846c2a4f528860a5f}\label{class_c_easy_sound_a871478c0717d884846c2a4f528860a5f}} 
+\index{CEasySound@{CEasySound}!GetSound@{GetSound}}
+\index{GetSound@{GetSound}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{GetSound()}{GetSound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sound}{C\+Sound}} $\ast$ C\+Easy\+Sound\+::\+Get\+Sound (\begin{DoxyParamCaption}\item[{int}]{i\+Sound\+ID }\end{DoxyParamCaption})}
+
+Get\+Sound\+: get the sound from the m\+\_\+list\+Sound list
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Sound\+ID} & -\/ Sound\textquotesingle{}s ID to be given before get Sound Object from the m\+\_\+list\+Sound \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+Sound$\ast$ -\/ Sound Object to use it (Play, Stop, etc) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_a89e74a3e4cf2bd0e72c3bbf6901dcb7c}\label{class_c_easy_sound_a89e74a3e4cf2bd0e72c3bbf6901dcb7c}} 
+\index{CEasySound@{CEasySound}!Instance@{Instance}}
+\index{Instance@{Instance}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_easy_sound}{C\+Easy\+Sound}} $\ast$ C\+Easy\+Sound\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Instance\+: Get \mbox{\hyperlink{class_c_easy_sound}{C\+Easy\+Sound}} class before using any methods (Singleton Design Pattern)
+
+\begin{DoxyReturn}{Returns}
+static C\+Easy\+Sound$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_aa1d7ffd4f5c4891a863df85d6136daf1}\label{class_c_easy_sound_aa1d7ffd4f5c4891a863df85d6136daf1}} 
+\index{CEasySound@{CEasySound}!Load@{Load}}
+\index{Load@{Load}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily int C\+Easy\+Sound\+::\+Load (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Load\+: load the sound and store in the m\+\_\+list\+Sound list
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ filename of sound wave file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ get sound\textquotesingle{}s ID for future use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_a7d7e9aa0f0b6cc79ab2cdb179ee9d29f}\label{class_c_easy_sound_a7d7e9aa0f0b6cc79ab2cdb179ee9d29f}} 
+\index{CEasySound@{CEasySound}!Unload@{Unload}}
+\index{Unload@{Unload}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+Easy\+Sound\+::\+Unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sound}{C\+Sound}} $\ast$}]{sound }\end{DoxyParamCaption})}
+
+Unload\+: unload the sound and remove from the m\+\_\+list\+Sound list
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound} & -\/ \mbox{\hyperlink{class_c_sound}{C\+Sound}} class to find if there match ID in the m\+\_\+list\+Sound and unload it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_easy_sound_a88ac4b0af77d561c5fad4016ed9aedcf}\label{class_c_easy_sound_a88ac4b0af77d561c5fad4016ed9aedcf}} 
+\index{CEasySound@{CEasySound}!Unload@{Unload}}
+\index{Unload@{Unload}!CEasySound@{CEasySound}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Easy\+Sound\+::\+Unload (\begin{DoxyParamCaption}\item[{int}]{i\+Sound\+ID }\end{DoxyParamCaption})}
+
+Unload\+: unload the sound and remove form the m\+\_\+list\+Sound list
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Sound\+ID} & -\/ Sound\textquotesingle{}s ID to find if there match ID in the m\+\_\+list\+Sound and unload it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+Sound.\+h\item 
+Easy\+Sound.\+cpp\end{DoxyCompactItemize}
