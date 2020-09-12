@@ -1,2 +1,14 @@
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/.suo
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/Browse.VC.db
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/1bb42c061b06a324/TEXTUREDPOLYGONS.ipch
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/a596c76e38b05c17/MAIN.ipch
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/d76931eb9017b518/PORTAL.ipch
+shayLearyALL/CAMPUS TOUR/Debug/main.obj
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.log
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/link.read.1.tlog
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.vcxprojAssemblyReference.cache
+shayLearyALL/CAMPUS TOUR/Debug/vc142.pdb
+
 'shayLearyALL/CAMPUS TOUR/.vs'
 'shayLearyALL/CAMPUS TOUR/Debug/**'
+
