@@ -103,7 +103,6 @@ private:
     TexturedPolygons (const TexturedPolygons &tp) {};
     TexturedPolygons &operator = (const TexturedPolygons &tp) {};
 };
-
 #endif
 
 //----------------------------------------------------------------------------------
