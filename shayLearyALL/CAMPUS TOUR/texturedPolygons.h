@@ -31,14 +31,14 @@ public:
 
 	// loads a raw image file into memory
 	GLubyte* LoadTexture(char *filename, int imgWidth, int imgHeight);
-	GLubyte* LoadTexture(char *filename);
+	std::vector<unsigned char> LoadTexture(char* filename);
 
 	// set the number of textures to be used
 	void SetTextureCount(const int &textureNo);
 
 	// creates texture and set required values for texture mapping
 	void CreateTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
-	void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
+	void CreatePNGTexture(int textureNo, std::vector<unsigned char>* image, int imgWidth, int imgHeight);
 
 	// calls function to creates display list to contain image
 	void CreateDisplayList(const int &XYZ, const int &listNo,
