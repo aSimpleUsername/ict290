@@ -259,6 +259,7 @@ C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4998,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4998,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5105,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+<<<<<<< Updated upstream
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5114,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5121,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5128,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
@@ -403,6 +404,61 @@ C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\texturedPolygons.cpp(377,19): warning C4244: 'argument': conversion from 'const GLdouble' to 'GLfloat', possible loss of data
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\texturedPolygons.cpp(377,15): warning C4244: 'argument': conversion from 'const GLdouble' to 'GLfloat', possible loss of data
   Generating Code...
+=======
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5116,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5127,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5139,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5157,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5386,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5393,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5400,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5419,34): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5419,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5423,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5423,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5439,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5439,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5443,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5443,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5550,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5559,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5566,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5573,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5579,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5580,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5581,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5592,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5599,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5606,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5612,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5613,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5614,42): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5626,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5627,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5629,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5630,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5632,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5633,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5635,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5636,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5638,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5639,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5644,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5649,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5654,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5660,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5662,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5663,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5664,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5665,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5666,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5667,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5668,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5669,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5670,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5671,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5672,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+>>>>>>> Stashed changes
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored

@@ -1639,8 +1639,8 @@ void CreateTextures()
 	tp.CreateTexture(217, image, 256, 256);
 	image = tp.LoadTexture("data/welcome.raw", 512, 512);
 	tp.CreateTexture(218, image, 512, 512);
-	image = tp.LoadTexture("data/thanks.raw", 512, 512);
-	tp.CreateTexture(219, image, 512, 512);
+	image = tp.LoadTexture("data/thanks.png");
+	tp.CreatePNGTexture(219, image, 512, 512);
 
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);	
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
