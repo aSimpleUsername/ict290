@@ -8,6 +8,9 @@ a collision between the player and the portal is made.
 
 */
 
+#ifndef PORTAL_H
+#define PORTAL_H
+
 #include "camera.h"
 
 class Portal
@@ -43,3 +46,5 @@ private:
 	//Size of portal across z axis
 	double zDim;
 };
+
+#endif // !PORTAL_H
