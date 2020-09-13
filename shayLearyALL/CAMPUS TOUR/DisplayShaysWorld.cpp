@@ -26,7 +26,7 @@ void DisplayShaysWorld::myinit()
 	// turn collision detection on
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
-	cam.SetNoBoundingBoxes(25);
+	cam.SetNoBoundingBoxes(55);
 
 
 	// set starting position of user
@@ -241,6 +241,77 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(23, 40300.0);
 	cam.SetAABBMinZ(23, 40012.0);
 
+	/////////////////////////////////////////////////////////////
+	//courtyard pillars
+	int index = 24;
+	double xVal = -1158;
+	double zVal = 41100;
+	for (int i = 0; i < 14; i++)
+	{
+		cam.SetAABBMaxX(index, xVal);
+		cam.SetAABBMinX(index, xVal - 128);
+		cam.SetAABBMaxZ(index, zVal);
+		cam.SetAABBMinZ(index, zVal - 128);
+
+		index++;
+
+		xVal = xVal - 1940;
+	}
+
+	index = 38; //CHECK
+	xVal = -1158;
+	zVal = 41100;
+	for (int i = 0; i < 5; i++)
+	{
+		zVal = zVal - 1940;
+
+		cam.SetAABBMaxX(index, xVal);
+		cam.SetAABBMinX(index, xVal - 128);
+		cam.SetAABBMaxZ(index, zVal);
+		cam.SetAABBMinZ(index, zVal - 128);
+
+		index++;
+	}
+
+	index = 43;
+	xVal = -24438;
+	zVal = 41100;
+	for (int i = 0; i < 5; i++)
+	{
+		zVal = zVal - 1940;
+
+		cam.SetAABBMaxX(index, xVal);
+		cam.SetAABBMinX(index, xVal - 128);
+		cam.SetAABBMaxZ(index, zVal);
+		cam.SetAABBMinZ(index, zVal - 128);
+
+		index++;
+	}
+	/////////////////////////////////////////////////////////////
+
+	//green bin
+	cam.SetAABBMaxX(48, -13200);
+	cam.SetAABBMinX(48, -13400);
+	cam.SetAABBMaxZ(48, 41300);
+	cam.SetAABBMinZ(48, 41100);
+
+	//red bin
+	cam.SetAABBMaxX(49, -13500);
+	cam.SetAABBMinX(49, -13700);
+	cam.SetAABBMaxZ(49, 41300);
+	cam.SetAABBMinZ(49, 41100);
+
+	//green bin 2
+	cam.SetAABBMaxX(50, -1400);
+	cam.SetAABBMinX(50, -1600);
+	cam.SetAABBMaxZ(50, 41300);
+	cam.SetAABBMinZ(50, 41100);
+
+	//red bin 2
+	cam.SetAABBMaxX(51, -1700);
+	cam.SetAABBMinX(51, -1900);
+	cam.SetAABBMaxZ(51, 41300);
+	cam.SetAABBMinZ(51, 41100);
 
 	// current AABB array size = 25
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
@@ -306,7 +377,7 @@ void DisplayShaysWorld::CreatePlains()
 	GLdouble xLocation = 1950;
 	step = 10605.0;
 	stepLength = 40300.0;
-	for (int i = 0; i < 12; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		cam.SetPlains(FLAT_PLAIN, xLocation, xLocation + 42, step + 400, step + 400, stepLength, stepLength + 512);
 		step -= 64.0;
@@ -1092,6 +1163,9 @@ void DisplayShaysWorld::CreateTextures()
 
 	image = tp.LoadTexture("data/vlad.png");
 	tp.CreatePNGTexture(VLAD, image, 512, 512);
+
+	image = tp.LoadTexture("data/bintop.png");
+	tp.CreatePNGTexture(BIN_TOP, image, 1300, 867);
 	// END OF NEW TEXTURES
 
 
@@ -4141,6 +4215,30 @@ void DisplayShaysWorld::DisplayExtras()
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(COURTYARD_DOOR_2));
 	glCallList(707);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_GREEN));
+	for(int i = 712; i < 716; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_TOP));
+	glCallList(716);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_RED));
+	for (int i = 717; i < 721; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_TOP));
+	glCallList(721);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_GREEN));
+	for (int i = 722; i < 726; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_TOP));
+	glCallList(726);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_RED));
+	for (int i = 727; i < 731; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BIN_TOP));
+	glCallList(731);
 }
 
 void DisplayShaysWorld::DrawExtras()
@@ -4532,6 +4630,274 @@ void DisplayShaysWorld::DrawExtras()
 	glVertex3f(-25695, 10800, 32400);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-25695, 10800, 32000);
+	glEnd();
+	glEndList();
+
+	//////////////////////////////////////////////////////////////////////////////
+	//green bin
+	glNewList(712, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13400, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13400, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13400, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13400, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(713, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13200, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13200, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13200, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13200, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(714, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13400, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13200, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13200, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13400, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(715, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13200, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13400, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13400, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13200, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(716, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13200, 10300, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13400, 10300, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13400, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13200, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	//////////////////////////////////////////////////////////////////////////////
+	//red bin
+	glNewList(717, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13700, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13700, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13700, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13700, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(718, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13500, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13500, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13500, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13500, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(719, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13700, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13500, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13500, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13700, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(720, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13500, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13700, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13700, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13500, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(721, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-13500, 10300, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-13700, 10300, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-13700, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-13500, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	//////////////////////////////////////////////////////////////////////////////
+	//green bin 2
+	glNewList(722, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1600, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1600, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1600, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1600, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(723, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1400, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1400, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1400, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1400, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(724, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1600, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1400, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1400, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1600, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(725, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1400, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1600, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1600, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1400, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(726, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1400, 10300, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1600, 10300, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1600, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1400, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	//////////////////////////////////////////////////////////////////////////////
+	//red bin 2
+	glNewList(727, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1900, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1900, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1900, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1900, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(728, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1700, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1700, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1700, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1700, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(729, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1900, 10000, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1700, 10000, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1700, 10300, 41300);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1900, 10300, 41300);
+	glEnd();
+	glEndList();
+
+	glNewList(730, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1700, 10000, 41100);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1900, 10000, 41100);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1900, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1700, 10300, 41100);
+	glEnd();
+	glEndList();
+
+	glNewList(731, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(-1700, 10300, 41300);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-1900, 10300, 41300);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(-1900, 10300, 41100);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(-1700, 10300, 41100);
 	glEnd();
 	glEndList();
 }
