@@ -1632,7 +1632,11 @@ void DisplayShaysWorld::DisplayAboveWindowBlock()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_CHANC_EDGE));
 	glCallList(424);
 
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_WINDOW_BLOCK_3));
+	glCallList(640);
 
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_WINDOW_BLOCK_3));
+	glCallList(641);
 }
 
 void DisplayShaysWorld::DrawAboveWindowBlock()
@@ -1745,9 +1749,8 @@ void DisplayShaysWorld::DrawAboveWindowBlock()
 
 	// balcony
 	tp.CreateDisplayList(YZ, 601, 256.0, 256.0, -1800, 10896.0, 10000.0, 1.56, 121.8);
-
-
-
+	tp.CreateDisplayList(XY, 640, 1000, 256, -24165, 10896.0, 40800.0, 25, 1.56);
+	tp.CreateDisplayList(YZ, 641, 256, 1000, -24165, 10896.0, 29810, 1.56, 25);
 }
 
 //--------------------------------------------------------------------------------------
@@ -2727,7 +2730,7 @@ void DisplayShaysWorld::DrawBricks()
 	tp.CreateDisplayList(XY, 588, 128.0, 128.0, -200.0, 10000.0, 40790.0, 21.95, 14.0);		// stairs inner wall (bookshop side) downstairs wall
 	tp.CreateDisplayList(XY, 589, 128.0, 128.0, -25700.0, 10000.0, 29800, 200.0, 21.0);		// courtyard wall parrallel to bookshop
 	tp.CreateDisplayList(YZ, 584, 128.0, 128.0, -200.0, 10000.0, 40790.0, 14.0, 3.0);		// stairs wall joiner
-	tp.CreateDisplayList(YZ, 585, 128.0, 128.0, -25700.0, 10000.0, 29800, 7.0, 90.5);		// courtyard wall parrallel to bushcourt
+	tp.CreateDisplayList(YZ, 585, 128.0, 128.0, -25700.0, 10000.0, 29800, 7.5, 90.5);		// courtyard wall parrallel to bushcourt
 	tp.CreateDisplayList(YZ, 598, 128.0, 128.0, -200.0, 10900.0, 39400.0, 7.0, 11.5);		// above stairs entrance
 	tp.CreateDisplayList(YZ, 599, 128.0, 128.0, 900.0, 10900.0, 39400.0, 7.0, 11.5);			// wall behind portal
 
@@ -3275,13 +3278,10 @@ void DisplayShaysWorld::DrawRoof()
 	DrawAngledRoofBeam2(174, 33524.0, 11998.0 - 104.16, 43056.0 - 283.0, 2.36);
 
 	// courtyard ceiling
-	tp.CreateDisplayList(XZ, 595, 128.0, 64.0, -25700.0, 10900.0, 41168.0, 221.2, 29.0);	// courtyard walkway
+	tp.CreateDisplayList(XZ, 595, 128.0, 64.0, -25700.0, 10900.0, 40800.0, 221.2, 34.0);	// courtyard walkway
 	tp.CreateDisplayList(XZ, 596, 128.0, 64.0, -1800, 10900.0, 26000, 21.0, 237.0);			// courtyard - bushcourt side 
 	tp.CreateDisplayList(XZ, 597, 128.0, 64.0, -25700.0, 10900.0, 26000, 12.0, 237.0);		// courtyard - not bushcourt side
 	tp.CreateDisplayList(XZ, 600, 128.0, 64.0, -1800, 11800.0, 26000, 34.1, 237.0);			// courtyard - above stairs
-
-
-
 }
 
 // --------------------------------------------------------------------------------------
