@@ -137,40 +137,125 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods-
 	//----------------------------------------------------------------------------------
+	/**
+		* @brief Gets Camera X
+		* @return GLdouble
+	*/
 	GLdouble GetLR () {return m_x;}
+	/**
+		* @brief Gets Camera Y
+		* @return GLdouble
+	*/
 	GLdouble GetUD () {return m_y;}
+	/**
+		* @brief Gets Camera Z
+		* @return GLdouble
+	*/
 	GLdouble GetFB () {return m_z;}	
+	/**
+		* @brief Gets AABB Max X
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMaxX (const int & tempIndex) {return m_colDetect.GetAABBMaxX (tempIndex);}
+	/**
+		* @brief Gets AABB Min X
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMinX (const int & tempIndex) {return m_colDetect.GetAABBMinX (tempIndex);}
+	/**
+		* @brief Gets AABB Max Y
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMaxY (const int & tempIndex) {return m_colDetect.GetAABBMaxY (tempIndex);}
+	/**
+		* @brief Gets AABB Min Y
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMinY (const int & tempIndex) {return m_colDetect.GetAABBMinY (tempIndex);}
+	/**
+		* @brief Gets AABB Max Z
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMaxZ (const int & tempIndex) {return m_colDetect.GetAABBMaxZ (tempIndex);}
+	/**
+		* @brief Gets AABB Min Z
+		* @param tempIndex - index of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetAABBMinZ (const int & tempIndex) {return m_colDetect.GetAABBMinZ (tempIndex);}
-	
-	// position the camera
+	/**
+		* @brief position the camera
+		* @param tempX - X of the camera
+		* @param tempY - Y of the camera
+		* @param tempZ - Z of the camera
+		* @param tempAngle - angle of the camera
+		* @return void
+	*/
 	void Position (GLdouble const & tempX,
 				   GLdouble const & tempY,
 				   GLdouble const & tempZ,
 				   GLdouble const & tempAngle);
-	
-	// print postion to camera
+	/**
+		* @brief prints position to camera
+		* @return void
+	*/
 	void printPosition(void);
-
-	// check whether ok to move
+	/**
+		* @brief checks if ok to move
+		* @return void
+	*/
 	void CheckCamera();
-
-	// Used to pass direction to move or rotate  (i.e. 1, -1 or 0)
+	/**
+		* @brief Used to pass direction to move or rotate in z direction
+		* @param tempMove - Z value to move
+		* @return void
+	*/
 	void DirectionFB(int const & tempMove);
+	/**
+		* @brief Used to pass direction to move or rotate in x direction
+		* @param tempMove - X value to move
+		* @return void
+	*/
 	void DirectionLR(int const & tempMove);
+	/**
+		* @brief Used to pass direction to move or rotate in Y direction
+		* @param tempMove - Y value to move
+		* @return void
+	*/
 	void DirectionUD(int const & tempMove);
 
-	// Rotates the camera
+	/**
+		* @brief Rotates Camera
+		* @param x - X value to rotate
+		* @param y - Y value to rotate
+		* @param width - width of camera
+		* @param height - height of camera
+		* @return void
+	*/
 	void RotateCamera(int x, int y, int width, int height);
 
-	// display map
+	/**
+		* @brief Displays Map
+		* @param screenWidth - width of screen
+		* @param screenHeight - height of screen
+		* @param tempImage - image of map
+		* @return void
+	*/
 	void DisplayMap(const int & screenWidth, const int & screenHeight, 
 		            const GLuint & tempImage);
-	// display welcome screen
+	/**
+		* @brief Displays Welcome Screen
+		* @param screenWidth - width of screen
+		* @param screenHeight - height of 
+		* @param tempExit - ?
+		* @param tempImage - image of welcome screen
+		* @return void
+	*/
 	void DisplayWelcomeScreen (const int & screenWidth, const int & screenHeight,
 							   const int & tempExit, const GLuint & tempImage);
 	// display no exit
