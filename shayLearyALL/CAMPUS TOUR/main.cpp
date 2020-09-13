@@ -98,10 +98,11 @@ void Display()
 	glPushMatrix();
 	// displays the welcome screen
 	if (shaysWorld.DisplayWelcome && isShaysWorld) shaysWorld.cam.DisplayWelcomeScreen(width, height, 1, shaysWorld.tp.GetTexture(WELCOME));
-	if (shaysWorld.DisplayWelcome && !isShaysWorld) wrathWorld.cam.DisplayWelcomeScreen(width, height, 1, wrathWorld.tp.GetTexture(WELCOME));
+	if (wrathWorld.DisplayWelcome && !isShaysWorld) wrathWorld.cam.DisplayWelcomeScreen(width, height, 1, wrathWorld.tp.GetTexture(WELCOME_SCREEN));
 	// displays the exit screen
 	// displays the exit screen
 	if (shaysWorld.DisplayExit) shaysWorld.cam.DisplayWelcomeScreen(width, height, 0, shaysWorld.tp.GetTexture(EXIT));
+	if (wrathWorld.DisplayExit) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(EXIT_SCREEN));
 
 	if (isShaysWorld)
 	{
