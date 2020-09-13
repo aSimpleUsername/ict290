@@ -18,6 +18,7 @@
 #define EXIT_SCREEN					2
 #define GROUND_PLANE				3
 #define SPACE_1						4
+#define PORTAL_1					5
 
 class DisplayWrathWorld
 {
@@ -43,6 +44,8 @@ public:
 	// deletes image and clears memory
 	void DeleteImageFromMemory(unsigned char* tempImage);
 
+	bool stairsReturnPortal();
+
 private:
 	// varibles used for tarnslating graphics etc
 	GLdouble step, step2, stepLength;
@@ -54,12 +57,14 @@ private:
 
 	void displaySkyBox();
 	void displayGroundPlane();
+	void displayPortal();
 
 	// calls functions to create display lists (below)
 	void CreateTextureList();
 	// creates display lists
 	void drawSkyBox();
 	void drawGroundPlane();
+	void drawPortal();
 
 	// loads images and creates texture
 	void CreateTextures();

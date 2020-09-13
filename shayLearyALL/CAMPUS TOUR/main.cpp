@@ -52,7 +52,7 @@ void reshape(int w, int h);
 void IncrementFrameCount();
 
 //--------------------------------------------------------------------------------------
-//  Main function 
+//  Main function
 //--------------------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
@@ -67,14 +67,14 @@ int main(int argc, char **argv)
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
 
-	glutIgnoreKeyRepeat(1); 
+	glutIgnoreKeyRepeat(1);
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
 
 	glutDisplayFunc(Display);
 	glutIdleFunc(Display);
 	glutMouseFunc(Mouse);
-	
+
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
 	glutPassiveMotionFunc(mouseMove);
 	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
@@ -142,6 +142,14 @@ void Display()
 		// set the movement and rotation speed according to frame count
 		IncrementFrameCount();
 		wrathWorld.cam.SetMoveSpeed(stepIncrement);
+
+		if (wrathWorld.stairsReturnPortal())
+		{
+			printf("PORTAL\n");
+			isShaysWorld = true;
+			shaysWorld.cam.Position(1400, 11234, 39740, 0);
+			//shaysWorld.myinit();
+		}
 		//wrathWorld.stairsPortal();
 		//wrathWorld.stairsReturnPortal();
 
@@ -175,7 +183,7 @@ void reshape(int w, int h)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
-	gluPerspective(45,ratio,1,250000);	
+	gluPerspective(45,ratio,1,250000);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -301,7 +309,7 @@ void processKeys()
 	{
 		wrathWorld.cam.SetXRotateSpeed(0.0f);
 		wrathWorld.cam.SetYRotateSpeed(0.0f);
-		wrathWorld.cam.SetMoveSpeed(0.0f); 
+		wrathWorld.cam.SetMoveSpeed(0.0f);
 		wrathWorld.DisplayExit = true;
 	}
 
@@ -367,7 +375,7 @@ void mouseMove(int x, int y)
 //--------------------------------------------------------------------------------------
 void IncrementFrameCount()
 {
-	double t = ((GLdouble)(clock()-lastClock))/(GLdouble)CLOCKS_PER_SEC;  
+	double t = ((GLdouble)(clock()-lastClock))/(GLdouble)CLOCKS_PER_SEC;
 	frameCount ++;
 
 	// reset after t

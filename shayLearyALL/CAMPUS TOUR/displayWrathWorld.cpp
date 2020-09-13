@@ -52,6 +52,7 @@ void DisplayWrathWorld::myinit()
 }
 
 
+
 //--------------------------------------------------------------------------------------
 //  Delete raw image and clear memory
 //--------------------------------------------------------------------------------------
@@ -78,6 +79,17 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
+bool DisplayWrathWorld::stairsReturnPortal()
+{
+	Portal stepsReturn;
+
+	stepsReturn.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	stepsReturn.portalDimensions(-500, -500, -500);
+	return(stepsReturn.createPortal(10500, 10500.0, 15000.0));
+}
+
+
+
 void DisplayWrathWorld::CreateTextures()
 {
 	glEnable(GL_DEPTH_TEST);
@@ -101,6 +113,9 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/space1.png");
 	tp.CreatePNGTexture(SPACE_1, image, 1024, 1024);
 
+	image = tp.LoadTexture("data/spaceportal.png");
+	tp.CreatePNGTexture(PORTAL_1, image, 512, 385);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -109,6 +124,7 @@ void DisplayWrathWorld::DrawBackdrop()
 {
 	displaySkyBox();
 	displayGroundPlane();
+	displayPortal();
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -118,25 +134,36 @@ void DisplayWrathWorld::displaySkyBox()
 		glCallList(i);
 }
 
-void DisplayWrathWorld::displayGroundPlane()
-{
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
-	glCallList(3);
-}
-
 void DisplayWrathWorld::drawSkyBox()
 {
-	tp.CreateDisplayList(XZ, 4, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// Top
-	tp.CreateDisplayList(XZ, 5, 1024, 1024, -10000.0, 92400.0, -30000.0, 100, 100);		// Bottom
+	tp.CreateDisplayList(XZ, 4, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// Bottom
+	tp.CreateDisplayList(XZ, 5, 1024, 1024, -10000.0, 92400.0, -30000.0, 100, 100);		// Top
 	tp.CreateDisplayList(YZ, 6, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// FRONT
 	tp.CreateDisplayList(YZ, 7, 1024, 1024, 30000.0, -10000.0, -30000.0, 100, 100);		// Back
 	tp.CreateDisplayList(XY, 8, 1024, 1024, -10000.0, -10000.0, -10000.0, 100, 100);	// Left
 	tp.CreateDisplayList(XY, 9, 1024, 1024, -10000.0, -10000.0, 72400, 100, 100);		// Right	
 }
 
+void DisplayWrathWorld::displayGroundPlane()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(3);
+}
+
 void DisplayWrathWorld::drawGroundPlane()
 {
 	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, 0.0, 50, 50);	// groundPlane
+}
+
+void DisplayWrathWorld::displayPortal()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL_1));
+	glCallList(10);
+}
+
+void DisplayWrathWorld::drawPortal()
+{
+	tp.CreateDisplayList(XY, 10, 512, 385, 10000, 10000, 15000, 1.0, 2);
 }
 
 //--------------------------------------------------------------------------------------
@@ -147,5 +174,6 @@ void DisplayWrathWorld::CreateTextureList()
 {
 	drawSkyBox();				// 4-9
 	drawGroundPlane();			// 3
-	//last number used: 601
+	drawPortal();				//10
+								//last number used: 10
 }
