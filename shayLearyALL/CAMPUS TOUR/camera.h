@@ -31,14 +31,53 @@ public:
 	//  Set Methods
 	//----------------------------------------------------------------------------------
 	// sets initial value for bounding boxes (in the array AABB)
+	/**
+		* @brief Sets Max X of AABB
+		* @param tempIndex - index of AABB
+		* @param tempX - max x of AABB
+		* @return void
+	*/
 	void SetAABBMaxX(const int & tempIndex, const GLdouble &tempX) {m_colDetect.SetAABBMaxX(tempIndex, tempX);}
+	/**
+		* @brief Sets Min X of AABB
+		* @param tempIndex - index of AABB
+		* @param tempX - max x of AABB
+		* @return void
+	*/
 	void SetAABBMinX(const int & tempIndex, const GLdouble &tempX) {m_colDetect.SetAABBMinX(tempIndex, tempX);}
+	/**
+		* @brief Sets Max Y of AABB
+		* @param tempIndex - index of AABB
+		* @param tempY - max y of AABB
+		* @return void
+	*/
 	void SetAABBMaxY(const int & tempIndex, const GLdouble &tempY) {m_colDetect.SetAABBMaxY(tempIndex, tempY);}
+	/**
+		* @brief Sets Min Y of AABB
+		* @param tempIndex - index of AABB
+		* @param tempY - min y of AABB
+		* @return void
+	*/
 	void SetAABBMinY(const int & tempIndex, const GLdouble &tempY) {m_colDetect.SetAABBMinY(tempIndex, tempY);}
+	/**
+		* @brief Sets Max Z of AABB
+		* @param tempIndex - index of AABB
+		* @param tempY - max z of AABB
+		* @return void
+	*/
 	void SetAABBMaxZ(const int & tempIndex, const GLdouble &tempZ) {m_colDetect.SetAABBMaxZ(tempIndex, tempZ);}
+	/**
+		* @brief Sets Min Z of AABB
+		* @param tempIndex - index of AABB
+		* @param tempY - min z of AABB
+		* @return void
+	*/
 	void SetAABBMinZ(const int & tempIndex, const GLdouble &tempZ) {m_colDetect.SetAABBMinZ(tempIndex, tempZ);}
-
-	// set step and rotation size
+	/**
+		* @brief Sets the rotate speed of X
+		* @param tempSpeed - speed to set X
+		* @return void
+	*/
 	void SetXRotateSpeed (const GLdouble &tempSpeed) {m_xrotateSpeed = tempSpeed;}
 	void SetYRotateSpeed(const GLdouble& tempSpeed) {m_yrotateSpeed = tempSpeed;}
 	void SetMoveSpeed (const GLdouble &tempSpeed) {m_moveSpeed = tempSpeed;}
