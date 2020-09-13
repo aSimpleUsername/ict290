@@ -220,92 +220,92 @@ C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\ma
 C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4464,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
 C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4507,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4512,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4647,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4649,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4650,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4651,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4652,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4659,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4661,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4662,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4663,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4664,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4671,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4673,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4674,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4675,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4676,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4683,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4685,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4686,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4687,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4688,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4697,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4698,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4699,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4700,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4765,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4776,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4788,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4822,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4833,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4845,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4855,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4868,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4952,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4963,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4974,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4986,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5004,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5233,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5240,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5247,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5266,34): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5266,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5270,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5270,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5286,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5286,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5290,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5290,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5397,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5406,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5413,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5420,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5426,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5427,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5428,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5439,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5446,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5453,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5459,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5460,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5461,42): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5473,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5474,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5476,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5477,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5479,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5480,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5482,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5483,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5485,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5486,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5491,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5496,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5501,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5507,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5509,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5510,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5511,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5512,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5513,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5514,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5515,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5516,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5517,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5518,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5519,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4757,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4759,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4760,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4761,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4762,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4769,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4771,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4772,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4773,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4774,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4781,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4783,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4784,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4785,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4786,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4793,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4795,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4796,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4797,29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4798,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4807,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4808,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4809,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4810,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4916,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4927,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4939,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4973,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4984,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(4996,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5006,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5019,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5103,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5114,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5125,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5137,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5155,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5384,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5391,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5398,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5417,34): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5417,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5421,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5421,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5437,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5437,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5441,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5441,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5548,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5557,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5564,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5571,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5577,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5578,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5579,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5590,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5597,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5604,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5610,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5611,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5612,42): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5624,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5625,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5627,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5628,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5630,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5631,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5633,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5634,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5636,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5637,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5642,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5647,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5652,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5658,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5660,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5661,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5662,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5663,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5664,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5665,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5666,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5667,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5668,28): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5669,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(5670,29): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
