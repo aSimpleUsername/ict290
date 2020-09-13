@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5finstance_1578',['_instance',['../class_c_easy_sound.html#ac1894785d41ee50082c2592cb8fa6ff1',1,'CEasySound']]]
+  ['_5finstance_1432',['_instance',['../class_c_easy_sound.html#ac1894785d41ee50082c2592cb8fa6ff1',1,'CEasySound']]]
 ];
