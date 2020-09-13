@@ -1,6 +1,6 @@
-shayLearyALL/CAMPUS TOUR/.vs/**
-shayLearyALL/CAMPUS TOUR/Debug/**
-shayLearyALL/CAMPUS TOUR/Release/**
+shayLearyALL/CAMPUS TOUR/.vs/
+shayLearyALL/CAMPUS TOUR/Debug/
+shayLearyALL/CAMPUS TOUR/Release/
 .obj
 .vscode
 .tlog
