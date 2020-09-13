@@ -402,15 +402,8 @@ private:
 	void DrawAngledRoofBeam2(int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
 	void DrawStepBricks();
 	void DrawMapExit();
-	//void DrawECL();
+
 	void drawPortal();
-
-
-	//void BindBridgeWall(GLint LR);
-	//void BindBuildingWall();
-	//void BindWallPosts(GLint LR);
-
-	//void IncrementFrameCount();
 
 	// loads images and creates texture
 	void CreateTextures();
