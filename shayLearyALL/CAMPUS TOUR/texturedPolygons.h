@@ -71,7 +71,15 @@ public:
     */
     void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
 
-	// calls function to creates display list to contain image
+	// 
+	/**
+		* @brief calls function to creates display list to contain image
+		* @param &XYZ 
+		* @param &listNo
+		* @param imgWidth 
+		* @param imgHeight 
+		* @return void
+	*/
 	void CreateDisplayList(const int &XYZ, const int &listNo,
 		                   const GLdouble &xImgSize, const GLdouble &zImgSize,
 					       const GLdouble &xStart, const GLdouble &yStart, const GLdouble &zStart,
