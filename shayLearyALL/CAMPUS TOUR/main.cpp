@@ -115,7 +115,6 @@ void Display()
 			isShaysWorld = false;
 			wrathWorld.myinit();
 		}
-		shaysWorld.stairsReturnPortal();
 
 		// displays the map
 		if (shaysWorld.DisplayMap) shaysWorld.cam.DisplayMap(width, height, shaysWorld.tp.GetTexture(MAP));
@@ -141,6 +140,14 @@ void Display()
 		// set the movement and rotation speed according to frame count
 		IncrementFrameCount();
 		wrathWorld.cam.SetMoveSpeed(stepIncrement);
+
+		if (wrathWorld.stairsReturnPortal())
+		{
+			printf("PORTAL\n");
+			isShaysWorld = true;
+			shaysWorld.cam.Position(1400, 11234, 39740, 0);
+			//shaysWorld.myinit();
+		}
 		//wrathWorld.stairsPortal();
 		//wrathWorld.stairsReturnPortal();
 
