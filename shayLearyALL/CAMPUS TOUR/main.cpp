@@ -116,6 +116,7 @@ void Display()
 			wrathWorld.myinit();
 		}
 		shaysWorld.stairsReturnPortal();
+		shaysWorld.specialPortal();
 
 		// displays the map
 		if (shaysWorld.DisplayMap) shaysWorld.cam.DisplayMap(width, height, shaysWorld.tp.GetTexture(MAP));

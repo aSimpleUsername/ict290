@@ -332,6 +332,7 @@ public:
 
 	bool stairsPortal();
 	void stairsReturnPortal();
+	void specialPortal();
 
 	// deletes image and clears memory
 	void DeleteImageFromMemory(unsigned char* tempImage);
@@ -373,6 +374,7 @@ private:
 	void DisplayLights();
 	//void DisplayECL();
 	void displayPortal();
+	void displaySpecialPortal();
 
 	// calls functions to create display lists (below)
 	void CreateTextureList();
@@ -407,6 +409,7 @@ private:
 	void DrawMapExit();
 
 	void drawPortal();
+	void drawSpecialPortal();
 
 	// loads images and creates texture
 	void CreateTextures();
