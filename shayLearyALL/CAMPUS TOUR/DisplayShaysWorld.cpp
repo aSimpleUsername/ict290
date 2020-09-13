@@ -3387,6 +3387,7 @@ void DisplayShaysWorld::DrawEntranceSteps()
 // Date: 05/09/2020
 // Updated Stairs
 // Version 2 - 12/09/2020
+// Version 3 - Updated Textures 13/09/2020
 void DisplayShaysWorld::DrawBookSteps()
 {
 	GLdouble xLocation = 1950;
@@ -3394,8 +3395,31 @@ void DisplayShaysWorld::DrawBookSteps()
 	stepLength = 40300.0;
 	for (int i = 508; i < 518; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation, step, stepLength, 0.71, 1.0);
-		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 8.0);
+		glNewList(i, GL_COMPILE);
+			glBegin(GL_QUADS);
+			glTexCoord2f(0.0, 1.0);
+			glVertex3f(xLocation + 142, step, stepLength);
+			glTexCoord2f(1.0, 1.0);
+			glVertex3f(xLocation + 142, step, stepLength + 512);
+			glTexCoord2f(1.0, 0.0);
+			glVertex3f(xLocation, step, stepLength + 512);
+			glTexCoord2f(0.0, 0.0);
+			glVertex3f(xLocation, step, stepLength);
+		glEnd();
+		glEndList();
+
+		glNewList(i + 16, GL_COMPILE);
+			glBegin(GL_QUADS);
+			glTexCoord2f(0.0, 1.0);
+			glVertex3f(xLocation, step, stepLength);
+			glTexCoord2f(3.0, 1.0);
+			glVertex3f(xLocation, step, stepLength + 512);
+			glTexCoord2f(3.0, 0.0);
+			glVertex3f(xLocation, step - 64, stepLength + 512);
+			glTexCoord2f(0.0, 0.0);
+			glVertex3f(xLocation, step - 64, stepLength);
+		glEnd();
+		glEndList();
 
 		step -= 64.0;
 		xLocation -= 142.0;
@@ -3406,8 +3430,31 @@ void DisplayShaysWorld::DrawBookSteps()
 	stepLength = 39500;
 	for (int i = 542; i < 543; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 512.0, 512.0, xLocation, step, stepLength, 1.0, 2.5);
-		tp.CreateDisplayList(YZ, i + 3, 64.0, 64.0, xLocation, step - 64.0, stepLength, 1.0, 20.0);
+		glNewList(i, GL_COMPILE);
+			glBegin(GL_QUADS);
+			glTexCoord2f(0.0, 1.0);
+			glVertex3f(xLocation + 512, step, stepLength);
+			glTexCoord2f(2.5, 1.0);
+			glVertex3f(xLocation + 512, step, stepLength + 1290);
+			glTexCoord2f(2.5, 0.0);
+			glVertex3f(xLocation, step, stepLength + 1290);
+			glTexCoord2f(0.0, 0.0);
+			glVertex3f(xLocation, step, stepLength);
+		glEnd();
+		glEndList();
+
+		glNewList(i + 3, GL_COMPILE);
+			glBegin(GL_QUADS);
+			glTexCoord2f(0.0, 1.0);
+			glVertex3f(xLocation, step, stepLength);
+			glTexCoord2f(6.0, 1.0);
+			glVertex3f(xLocation, step, stepLength + 1290);
+			glTexCoord2f(6.0, 0.0);
+			glVertex3f(xLocation, step - 64, stepLength + 1290);
+			glTexCoord2f(0.0, 0.0);
+			glVertex3f(xLocation, step - 64, stepLength);
+		glEnd();
+		glEndList();
 	}
 }
 
@@ -3418,8 +3465,31 @@ void DisplayShaysWorld::DrawBookStepsTwo()
 	stepLength = 39500;
 	for (int i = 546; i < 554; i++)
 	{
-		tp.CreateDisplayList(XZ, i, 200.0, 512.0, xLocation - 990, step, stepLength, 0.71, 1.00);
-		tp.CreateDisplayList(YZ, i + 16, 64.0, 64.0, xLocation - 848, step - 64.0, stepLength, 1.0, 8.0);
+		glNewList(i, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f((xLocation - 990), step, stepLength);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f((xLocation - 990), step, stepLength + 512);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f((xLocation - 990) + 142, step, stepLength + 512);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f((xLocation - 990) + 142, step, stepLength);
+		glEnd();
+		glEndList();
+
+		glNewList(i + 16, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f((xLocation - 848), step, stepLength);
+		glTexCoord2f(3.0, 1.0);
+		glVertex3f((xLocation - 848), step, stepLength + 512);
+		glTexCoord2f(3.0, 0.0);
+		glVertex3f((xLocation - 848), step - 64, stepLength + 512);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f((xLocation - 848), step - 64, stepLength);
+		glEnd();
+		glEndList();
 
 		step -= 64.0;
 		xLocation += 142.0;

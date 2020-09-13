@@ -1,313 +1,385 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: Two or more files with the name of .NETFramework,Version=v4.0.AssemblyAttributes.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp, Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp.
   DisplayShaysWorld.cpp
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(13,62): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1156,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1182,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1199,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1437,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1527,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1539,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1606,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1607,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1608,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1609,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1610,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1612,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1619,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1620,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1621,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1622,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1623,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1625,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1633,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1634,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1635,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1636,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1637,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1639,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1710,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1714,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1794,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1794,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1799,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1803,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1809,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1813,36): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1820,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1824,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1830,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1847,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1851,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1857,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1861,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1888,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1892,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1898,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1902,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1916,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1916,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1921,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1925,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1931,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1935,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1966,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1973,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1984,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1991,35): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2014,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2028,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2028,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2048,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2086,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2087,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2088,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2089,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2138,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2146,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2153,23): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2166,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2174,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2240,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2241,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2242,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2243,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2252,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2253,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2254,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2255,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2552,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2764,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2779,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2795,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2815,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2838,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2842,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2861,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2865,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2885,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2889,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2909,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2913,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2980,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2981,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2982,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2983,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2985,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2992,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2993,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2994,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2995,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2996,54): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3005,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3007,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3008,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3009,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3010,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3011,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3019,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3020,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3021,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3022,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3023,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3024,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3034,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3035,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3036,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3037,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3047,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3048,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3049,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3050,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3058,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3059,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3060,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3061,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3062,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3063,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3073,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3074,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3075,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3076,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3086,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3087,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3088,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3089,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3096,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3097,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3098,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3099,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3100,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3101,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3102,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3109,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3111,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3112,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3113,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3114,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3115,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3122,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3124,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3125,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3126,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3127,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3128,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3136,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3137,65): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3138,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3139,65): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3140,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3151,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3153,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3164,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3166,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3223,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3224,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3224,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3225,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3226,34): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3226,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3235,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3236,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3236,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3237,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3238,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3238,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,23): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3251,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3252,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3253,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3254,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3263,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3264,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3265,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3266,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3296,22): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3296,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3300,22): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3300,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3441,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3468,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3482,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3510,28): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3510,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3537,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3551,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3710,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3744,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3775,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3818,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3823,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4072,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4074,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4075,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4076,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4077,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4084,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4086,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4087,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4088,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4089,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4096,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4098,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4099,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4100,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4101,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4108,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4110,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4111,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4112,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4113,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4122,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4123,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4124,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4125,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4413,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4424,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4436,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4470,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4481,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4493,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4503,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4516,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4600,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4611,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4622,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4634,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4652,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4881,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4888,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4895,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4914,33): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4914,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4918,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4918,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4934,41): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4934,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4938,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4938,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5045,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5054,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5061,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5068,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5074,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5075,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5076,42): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5087,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5094,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5101,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5107,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5108,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5109,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5121,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5122,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5124,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5125,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5127,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5128,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5130,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5131,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5133,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5134,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5139,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5144,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5149,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5155,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5157,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5158,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5159,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5160,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5161,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5162,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5163,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5164,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5165,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5166,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5167,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(13,62): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1156,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1182,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1199,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1437,30): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1527,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1539,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1606,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1607,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1608,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1609,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1610,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1612,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1619,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1620,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1621,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1622,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1623,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1625,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1633,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1634,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1635,44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1636,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1637,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1639,52): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1710,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1714,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1794,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1794,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1799,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1803,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1809,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1813,36): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1820,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1824,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1830,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1847,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1851,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1857,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1861,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1888,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1892,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1898,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1902,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1916,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1916,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1921,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1925,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1931,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1935,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1966,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1973,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1984,30): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(1991,35): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2014,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2028,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2028,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2048,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2086,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2087,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2088,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2089,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2138,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2146,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2153,23): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2166,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2174,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2240,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2241,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2242,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2243,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2252,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2253,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2254,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2255,58): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2552,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2764,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2779,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2795,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2815,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2838,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2842,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2861,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2865,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2885,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2889,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2909,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2913,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2980,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2981,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2982,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2983,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2985,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2992,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2993,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2994,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2995,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(2996,54): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3005,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3007,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3008,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3009,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3010,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3011,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3019,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3020,55): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3021,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3022,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3023,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3024,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3034,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3035,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3036,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3037,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3047,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3048,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3049,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3050,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3058,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3059,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3060,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3061,57): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3062,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3063,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3073,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3074,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3075,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3076,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3086,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3087,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3088,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3089,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3096,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3097,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3098,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3099,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3100,56): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3101,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3102,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3109,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3111,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3112,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3113,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3114,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3115,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3122,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3124,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3125,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3126,46): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3127,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3128,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3136,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3137,65): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3138,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3139,65): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3140,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3151,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3153,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3164,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3166,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,21): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3220,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3222,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3223,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3224,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3224,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3225,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3226,34): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3226,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3232,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3234,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3235,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3236,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3236,40): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3237,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3238,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3238,33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3248,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,23): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3250,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3251,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3252,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3253,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3254,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,19): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3260,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3262,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3263,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3264,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3265,20): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3266,13): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3296,22): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3296,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3300,22): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3300,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3401,38): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3401,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3401,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3403,49): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3403,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3403,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3405,43): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3405,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3405,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3407,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3407,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3407,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3414,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3414,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3414,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3416,43): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3416,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3416,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3418,48): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3418,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3418,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3420,37): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3420,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3420,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3436,38): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3436,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3436,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3438,49): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3438,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3438,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3440,43): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3440,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3440,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3442,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3442,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3442,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3449,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3449,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3449,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3451,43): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3451,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3451,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3453,48): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3453,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3453,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3455,37): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3455,31): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3455,15): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3471,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3471,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3471,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3473,50): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3473,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3473,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3475,56): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3475,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3475,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3477,45): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3477,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3477,32): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3484,39): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3484,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3484,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3486,50): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3486,33): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3486,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3488,55): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3488,38): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3488,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3490,44): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3490,38): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3490,25): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3511,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3538,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3552,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3580,28): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3580,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3607,17): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3621,27): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3780,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3814,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3845,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3888,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(3893,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4142,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4144,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4145,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4146,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4147,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4154,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4156,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4157,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4158,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4159,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4166,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4168,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4169,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4170,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4171,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4178,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4180,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4181,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4182,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4183,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4192,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4193,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4194,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4195,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4483,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4494,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4506,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4540,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4551,29): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4563,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4573,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4586,26): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4670,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4681,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4692,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4704,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4722,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4951,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4958,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4965,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4984,33): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4984,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4988,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(4988,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5004,41): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5004,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5008,43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5008,18): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5115,16): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5124,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5131,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5138,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5144,39): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5145,37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5146,42): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5157,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5164,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5171,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5177,38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5178,36): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5179,41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5191,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5192,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5194,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5195,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5197,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5198,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5200,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5201,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5203,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5204,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5209,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5214,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5219,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5225,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5227,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5228,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5229,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5230,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5231,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5232,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5233,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5234,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5235,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5236,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.cpp(5237,27): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
 DisplayShaysWorld.obj : warning LNK4248: unresolved typeref token (0100001B) for 'GLUquadric'; image may not run
-  shaysWorld.vcxproj -> C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
+  shaysWorld.vcxproj -> C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
