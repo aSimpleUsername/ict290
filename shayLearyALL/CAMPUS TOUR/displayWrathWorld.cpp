@@ -114,7 +114,8 @@ void DisplayWrathWorld::DrawBackdrop()
 void DisplayWrathWorld::displaySkyBox()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACE_1));
-	glCallList(6);
+	for(int i=4; i<10; i++)
+		glCallList(i);
 }
 
 void DisplayWrathWorld::displayGroundPlane()
@@ -125,12 +126,12 @@ void DisplayWrathWorld::displayGroundPlane()
 
 void DisplayWrathWorld::drawSkyBox()
 {
-	//tp.CreateDisplayList(XZ, 4, 1024, 1024, -20000, 100000.0, 0.0, 50, 50);	// Top
-	//tp.CreateDisplayList(XZ, 5, 1024, 1024, -20000, 100000.0, 0.0, 50, 50);	// Bottom
+	tp.CreateDisplayList(XZ, 4, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// Top
+	tp.CreateDisplayList(XZ, 5, 1024, 1024, -10000.0, 92400.0, -30000.0, 100, 100);		// Bottom
 	tp.CreateDisplayList(YZ, 6, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// FRONT
-	//tp.CreateDisplayList(YZ, 7, 1024, 1024, 0.0, 10000.0, 0.0, 50, 50);	// Back
-	//tp.CreateDisplayList(XY, 8, 1024, 1024, 0.0, 10000.0, 0.0, 50, 50);	// Left
-	//tp.CreateDisplayList(XY, 9, 1024, 1024, 0.0, 10000.0, 0.0, 50, 50);	// Right	
+	tp.CreateDisplayList(YZ, 7, 1024, 1024, 30000.0, -10000.0, -30000.0, 100, 100);		// Back
+	tp.CreateDisplayList(XY, 8, 1024, 1024, -10000.0, -10000.0, -10000.0, 100, 100);	// Left
+	tp.CreateDisplayList(XY, 9, 1024, 1024, -10000.0, -10000.0, 72400, 100, 100);		// Right	
 }
 
 void DisplayWrathWorld::drawGroundPlane()
