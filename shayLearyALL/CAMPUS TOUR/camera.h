@@ -258,20 +258,29 @@ public:
 	*/
 	void DisplayWelcomeScreen (const int & screenWidth, const int & screenHeight,
 							   const int & tempExit, const GLuint & tempImage);
-	// display no exit
+	/**
+		* @brief Displays Exit Screen
+		* @param screenWidth - width of screen
+		* @param screenHeight - height of
+		* @param tempImage - image of exit screen
+		* @return void
+	*/
 	void DisplayNoExit (const int & screenWidth, const int & screenHeight, 
 						const GLuint & tempImage);
 	Camera& operator = (const Camera& other);
 private:
 
-	//steep incline increments
+	///steep incline increments x
 	GLdouble m_incrementX;
+	///steep incline increments z
 	GLdouble m_incrementZ;
+	/// number of plains
 	int m_No_Plains;
+	/// plane number
 	int m_plainNo;
 	GLdouble m_plainHeight;
 
-	// rotation variables
+	/// rotation variables
 	GLdouble m_rotateAngleLR;
 	GLdouble m_deltaAngleLR;
 	GLdouble m_rotateAngleUD;	
