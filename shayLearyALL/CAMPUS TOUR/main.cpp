@@ -4568,6 +4568,10 @@ void DisplayExtras ()
 		glTranslatef(1208.0, 0.0, 0.0);			
 		glCallList(421);
 	glPopMatrix();
+
+	//New Courtyard Textures
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	for(int i = 650; i < 700; i++) glCallList(i);
 }
 
 void DrawExtras ()
@@ -4703,8 +4707,41 @@ void DrawExtras ()
 	tp.CreateDisplayList (XY, 420, 2.0, 32.0, 22928.0, 10870.0, 42960.0, 604.0, 1.0);	// ticket box ledge edge
 	tp.CreateDisplayList (YZ, 421, 32.0, 2.0, 22928.0, 10870.0, 42960.0, 1.0, 49);		// ticket box ledge edge side
 
+	//New Courtyard Textures (YZ Near Stairs)
+	tp.CreateDisplayList(YZ, 650, 250, 100, -205, 10300, 40900, 1.0, 1.0);				//fire extinguisher
 
+	tp.CreateDisplayList(YZ, 651, 800, 400, -205, 10000, 38000, 1.0, 1.0);				//YZ courtyard door
+	tp.CreateDisplayList(YZ, 652, 800, 400, -205, 10000, 35000, 1.0, 1.0);				//YZ courtyard door
+	tp.CreateDisplayList(YZ, 653, 800, 400, -205, 10000, 32000, 1.0, 1.0);				//YZ courtyard door
 
+	tp.CreateDisplayList(YZ, 654, 300, 300, -205, 10400, 35750, 1.0, 1.0);				//YZ courtyard window
+	tp.CreateDisplayList(YZ, 655, 300, 300, -205, 10400, 34250, 1.0, 1.0);				//YZ courtyard window
+	tp.CreateDisplayList(YZ, 656, 300, 300, -205, 10400, 31250, 1.0, 1.0);				//YZ courtyard window
+
+	//New Courtyard Textures (XY Bookshop)
+	tp.CreateDisplayList(XY, 657, 1000, 800, 1000, 10000, 42950, 1.0, 1.0);				//bookshop window
+	tp.CreateDisplayList(XY, 658, 1000, 800, 0, 10000, 42950, 1.0, 1.0);				//bookshop door
+	tp.CreateDisplayList(XY, 659, 1000, 800, -1000, 10000, 42950, 1.0, 1.0);			//bookshop window
+	tp.CreateDisplayList(XY, 660, 500, 700, -2500, 10000, 42950, 1.0, 1.0);				//XY door
+	tp.CreateDisplayList(XY, 661, 350, 350, -3000, 10300, 42950, 1.0, 1.0);				//XY poster
+	tp.CreateDisplayList(XY, 662, 1000, 800, -5000, 10000, 42950, 1.0, 1.0);			//bookshop window
+
+	tp.CreateDisplayList(XY, 663, 600, 300, -6000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 664, 600, 300, -7000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 665, 500, 700, -8500, 10000, 42950, 1.0, 1.0);				//XY door
+	tp.CreateDisplayList(XY, 666, 350, 350, -9000, 10300, 42950, 1.0, 1.0);				//XY poster
+	tp.CreateDisplayList(XY, 667, 500, 700, -11000, 10000, 42950, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 668, 600, 300, -12000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 669, 500, 700, -14000, 10000, 42950, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 670, 600, 300, -15000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 671, 600, 300, -16000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 672, 500, 700, -18000, 10000, 42950, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 673, 500, 700, -20000, 10000, 42950, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 674, 600, 300, -21000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 675, 600, 300, -22000, 10300, 42950, 1.0, 1.0);				//XY Poster
+
+	//New Courtyard Textures (XY Opposite Bookshop)
+	tp.CreateDisplayList(XY, 676, 600, 600, -22000, 10400, 29820, 1.0, 1.0);				//XY window
 }
 
 // --------------------------------------------------------------------------------------
