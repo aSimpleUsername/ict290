@@ -79,28 +79,63 @@ public:
 		* @return void
 	*/
 	void SetXRotateSpeed (const GLdouble &tempSpeed) {m_xrotateSpeed = tempSpeed;}
+	/**
+		* @brief Sets the rotate speed of Y
+		* @param tempSpeed - speed to set Y 
+		* @return void
+	*/
 	void SetYRotateSpeed(const GLdouble& tempSpeed) {m_yrotateSpeed = tempSpeed;}
+	/**
+		* @brief Sets the move speed
+		* @param tempSpeed - speed to set movement too
+		* @return void
+	*/
 	void SetMoveSpeed (const GLdouble &tempSpeed) {m_moveSpeed = tempSpeed;}
 
 	// COLLSION DETECTION FUNCTIONS
 	// set collision detection (TRUE = on)
+	/**
+		* @brief Sets collsion detection
+		* @param tempCol - boolean value of colision detection
+		* @return void
+	*/
 	void SetCollisionDetectionOn (const bool &tempCol) {m_CollisionDetectionOn = tempCol;}
-	// set number of bounding boxes
+	/**
+		* @brief Sets number of bounding boxes
+		* @param tempSize - number of bounding boxes
+		* @return void
+	*/
 	void SetNoBoundingBoxes(const int & tempSize) {m_colDetect.SetNoBoundingBoxes(tempSize);}
-	// set the co-ordinates of the world
+	/**
+		* @brief Sets the co-ordinates of the world
+		* @param tempX - x world coordinate
+		* @param tempZ - z world coordinate
+		* @return void
+	*/
 	void SetWorldCoordinates (const GLdouble &tempX, const GLdouble &tempZ);
-	// creates a linked list for each quadrant of the world and places the bounding box
-	// data in each.  Then clears and deletes AABB array.
+	/**
+		* @brief Creates a linked list for each quadrant of the world and places the bounding box data in each.
+		* @return void
+	*/
 	void InitiateBoundingBoxes() {m_colDetect.CreateLinkedList();}
-
-	// sets the co-ordinate of each plain
+	/**
+		* @brief Sets the co-ordinate of each plain
+		* @param tempType - plain type
+		* @param tempXs - X coodinate start
+		* @param tempXe - X coodinate end
+		* @param tempYs - Y coodinate start
+		* @param tempYe - Y coodinate end
+		* @param tempZs - Z coodinate start
+		* @param tempZe - Z coodinate end
+		* @return void
+	*/
 	void SetPlains (const int tempType,
 				    const GLdouble tempXs, const GLdouble tempXe,
 				    const GLdouble tempYs, const GLdouble tempYe,
 				    const GLdouble tempZs, const GLdouble tempZe);
 
 	//----------------------------------------------------------------------------------
-	//  Get Methods
+	//  Get Methods-
 	//----------------------------------------------------------------------------------
 	GLdouble GetLR () {return m_x;}
 	GLdouble GetUD () {return m_y;}
