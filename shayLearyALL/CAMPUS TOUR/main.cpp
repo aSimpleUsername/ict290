@@ -12,6 +12,7 @@
 #include "texturedPolygons.h"
 #include "Portal.h"
 #include "DisplayShaysWorld.h"
+#include "displayWrathWorld.h"
 
 //--------------------------------------------------------------------------------------
 
@@ -21,6 +22,7 @@
 // Set speed (steps)
 
 DisplayShaysWorld shaysWorld;
+DisplayWrathWorld wrathWorld;
 GLdouble movementSpeed = 15.0;
 GLdouble xrotationSpeed = 0.0015;
 GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
@@ -95,7 +97,9 @@ void Display()
 	glEnable(GL_TEXTURE_2D);
 	glPushMatrix();
 	// displays the welcome screen
-	if (shaysWorld.DisplayWelcome) shaysWorld.cam.DisplayWelcomeScreen(width, height, 1, shaysWorld.tp.GetTexture(WELCOME));
+	if (shaysWorld.DisplayWelcome && isShaysWorld) shaysWorld.cam.DisplayWelcomeScreen(width, height, 1, shaysWorld.tp.GetTexture(WELCOME));
+	if (shaysWorld.DisplayWelcome && !isShaysWorld) wrathWorld.cam.DisplayWelcomeScreen(width, height, 1, wrathWorld.tp.GetTexture(WELCOME));
+	// displays the exit screen
 	// displays the exit screen
 	if (shaysWorld.DisplayExit) shaysWorld.cam.DisplayWelcomeScreen(width, height, 0, shaysWorld.tp.GetTexture(EXIT));
 
@@ -126,11 +130,31 @@ void Display()
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
 	}
+	if(!isShaysWorld)
+	{
+		wrathWorld.cam.CheckCamera();
+		// set the movement and rotation speed according to frame count
+		IncrementFrameCount();
+		wrathWorld.cam.SetMoveSpeed(stepIncrement);
+		//wrathWorld.stairsPortal();
+		//wrathWorld.stairsReturnPortal();
+
+		// print postion to assist development
+		wrathWorld.cam.printPosition();
+
+		// display images
+		wrathWorld.DrawBackdrop();
+
+		glPopMatrix();
+		glDisable(GL_TEXTURE_2D);
+	}
+
 	// clear buffers
 	glFlush();
 	glutSwapBuffers();
-}/*
- */
+}
+
+
 //--------------------------------------------------------------------------------------
 void reshape(int w, int h)
 {
@@ -178,6 +202,23 @@ void keyPressed(unsigned char key, int x, int y)
 			shaysWorld.DisplayWelcome = true;
 		}
 	}
+	else if (key == ' ' && !isShaysWorld)
+	{
+		if (wrathWorld.DisplayWelcome)		//if info screen is up don't allow player to look around
+		{
+			wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
+			wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+			wrathWorld.cam.SetMoveSpeed(movementSpeed);
+			wrathWorld.DisplayWelcome = false;
+		}
+		else
+		{
+			wrathWorld.cam.SetXRotateSpeed(0.0f);
+			wrathWorld.cam.SetYRotateSpeed(0.0f);
+			wrathWorld.cam.SetMoveSpeed(0.0f);
+			wrathWorld.DisplayWelcome = true;
+		}
+	}
 }
 
 void releaseKey(unsigned char key, int x, int y)
@@ -185,27 +226,40 @@ void releaseKey(unsigned char key, int x, int y)
 	keyStates[key] = false;		//set keystate to released
 }
 
+// Will cut this code in half once I overload the camera assignment operator
 void processKeys()
 {
 	int speed = 3;
 
 	if ((keyStates['a'] || keyStates['A']) && isShaysWorld)		//step left
 		shaysWorld.cam.DirectionLR(-speed);
+	if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
+		wrathWorld.cam.DirectionLR(-speed);
 
 	if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
 		shaysWorld.cam.DirectionLR(speed);
+	if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
+		wrathWorld.cam.DirectionLR(speed);
 
 	if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
 		shaysWorld.cam.DirectionFB(speed);
+	if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
+		wrathWorld.cam.DirectionFB(speed);
 
 	if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
 		shaysWorld.cam.DirectionFB(-speed);
+	if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
+		wrathWorld.cam.DirectionFB(-speed);
 
 	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
 		shaysWorld.cam.DirectionLR(0);
+	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
+		wrathWorld.cam.DirectionLR(0);
 
 	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
 		shaysWorld.cam.DirectionFB(0);
+	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
+		wrathWorld.cam.DirectionFB(0);
 
 	if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
 	{
@@ -218,17 +272,35 @@ void processKeys()
 			shaysWorld.DisplayMap = true;
 		}
 	}
-	
-	if(keyStates[27])	// exit tour (escape key)
+
+	if ((keyStates['p'] || keyStates['P']) && isShaysWorld)	// change world - temp
+	{
+		wrathWorld.myinit();
+		isShaysWorld = false;
+	}
+
+	/*if ((keyStates['p'] || keyStates['P']) && !isShaysWorld)	// change world - temp
+	{
+		isShaysWorld = true;
+	}*/
+
+	if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
 	{
 		shaysWorld.cam.SetXRotateSpeed(0.0f);
 		shaysWorld.cam.SetYRotateSpeed(0.0f);
 		shaysWorld.cam.SetMoveSpeed(0.0f);
 		shaysWorld.DisplayExit = true;
 	}
+	if ((keyStates[27]) && !isShaysWorld)	// exit tour (escape key)
+	{
+		wrathWorld.cam.SetXRotateSpeed(0.0f);
+		wrathWorld.cam.SetYRotateSpeed(0.0f);
+		wrathWorld.cam.SetMoveSpeed(0.0f); 
+		wrathWorld.DisplayExit = true;
+	}
 
 	// display light fittings
-	if((keyStates['l'] || keyStates['L']) && isShaysWorld)
+	if ((keyStates['l'] || keyStates['L']) && isShaysWorld)
 	{
 		if (shaysWorld.lightsOn)
 		{
@@ -239,20 +311,6 @@ void processKeys()
 			shaysWorld.lightsOn = true;
 		}
 	}
-		
-	if ((keyStates['p'] || keyStates['P']) && isShaysWorld)
-	{
-		// Display ECL Block
-		if (shaysWorld.displayECL)
-		{
-			shaysWorld.displayECL = false;
-		}
-		else
-		{
-			shaysWorld.displayECL = true;
-		}
-	}
-		
 }
 
 //--------------------------------------------------------------------------------------
@@ -261,7 +319,7 @@ void processKeys()
 void Mouse(int button, int state, int x, int y)
 {
 	// exit tour if clicked on exit splash screen
-	if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN))
+	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && isShaysWorld)
 	{
 		if ((shaysWorld.DisplayExit) && (x <= width/2.0 + 256.0) && (x >= width/2.0 - 256.0)
 			&& (y <= height/2.0 + 256.0) && (y >= height/2.0 - 256.0))
@@ -270,6 +328,15 @@ void Mouse(int button, int state, int x, int y)
 			exit(1);
 		}
   	 }
+	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && !isShaysWorld)
+	{
+		if ((wrathWorld.DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
+			&& (y <= height / 2.0 + 256.0) && (y >= height / 2.0 - 256.0))
+		{
+			wrathWorld.DeleteImageFromMemory(wrathWorld.image);
+			exit(1);
+		}
+	}
 }
 
 //--------------------------------------------------------------------------------------
@@ -277,11 +344,17 @@ void Mouse(int button, int state, int x, int y)
 //--------------------------------------------------------------------------------------
 void mouseMove(int x, int y)
 {
-	shaysWorld.cam.RotateCamera(x, y, width, height);
-	glutWarpPointer(width / 2, height / 2);
+	if (isShaysWorld)
+	{
+		shaysWorld.cam.RotateCamera(x, y, width, height);
+		glutWarpPointer(width / 2, height / 2);
+	}
+	if(!isShaysWorld)
+	{
+		wrathWorld.cam.RotateCamera(x, y, width, height);
+		glutWarpPointer(width / 2, height / 2);
+	}
 }
-
-
 
 //--------------------------------------------------------------------------------------
 //  Increments frame count used for setting movement speed

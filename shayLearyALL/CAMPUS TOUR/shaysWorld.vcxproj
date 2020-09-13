@@ -127,6 +127,7 @@
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp" />
     <ClCompile Include="DisplayShaysWorld.cpp" />
+    <ClCompile Include="displayWrathWorld.cpp" />
     <ClCompile Include="EasySound.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="cameraMap.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="DisplayShaysWorld.h" />
+    <ClInclude Include="displayWrathWorld.h" />
     <ClInclude Include="EasySound.h" />
     <ClInclude Include="lodepng.h" />
     <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut.h" />
