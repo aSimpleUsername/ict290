@@ -1,0 +1,6 @@
+<map id="AABB::GetNoBoundingBoxes" name="AABB::GetNoBoundingBoxes">
+<area shape="rect" id="node1" title="Gets number of bounding boxes." alt="" coords="663,13,857,39"/>
+<area shape="rect" id="node2" href="$class_collision.html#affd6aa970fc603b44dab681f551baef1" title=" " alt="" coords="444,5,615,47"/>
+<area shape="rect" id="node3" href="$class_collision.html#a30554164f1f1501dc707bcec81e3fd34" title=" " alt="" coords="220,13,396,39"/>
+<area shape="rect" id="node4" href="$class_camera.html#af39ed792820436b916a4d6110413423f" title="Creates a linked list for each quadrant of the world and places the bounding box data in each." alt="" coords="5,5,172,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AABB::BoundingBox" name="AABB::BoundingBox">
+<area shape="rect" id="node1" title="stores max and min values of co&#45;ordinates" alt="" coords="5,189,148,267"/>
+<area shape="rect" id="node2" href="$struct_a_a_b_b_1_1_x_y_z.html" title="stores x,y,z co&#45;ordinates" alt="" coords="32,5,121,112"/>
+</map>

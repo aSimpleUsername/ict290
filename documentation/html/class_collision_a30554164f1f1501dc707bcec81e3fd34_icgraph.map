@@ -1,0 +1,4 @@
+<map id="Collision::CreateLinkedList" name="Collision::CreateLinkedList">
+<area shape="rect" id="node1" title=" " alt="" coords="220,13,396,39"/>
+<area shape="rect" id="node2" href="$class_camera.html#af39ed792820436b916a4d6110413423f" title="Creates a linked list for each quadrant of the world and places the bounding box data in each." alt="" coords="5,5,172,47"/>
+</map>

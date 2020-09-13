@@ -1,0 +1,5 @@
+<map id="Camera::SetNoBoundingBoxes" name="Camera::SetNoBoundingBoxes">
+<area shape="rect" id="node1" title="Sets number of bounding boxes." alt="" coords="5,13,208,39"/>
+<area shape="rect" id="node2" href="$class_collision.html#a33c7681e88ca6ab89ae53b6342aed6f2" title=" " alt="" coords="256,5,425,47"/>
+<area shape="rect" id="node3" href="$class_a_a_b_b.html#a4bbff0661c754b621c4b6bfc89bcf051" title="Sets size of bounding box." alt="" coords="473,13,667,39"/>
+</map>
