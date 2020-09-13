@@ -88,7 +88,6 @@ public:
 					       const GLdouble &xStart, const GLdouble &yStart, const GLdouble &zStart,
 					       const GLdouble &xTimes, const GLdouble &zTimes);
 
-	
     /**
         * @brief used to create display lists where image is larger than world scale on YZ axis
         * @param listNo - number the item is in the list
@@ -122,8 +121,27 @@ public:
 							  const GLdouble &xStart, const GLdouble &xSize,
 							  const GLdouble &yStart, const GLdouble &ySize,
 							  const GLdouble &xImgSize, const GLdouble &yImgSize);
-
-	// used to create display lists where image is on an angle
+    /**
+        * @brief used to create display lists where image is on an angle
+        * @param listNo - number the item is in the list
+        * @param imageWidth - width of image
+        * @param imageHeight - height of image
+        * @param x1 - first corner x
+        * @param x2 - second corner x
+        * @param x3 - third corner x
+        * @param x4 - fourth corner x
+        * @param y1 - first corner y
+        * @param y2 - second corner y
+        * @param y3 - third corner y
+        * @param y4 - fourth corner y
+        * @param z1 - first corner z
+        * @param z2 - second corner z
+        * @param z3 - third corner z
+        * @param z4 - fourth corner z
+        * @param smallestX - the smallest x
+        * @param smallestZ - the smallest z
+        * @return void
+    */
 	void CreateAngledPolygon(const int &listNo,
 							 const GLdouble &imageWidth, const GLdouble &imageHeight,
 							 const GLdouble &x1, const GLdouble &x2,
