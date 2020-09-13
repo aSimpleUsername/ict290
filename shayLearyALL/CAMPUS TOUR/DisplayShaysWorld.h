@@ -356,6 +356,7 @@ private:
 	//MID
 	void DisplayBookSteps();
 	void DisplayBookStepsTwo();
+	void displayStairRailing();
 	// TEST
 	void DisplayExtras();
 	void DisplayGrass();
@@ -390,10 +391,11 @@ private:
 	void DrawExtras();
 	void DrawRoof();
 	void DrawEntranceSteps();
-	//MID
+	//Stairs
 	void DrawBookSteps();
 	void DrawBookStepsTwo();
-	//Mid
+	void drawStairRailing();
+	//Stairs
 	void DrawLargerTextures();
 	void DrawLights();
 	void DrawBench();
