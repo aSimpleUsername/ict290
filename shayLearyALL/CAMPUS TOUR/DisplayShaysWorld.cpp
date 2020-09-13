@@ -89,6 +89,33 @@ void DisplayShaysWorld::stairsReturnPortal()
 		cam.Position(1400, 11234, 39740, 0);
 	}
 }
+
+void DisplayShaysWorld::drawSpecialPortal()
+{
+	tp.CreateDisplayList(XY, 750, 500.0, 800.0, -23500, 10000.0, 42949.0, 1.0, 1.0);
+}
+
+void DisplayShaysWorld::displaySpecialPortal()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	glCallList(750);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
+	glCallList(751);
+}
+
+void DisplayShaysWorld::specialPortal()
+{
+	Portal toStart;
+
+	toStart.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	toStart.portalDimensions(-500, -100, -600);
+	if (toStart.createPortal(-23000, 10500.0, 43000.0) == true)
+	{
+		cam.Position(34890, 10450, 23400, 0);
+	}
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1212,6 +1239,7 @@ void DisplayShaysWorld::DrawBackdrop()
 	DisplayRoof();
 	DisplayStepBricks();
 	displayPortal();
+	displaySpecialPortal();
 	displayStairRailing();
 	//displaySkyBox();
 	if (lightsOn) DisplayLights();
@@ -5722,9 +5750,9 @@ void DisplayShaysWorld::CreateTextureList()
 	// 455-459
 
 	drawPortal();				// 593
+	drawSpecialPortal(); //750
 	drawStairRailing();
 	//drawSkyBox();
 
-	//last number used: 707
-	// 600-649
+	//last number used: 750
 }
