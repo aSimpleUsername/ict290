@@ -149,10 +149,6 @@
     <ClInclude Include="displayWrathWorld.h" />
     <ClInclude Include="EasySound.h" />
     <ClInclude Include="lodepng.h" />
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut.h" />
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_ext.h" />
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_std.h" />
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\glut.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
     <ClInclude Include="Portal.h" />

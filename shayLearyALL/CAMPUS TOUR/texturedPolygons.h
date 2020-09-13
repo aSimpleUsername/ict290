@@ -108,7 +108,7 @@ public:
     /**
         * @brief Used to create display lists where image is larger than world scale on XY axis
         * @param listNo - number the item is in the list
-        * @param zStart - starting x
+        * @param zStart - starting z
         * @param xStart - starting x
         * @param xSize - size of x
         * @param yStart - starting y

@@ -29,15 +29,36 @@ public:
 	virtual ~AABBLinkedList() {Clear();}
 
 	//----------------------------------------------------------------------------------
-
-	// clears linked list and frees memory
+	/**
+		* @brief Clears linked list and frees memory
+		* @return void
+	*/
 	void Clear();
 
-	// add a node to the start of the linked list
+	
+	/**
+		* @brief Adds a node to the start of the linked list
+		* @param maxX - maximum x
+		* @param minX - minimum x
+		* @param maxY - maximum y
+		* @param minY - minimum y
+		* @param maxZ - maximum z
+		* @param minZ - minimum z
+		* @return bool
+	*/
 	bool AddToStart (GLdouble maxX, GLdouble minX, GLdouble maxY,
 				     GLdouble minY, GLdouble maxZ, GLdouble minZ);
-	
-	//  set the values of the node data
+	/**
+		* @brief Set the values of the node data
+		* @param ptrCount - Pointer of AABB
+		* @param maxX - maximum x
+		* @param minX - minimum x
+		* @param maxY - maximum y
+		* @param minY - minimum y
+		* @param maxZ - maximum z
+		* @param minZ - minimum z
+		* @return void
+	*/
 	void SetData(const int &ptrCount,
 				 const GLdouble maxX, const GLdouble minX,
 				 const GLdouble maxY, const GLdouble minY,
@@ -46,28 +67,68 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods
 	//----------------------------------------------------------------------------------
+	/**
+		* @brief Gets Max X of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMaxX (int ptrCount);
+	/**
+		* @brief Gets Min X of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMinX (int ptrCount);
+	/**
+		* @brief Gets Max Y of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMaxY (int ptrCount);
+	/**
+		* @brief Gets Min Y of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMinY (int ptrCount);
+	/**
+		* @brief Gets Max Z of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMaxZ (int ptrCount);
+	/**
+		* @brief Gets Min Z of AABB
+		* @param ptrCount - Pointer of AABB
+		* @return GLdouble
+	*/
 	GLdouble GetMinZ (int ptrCount);
-	
-	// Return size of list
+	/**
+		* @brief Returns size of AABB list
+		* @return int
+	*/
 	int GetListSize ();
-	
-	// Return the address of the link to the next node in the list
+	/**
+		* @brief Return the address of the link to the next node in the list
+		* @return AABBNode
+	*/
     AABBNode *GetNext () const {return m_first->GetNext();}
-	// Return the address of the link to the first node in the list
+	/**
+		* @brief // Return the address of the link to the first node in the list
+		* @return AABBNode
+	*/
 	AABBNode *GetFirst() const {return m_first;}
 
 //--------------------------------------------------------------------------------------
 
 private:
-	// pointer to first node in list
+	/// pointer to first node in list
 	AABBNode *m_first;
-
-	// used to clear memory
+	/**
+		* @brief Used to Clear Memory
+		* @param before - node before one to be deleted
+		* @return void
+	*/
 	void Delete (AABBNode *before);
 
 	// Privatised copy constructor and assignment operator

@@ -110,18 +110,6 @@
     <ClInclude Include="texturedPolygons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_ext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\freeglut_std.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="packages\freeglut.2.8.1.15\build\native\include\gl\glut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
