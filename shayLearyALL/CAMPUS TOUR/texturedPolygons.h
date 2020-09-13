@@ -70,28 +70,54 @@ public:
         * @return void
     */
     void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
-
-	// 
-	/**
-		* @brief calls function to creates display list to contain image
-		* @param &XYZ 
-		* @param &listNo
-		* @param imgWidth 
-		* @param imgHeight 
-		* @return void
-	*/
+    /**
+        * @brief Calls function to creates display list to contain image
+        * @param XYZ 
+        * @param listNo - number the item is in the list
+        * @param xImgSize - x size of image
+        * @param zImgSize - z size of image
+        * @param xStart - starting x
+        * @param yStart - starting y
+        * @param zStart - starting z
+        * @param xTimes
+        * @param zTimes
+        * @return void
+    */
 	void CreateDisplayList(const int &XYZ, const int &listNo,
 		                   const GLdouble &xImgSize, const GLdouble &zImgSize,
 					       const GLdouble &xStart, const GLdouble &yStart, const GLdouble &zStart,
 					       const GLdouble &xTimes, const GLdouble &zTimes);
 
-	// used to create display lists where image is larger than world scale on YZ axis
+	
+    /**
+        * @brief used to create display lists where image is larger than world scale on YZ axis
+        * @param listNo - number the item is in the list
+        * @param xStart - starting x
+        * @param xSize - size of x
+        * @param yStart - starting y
+        * @param ySize - size of y
+        * @param zStart - starting z
+        * @param zSize - size of z
+        * @param yImgSize - y size of image
+        * @param zImgSize - z size of image
+        * @return void
+    */
 	void CreateYtoZWindowList(const int &listNo, const GLdouble &xStart,
 							  const GLdouble &yStart, const GLdouble &ySize,
 							  const GLdouble &zStart, const GLdouble &zSize,
 							  const GLdouble &yImgSize, const GLdouble &zImgSize);
-
-	// used to create display lists where image is larger than world scale on XY axis
+    /**
+        * @brief Used to create display lists where image is larger than world scale on XY axis
+        * @param listNo - number the item is in the list
+        * @param zStart - starting x
+        * @param xStart - starting x
+        * @param xSize - size of x
+        * @param yStart - starting y
+        * @param ySize - size of y
+        * @param xImgSize - y size of image
+        * @param yImgSize - z size of image
+        * @return void
+    */
 	void CreateXtoYWindowList(const int &listNo, const GLdouble &zStart,
 							  const GLdouble &xStart, const GLdouble &xSize,
 							  const GLdouble &yStart, const GLdouble &ySize,
