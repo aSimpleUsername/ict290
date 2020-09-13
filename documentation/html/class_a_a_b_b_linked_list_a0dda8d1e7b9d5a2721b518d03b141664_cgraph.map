@@ -1,5 +1,0 @@
-<map id="AABBLinkedList::AddToStart" name="AABBLinkedList::AddToStart">
-<area shape="rect" id="node1" title="Adds a node to the start of the linked list." alt="" coords="5,31,196,57"/>
-<area shape="rect" id="node2" href="$class_a_a_b_b_node.html#a9ec9a1d51945b1783e8c26542f71128f" title="Return the address of the link to the next node in the list." alt="" coords="244,5,388,32"/>
-<area shape="rect" id="node3" href="$class_a_a_b_b_node.html#a2d624ad9c1241156af7a4dd96cbcd40f" title="Set the address of the link to the next node in the list." alt="" coords="245,56,387,83"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="AABBLinkedList::~AABBLinkedList" name="AABBLinkedList::~AABBLinkedList">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,233,57"/>
-<area shape="rect" id="node2" href="$class_a_a_b_b_linked_list.html#a91220ba141deab9a3da2ec7ca6396436" title="Clears linked list and frees memory." alt="" coords="281,31,436,57"/>
-<area shape="rect" id="node3" href="$class_a_a_b_b_linked_list.html#aa4e4c62a0b374cafb85f5f41a9d31553" title="Used to Clear Memory." alt="" coords="484,56,647,83"/>
-<area shape="rect" id="node4" href="$class_a_a_b_b_node.html#a9ec9a1d51945b1783e8c26542f71128f" title="Return the address of the link to the next node in the list." alt="" coords="695,5,839,32"/>
-<area shape="rect" id="node5" href="$class_a_a_b_b_node.html#a2d624ad9c1241156af7a4dd96cbcd40f" title="Set the address of the link to the next node in the list." alt="" coords="695,56,838,83"/>
-</map>

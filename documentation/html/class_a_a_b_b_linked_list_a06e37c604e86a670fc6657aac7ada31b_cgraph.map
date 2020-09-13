@@ -1,4 +1,0 @@
-<map id="AABBLinkedList::GetMaxY" name="AABBLinkedList::GetMaxY">
-<area shape="rect" id="node1" title="Gets Max Y of AABB." alt="" coords="5,5,185,32"/>
-<area shape="rect" id="node2" href="$class_a_a_b_b_node.html#a9ec9a1d51945b1783e8c26542f71128f" title="Return the address of the link to the next node in the list." alt="" coords="233,5,377,32"/>
-</map>

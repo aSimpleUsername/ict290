@@ -1,7 +1,0 @@
-<map id="AABBNode::SetNext" name="AABBNode::SetNext">
-<area shape="rect" id="node1" title="Set the address of the link to the next node in the list." alt="" coords="723,31,865,57"/>
-<area shape="rect" id="node2" href="$class_a_a_b_b_linked_list.html#a0dda8d1e7b9d5a2721b518d03b141664" title="Adds a node to the start of the linked list." alt="" coords="484,5,675,32"/>
-<area shape="rect" id="node3" href="$class_a_a_b_b_linked_list.html#aa4e4c62a0b374cafb85f5f41a9d31553" title="Used to Clear Memory." alt="" coords="498,56,661,83"/>
-<area shape="rect" id="node4" href="$class_a_a_b_b_linked_list.html#a91220ba141deab9a3da2ec7ca6396436" title="Clears linked list and frees memory." alt="" coords="281,56,436,83"/>
-<area shape="rect" id="node5" href="$class_a_a_b_b_linked_list.html#a045b677f4cceafb09d188e7a08f5e065" title=" " alt="" coords="5,56,233,83"/>
-</map>
