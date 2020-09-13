@@ -1,2 +1,4 @@
-'shayLearyALL/CAMPUS TOUR/.vs'
+'shayLearyALL/CAMPUS TOUR/.vs/**'
 'shayLearyALL/CAMPUS TOUR/Debug/**'
+'shayLearyALL/CAMPUS TOUR/Release/**'
+
