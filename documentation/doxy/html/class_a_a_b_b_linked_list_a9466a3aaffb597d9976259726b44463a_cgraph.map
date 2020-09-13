@@ -1,0 +1,5 @@
+<map id="AABBLinkedList::SetData" name="AABBLinkedList::SetData">
+<area shape="rect" id="node1" title="Set the values of the node data." alt="" coords="5,31,177,57"/>
+<area shape="rect" id="node2" href="$class_a_a_b_b_node.html#a9ec9a1d51945b1783e8c26542f71128f" title="Return the address of the link to the next node in the list." alt="" coords="225,5,369,32"/>
+<area shape="rect" id="node3" href="$class_a_a_b_b_node.html#a43c049985e68d0d7443dc7ba11c71979" title="Sets Data." alt="" coords="226,56,369,83"/>
+</map>

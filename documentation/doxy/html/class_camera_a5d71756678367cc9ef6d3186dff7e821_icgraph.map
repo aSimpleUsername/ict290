@@ -1,0 +1,10 @@
+<map id="Camera::GetLR" name="Camera::GetLR">
+<area shape="rect" id="node1" title="Gets Camera X." alt="" coords="409,131,521,157"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="104,131,169,157"/>
+<area shape="rect" id="node4" href="$class_camera.html#adc12edf020e48254432214200f8e63c3" title="Displays Map." alt="" coords="218,39,361,65"/>
+<area shape="rect" id="node5" href="$class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title=" " alt="" coords="217,90,361,131"/>
+<area shape="rect" id="node6" href="$class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title=" " alt="" coords="217,155,361,197"/>
+<area shape="rect" id="node7" href="$class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title=" " alt="" coords="218,221,361,262"/>
+<area shape="rect" id="node8" href="$class_display_shays_world.html#a6de35eaf895280932c6f4e6d368ae52b" title=" " alt="" coords="217,286,361,327"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,131,56,157"/>
+</map>

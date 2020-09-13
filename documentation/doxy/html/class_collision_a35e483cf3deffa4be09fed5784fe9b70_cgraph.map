@@ -1,0 +1,4 @@
+<map id="Collision::SetAABBMaxY" name="Collision::SetAABBMaxY">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$class_a_a_b_b.html#af5f3fe38dd9aaf9ba1aa81c119b4beaa" title="Sets max y of bounding box." alt="" coords="223,5,343,32"/>
+</map>

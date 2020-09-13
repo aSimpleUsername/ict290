@@ -1,0 +1,5 @@
+<map id="AABBLinkedList::GetMaxX" name="AABBLinkedList::GetMaxX">
+<area shape="rect" id="node1" title="Gets Max X of AABB." alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$class_a_a_b_b_node.html#adb707da6d39fdae8230dd40f33a6cc85" title="Gets Max X of node." alt="" coords="232,5,381,32"/>
+<area shape="rect" id="node3" href="$class_a_a_b_b_node.html#a9ec9a1d51945b1783e8c26542f71128f" title="Return the address of the link to the next node in the list." alt="" coords="235,56,379,83"/>
+</map>

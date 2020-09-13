@@ -1,0 +1,4 @@
+<map id="Collision::SetAABBMaxY" name="Collision::SetAABBMaxY">
+<area shape="rect" id="node1" title=" " alt="" coords="219,5,388,32"/>
+<area shape="rect" id="node2" href="$class_camera.html#a5645577a695fb4b5b59aa948882a27d4" title="Sets Max Y of AABB." alt="" coords="5,5,171,32"/>
+</map>

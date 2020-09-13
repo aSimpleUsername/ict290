@@ -1,0 +1,13 @@
+<map id="DisplayShaysWorld::DrawMapExit" name="DisplayShaysWorld::DrawMapExit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,195,149,236"/>
+<area shape="rect" id="node2" href="$class_textured_polygons.html#a4b21cfdd9a38b6026bc1f0e8bd2455a1" title="Calls function to creates display list to contain image." alt="" coords="197,195,369,236"/>
+<area shape="rect" id="node3" href="$class_textured_polygons.html#a037ef33a71ce33954a49b378b3aad197" title=" " alt="" coords="417,5,589,47"/>
+<area shape="rect" id="node6" href="$class_textured_polygons.html#afcc97491bf1cbbe22e91bc7e4c476ac3" title=" " alt="" coords="417,71,589,112"/>
+<area shape="rect" id="node7" href="$class_textured_polygons.html#ad5beba21ad65ebbd1c8228924b56e49b" title=" " alt="" coords="417,136,589,177"/>
+<area shape="rect" id="node8" href="$_s_d_l__opengl_8h.html#a98964453975519f92d6cc59ef77f7436" title=" " alt="" coords="471,202,536,229"/>
+<area shape="rect" id="node9" href="$_s_d_l__opengl_8h.html#abbff207d1fa71b296ff35b149cef7238" title=" " alt="" coords="476,253,531,279"/>
+<area shape="rect" id="node10" href="$_s_d_l__opengl_8h.html#a9bd7233f539f4fd2000c5d5999f6c439" title=" " alt="" coords="465,303,541,330"/>
+<area shape="rect" id="node11" href="$_s_d_l__opengl_8h.html#a2255efdc1e7585c158d43eb670dde31b" title=" " alt="" coords="464,354,543,381"/>
+<area shape="rect" id="node4" href="$_s_d_l__opengl_8h.html#a09db6f9fa0d39ef7e3919e6212296ece" title=" " alt="" coords="637,53,735,79"/>
+<area shape="rect" id="node5" href="$_s_d_l__opengl_8h.html#a9a95e17961303a80a5bf052b8c1cf677" title=" " alt="" coords="646,103,726,130"/>
+</map>

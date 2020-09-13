@@ -1,0 +1,5 @@
+<map id="Camera::ClimbSteps" name="Camera::ClimbSteps">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node2" href="$class_camera.html#a19d7bf6f171a46abe5b7743c0429ca75" title="Used to pass direction to move or rotate in z direction." alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="$class_camera.html#a11f6493139834cc9d31a1c28e5effa1a" title="Used to pass direction to move or rotate in x direction." alt="" coords="196,56,339,83"/>
+</map>

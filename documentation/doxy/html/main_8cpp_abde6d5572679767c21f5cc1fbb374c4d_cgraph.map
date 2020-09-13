@@ -1,0 +1,6 @@
+<map id="keyPressed" name="keyPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,96,83"/>
+<area shape="rect" id="node2" href="$class_camera.html#a86a5a6f374125bb58c6a97ba2d921a64" title="Sets the move speed." alt="" coords="152,5,315,32"/>
+<area shape="rect" id="node3" href="$class_camera.html#a52e0b0f00c00d0bfb6bab0ee95dd444a" title="Sets the rotate speed of X." alt="" coords="145,56,322,83"/>
+<area shape="rect" id="node4" href="$class_camera.html#aff81964279993402e401d2980f96cd95" title="Sets the rotate speed of Y." alt="" coords="144,107,323,133"/>
+</map>

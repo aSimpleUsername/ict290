@@ -1,0 +1,18 @@
+<map id="Camera" name="Camera">
+<area shape="rect" id="node1" title=" " alt="" coords="378,1556,525,2103"/>
+<area shape="rect" id="node2" href="$class_c_easy_sound.html" title=" " alt="" coords="5,1233,132,1427"/>
+<area shape="rect" id="node3" href="$struct_s_d_l___audio_spec.html" title=" " alt="" coords="55,792,173,987"/>
+<area shape="rect" id="node15" href="$class_c_sound.html" title=" " alt="" coords="246,1240,358,1420"/>
+<area shape="rect" id="node4" href="$class_plain_linked_list.html" title=" " alt="" coords="382,1167,521,1493"/>
+<area shape="rect" id="node5" href="$class_plain_node.html" title=" " alt="" coords="382,704,494,1075"/>
+<area shape="rect" id="node6" href="$class_collision.html" title=" " alt="" coords="583,1181,715,1479"/>
+<area shape="rect" id="node7" href="$class_a_a_b_b.html" title=" " alt="" coords="595,755,764,1023"/>
+<area shape="rect" id="node8" href="$struct_a_a_b_b_1_1_bounding_box.html" title="stores max and min values of co&#45;ordinates" alt="" coords="608,469,751,546"/>
+<area shape="rect" id="node9" href="$struct_a_a_b_b_1_1_x_y_z.html" title="stores x,y,z co&#45;ordinates" alt="" coords="635,189,724,296"/>
+<area shape="rect" id="node10" href="$class_a_a_b_b_linked_list.html" title=" " alt="" coords="788,733,933,1045"/>
+<area shape="rect" id="node11" href="$class_a_a_b_b_node.html" title=" " alt="" coords="803,373,919,641"/>
+<area shape="rect" id="node12" href="$struct_a_a_b_b_node_1_1_bounding_box.html" title="stores max and min values of co&#45;ordinates" alt="" coords="774,204,947,281"/>
+<area shape="rect" id="node13" href="$struct_a_a_b_b_node_1_1_x_y_z.html" title="stores x,y,z co&#45;ordinates" alt="" coords="801,5,920,112"/>
+<area shape="rect" id="node14" href="$class_camera_map.html" title=" " alt="" coords="739,1247,921,1413"/>
+<area shape="rect" id="node16" href="$class_c_sound_time.html" title=" " alt="" coords="233,733,357,1045"/>
+</map>

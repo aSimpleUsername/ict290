@@ -1,0 +1,6 @@
+<map id="CameraMap::DisplayWelcomeScreen" name="CameraMap::DisplayWelcomeScreen">
+<area shape="rect" id="node1" title=" " alt="" coords="480,5,679,47"/>
+<area shape="rect" id="node2" href="$class_camera.html#ab8084e679b9cf9bf9a6e333ca8a0caee" title="Displays Welcome Screen." alt="" coords="217,13,432,39"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="104,13,169,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>

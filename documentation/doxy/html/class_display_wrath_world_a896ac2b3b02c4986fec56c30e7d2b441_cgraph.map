@@ -1,0 +1,9 @@
+<map id="DisplayWrathWorld::DrawBackdrop" name="DisplayWrathWorld::DrawBackdrop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,148,112"/>
+<area shape="rect" id="node2" href="$class_display_wrath_world.html#a9b0a6c3b53645b4ac07918fda2a590f1" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" id="node6" href="$class_display_wrath_world.html#a84b173349ecb724b3cb34edbf0a60c90" title=" " alt="" coords="196,71,339,112"/>
+<area shape="rect" id="node7" href="$class_display_wrath_world.html#a9ef905fa8cccbfedafb3f076a36c91e1" title=" " alt="" coords="196,136,339,177"/>
+<area shape="rect" id="node3" href="$class_textured_polygons.html#af6694e3cbea65de23f5dcfab77a48b99" title="Returns the texture." alt="" coords="387,27,585,54"/>
+<area shape="rect" id="node4" href="$_s_d_l__opengl_8h.html#a940f58f3728713267a58e2d09ff602b2" title=" " alt="" coords="435,78,537,105"/>
+<area shape="rect" id="node5" href="$_s_d_l__opengl_8h.html#a31d8f4c0ab0fdc04ee4ba3236eea9c13" title=" " alt="" coords="449,129,523,155"/>
+</map>

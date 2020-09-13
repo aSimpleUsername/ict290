@@ -1,0 +1,9 @@
+<map id="TexturedPolygons::CreateYtoZWindowList" name="TexturedPolygons::CreateYtoZWindowList">
+<area shape="rect" id="node1" title="used to create display lists where image is larger than world scale on YZ axis" alt="" coords="793,39,965,80"/>
+<area shape="rect" id="node2" href="$class_display_shays_world.html#ab116d4a6bbaa3ad88e531c1747d8bd5d" title=" " alt="" coords="601,5,745,47"/>
+<area shape="rect" id="node7" href="$class_display_shays_world.html#a8928f52f3d51d21a3f0fb130cb4876aa" title=" " alt="" coords="601,71,745,112"/>
+<area shape="rect" id="node3" href="$class_display_shays_world.html#a8e2c9eaea3a1547bccd8449ef131cb99" title=" " alt="" coords="409,39,553,80"/>
+<area shape="rect" id="node4" href="$class_display_shays_world.html#aba0f0debde0e1fc4f7db3a6ecb35f074" title=" " alt="" coords="217,39,361,80"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="104,21,169,47"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
+</map>

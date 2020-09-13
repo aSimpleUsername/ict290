@@ -1,0 +1,13 @@
+<map id="DisplayShaysWorld::specialPortal" name="DisplayShaysWorld::specialPortal">
+<area shape="rect" id="node1" title=" " alt="" coords="5,150,149,191"/>
+<area shape="rect" id="node2" href="$class_portal.html#ac4c29dca020a20953416faa2624884f1" title=" " alt="" coords="212,5,347,32"/>
+<area shape="rect" id="node3" href="$class_camera.html#a2c82b9713e7cc1fb77130aad72728478" title="Gets Camera Z." alt="" coords="223,56,336,83"/>
+<area shape="rect" id="node4" href="$class_camera.html#a5d71756678367cc9ef6d3186dff7e821" title="Gets Camera X." alt="" coords="223,107,335,133"/>
+<area shape="rect" id="node5" href="$class_camera.html#acaa842acd09e3a18c409ddc0c89cf808" title="Gets Camera Y." alt="" coords="222,157,337,184"/>
+<area shape="rect" id="node6" href="$class_portal.html#a4d7de51f166c38807bdbaacb08f61e25" title=" " alt="" coords="197,208,361,235"/>
+<area shape="rect" id="node7" href="$class_camera.html#a259204729f7a60277c6f6215559adcc0" title="position the camera" alt="" coords="218,259,341,285"/>
+<area shape="rect" id="node11" href="$class_portal.html#a545f30c1b34f9178830be53e811ca419" title=" " alt="" coords="214,309,345,336"/>
+<area shape="rect" id="node8" href="$class_camera.html#a023cb3e9d92301d8132f338c7ef5be77" title=" " alt="" coords="409,233,563,260"/>
+<area shape="rect" id="node10" href="$class_camera.html#a11d15ac81e6fbe74c1dd09e342be3e9c" title=" " alt="" coords="420,284,552,311"/>
+<area shape="rect" id="node9" href="$_s_d_l__opengl_8h.html#a6577472f85b23086331edadaf0311a49" title=" " alt="" coords="611,233,713,260"/>
+</map>

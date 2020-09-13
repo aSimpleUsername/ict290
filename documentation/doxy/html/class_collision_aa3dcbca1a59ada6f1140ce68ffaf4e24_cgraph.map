@@ -1,0 +1,4 @@
+<map id="Collision::GetAABBMaxY" name="Collision::GetAABBMaxY">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$class_a_a_b_b.html#a1e4dc54e528b14528968b6aa9e347eea" title="Gets max y of bounding box." alt="" coords="224,5,345,32"/>
+</map>
