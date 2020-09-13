@@ -107,10 +107,14 @@ void Display()
 	if (isShaysWorld)
 	{
 		shaysWorld.cam.CheckCamera();
-		// set the movement and rotation speed according to frame count
+		// set the movement and rotation speed accordiwng to frame count
 		IncrementFrameCount();
 		shaysWorld.cam.SetMoveSpeed(stepIncrement);
-		shaysWorld.stairsPortal();
+		if (shaysWorld.stairsPortal())
+		{
+			isShaysWorld = false;
+			wrathWorld.myinit();
+		}
 		shaysWorld.stairsReturnPortal();
 
 		// displays the map

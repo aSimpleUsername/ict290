@@ -55,16 +55,13 @@ void DisplayShaysWorld::myinit()
 //Date: 11/09/2020
 // Progress on portals
 
-void DisplayShaysWorld::stairsPortal()
+bool DisplayShaysWorld::stairsPortal()
 {
 	Portal steps;
 
 	steps.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
 	steps.portalDimensions(-300, -200, -700);
-	if (steps.createPortal(1360, 11430, 40250) == true)
-	{
-		cam.Position(3652, 10450, 37133, 0);
-	}
+	return(steps.createPortal(1360, 11430, 40250));
 }
 
 void DisplayShaysWorld::drawPortal()
