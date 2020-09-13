@@ -102,7 +102,7 @@ public:
 	// display no exit
 	void DisplayNoExit (const int & screenWidth, const int & screenHeight, 
 						const GLuint & tempImage);
-	
+	Camera& operator = (const Camera& other);
 private:
 
 	//steep incline increments
@@ -141,7 +141,7 @@ private:
 	void MoveFB();
 	void MoveLR();
 	void MoveUD();
-	
+
 	// overloaded function for setting plain
 	void SetPlains(const int & moveX, const int & moveZ);
 
@@ -169,7 +169,7 @@ private:
 
     // Privatised copy constructor and assignment operator
     Camera (const Camera &cam) {};
-    Camera &operator = (const Camera &cam) {};
+    //Camera &operator = (const Camera &cam) {};
 };
 
 #endif

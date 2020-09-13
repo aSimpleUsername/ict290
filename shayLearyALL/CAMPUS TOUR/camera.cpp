@@ -480,4 +480,56 @@ void Camera::ClimbSteps(GLdouble stepStart, GLdouble stepFinish, GLdouble stepHe
 }
 //----------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------
+// Overloaded operator - unfinished because every object involved requires overloading
+//----------------------------------------------------------------------------------------
+/*
+Camera& Camera::operator = (const Camera& other)
+{
+	m_incrementX = other.m_incrementX;
+	m_incrementZ = other.m_incrementZ;
+	m_No_Plains = other.m_No_Plains;
+	m_plainNo = other.m_plainNo;
+	m_plainHeight = other.m_plainHeight;
+
+	m_rotateAngleLR = other.m_rotateAngleLR;
+	m_deltaAngleLR = other.m_deltaAngleLR;
+	m_rotateAngleUD = other.m_rotateAngleUD;
+	m_deltaAngleUD = other.m_deltaAngleUD;
+
+	m_x = other.m_x;
+	m_y = other.m_y;
+	m_z = other.m_z;
+	m_zLast = other.m_zLast;
+	m_xLast = other.m_xLast;
+
+	m_lookX = other.m_lookX;
+	m_lookY = other.m_lookY;
+	m_lookZ = other.m_lookZ;
+
+	m_lookXX = other.m_lookXX;
+	m_lookYY = other.m_lookYY;
+	m_lookZZ = other.m_lookZZ;
+
+	m_deltaMoveLR = other.m_deltaMoveLR;
+	m_deltaMoveFB = other.m_deltaMoveFB;
+	m_deltaMoveUD = other.m_deltaMoveUD;
+	m_direction = other.m_direction;
+
+	m_xrotateSpeed = other.m_xrotateSpeed;
+	m_yrotateSpeed = other.m_yrotateSpeed;
+	m_moveSpeed = other.m_moveSpeed;
+
+	m_xrotateSpeed = other.m_xrotateSpeed;
+	m_yrotateSpeed = other.m_yrotateSpeed;
+	m_moveSpeed = other.m_moveSpeed;
+
+	m_CollisionDetectionOn = other.m_CollisionDetectionOn;
+
+	m_colDetect = other.m_colDetect;
+	m_map = other.m_map;
+	m_Plain = other.m_Plain;
+
+	return *this;
+}*/
 
