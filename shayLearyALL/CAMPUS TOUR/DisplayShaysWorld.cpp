@@ -1137,7 +1137,8 @@ void DisplayShaysWorld::DrawBackdrop()
 	DisplayRedPosts();
 	DisplayRoof();
 	DisplayStepBricks();
-	displayPortal(); //TEST
+	displayPortal();
+	displayStairRailing();
 	//displaySkyBox();
 	if (lightsOn) DisplayLights();
 }
@@ -3496,6 +3497,79 @@ void DisplayShaysWorld::DrawBookStepsTwo()
 	}
 }
 
+void DisplayShaysWorld::displayStairRailing()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(WALL_BRICK_STEPS));
+	for(int i = 708; i < 712; i++) glCallList(i);
+}
+
+void DisplayShaysWorld::drawStairRailing()
+{
+	GLdouble xLocation = 1950;
+	step = 10505.0;
+	stepLength = 40300.0;
+	
+	glNewList(708, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 10.0);
+		glVertex3f(xLocation + 142, step - 100, stepLength);
+		glTexCoord2f(2.0, 10.0);
+		glVertex3f(xLocation + 142, step + 250, stepLength);
+		glTexCoord2f(2.0, 0.0);
+		glVertex3f((xLocation - 1000), step -250 , stepLength);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f((xLocation - 1000), step - 600, stepLength);
+	glEnd();
+	glEndList();
+
+	xLocation = 2089;
+	step = 10569.0;
+	stepLength = 40300.0;
+
+	glNewList(709, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(xLocation, step - 164, stepLength - 288);
+		glTexCoord2f(0.0, 2.0);
+		glVertex3f(xLocation, step - 164, stepLength);
+		glTexCoord2f(2.0, 2.0);
+		glVertex3f(xLocation, step + 186, stepLength);
+		glTexCoord2f(2.0, 0.0);
+		glVertex3f(xLocation, step + 186, stepLength - 288);
+	glEnd();
+	glEndList();
+
+	xLocation = 1950;
+	step = 10505.0;
+	stepLength = 40012.0;
+
+	glNewList(710, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 10.0);
+	glVertex3f(xLocation + 142, step + 250, stepLength);
+	glTexCoord2f(2.0, 10.0);
+	glVertex3f(xLocation + 142, step - 100, stepLength);
+	glTexCoord2f(2.0, 0.0);
+	glVertex3f((xLocation - 1000), step + 575, stepLength);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f((xLocation - 1000), step + 825, stepLength);
+	glEnd();
+	glEndList();
+
+	glNewList(711, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 10.0);
+	glVertex3f(xLocation + 142, step - 100, stepLength - 512);
+	glTexCoord2f(2.0, 10.0);
+	glVertex3f(xLocation + 142, step - 100, stepLength);
+	glTexCoord2f(2.0, 0.0);
+	glVertex3f((xLocation - 1000), step + 575, stepLength);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f((xLocation - 1000), step + 575, stepLength - 512);
+	glEnd();
+	glEndList();
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -5282,8 +5356,9 @@ void DisplayShaysWorld::CreateTextureList()
 	// 455-459
 
 	drawPortal();				// 593
+	drawStairRailing();
 	//drawSkyBox();
 
-	//last number used: 601
+	//last number used: 707
 	// 600-649
 }

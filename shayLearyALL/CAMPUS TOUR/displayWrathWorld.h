@@ -14,18 +14,10 @@
 #define XY_FLIP 4
 
 // Wall Brick Textures
-#define WALL_BRICK_YZ				15
-#define WALL_BRICK_XY				16
-#define WALL_BRICK_XY_87WIDTH		17
-#define WALL_BRICK_GAP_YZ			18
-#define WALL_BRICK_GAP2_YZ			19
-#define	WALL_BRICK_USD_YZ			20
-#define WALL_BRICK_XY_END			21
-#define WALL_BRICK_YZ_END			22
-#define	WALL_GAP_1					23
-#define WALL_BRICK_3_4				24
-#define SHADOW_BRICK				25
-#define WALL_BRICK_SEC_SIGN			216
+#define WELCOME_SCREEN				1
+#define EXIT_SCREEN					2
+#define GROUND_PLANE				3
+#define SPACE_1						4
 
 class DisplayWrathWorld
 {
@@ -39,7 +31,7 @@ public:
 	// display campus map
 	bool DisplayMap = false;
 	// display welcome screen
-	bool DisplayWelcome = true;
+	bool DisplayWelcome = false;
 	// display exit screen
 	bool DisplayExit = false;
 	// display light fittings
@@ -60,12 +52,14 @@ private:
 	// Stores raw image file
 	std::vector<unsigned char>* pngImage;
 
-	void DisplayBricks();
+	void displaySkyBox();
+	void displayGroundPlane();
 
 	// calls functions to create display lists (below)
 	void CreateTextureList();
 	// creates display lists
-	void DrawBricks();
+	void drawSkyBox();
+	void drawGroundPlane();
 
 	// loads images and creates texture
 	void CreateTextures();
