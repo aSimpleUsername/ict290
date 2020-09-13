@@ -330,7 +330,7 @@ public:
 	// calls display functions below to draw the backdrops
 	void DrawBackdrop();
 
-	void stairsPortal();
+	bool stairsPortal();
 	void stairsReturnPortal();
 
 	// deletes image and clears memory
