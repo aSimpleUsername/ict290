@@ -301,6 +301,7 @@
 #define VENDING_MACHINE_2			244
 #define VENDING_MACHINE_3			245
 #define VLAD						246
+#define BIN_TOP						247
 // 246 Next
 
 
@@ -356,6 +357,7 @@ private:
 	//MID
 	void DisplayBookSteps();
 	void DisplayBookStepsTwo();
+	void displayStairRailing();
 	// TEST
 	void DisplayExtras();
 	void DisplayGrass();
@@ -390,10 +392,11 @@ private:
 	void DrawExtras();
 	void DrawRoof();
 	void DrawEntranceSteps();
-	//MID
+	//Stairs
 	void DrawBookSteps();
 	void DrawBookStepsTwo();
-	//Mid
+	void drawStairRailing();
+	//Stairs
 	void DrawLargerTextures();
 	void DrawLights();
 	void DrawBench();

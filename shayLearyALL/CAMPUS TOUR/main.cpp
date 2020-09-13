@@ -281,8 +281,6 @@ void mouseMove(int x, int y)
 	glutWarpPointer(width / 2, height / 2);
 }
 
-
-
 //--------------------------------------------------------------------------------------
 //  Increments frame count used for setting movement speed
 //--------------------------------------------------------------------------------------
