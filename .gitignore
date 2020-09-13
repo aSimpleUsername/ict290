@@ -1,13 +1,37 @@
-'shayLearyALL/CAMPUS TOUR/.vs'
-'shayLearyALL/CAMPUS TOUR/Debug/**'
+<<<<<<< HEAD
+shayLearyALL/CAMPUS TOUR/.vs/
+shayLearyALL/CAMPUS TOUR/Debug/
+shayLearyALL/CAMPUS TOUR/Release/
+*.obj
+*.vscode
+*.tlog
 shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/.suo
-shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/Browse.VC.db
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/4bee5a48d0da6a91/MAIN.ipch
 shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/TestStore/0/000.testlog
-shayLearyALL/CAMPUS TOUR/Debug/main.obj
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.log
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.pdb
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/CL.command.1.tlog
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/CL.read.1.tlog
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/CL.write.1.tlog
-shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/link.write.1.tlog
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/4bee5a48d0da6a91/MAIN.ipch
+*.ipch
+=======
+
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/4bee5a48d0da6a91/MAIN.ipch
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/TestStore/0/000.testlog
+*.log
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/rc.command.1.tlog
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/rc.read.1.tlog
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/rc.write.1.tlog
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.tlog/shaysWorld.lastbuildstate
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.vcxproj.FileListAbsolute.txt
+shayLearyALL/CAMPUS TOUR/Debug/shaysWorld.vcxprojAssemblyReference.cache
 shayLearyALL/CAMPUS TOUR/Debug/vc142.pdb
+shayLearyALL/CAMPUS TOUR/main.cpp
+shayLearyALL/CAMPUS TOUR/shaysWorld.exe
+shayLearyALL/CAMPUS TOUR/shaysWorld.pdb
+shayLearyALL/CAMPUS TOUR/Debug/Sound.obj
+shayLearyALL/CAMPUS TOUR/Debug/SoundTime.obj
+shayLearyALL/CAMPUS TOUR/Debug/texturedPolygons.obj
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/TestStore/0/testlog.manifest
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/TestStore/0/000.testlog
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/86ac9ca6d12ebee2/TEXTUREDPOLYGONS.ipch
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/ipch/AutoPCH/4bee5a48d0da6a91/MAIN.ipch
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/Browse.VC.db
+shayLearyALL/CAMPUS TOUR/.vs/shaysWorld/v16/.suo
+>>>>>>> vlad

@@ -26,19 +26,50 @@ public:
 
 	//----------------------------------------------------------------------------------
 
-	// returns texture
+	/**
+        * @brief Returns the texture
+        * @param tempIndex - Index of texture
+        * @return Gluint
+    */
 	GLuint GetTexture (const int & tempIndex) {return m_texture[tempIndex];}
-
-	// loads a raw image file into memory
+	/**
+        * @brief Loads the texture
+        * @param filename - name of the file
+        * @param imgWidth - width of the image
+        * @param imgHeight - height of the image
+        * @return GLubyte*
+    */
 	GLubyte* LoadTexture(char *filename, int imgWidth, int imgHeight);
+    /**
+        * @brief Loads the texture
+        * @param filename - name of the file
+        * @return GLubyte*
+    */
 	GLubyte* LoadTexture(const char* filename);
-
-	// set the number of textures to be used
+    /**
+        * @brief Set the number of textures to be used
+        * @param textureNo - number of the texture
+        * @return void
+    */
 	void SetTextureCount(const int &textureNo);
-
-	// creates texture and set required values for texture mapping
+    /**
+        * @brief Creates RAW texture and set required values for texture mapping
+        * @param textureNo - number of the texture
+        * @param image - character array of the image
+        * @param imgWidth - width of the image
+        * @param imgHeight - height of the image
+        * @return void
+    */
 	void CreateTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
-	void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
+	/**
+        * @brief Creates PNG texture and set required values for texture mapping
+        * @param textureNo - number of the texture
+        * @param image - character array of the image
+        * @param imgWidth - width of the image
+        * @param imgHeight - height of the image
+        * @return void
+    */
+    void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
 
 	// calls function to creates display list to contain image
 	void CreateDisplayList(const int &XYZ, const int &listNo,
@@ -70,9 +101,15 @@ public:
 							 const int &smallestX, const int &smallestZ);
 
 private:
-	// pointer to display list
+	/// pointer to display list
 	GLuint *m_texture;
-	// returns image file
+	/**
+        * @brief Loads RAW image file
+        * @param filename - name of the file
+        * @param width - width of the image
+        * @param height - height of the image
+        * @return GLubyte*
+    */
 	GLubyte* LoadRawImageFile(char* filename, int width, int height);
 
 	void Clear ();
