@@ -66,6 +66,9 @@
     <ClCompile Include="DisplayShaysWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="displayWrathWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H">
@@ -132,6 +135,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DisplayShaysWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="displayWrathWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
