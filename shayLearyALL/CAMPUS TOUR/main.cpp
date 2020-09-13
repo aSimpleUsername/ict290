@@ -4884,8 +4884,10 @@ void DrawExtras ()
 
 	//Opposite bookshop wall
 	tp.CreateDisplayList(XY, 700, 600, 400, 1750, 10300, 41180, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 701, 600, 400, 0, 10300, 41180, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);				//Level 1 sign
+	tp.CreateDisplayList(XY, 701, 600, 400, 0, 10300, 41180, 1.0, 1.0);	//XY poster
+
+	//tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);	//Level 1 sign
+	tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);
 
 	//Opposite stairs
 	tp.CreateDisplayList(YZ, 703, 400, 600, -25695, 10300, 38000, 1.0, 1.0);				//YZ poster
