@@ -1,0 +1,4 @@
+<map id="Collision::SetNoBoundingBoxes" name="Collision::SetNoBoundingBoxes">
+<area shape="rect" id="node1" title=" " alt="" coords="256,5,425,47"/>
+<area shape="rect" id="node2" href="$class_camera.html#a043549232a16c18fe93f35c5d3a40fe2" title="Sets number of bounding boxes." alt="" coords="5,13,208,39"/>
+</map>

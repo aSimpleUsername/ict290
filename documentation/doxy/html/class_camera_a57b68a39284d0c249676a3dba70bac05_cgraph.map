@@ -1,5 +1,0 @@
-<map id="Camera::SetAABBMaxX" name="Camera::SetAABBMaxX">
-<area shape="rect" id="node1" title="Sets Max X of AABB." alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$class_collision.html#a4a48bb981450043e0acf28a94ba374cc" title=" " alt="" coords="216,5,383,32"/>
-<area shape="rect" id="node3" href="$class_a_a_b_b.html#a49aefcac8e9b33ef4508f220d551e9a3" title="Sets max x of bounding box." alt="" coords="431,5,549,32"/>
-</map>

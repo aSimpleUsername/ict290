@@ -1,5 +1,0 @@
-<map id="Camera::GetAABBMaxY" name="Camera::GetAABBMaxY">
-<area shape="rect" id="node1" title="Gets AABB Max Y." alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$class_collision.html#aa3dcbca1a59ada6f1140ce68ffaf4e24" title=" " alt="" coords="220,5,391,32"/>
-<area shape="rect" id="node3" href="$class_a_a_b_b.html#a1e4dc54e528b14528968b6aa9e347eea" title="Gets max y of bounding box." alt="" coords="439,5,560,32"/>
-</map>

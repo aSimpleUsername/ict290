@@ -1,6 +1,0 @@
-<map id="SDL_MessageBoxData" name="SDL_MessageBoxData">
-<area shape="rect" id="node1" title="MessageBox structure containing title, text, window, etc." alt="" coords="101,344,259,480"/>
-<area shape="rect" id="node2" href="$struct_s_d_l___message_box_button_data.html" title="Individual button data." alt="" coords="5,175,200,281"/>
-<area shape="rect" id="node3" href="$struct_s_d_l___message_box_color_scheme.html" title="A set of colors to use for message box dialogs." alt="" coords="224,189,432,267"/>
-<area shape="rect" id="node4" href="$struct_s_d_l___message_box_color.html" title="RGB value used in a message box color scheme." alt="" coords="248,5,408,112"/>
-</map>

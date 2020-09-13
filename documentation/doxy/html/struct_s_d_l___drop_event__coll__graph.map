@@ -1,3 +1,0 @@
-<map id="SDL_DropEvent" name="SDL_DropEvent">
-<area shape="rect" id="node1" title="An event used to request a file open by the system (event.drop.*) This event is enabled by default,..." alt="" coords="5,5,119,127"/>
-</map>

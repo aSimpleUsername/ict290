@@ -1,5 +1,0 @@
-<map id="SDL_WindowShapeMode" name="SDL_WindowShapeMode">
-<area shape="rect" id="node1" title="A struct that tags the SDL_WindowShapeParams union with an enum describing the type of its contents." alt="" coords="12,329,181,407"/>
-<area shape="rect" id="node2" href="$union_s_d_l___window_shape_params.html" title="A union containing parameters for shaped windows." alt="" coords="5,189,188,267"/>
-<area shape="rect" id="node3" href="$struct_s_d_l___color.html" title=" " alt="" coords="55,5,139,127"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="DisplayShaysWorld::CreatePlains" name="DisplayShaysWorld::CreatePlains">
-<area shape="rect" id="node1" title=" " alt="" coords="5,49,149,90"/>
-<area shape="rect" id="node2" href="$class_camera.html#a5b5c1468bdb3b8e6e654bea66c9561b8" title="Sets the co&#45;ordinate of each plain." alt="" coords="197,56,328,83"/>
-<area shape="rect" id="node3" href="$class_plain_linked_list.html#a4d9d62421c215a3c9e2c9ef0833b84a1" title=" " alt="" coords="376,56,559,83"/>
-<area shape="rect" id="node4" href="$class_plain_node.html#a0bffe61c0a30c8af32d5cb6ac59e4070" title=" " alt="" coords="607,5,744,32"/>
-<area shape="rect" id="node5" href="$class_plain_node.html#a566db8fc78c8b4dea13373f908a53577" title=" " alt="" coords="607,56,743,83"/>
-<area shape="rect" id="node6" href="$class_plain_node.html#afe5be77c2dfbf7447105f0ea722e77f1" title=" " alt="" coords="607,107,743,133"/>
-</map>

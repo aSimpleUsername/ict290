@@ -1,9 +1,0 @@
-<map id="Collision::Collide" name="Collision::Collide">
-<area shape="rect" id="node1" title=" " alt="" coords="593,56,712,83"/>
-<area shape="rect" id="node2" href="$class_camera.html#acc808e653e9c59f0d2450c9caca26b98" title=" " alt="" coords="423,5,545,32"/>
-<area shape="rect" id="node6" href="$class_camera.html#ad53c2248f2d38bc8f01ac288e8cc21d3" title=" " alt="" coords="423,56,545,83"/>
-<area shape="rect" id="node7" href="$class_camera.html#af14abc814d362ed9781db6725919f836" title=" " alt="" coords="423,107,545,133"/>
-<area shape="rect" id="node3" href="$class_camera.html#a5757577b0e11b8722bf251ee086eef1d" title="checks if ok to move" alt="" coords="217,56,375,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="104,56,169,83"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,56,83"/>
-</map>
