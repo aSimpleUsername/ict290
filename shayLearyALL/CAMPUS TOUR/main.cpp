@@ -4818,15 +4818,103 @@ void DrawExtras ()
 	tp.CreateDisplayList (YZ, 421, 32.0, 2.0, 22928.0, 10870.0, 42960.0, 1.0, 49);		// ticket box ledge edge side
 
 	//New Courtyard Textures (YZ Near Stairs)
-	tp.CreateDisplayList(YZ, 650, 250, 100, -205, 10300, 40900, 1.0, 1.0);				//fire extinguisher
+	//tp.CreateDisplayList(YZ, 650, 250, 100, -205, 10300, 40900, 1.0, 1.0);				//fire extinguisher
+	glNewList(650, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10300, 40900);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10300, 41000);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10550, 41000);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10550, 40900);
+		glEnd();
+	glEndList();
 
-	tp.CreateDisplayList(YZ, 651, 800, 400, -205, 10000, 38000, 1.0, 1.0);				//YZ courtyard door
-	tp.CreateDisplayList(YZ, 652, 800, 400, -205, 10000, 35000, 1.0, 1.0);				//YZ courtyard door
+	//tp.CreateDisplayList(YZ, 651, 800, 400, -205, 10000, 38000, 1.0, 1.0);				//YZ courtyard door
+	glNewList(651, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10000, 38000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10000, 38400);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10800, 38400);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10800, 38000);
+		glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 652, 800, 400, -205, 10000, 35000, 1.0, 1.0);				//YZ courtyard door
+	glNewList(652, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10000, 35000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10000, 35400);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10800, 35400);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10800, 35000);
+	glEnd();
+	glEndList();
+
 	tp.CreateDisplayList(YZ, 653, 800, 400, -205, 10000, 32000, 1.0, 1.0);				//YZ courtyard door
+	glNewList(653, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10000, 32000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10000, 32400);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10800, 32400);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10800, 32000);
+	glEnd();
+	glEndList();
 
-	tp.CreateDisplayList(YZ, 654, 300, 300, -205, 10400, 35750, 1.0, 1.0);				//YZ courtyard window
-	tp.CreateDisplayList(YZ, 655, 300, 300, -205, 10400, 34250, 1.0, 1.0);				//YZ courtyard window
-	tp.CreateDisplayList(YZ, 656, 300, 300, -205, 10400, 31250, 1.0, 1.0);				//YZ courtyard window
+	//tp.CreateDisplayList(YZ, 654, 300, 300, -205, 10400, 35750, 1.0, 1.0);				//YZ courtyard window
+	glNewList(654, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10400, 35750);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10400, 36050);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10700, 36050);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10700, 35750);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 655, 300, 300, -205, 10400, 34250, 1.0, 1.0);				//YZ courtyard window
+	glNewList(655, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10400, 34250);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10400, 34550);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10700, 34550);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10700, 34250);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 656, 300, 300, -205, 10400, 31250, 1.0, 1.0);				//YZ courtyard window
+	glNewList(656, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-205, 10400, 31250);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-205, 10400, 31550);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-205, 10700, 31550);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-205, 10700, 31250);
+	glEnd();
+	glEndList();
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//New Courtyard Textures (XY Bookshop)
@@ -4884,15 +4972,81 @@ void DrawExtras ()
 
 	//Opposite bookshop wall
 	tp.CreateDisplayList(XY, 700, 600, 400, 1750, 10300, 41180, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 701, 600, 400, 0, 10300, 41180, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);				//Level 1 sign
+	tp.CreateDisplayList(XY, 701, 600, 400, 0, 10300, 41180, 1.0, 1.0);	//XY poster
+
+	//tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);	//Level 1 sign
+	tp.CreateDisplayList(XY, 702, 200, 300, 250, 10300, 40780, 1.0, 1.0);
 
 	//Opposite stairs
-	tp.CreateDisplayList(YZ, 703, 400, 600, -25695, 10300, 38000, 1.0, 1.0);				//YZ poster
-	tp.CreateDisplayList(YZ, 704, 1000, 1700, -25695, 10000, 41300, 1.0, 1.0);				//YZ courtyard exit
-	tp.CreateDisplayList(YZ, 705, 250, 100, -25695, 10300, 40900, 1.0, 1.0);					//fire extinguisher
-	tp.CreateDisplayList(YZ, 706, 800, 400, -25695, 10000, 36000, 1.0, 1.0);				//YZ courtyard door
-	tp.CreateDisplayList(YZ, 707, 800, 400, -25695, 10000, 32000, 1.0, 1.0);				//YZ courtyard door
+	//tp.CreateDisplayList(YZ, 703, 400, 600, -25695, 10300, 38000, 1.0, 1.0);				//YZ poster
+	glNewList(703, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-25695, 10300, 38600);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-25695, 10300, 38000);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-25695, 10700, 38000);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-25695, 10700, 38600);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 704, 1000, 1700, -25695, 10000, 41300, 1.0, 1.0);				//YZ courtyard exit
+	glNewList(704, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-25695, 10000, 43000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-25695, 10000, 41300);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-25695, 11000, 41300);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-25695, 11000, 43000);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 705, 250, 100, -25695, 10300, 40900, 1.0, 1.0);				//fire extinguisher
+	glNewList(705, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-25695, 10300, 41000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-25695, 10300, 40900);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-25695, 10550, 40900);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-25695, 10550, 41000);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 706, 800, 400, -25695, 10000, 36000, 1.0, 1.0);				//YZ courtyard door
+	glNewList(706, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-25695, 10000, 36000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-25695, 10000, 36400);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-25695, 10800, 36400);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-25695, 10800, 36000);
+	glEnd();
+	glEndList();
+
+	//tp.CreateDisplayList(YZ, 707, 800, 400, -25695, 10000, 32000, 1.0, 1.0);				//YZ courtyard door
+	glNewList(707, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(-25695, 10000, 32000);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(-25695, 10000, 32400);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(-25695, 10800, 32400);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(-25695, 10800, 32000);
+	glEnd();
+	glEndList();
 }
 
 // --------------------------------------------------------------------------------------
