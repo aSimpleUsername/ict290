@@ -301,6 +301,7 @@
 #define VENDING_MACHINE_2			244
 #define VENDING_MACHINE_3			245
 #define VLAD						246
+#define BIN_TOP						247
 // 246 Next
 
 
