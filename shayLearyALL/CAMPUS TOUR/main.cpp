@@ -145,13 +145,10 @@ void Display()
 
 		if (wrathWorld.stairsReturnPortal())
 		{
-			printf("PORTAL\n");
 			isShaysWorld = true;
+			shaysWorld.myinit();
 			shaysWorld.cam.Position(1400, 11234, 39740, 0);
-			//shaysWorld.myinit();
 		}
-		//wrathWorld.stairsPortal();
-		//wrathWorld.stairsReturnPortal();
 
 		// print postion to assist development
 		wrathWorld.cam.printPosition();
