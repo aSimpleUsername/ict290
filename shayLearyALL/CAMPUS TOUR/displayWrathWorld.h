@@ -27,7 +27,7 @@
 	* @class displayWrathWorld
 	* @brief Class that defines how the wrath world will be displayed
 	* @author Group Team No Name 2
-	* @version
+	* @version 1.0
 	* @date 14 Sep 20
 	*/
 class DisplayWrathWorld
@@ -59,8 +59,9 @@ public:
 	void DeleteImageFromMemory(unsigned char* tempImage);	// deletes image and clears memory
 
 		/**
-		* @brief defines the return portal to Shays World
-		* @return */
+		* @brief defines the return portal collision to Shays World
+		* @return  if player is withing the bounds of portal
+		*/
 	bool stairsReturnPortal();
 
 private:
@@ -76,7 +77,7 @@ private:
 	void displaySkyBox();
 
 		/**
-		* @brief dispolays the ground plane
+		* @brief displays the ground plane
 		*/
 	void displayGroundPlane();
 

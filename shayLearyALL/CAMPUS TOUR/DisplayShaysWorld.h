@@ -304,7 +304,13 @@
 #define BIN_TOP						247
 // 246 Next
 
-
+	/**
+	* @class DisplayShaysWorld
+	* @brief Class that defines how the Shays World will be displayed
+	* @author Group Team No Name 2
+	* @version 1.1
+	* @date 14 Sep 20
+	*/
 class DisplayShaysWorld
 {
 public:
@@ -313,106 +319,333 @@ public:
 	TexturedPolygons tp;
 	unsigned char* image = NULL;
 
-	//booleans
-	// display campus map
 	bool DisplayMap = false;
-	// display welcome screen
 	bool DisplayWelcome = true;
-	// display exit screen
 	bool DisplayExit = false;
-	// display light fittings
 	bool lightsOn;
-	// display ECL block
-	bool displayECL = true;
 
-	// initializes setting
-	void myinit();	
-	// calls display functions below to draw the backdrops
+		/**
+		* @brief initialises Shays World
+		*/
+	void myinit();
+
+		/**
+		* @brief calls display functions below to draw the backdrops
+		*/
 	void DrawBackdrop();
 
+		/**
+		* @brief defines the portal on top of the stairs
+		* @return if the player is withi the bounds of the portal
+		*/
 	bool stairsPortal();
+
+		/**
+		* @brief defines the portal that telports within the same world
+		*/
 	void specialPortal();
 
-	// deletes image and clears memory
+		/**
+		* @brief deletes image and clears memory
+		* @param the image
+		*/
 	void DeleteImageFromMemory(unsigned char* tempImage);
 
 private:
 	Portal steps;
 	Portal toStart;
 
-	// varibles used for tarnslating graphics etc
-	GLdouble step, step2, stepLength;
-	// Glut Cylinder
-	GLUquadricObj* glu_cylinder;
+	GLdouble step, step2, stepLength;			// varibles used for tarnslating graphics etc
+	GLUquadricObj* glu_cylinder;				// Glut Cylinder
 
-	// Stores raw image file
-	std::vector<unsigned char>* pngImage;
+	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 	// functions to display display lists (images) and bind them to a texture
+		/**
+		* @brief displays the above winodow block
+		*/
 	void DisplayAboveWindowBlock();
+
+		/**
+		* @brief displays benchs
+		*/
 	void DisplayBench();
+
+		/**
+		* @brief displays bricks (walls)
+		*/
 	void DisplayBricks();
+
+		/**
+		* @brief displays the chanc posts
+		*/
 	void DisplayChancPosts();
+
+		/**
+		* @brief displays cylinders
+		*/
 	void DisplayCylinders();
+
+		/**
+		* @brief displays Door paving
+		*/
 	void DisplayDoorPaving();
+
+		/**
+		* @brief displays Door posts
+		*/
 	void DisplayDoorPosts();
+
+		/**
+		* @brief displays entrance steps
+		*/
 	void DisplayEntranceSteps();
+
+		/**
+		* @brief displays book steps
+		*/
 	void DisplayBookSteps();
+
+		/**
+		* @brief displays book steps 2
+		*/
 	void DisplayBookStepsTwo();
+
+		/**
+		* @brief displays stair railing
+		*/
 	void displayStairRailing();
+
+		/**
+		* @brief displays extras
+		*/
 	void DisplayExtras();
+
+		/**
+		* @brief displays grass
+		*/
 	void DisplayGrass();
+
+		/**
+		* @brief displays larger textures
+		*/
 	void DisplayLargerTextures();
+
+		/**
+		* @brief displays grass
+		*/
 	void DisplayLibraryPosts();
+
+		/**
+		* @brief displays main posts
+		*/
 	void DisplayMainPosts();
+
+		/**
+		* @brief displays pavement
+		*/
 	void DisplayPavement();
+
+		/**
+		* @brief displays phys sci posts
+		*/
 	void DisplayPhysSciPosts();
+
+		/**
+		* @brief displays purple posts
+		*/
 	void DisplayPurplePosts();
+
+		/**
+		* @brief displays red posts
+		*/
 	void DisplayRedPosts();
+
+		/**
+		* @brief displays phys sci posts
+		*/
 	void DisplayRoof();
+
+		/**
+		* @brief displays step bricks
+		*/
 	void DisplayStepBricks();
+
+		/**
+		* @brief displays lights
+		*/
 	void DisplayLights();
+	
+		/**
+		* @brief displays portals
+		*/
 	void displayPortal();
+
+		/**
+		* @brief displays special portal
+		*/
 	void displaySpecialPortal();
 
-	// calls functions to create display lists (below)
+		/**
+		* @brief calls functions to create display lists (below)
+		*/
 	void CreateTextureList();
-	// creates display lists
-	void DrawGrass();
-	void DrawChancPosts();
-	void DrawDoorPosts();
-	void DrawPurplePosts();
-	void DrawRedPosts();
-	void DrawMainPosts();
-	void DrawAboveWindowBlock();
-	void DrawDoorPaving();
-	void DrawPhysSciPosts();
-	void DrawLibraryPosts();
-	void DrawBricks();
-	void DrawPavement();
-	void DrawExtras();
-	void DrawRoof();
-	void DrawEntranceSteps();
-	void DrawBookSteps();
-	void DrawBookStepsTwo();
-	void drawStairRailing();
-	void DrawLargerTextures();
-	void DrawLights();
-	void DrawBench();
-	void DrawCylinders();
-	void DrawAngledRoofBeam(int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
-	void DrawAngledRoofBeam2(int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
-	void DrawStepBricks();
-	void DrawMapExit();
 
+		/**
+		* @brief draws grass
+		*/ 
+	void DrawGrass();
+
+		/*
+		* @brief drawsj chance posts
+		*/
+	void DrawChancPosts();
+
+		/*
+		* @brief draws door posts
+		*/
+	void DrawDoorPosts();
+
+		/*
+		* @brief draws purple posts
+		*/
+	void DrawPurplePosts();
+
+		/*
+		* @brief draws red posts
+		*/
+	void DrawRedPosts();
+
+		/*
+		* @brief draws main posts
+		*/
+	void DrawMainPosts();
+
+		/*
+		* @brief draws above window block
+		*/
+	void DrawAboveWindowBlock();
+
+		/*
+		* @brief draws door paving
+		*/
+	void DrawDoorPaving();
+
+		/*
+		* @brief draws phys scie posts
+		*/
+	void DrawPhysSciPosts();
+
+		/*
+		* @brief draws library posts
+		*/
+	void DrawLibraryPosts();
+
+		/*
+		* @brief draws bricks
+		*/
+	void DrawBricks();
+
+		/*
+		* @brief draws pavement
+		*/
+	void DrawPavement();
+
+		/*
+		* @brief draws extras
+		*/
+	void DrawExtras();
+
+		/*
+		* @brief draws roof
+		*/
+	void DrawRoof();
+
+		/*
+		* @brief draws entrance steps
+		*/
+	void DrawEntranceSteps();
+
+		/*
+		* @brief draws book steps
+		*/
+	void DrawBookSteps();
+
+		/*
+		* @brief draws book steps two
+		*/
+	void DrawBookStepsTwo();
+
+		/*
+		* @brief draws stairs railing
+		*/
+	void drawStairRailing();
+
+		/*
+		* @brief draws larger textures
+		*/
+	void DrawLargerTextures();
+
+		/*
+		* @brief draws lights
+		*/
+	void DrawLights();
+
+		/*
+		* @brief draws benches
+		*/
+	void DrawBench();
+		
+		/*
+		* @brief draws cylinders
+		*/
+	void DrawCylinders();
+
+		/*
+		* @brief draws angled roof beam
+		* @param list number, xyz cooridnates and beam size
+		*/
+	void DrawAngledRoofBeam(int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+
+		/*
+		* @brief draws angled roof beam 2
+		* @param list number, xyz cooridnates and beam size
+		*/
+	void DrawAngledRoofBeam2(int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+
+		/*
+		* @brief draws step bricks
+		*/
+	void DrawStepBricks();
+
+		/*
+		* @brief draws map exit
+		*/
+	void DrawMapExit();
+		
+		/*
+		* @brief draws portal
+		*/
 	void drawPortal();
+
+		/*
+		* @brief draws special portal
+		*/
 	void drawSpecialPortal();
 
-	// loads images and creates texture
+		/*
+		* @brief loads images and creates texture
+		*/
 	void CreateTextures();
-	// creates bounding boxes for collsion detection
+
+		/*
+		* @brief creates bounding boxes for collsion detection
+		*/
 	void CreateBoundingBoxes();
-	// creates different plains
+
+		/*
+		* @brief draws creates different plains
+		*/
 	void CreatePlains();
 };
 
