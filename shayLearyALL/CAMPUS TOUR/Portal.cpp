@@ -10,6 +10,7 @@ a collision between the player and the portal is made.
 
 #include "Portal.h"
 
+//Constructor, sets all default values
 Portal::Portal()
 {
 	xPlayer = 0;
@@ -21,12 +22,14 @@ Portal::Portal()
 	zDim = 0;
 }
 
+//Collects and stores the position of the player
 void Portal::setLocation(double xPos, double yPos, double zPos)
 {
 	xPlayer = xPos;
 	yPlayer = yPos;
 	zPlayer = zPos;
 }
+
 
 void Portal::portalDimensions(double xSize, double ySize, double zSize)
 {
@@ -35,6 +38,8 @@ void Portal::portalDimensions(double xSize, double ySize, double zSize)
 	zDim = zSize;
 }
 
+//Checks for collision of player of portal position.
+//Returns true if collision of portal occurs, otherwise returns false
 //Starts need to be larger than (start - dim). Example - xPlayer < 4000 && xPlayer > 3000
 bool Portal::createPortal(double xStart, double yStart, double zStart)
 {

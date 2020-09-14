@@ -331,13 +331,15 @@ public:
 	void DrawBackdrop();
 
 	bool stairsPortal();
-	void stairsReturnPortal();
 	void specialPortal();
 
 	// deletes image and clears memory
 	void DeleteImageFromMemory(unsigned char* tempImage);
 
 private:
+	Portal steps;
+	Portal toStart;
+
 	// varibles used for tarnslating graphics etc
 	GLdouble step, step2, stepLength;
 	// Glut Cylinder
@@ -355,11 +357,9 @@ private:
 	void DisplayDoorPaving();
 	void DisplayDoorPosts();
 	void DisplayEntranceSteps();
-	//MID
 	void DisplayBookSteps();
 	void DisplayBookStepsTwo();
 	void displayStairRailing();
-	// TEST
 	void DisplayExtras();
 	void DisplayGrass();
 	void DisplayLargerTextures();
@@ -372,7 +372,6 @@ private:
 	void DisplayRoof();
 	void DisplayStepBricks();
 	void DisplayLights();
-	//void DisplayECL();
 	void displayPortal();
 	void displaySpecialPortal();
 
@@ -394,11 +393,9 @@ private:
 	void DrawExtras();
 	void DrawRoof();
 	void DrawEntranceSteps();
-	//Stairs
 	void DrawBookSteps();
 	void DrawBookStepsTwo();
 	void drawStairRailing();
-	//Stairs
 	void DrawLargerTextures();
 	void DrawLights();
 	void DrawBench();
