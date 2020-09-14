@@ -58,9 +58,6 @@ int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	//glutInitWindowPosition(100,100);
-	//glutInitWindowSize(800,500);
-	//glutCreateWindow("Murdoch University Campus Tour");
 	glutGameModeString("1920x1080:32@60");
 	glutEnterGameMode();
 
@@ -100,7 +97,6 @@ void Display()
 	if (shaysWorld.DisplayWelcome && isShaysWorld) shaysWorld.cam.DisplayWelcomeScreen(width, height, 1, shaysWorld.tp.GetTexture(WELCOME));
 	if (wrathWorld.DisplayWelcome && !isShaysWorld) wrathWorld.cam.DisplayWelcomeScreen(width, height, 1, wrathWorld.tp.GetTexture(WELCOME_SCREEN));
 	// displays the exit screen
-	// displays the exit screen
 	if (shaysWorld.DisplayExit) shaysWorld.cam.DisplayWelcomeScreen(width, height, 0, shaysWorld.tp.GetTexture(EXIT));
 	if (wrathWorld.DisplayExit) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(EXIT_SCREEN));
 
@@ -115,7 +111,6 @@ void Display()
 			isShaysWorld = false;
 			wrathWorld.myinit();
 		}
-		shaysWorld.stairsReturnPortal();
 		shaysWorld.specialPortal();
 
 		// displays the map
@@ -289,11 +284,6 @@ void processKeys()
 		wrathWorld.myinit();
 		isShaysWorld = false;
 	}
-
-	/*if ((keyStates['p'] || keyStates['P']) && !isShaysWorld)	// change world - temp
-	{
-		isShaysWorld = true;
-	}*/
 
 	if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
 	{

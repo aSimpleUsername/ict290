@@ -32,12 +32,6 @@ void DisplayShaysWorld::myinit()
 	// set starting position of user
 	cam.Position(3652.0, 10450.0, 42133.0, 90.0);
 
-	//ORIGINAL POSITION
-	/*
-	cam.Position(32720.0, 9536.0,
-		4800.0, 180.0);
-		*/
-
 	CreatePlains();
 
 	// creates bounding boxes and places in array
@@ -57,8 +51,6 @@ void DisplayShaysWorld::myinit()
 
 bool DisplayShaysWorld::stairsPortal()
 {
-	Portal steps;
-
 	steps.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
 	steps.portalDimensions(-300, -200, -700);
 	return(steps.createPortal(1360, 11430, 40250));
@@ -73,18 +65,6 @@ void DisplayShaysWorld::displayPortal()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL));
 	glCallList(593);
-}
-
-void DisplayShaysWorld::stairsReturnPortal()
-{
-	Portal stepsReturn;
-
-	stepsReturn.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
-	stepsReturn.portalDimensions(-1000, -100, -1000);
-	if (stepsReturn.createPortal(4052.0, 10500.0, 35133.0) == true)
-	{
-		cam.Position(1400, 11234, 39740, 0);
-	}
 }
 
 void DisplayShaysWorld::drawSpecialPortal()
@@ -103,8 +83,6 @@ void DisplayShaysWorld::displaySpecialPortal()
 
 void DisplayShaysWorld::specialPortal()
 {
-	Portal toStart;
-
 	toStart.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
 	toStart.portalDimensions(-500, -100, -600);
 	if (toStart.createPortal(-23000, 10500.0, 43000.0) == true)
@@ -282,7 +260,7 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 		xVal = xVal - 1940;
 	}
 
-	index = 38; //CHECK
+	index = 38;
 	xVal = -1158;
 	zVal = 41100;
 	for (int i = 0; i < 5; i++)
@@ -337,7 +315,7 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(51, 41300);
 	cam.SetAABBMinZ(51, 41100);
 
-	// current AABB array size = 25
+	// current AABB array size = 55
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
@@ -354,6 +332,7 @@ void DisplayShaysWorld::CreatePlains()
 	//Collided with stairs before
 	cam.SetPlains(FLAT_PLAIN, 0.0, 6500.0, 10450.0, 10450.0, 17000.0, 30000.0);
 	cam.SetPlains(FLAT_PLAIN, 27000.0, 36000.0, 10450.0, 10450.0, 17000.0, 40000.0);
+
 	//Collied with stairs before
 	//cam.SetPlains (FLAT_PLAIN, 0.0, 36000.0 , 10450.0, 10450.0, 40000.0, 50000.0);
 	cam.SetPlains(FLAT_PLAIN, 3000.0, 36000.0, 10450.0, 10450.0, 40000.0, 50000.0);
@@ -444,7 +423,6 @@ void DisplayShaysWorld::DeleteImageFromMemory(unsigned char* tempImage)
 		delete[] tempImage;
 	}
 }
-
 //--------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------
@@ -1007,9 +985,6 @@ void DisplayShaysWorld::CreateTextures()
 	image = tp.LoadTexture("data/windows/exiteast.raw", 512, 512);
 	tp.CreateTexture(EXIT_EAST, image, 512, 512);
 
-	//image = tp.LoadTexture("data/windows/exitwest.raw", 256, 512);
-	//tp.CreateTexture(EXIT_WEST, image, 256, 512);
-
 	image = tp.LoadTexture("data/windows/window1.raw", 256, 256);
 	tp.CreateTexture(WINDOW_1, image, 256, 256);
 
@@ -1192,7 +1167,6 @@ void DisplayShaysWorld::CreateTextures()
 	tp.CreatePNGTexture(BIN_TOP, image, 1300, 867);
 	// END OF NEW TEXTURES
 
-
 	image = tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
 	image = tp.LoadTexture("data/welcome.png");
@@ -1203,7 +1177,6 @@ void DisplayShaysWorld::CreateTextures()
 
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
-
 
 }
 
@@ -1220,10 +1193,8 @@ void DisplayShaysWorld::DrawBackdrop()
 	DisplayDoorPaving();
 	DisplayDoorPosts();
 	DisplayEntranceSteps();
-	//bookshop steps
 	DisplayBookSteps();
 	DisplayBookStepsTwo();
-	//bookshop steps
 	DisplayExtras();
 	DisplayGrass();
 	DisplayLargerTextures();
@@ -1238,10 +1209,8 @@ void DisplayShaysWorld::DrawBackdrop()
 	displayPortal();
 	displaySpecialPortal();
 	displayStairRailing();
-	//displaySkyBox();
 	if (lightsOn) DisplayLights();
 }
-
 
 //--------------------------------------------------------------------------------------
 // Display the chancellery window and door posts
@@ -1360,11 +1329,6 @@ void DisplayShaysWorld::DisplayChancPosts()
 	glCallList(237);
 	glPopMatrix();
 
-	//glPushMatrix();
-		//glTranslatef(0.0, 320.0, -9600.0);
-		//glCallList(237);
-//	glPopMatrix();
-
 	// angled corner of window ledges
 	glPushMatrix();
 	glTranslatef(0.0, 1024.0, 0.0);
@@ -1431,7 +1395,6 @@ void DisplayShaysWorld::DrawChancPosts()
 	glVertex3f(33872.0, 10247.0, 20112.0);
 	glEnd();
 	glEndList();
-
 
 }
 
@@ -2451,7 +2414,6 @@ void DisplayShaysWorld::DrawPavement()
 	tp.CreateDisplayList(XZ, 73, 128.0, 64.0, 31632.0, 10000.0, 10000.0, 17.0, 482.5);
 	tp.CreateDisplayList(XZ, 88, 128.0, 64.0, 33744.0, 10000.0, 41104.0, 4.75, 30.5);	// by steps between phys sci and library
 	tp.CreateDisplayList(XZ, 428, 128.0, 64.0, 34256.0, 10000.0, 26704.0, 1.0, 9.5); // phys sci doorway (behind carpet)
-	//
 
 	// PAVEMENT_TOP
 	tp.CreateDisplayList(XZ, 74, 64.0, 128.0, 4912.0, 10000.0, 40880.0, 416.5, 17.0);
@@ -2465,7 +2427,6 @@ void DisplayShaysWorld::DrawPavement()
 	tp.CreateDisplayList(XZ, 590, 128.0, 64.0, -1800, 10000.0, 26000, 35.1, 237.0);	// courtyard - bushcourt side 
 	tp.CreateDisplayList(XZ, 591, 128.0, 64.0, -25700.0, 10000.0, 26000, 12.0, 237.0);	// courtyard - not bushcourt side
 	tp.CreateDisplayList(XZ, 594, 128.0, 64.0, -25700.0, 10000.0, 40845.0, 186.75, 5.05);	// courtyard between walkway and grass
-
 
 	// PAVEMENT_JOINS
 	glNewList(89, GL_COMPILE);
@@ -2600,7 +2561,6 @@ void DisplayShaysWorld::DisplayBricks()
 	for (int i = 200; i < 202; i++) glCallList(i);
 	glCallList(188);
 
-
 	// WALL_BRICK_XY
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(WALL_BRICK_XY));
 	for (int i = 135; i < 165; i++) glCallList(i);
@@ -2617,7 +2577,6 @@ void DisplayShaysWorld::DisplayBricks()
 	// Brick with map on
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(MAP_2));
 	glCallList(434);
-
 
 	// WALL_BRICK_GAP_YZ
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(WALL_BRICK_GAP_YZ));
@@ -3446,7 +3405,6 @@ void DisplayShaysWorld::DisplayBookStepsTwo()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(STEP_EDGE));
 	for (int i = 579; i < 582; i++) glCallList(i);
 }
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 void DisplayShaysWorld::DrawEntranceSteps()
@@ -3668,7 +3626,6 @@ void DisplayShaysWorld::drawStairRailing()
 	glEnd();
 	glEndList();
 }
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -4327,7 +4284,6 @@ void DisplayShaysWorld::DrawExtras()
 	tp.CreateDisplayList(YZ, 345, 2.0, 128.0, 28104.0, 10000.0, 42756.0, 467.0, 1.0); // KBLT side
 	tp.CreateDisplayList(YZ, 346, 2.0, 2.0, 28014.0, 10000.0, 42866.0, 416.0, 98.0); // KBLT side
 
-
 	// TELEPHONE ROOF
 	tp.CreateAngledPolygon(337, 512.0, 256.0, 33882.0, 33882.0, 33882.0, 33882.0,
 		10268.0, 10268.0, 10598.24, 10598.24,
@@ -4504,53 +4460,53 @@ void DisplayShaysWorld::DrawExtras()
 	glEndList();
 
 	//New Courtyard Textures (XY Bookshop)
-	tp.CreateDisplayList(XY, 657, 1000, 800, 1000, 10000, 42950, 1.0, 1.0);				//bookshop window
-	tp.CreateDisplayList(XY, 658, 1000, 800, 0, 10000, 42950, 1.0, 1.0);				//bookshop door
-	tp.CreateDisplayList(XY, 659, 1000, 800, -1000, 10000, 42950, 1.0, 1.0);			//bookshop window
-	tp.CreateDisplayList(XY, 660, 500, 700, -2500, 10000, 42950, 1.0, 1.0);				//XY door
-	tp.CreateDisplayList(XY, 661, 350, 350, -3000, 10300, 42950, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 662, 1000, 800, -5000, 10000, 42950, 1.0, 1.0);			//bookshop window
+	tp.CreateDisplayList(XY, 657, 1000, 800, 1000, 10000, 42945, 1.0, 1.0);				//bookshop window
+	tp.CreateDisplayList(XY, 658, 1000, 800, 0, 10000, 42945, 1.0, 1.0);				//bookshop door
+	tp.CreateDisplayList(XY, 659, 1000, 800, -1000, 10000, 42945, 1.0, 1.0);			//bookshop window
+	tp.CreateDisplayList(XY, 660, 500, 700, -2500, 10000, 42945, 1.0, 1.0);				//XY door
+	tp.CreateDisplayList(XY, 661, 350, 350, -3000, 10300, 42945, 1.0, 1.0);				//XY poster
+	tp.CreateDisplayList(XY, 662, 1000, 800, -5000, 10000, 42945, 1.0, 1.0);			//bookshop window
 
-	tp.CreateDisplayList(XY, 663, 600, 300, -6000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 664, 600, 300, -7000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 665, 500, 700, -8500, 10000, 42950, 1.0, 1.0);				//XY door
-	tp.CreateDisplayList(XY, 666, 350, 350, -9000, 10300, 42950, 1.0, 1.0);				//XY poster
-	tp.CreateDisplayList(XY, 667, 500, 700, -11000, 10000, 42950, 1.0, 1.0);			//XY door
-	tp.CreateDisplayList(XY, 668, 600, 300, -12000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 669, 500, 700, -14000, 10000, 42950, 1.0, 1.0);			//XY door
-	tp.CreateDisplayList(XY, 670, 600, 300, -15000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 671, 600, 300, -16000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 672, 500, 700, -18000, 10000, 42950, 1.0, 1.0);			//XY door
-	tp.CreateDisplayList(XY, 673, 500, 700, -20000, 10000, 42950, 1.0, 1.0);			//XY door
-	tp.CreateDisplayList(XY, 674, 600, 300, -21000, 10300, 42950, 1.0, 1.0);				//XY Poster
-	tp.CreateDisplayList(XY, 675, 600, 300, -22000, 10300, 42950, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 663, 600, 300, -6000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 664, 600, 300, -7000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 665, 500, 700, -8500, 10000, 42945, 1.0, 1.0);				//XY door
+	tp.CreateDisplayList(XY, 666, 350, 350, -9000, 10300, 42945, 1.0, 1.0);				//XY poster
+	tp.CreateDisplayList(XY, 667, 500, 700, -11000, 10000, 42945, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 668, 600, 300, -12000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 669, 500, 700, -14000, 10000, 42945, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 670, 600, 300, -15000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 671, 600, 300, -16000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 672, 500, 700, -18000, 10000, 42945, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 673, 500, 700, -20000, 10000, 42945, 1.0, 1.0);			//XY door
+	tp.CreateDisplayList(XY, 674, 600, 300, -21000, 10300, 42945, 1.0, 1.0);				//XY Poster
+	tp.CreateDisplayList(XY, 675, 600, 300, -22000, 10300, 42945, 1.0, 1.0);				//XY Poster
 
 	//New Courtyard Textures (XY Opposite Bookshop)
 	//Lower
-	tp.CreateDisplayList(XY, 676, 600, 600, -23000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 677, 600, 600, -21000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 678, 600, 600, -19000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 679, 600, 600, -17000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 680, 600, 600, -15000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 681, 600, 600, -13000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 682, 600, 600, -11000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 683, 600, 600, -9000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 684, 600, 600, -7000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 685, 600, 600, -5000, 10400, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 686, 600, 600, -3000, 10400, 29820, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 676, 600, 600, -23000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 677, 600, 600, -21000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 678, 600, 600, -19000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 679, 600, 600, -17000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 680, 600, 600, -15000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 681, 600, 600, -13000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 682, 600, 600, -11000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 683, 600, 600, -9000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 684, 600, 600, -7000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 685, 600, 600, -5000, 10400, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 686, 600, 600, -3000, 10400, 29825, 1.0, 1.0);				//XY window
 
 	//Upper
-	tp.CreateDisplayList(XY, 687, 600, 600, -23000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 688, 600, 600, -21000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 689, 600, 600, -19000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 690, 600, 600, -17000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 691, 600, 600, -15000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 692, 600, 600, -13000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 693, 600, 600, -11000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 694, 600, 600, -9000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 695, 600, 600, -7000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 696, 600, 600, -5000, 11600, 29820, 1.0, 1.0);				//XY window
-	tp.CreateDisplayList(XY, 697, 600, 600, -3000, 11600, 29820, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 687, 600, 600, -23000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 688, 600, 600, -21000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 689, 600, 600, -19000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 690, 600, 600, -17000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 691, 600, 600, -15000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 692, 600, 600, -13000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 693, 600, 600, -11000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 694, 600, 600, -9000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 695, 600, 600, -7000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 696, 600, 600, -5000, 11600, 29825, 1.0, 1.0);				//XY window
+	tp.CreateDisplayList(XY, 697, 600, 600, -3000, 11600, 29825, 1.0, 1.0);				//XY window
 
 	//Glass doors
 	tp.CreateDisplayList(XY, 698, 1000, 800, -1500, 10000, 29820, 1.0, 1.0);				//XY door
@@ -5215,8 +5171,6 @@ void DisplayShaysWorld::DisplayLargerTextures()
 	glCallList(423);
 
 	// West Exit
-	/*glBindTexture(GL_TEXTURE_2D, tp.GetTexture(EXIT_WEST));
-	glCallList(450);*/
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_WINDOW_BLOCK_CHANC));
 	glCallList(451);
 	// window next to steps
@@ -5315,10 +5269,6 @@ void DisplayShaysWorld::DisplayGrass()
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GRASS_2));
 	glCallList(198);
-
-	// USED IF REQUIRED DARKER HILL
-	//glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GRASS_HILL));
-	//for (int i = 461; i < 477; i++) glCallList(i);
 }
 
 void DisplayShaysWorld::DrawGrass()
@@ -5733,10 +5683,8 @@ void DisplayShaysWorld::CreateTextureList()
 	DrawBricks();				// 101-110, 112-169, 180-197, 200-201, 390-399, 430-434, 583-589, 598-599
 	DrawRoof();					// 1-10, 97-100, 170-179, 202-205, 214-222, 250-257, 296-299, 426-427, 595-597, 600
 	DrawEntranceSteps();		// 258-295, 206-207
-	//bookshop steps
 	DrawBookSteps();			// 508-546
 	DrawBookStepsTwo();			// 546-582
-	//bookshop steps
 	DrawExtras();				// 300-349, 388, 395, 419-421, 429, 435
 	DrawLargerTextures();		// 350-375, 379-387, 389, 414-418, 422-423, 450-453
 	DrawLights();				// 376-378
@@ -5744,12 +5692,9 @@ void DisplayShaysWorld::CreateTextureList()
 	DrawStepBricks();			// 478-507
 	DrawCylinders();			// 437-441
 	DrawMapExit();				// 448-449, 454
-	// 455-459
-
 	drawPortal();				// 593
 	drawSpecialPortal(); //750
 	drawStairRailing();
-	//drawSkyBox();
 
 	//last number used: 750
 }
