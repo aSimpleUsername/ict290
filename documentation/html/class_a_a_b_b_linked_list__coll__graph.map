@@ -1,6 +1,6 @@
 <map id="AABBLinkedList" name="AABBLinkedList">
-<area shape="rect" id="node1" title=" " alt="" coords="19,660,165,972"/>
-<area shape="rect" id="node2" href="$class_a_a_b_b_node.html" title=" " alt="" coords="34,329,150,597"/>
+<area shape="rect" id="node1" title="Class that defines how the linked list for AABB&#39;S works." alt="" coords="19,660,165,972"/>
+<area shape="rect" id="node2" href="$class_a_a_b_b_node.html" title="Class that defines the paramaters of each AABB node." alt="" coords="34,329,150,597"/>
 <area shape="rect" id="node3" href="$struct_a_a_b_b_node_1_1_bounding_box.html" title="stores max and min values of co&#45;ordinates" alt="" coords="5,189,179,267"/>
 <area shape="rect" id="node4" href="$struct_a_a_b_b_node_1_1_x_y_z.html" title="stores x,y,z co&#45;ordinates" alt="" coords="33,5,151,112"/>
 </map>

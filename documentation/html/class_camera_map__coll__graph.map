@@ -1,3 +1,3 @@
 <map id="CameraMap" name="CameraMap">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,187,171"/>
+<area shape="rect" id="node1" title="Class that defines how the map is displayed to the screen." alt="" coords="5,5,187,171"/>
 </map>

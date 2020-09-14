@@ -1,7 +1,7 @@
 <map id="PlainLinkedList::~PlainLinkedList" name="PlainLinkedList::~PlainLinkedList">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,220,57"/>
-<area shape="rect" id="node2" href="$class_plain_linked_list.html#a836472749021aa66632a7adb79f210a2" title=" " alt="" coords="268,31,416,57"/>
-<area shape="rect" id="node3" href="$class_plain_linked_list.html#af7efedb06f304d6d886a8817a83988d7" title=" " alt="" coords="464,56,619,83"/>
-<area shape="rect" id="node4" href="$class_plain_node.html#a0bffe61c0a30c8af32d5cb6ac59e4070" title=" " alt="" coords="667,5,804,32"/>
-<area shape="rect" id="node5" href="$class_plain_node.html#afe5be77c2dfbf7447105f0ea722e77f1" title=" " alt="" coords="667,56,803,83"/>
+<area shape="rect" id="node2" href="$class_plain_linked_list.html#a836472749021aa66632a7adb79f210a2" title="Clears linked list and frees memory." alt="" coords="268,31,416,57"/>
+<area shape="rect" id="node3" href="$class_plain_linked_list.html#af7efedb06f304d6d886a8817a83988d7" title="Used to Clear Memory." alt="" coords="464,56,619,83"/>
+<area shape="rect" id="node4" href="$class_plain_node.html#a0bffe61c0a30c8af32d5cb6ac59e4070" title="Return the address of the link to the next node in the list." alt="" coords="667,5,804,32"/>
+<area shape="rect" id="node5" href="$class_plain_node.html#afe5be77c2dfbf7447105f0ea722e77f1" title="Set the address of the link to the next node in the list." alt="" coords="667,56,803,83"/>
 </map>

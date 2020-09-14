@@ -1,7 +1,7 @@
 <map id="Camera::callGLLookAt" name="Camera::callGLLookAt">
-<area shape="rect" id="node1" title=" " alt="" coords="212,81,365,108"/>
-<area shape="rect" id="node2" href="$class_camera.html#acc808e653e9c59f0d2450c9caca26b98" title=" " alt="" coords="23,5,146,32"/>
-<area shape="rect" id="node3" href="$class_camera.html#ad53c2248f2d38bc8f01ac288e8cc21d3" title=" " alt="" coords="24,56,145,83"/>
-<area shape="rect" id="node4" href="$class_camera.html#af14abc814d362ed9781db6725919f836" title=" " alt="" coords="23,107,146,133"/>
+<area shape="rect" id="node1" title="displays new view" alt="" coords="212,81,365,108"/>
+<area shape="rect" id="node2" href="$class_camera.html#acc808e653e9c59f0d2450c9caca26b98" title="apply movements on x" alt="" coords="23,5,146,32"/>
+<area shape="rect" id="node3" href="$class_camera.html#ad53c2248f2d38bc8f01ac288e8cc21d3" title="apply movements on y" alt="" coords="24,56,145,83"/>
+<area shape="rect" id="node4" href="$class_camera.html#af14abc814d362ed9781db6725919f836" title="apply movements on z" alt="" coords="23,107,146,133"/>
 <area shape="rect" id="node5" href="$class_camera.html#ab48b9950bcde9dd8c17f5788fb396b8b" title="Rotates Camera." alt="" coords="5,157,164,184"/>
 </map>

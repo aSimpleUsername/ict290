@@ -1,6 +1,6 @@
 <map id="DisplayWrathWorld::DrawBackdrop" name="DisplayWrathWorld::DrawBackdrop">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,148,112"/>
-<area shape="rect" id="node2" href="$class_display_wrath_world.html#a9b0a6c3b53645b4ac07918fda2a590f1" title=" " alt="" coords="196,5,339,47"/>
-<area shape="rect" id="node3" href="$class_display_wrath_world.html#a84b173349ecb724b3cb34edbf0a60c90" title=" " alt="" coords="196,71,339,112"/>
-<area shape="rect" id="node4" href="$class_display_wrath_world.html#a9ef905fa8cccbfedafb3f076a36c91e1" title=" " alt="" coords="196,136,339,177"/>
+<area shape="rect" id="node1" title="calls private display functions to draw the scene" alt="" coords="5,71,148,112"/>
+<area shape="rect" id="node2" href="$class_display_wrath_world.html#a9b0a6c3b53645b4ac07918fda2a590f1" title="displays the ground plane" alt="" coords="196,5,339,47"/>
+<area shape="rect" id="node3" href="$class_display_wrath_world.html#a84b173349ecb724b3cb34edbf0a60c90" title="draws the portal" alt="" coords="196,71,339,112"/>
+<area shape="rect" id="node4" href="$class_display_wrath_world.html#a9ef905fa8cccbfedafb3f076a36c91e1" title="displays the skybox" alt="" coords="196,136,339,177"/>
 </map>

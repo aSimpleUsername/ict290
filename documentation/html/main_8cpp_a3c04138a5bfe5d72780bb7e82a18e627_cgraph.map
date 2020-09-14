@@ -1,10 +1,10 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,769,56,795"/>
 <area shape="rect" id="node2" href="$main_8cpp.html#ad68e140c468f3fdb642f29cdb06cb913" title=" " alt="" coords="126,739,226,766"/>
-<area shape="rect" id="node3" href="$class_display_shays_world.html#aba0f0debde0e1fc4f7db3a6ecb35f074" title=" " alt="" coords="104,791,248,832"/>
+<area shape="rect" id="node3" href="$class_display_shays_world.html#aba0f0debde0e1fc4f7db3a6ecb35f074" title="initialises Shays World" alt="" coords="104,791,248,832"/>
 <area shape="rect" id="node4" href="$class_display_shays_world.html#aafa101e63a05eb5c73d5ad6197ebb831" title=" " alt="" coords="296,692,447,733"/>
 <area shape="rect" id="node5" href="$class_display_shays_world.html#a96bc361c368f84e6d12649cfbfcf6ed2" title=" " alt="" coords="299,757,443,799"/>
-<area shape="rect" id="node6" href="$class_display_shays_world.html#a8e2c9eaea3a1547bccd8449ef131cb99" title=" " alt="" coords="299,823,443,864"/>
+<area shape="rect" id="node6" href="$class_display_shays_world.html#a8e2c9eaea3a1547bccd8449ef131cb99" title="calls functions to create display lists (below)" alt="" coords="299,823,443,864"/>
 <area shape="rect" id="node33" href="$class_display_shays_world.html#ac83617ad6bd4c06f5583cea13a4ee627" title=" " alt="" coords="299,888,443,929"/>
 <area shape="rect" id="node7" href="$class_display_shays_world.html#a8c1573ca677f530b03f0993617289d4f" title=" " alt="" coords="495,5,660,47"/>
 <area shape="rect" id="node8" href="$class_display_shays_world.html#a69014b8abc8b04f3534695dde8468f51" title=" " alt="" coords="505,71,649,112"/>
@@ -17,7 +17,7 @@
 <area shape="rect" id="node15" href="$class_display_shays_world.html#a2a38ea1a3c71ea410eeced62e25a31e5" title=" " alt="" coords="505,528,649,569"/>
 <area shape="rect" id="node16" href="$class_display_shays_world.html#ac419f7a5e895b8c324bab77306702ad5" title=" " alt="" coords="505,593,649,635"/>
 <area shape="rect" id="node17" href="$class_display_shays_world.html#a1237a6db5ee23187945c7078c0e48c51" title=" " alt="" coords="505,659,649,700"/>
-<area shape="rect" id="node18" href="$class_display_shays_world.html#a2361b6a22301e4042920efba8a246007" title=" " alt="" coords="505,724,649,765"/>
+<area shape="rect" id="node18" href="$class_display_shays_world.html#a2361b6a22301e4042920efba8a246007" title="draws grass" alt="" coords="505,724,649,765"/>
 <area shape="rect" id="node19" href="$class_display_shays_world.html#ab116d4a6bbaa3ad88e531c1747d8bd5d" title=" " alt="" coords="505,789,649,831"/>
 <area shape="rect" id="node20" href="$class_display_shays_world.html#a4d06af50ea02f2d463f0b80517f93df6" title=" " alt="" coords="505,855,649,896"/>
 <area shape="rect" id="node21" href="$class_display_shays_world.html#aeb616b1b6250b5291368a8526fd1400c" title=" " alt="" coords="505,920,649,961"/>

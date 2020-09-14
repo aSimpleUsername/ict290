@@ -1,5 +1,5 @@
 <map id="AABB::SetNoBoundingBoxes" name="AABB::SetNoBoundingBoxes">
 <area shape="rect" id="node1" title="Sets size of bounding box." alt="" coords="473,13,667,39"/>
-<area shape="rect" id="node2" href="$class_collision.html#a33c7681e88ca6ab89ae53b6342aed6f2" title=" " alt="" coords="256,5,425,47"/>
+<area shape="rect" id="node2" href="$class_collision.html#a33c7681e88ca6ab89ae53b6342aed6f2" title="Sets number of bounding boxes." alt="" coords="256,5,425,47"/>
 <area shape="rect" id="node3" href="$class_camera.html#a043549232a16c18fe93f35c5d3a40fe2" title="Sets number of bounding boxes." alt="" coords="5,13,208,39"/>
 </map>

@@ -70,45 +70,63 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Sets the location and dimesnions of a portal, and checks whether a collision between the player and the portal is made.  
+ <a href="class_portal.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_portal_8h_source.html">Portal.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Portal:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_portal__coll__graph.png" border="0" usemap="#_portal_coll__map" alt="Collaboration graph"/></div>
 <map name="_portal_coll__map" id="_portal_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,148,200"/>
+<area shape="rect" title="Sets the location and dimesnions of a portal, and checks whether a collision between the player and t..." alt="" coords="5,5,148,200"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af2f293ad6180c31a93382587044699ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#af2f293ad6180c31a93382587044699ce">Portal</a> ()</td></tr>
+<tr class="memdesc:af2f293ad6180c31a93382587044699ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, sets all default values.  <a href="class_portal.html#af2f293ad6180c31a93382587044699ce">More...</a><br /></td></tr>
 <tr class="separator:af2f293ad6180c31a93382587044699ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a545f30c1b34f9178830be53e811ca419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#a545f30c1b34f9178830be53e811ca419">setLocation</a> (double xPos, double yPos, double zPos)</td></tr>
+<tr class="memdesc:a545f30c1b34f9178830be53e811ca419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects and store camera position.  <a href="class_portal.html#a545f30c1b34f9178830be53e811ca419">More...</a><br /></td></tr>
 <tr class="separator:a545f30c1b34f9178830be53e811ca419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d7de51f166c38807bdbaacb08f61e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#a4d7de51f166c38807bdbaacb08f61e25">portalDimensions</a> (double xSize, double ySize, double zSize)</td></tr>
+<tr class="memdesc:a4d7de51f166c38807bdbaacb08f61e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects and stores dimesions on all axis's of the portal.  <a href="class_portal.html#a4d7de51f166c38807bdbaacb08f61e25">More...</a><br /></td></tr>
 <tr class="separator:a4d7de51f166c38807bdbaacb08f61e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c29dca020a20953416faa2624884f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#ac4c29dca020a20953416faa2624884f1">createPortal</a> (double xStart, double yStart, double zStart)</td></tr>
+<tr class="memdesc:ac4c29dca020a20953416faa2624884f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision of player of portal position. <br  />
+ Returns true if collision of portal occurs, otherwise returns false.  <a href="class_portal.html#ac4c29dca020a20953416faa2624884f1">More...</a><br /></td></tr>
 <tr class="separator:ac4c29dca020a20953416faa2624884f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a30f2d9118b3d9f7106c8b9e02eda473b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">xPlayer</a></td></tr>
+<tr class="memdesc:a30f2d9118b3d9f7106c8b9e02eda473b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of player on the x axis.  <a href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">More...</a><br /></td></tr>
 <tr class="separator:a30f2d9118b3d9f7106c8b9e02eda473b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbfde7470cecc8b3adcb3d3728f0902b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">yPlayer</a></td></tr>
+<tr class="memdesc:adbfde7470cecc8b3adcb3d3728f0902b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of player on the y axis.  <a href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">More...</a><br /></td></tr>
 <tr class="separator:adbfde7470cecc8b3adcb3d3728f0902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc437495e2b5f828607c32a3023cc19"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">zPlayer</a></td></tr>
+<tr class="memdesc:a7dc437495e2b5f828607c32a3023cc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of player on the z axis.  <a href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">More...</a><br /></td></tr>
 <tr class="separator:a7dc437495e2b5f828607c32a3023cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69cff77b958d2bf9a6900e8a6698c7e4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a></td></tr>
+<tr class="memdesc:a69cff77b958d2bf9a6900e8a6698c7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of portal across x axis.  <a href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">More...</a><br /></td></tr>
 <tr class="separator:a69cff77b958d2bf9a6900e8a6698c7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc4baff37c579761492d68acd632b434"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a></td></tr>
+<tr class="memdesc:acc4baff37c579761492d68acd632b434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of portal across y axis.  <a href="class_portal.html#acc4baff37c579761492d68acd632b434">More...</a><br /></td></tr>
 <tr class="separator:acc4baff37c579761492d68acd632b434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1d4233dcf4732ff1d69b5958d4e6874"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a></td></tr>
+<tr class="memdesc:aa1d4233dcf4732ff1d69b5958d4e6874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of portal across z axis.  <a href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">More...</a><br /></td></tr>
 <tr class="separator:aa1d4233dcf4732ff1d69b5958d4e6874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00016">16</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<div class="textblock"><p>Sets the location and dimesnions of a portal, and checks whether a collision between the player and the portal is made. </p>
+<dl class="section author"><dt>Author</dt><dd>Group Team No Name 2 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14/09/2020 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00025">25</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af2f293ad6180c31a93382587044699ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2f293ad6180c31a93382587044699ce">&#9670;&nbsp;</a></span>Portal()</h2>
@@ -125,18 +143,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00013">13</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">xPlayer</a> = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">yPlayer</a> = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">zPlayer</a> = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a> = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a> = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a> = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<p>Constructor, sets all default values. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00014">14</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">xPlayer</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">yPlayer</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">zPlayer</a> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a> = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a> = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="_portal_8h_source.html#l00043">xDim</a>, <a class="el" href="_portal_8h_source.html#l00036">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00045">yDim</a>, <a class="el" href="_portal_8h_source.html#l00038">yPlayer</a>, <a class="el" href="_portal_8h_source.html#l00047">zDim</a>, and <a class="el" href="_portal_8h_source.html#l00040">zPlayer</a>.</p>
+<p class="reference">References <a class="el" href="_portal_8h_source.html#l00073">xDim</a>, <a class="el" href="_portal_8h_source.html#l00066">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00075">yDim</a>, <a class="el" href="_portal_8h_source.html#l00068">yPlayer</a>, <a class="el" href="_portal_8h_source.html#l00077">zDim</a>, and <a class="el" href="_portal_8h_source.html#l00070">zPlayer</a>.</p>
 
 </div>
 </div>
@@ -173,35 +193,46 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00039">39</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (xPlayer &lt; xStart &amp;&amp; xPlayer &gt; xStart + <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (yPlayer &lt; yStart &amp;&amp; yPlayer &gt; yStart + <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a>)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (zPlayer &lt; zStart &amp;&amp; zPlayer &gt; zStart + <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="_portal_8h_source.html#l00043">xDim</a>, <a class="el" href="_portal_8h_source.html#l00036">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00045">yDim</a>, <a class="el" href="_portal_8h_source.html#l00038">yPlayer</a>, <a class="el" href="_portal_8h_source.html#l00047">zDim</a>, and <a class="el" href="_portal_8h_source.html#l00040">zPlayer</a>.</p>
+<p>Checks for collision of player of portal position. <br  />
+ Returns true if collision of portal occurs, otherwise returns false. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xStart</td><td>- Position of bound on the x axis </td></tr>
+    <tr><td class="paramname">yStart</td><td>- Position of bound on the y axis </td></tr>
+    <tr><td class="paramname">zStart</td><td>- Position of bound on the z axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_display_shays_world_8cpp_source.html#l00104">DisplayShaysWorld::specialPortal()</a>, <a class="el" href="_display_shays_world_8cpp_source.html#l00058">DisplayShaysWorld::stairsPortal()</a>, <a class="el" href="display_wrath_world_8cpp_source.html#l00082">DisplayWrathWorld::stairsReturnPortal()</a>, and <a class="el" href="_display_shays_world_8cpp_source.html#l00078">DisplayShaysWorld::stairsReturnPortal()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00044">44</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (xPlayer &lt; xStart &amp;&amp; xPlayer &gt; xStart + <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (yPlayer &lt; yStart &amp;&amp; yPlayer &gt; yStart + <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (zPlayer &lt; zStart &amp;&amp; zPlayer &gt; zStart + <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_portal_8h_source.html#l00073">xDim</a>, <a class="el" href="_portal_8h_source.html#l00066">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00075">yDim</a>, <a class="el" href="_portal_8h_source.html#l00068">yPlayer</a>, <a class="el" href="_portal_8h_source.html#l00077">zDim</a>, and <a class="el" href="_portal_8h_source.html#l00070">zPlayer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_display_shays_world_8cpp_source.html#l00084">DisplayShaysWorld::specialPortal()</a>, <a class="el" href="_display_shays_world_8cpp_source.html#l00052">DisplayShaysWorld::stairsPortal()</a>, and <a class="el" href="display_wrath_world_8cpp_source.html#l00079">DisplayWrathWorld::stairsReturnPortal()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_portal_ac4c29dca020a20953416faa2624884f1_icgraph.png" border="0" usemap="#class_portal_ac4c29dca020a20953416faa2624884f1_icgraph" alt=""/></div>
 <map name="class_portal_ac4c29dca020a20953416faa2624884f1_icgraph" id="class_portal_ac4c29dca020a20953416faa2624884f1_icgraph">
-<area shape="rect" title=" " alt="" coords="311,111,445,138"/>
-<area shape="rect" href="class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title=" " alt="" coords="119,5,263,47"/>
-<area shape="rect" href="class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title=" " alt="" coords="119,71,263,112"/>
-<area shape="rect" href="class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title=" " alt="" coords="119,136,262,177"/>
-<area shape="rect" href="class_display_shays_world.html#a6de35eaf895280932c6f4e6d368ae52b" title=" " alt="" coords="119,201,263,243"/>
-<area shape="rect" href="main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,111,71,138"/>
+<area shape="rect" title="Checks for collision of player of portal position. &#160;&#160;Returns true if collision of portal occurs,..." alt="" coords="311,78,445,105"/>
+<area shape="rect" href="class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title="defines the portal that telports within the same world" alt="" coords="119,5,263,47"/>
+<area shape="rect" href="class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title="defines the portal on top of the stairs" alt="" coords="119,71,263,112"/>
+<area shape="rect" href="class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title="defines the return portal collision to Shays World" alt="" coords="119,136,262,177"/>
+<area shape="rect" href="main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,78,71,105"/>
 </map>
 </div>
 
@@ -239,27 +270,37 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00031">31</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a> = xSize;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a> = ySize;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a> = zSize;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="_portal_8h_source.html#l00043">xDim</a>, <a class="el" href="_portal_8h_source.html#l00045">yDim</a>, and <a class="el" href="_portal_8h_source.html#l00047">zDim</a>.</p>
+<p>Collects and stores dimesions on all axis's of the portal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xSize</td><td>- Difference on x axis </td></tr>
+    <tr><td class="paramname">ySize</td><td>- Difference on y axis </td></tr>
+    <tr><td class="paramname">zSize</td><td>- Difference on z axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_display_shays_world_8cpp_source.html#l00104">DisplayShaysWorld::specialPortal()</a>, <a class="el" href="_display_shays_world_8cpp_source.html#l00058">DisplayShaysWorld::stairsPortal()</a>, <a class="el" href="display_wrath_world_8cpp_source.html#l00082">DisplayWrathWorld::stairsReturnPortal()</a>, and <a class="el" href="_display_shays_world_8cpp_source.html#l00078">DisplayShaysWorld::stairsReturnPortal()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00034">34</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">xDim</a> = xSize;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_portal.html#acc4baff37c579761492d68acd632b434">yDim</a> = ySize;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">zDim</a> = zSize;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_portal_8h_source.html#l00073">xDim</a>, <a class="el" href="_portal_8h_source.html#l00075">yDim</a>, and <a class="el" href="_portal_8h_source.html#l00077">zDim</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_display_shays_world_8cpp_source.html#l00084">DisplayShaysWorld::specialPortal()</a>, <a class="el" href="_display_shays_world_8cpp_source.html#l00052">DisplayShaysWorld::stairsPortal()</a>, and <a class="el" href="display_wrath_world_8cpp_source.html#l00079">DisplayWrathWorld::stairsReturnPortal()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_portal_a4d7de51f166c38807bdbaacb08f61e25_icgraph.png" border="0" usemap="#class_portal_a4d7de51f166c38807bdbaacb08f61e25_icgraph" alt=""/></div>
 <map name="class_portal_a4d7de51f166c38807bdbaacb08f61e25_icgraph" id="class_portal_a4d7de51f166c38807bdbaacb08f61e25_icgraph">
-<area shape="rect" title=" " alt="" coords="311,111,475,138"/>
-<area shape="rect" href="class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title=" " alt="" coords="119,5,263,47"/>
-<area shape="rect" href="class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title=" " alt="" coords="119,71,263,112"/>
-<area shape="rect" href="class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title=" " alt="" coords="119,136,262,177"/>
-<area shape="rect" href="class_display_shays_world.html#a6de35eaf895280932c6f4e6d368ae52b" title=" " alt="" coords="119,201,263,243"/>
-<area shape="rect" href="main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,111,71,138"/>
+<area shape="rect" title="Collects and stores dimesions on all axis&#39;s of the portal." alt="" coords="311,78,475,105"/>
+<area shape="rect" href="class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title="defines the portal that telports within the same world" alt="" coords="119,5,263,47"/>
+<area shape="rect" href="class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title="defines the portal on top of the stairs" alt="" coords="119,71,263,112"/>
+<area shape="rect" href="class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title="defines the return portal collision to Shays World" alt="" coords="119,136,262,177"/>
+<area shape="rect" href="main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,78,71,105"/>
 </map>
 </div>
 
@@ -297,14 +338,25 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00024">24</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">xPlayer</a> = xPos;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">yPlayer</a> = yPos;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">zPlayer</a> = zPos;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<p>Collects and store camera position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPos</td><td>- Position on x axis </td></tr>
+    <tr><td class="paramname">yPos</td><td>- Position on y axis </td></tr>
+    <tr><td class="paramname">zPos</td><td>- Position on z axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_portal_8cpp_source.html#l00026">26</a> of file <a class="el" href="_portal_8cpp_source.html">Portal.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">xPlayer</a> = xPos;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">yPlayer</a> = yPos;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">zPlayer</a> = zPos;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="_portal_8h_source.html#l00036">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00038">yPlayer</a>, and <a class="el" href="_portal_8h_source.html#l00040">zPlayer</a>.</p>
+<p class="reference">References <a class="el" href="_portal_8h_source.html#l00066">xPlayer</a>, <a class="el" href="_portal_8h_source.html#l00068">yPlayer</a>, and <a class="el" href="_portal_8h_source.html#l00070">zPlayer</a>.</p>
 
 </div>
 </div>
@@ -329,9 +381,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00043">43</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Size of portal across x axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00031">portalDimensions()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00073">73</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00034">portalDimensions()</a>.</p>
 
 </div>
 </div>
@@ -355,9 +409,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00036">36</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Position of player on the x axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00024">setLocation()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00066">66</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00026">setLocation()</a>.</p>
 
 </div>
 </div>
@@ -381,9 +437,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00045">45</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Size of portal across y axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00031">portalDimensions()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00075">75</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00034">portalDimensions()</a>.</p>
 
 </div>
 </div>
@@ -407,9 +465,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00038">38</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Position of player on the y axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00024">setLocation()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00068">68</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00026">setLocation()</a>.</p>
 
 </div>
 </div>
@@ -433,9 +493,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00047">47</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Size of portal across z axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00031">portalDimensions()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00077">77</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00034">portalDimensions()</a>.</p>
 
 </div>
 </div>
@@ -459,9 +521,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00040">40</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+<p>Position of player on the z axis. </p>
 
-<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00039">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00013">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00024">setLocation()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_portal_8h_source.html#l00070">70</a> of file <a class="el" href="_portal_8h_source.html">Portal.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_portal_8cpp_source.html#l00044">createPortal()</a>, <a class="el" href="_portal_8cpp_source.html#l00014">Portal()</a>, and <a class="el" href="_portal_8cpp_source.html#l00026">setLocation()</a>.</p>
 
 </div>
 </div>
@@ -470,12 +534,12 @@ Here is the caller graph for this function:</div>
 <li>C:/Users/charl/OneDrive - Murdoch University/ICT290/Project/ict290/shayLearyALL/CAMPUS TOUR/<a class="el" href="_portal_8cpp_source.html">Portal.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_portal_html_acc4baff37c579761492d68acd632b434"><div class="ttname"><a href="class_portal.html#acc4baff37c579761492d68acd632b434">Portal::yDim</a></div><div class="ttdeci">double yDim</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00045">Portal.h:45</a></div></div>
-<div class="ttc" id="aclass_portal_html_aa1d4233dcf4732ff1d69b5958d4e6874"><div class="ttname"><a href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">Portal::zDim</a></div><div class="ttdeci">double zDim</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00047">Portal.h:47</a></div></div>
-<div class="ttc" id="aclass_portal_html_a69cff77b958d2bf9a6900e8a6698c7e4"><div class="ttname"><a href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">Portal::xDim</a></div><div class="ttdeci">double xDim</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00043">Portal.h:43</a></div></div>
-<div class="ttc" id="aclass_portal_html_a30f2d9118b3d9f7106c8b9e02eda473b"><div class="ttname"><a href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">Portal::xPlayer</a></div><div class="ttdeci">double xPlayer</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00036">Portal.h:36</a></div></div>
-<div class="ttc" id="aclass_portal_html_a7dc437495e2b5f828607c32a3023cc19"><div class="ttname"><a href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">Portal::zPlayer</a></div><div class="ttdeci">double zPlayer</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00040">Portal.h:40</a></div></div>
-<div class="ttc" id="aclass_portal_html_adbfde7470cecc8b3adcb3d3728f0902b"><div class="ttname"><a href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">Portal::yPlayer</a></div><div class="ttdeci">double yPlayer</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00038">Portal.h:38</a></div></div>
+<div class="ttc" id="aclass_portal_html_acc4baff37c579761492d68acd632b434"><div class="ttname"><a href="class_portal.html#acc4baff37c579761492d68acd632b434">Portal::yDim</a></div><div class="ttdeci">double yDim</div><div class="ttdoc">Size of portal across y axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00075">Portal.h:75</a></div></div>
+<div class="ttc" id="aclass_portal_html_aa1d4233dcf4732ff1d69b5958d4e6874"><div class="ttname"><a href="class_portal.html#aa1d4233dcf4732ff1d69b5958d4e6874">Portal::zDim</a></div><div class="ttdeci">double zDim</div><div class="ttdoc">Size of portal across z axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00077">Portal.h:77</a></div></div>
+<div class="ttc" id="aclass_portal_html_a69cff77b958d2bf9a6900e8a6698c7e4"><div class="ttname"><a href="class_portal.html#a69cff77b958d2bf9a6900e8a6698c7e4">Portal::xDim</a></div><div class="ttdeci">double xDim</div><div class="ttdoc">Size of portal across x axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00073">Portal.h:73</a></div></div>
+<div class="ttc" id="aclass_portal_html_a30f2d9118b3d9f7106c8b9e02eda473b"><div class="ttname"><a href="class_portal.html#a30f2d9118b3d9f7106c8b9e02eda473b">Portal::xPlayer</a></div><div class="ttdeci">double xPlayer</div><div class="ttdoc">Position of player on the x axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00066">Portal.h:66</a></div></div>
+<div class="ttc" id="aclass_portal_html_a7dc437495e2b5f828607c32a3023cc19"><div class="ttname"><a href="class_portal.html#a7dc437495e2b5f828607c32a3023cc19">Portal::zPlayer</a></div><div class="ttdeci">double zPlayer</div><div class="ttdoc">Position of player on the z axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00070">Portal.h:70</a></div></div>
+<div class="ttc" id="aclass_portal_html_adbfde7470cecc8b3adcb3d3728f0902b"><div class="ttname"><a href="class_portal.html#adbfde7470cecc8b3adcb3d3728f0902b">Portal::yPlayer</a></div><div class="ttdeci">double yPlayer</div><div class="ttdoc">Position of player on the y axis.</div><div class="ttdef"><b>Definition:</b> <a href="_portal_8h_source.html#l00068">Portal.h:68</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

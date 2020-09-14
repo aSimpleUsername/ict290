@@ -1,4 +1,4 @@
 <map id="Collision::GetAABBMinX" name="Collision::GetAABBMinX">
-<area shape="rect" id="node1" title=" " alt="" coords="213,5,377,32"/>
+<area shape="rect" id="node1" title="Returns Min x of bounding box." alt="" coords="213,5,377,32"/>
 <area shape="rect" id="node2" href="$class_camera.html#a7b0c8231ff696a81330b0960ee4ff719" title="Gets AABB Min X." alt="" coords="5,5,165,32"/>
 </map>

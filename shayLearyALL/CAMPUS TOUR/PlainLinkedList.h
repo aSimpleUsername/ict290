@@ -41,6 +41,7 @@ public:
 	void Clear();
 	/**
 		* @brief add a node to the start of the linked list
+		* @param tempType - type of plain
 		* @param tempXs - x start
 		* @param tempXe - x end
 		* @param tempYs - y start

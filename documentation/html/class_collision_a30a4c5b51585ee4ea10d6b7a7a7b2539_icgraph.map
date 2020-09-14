@@ -1,4 +1,4 @@
 <map id="Collision::GetAABBMinZ" name="Collision::GetAABBMinZ">
-<area shape="rect" id="node1" title=" " alt="" coords="213,5,377,32"/>
+<area shape="rect" id="node1" title="Returns Min z of bounding box." alt="" coords="213,5,377,32"/>
 <area shape="rect" id="node2" href="$class_camera.html#a333f233675f83907a0f8a8e3274865fe" title="Gets AABB Min Z." alt="" coords="5,5,165,32"/>
 </map>

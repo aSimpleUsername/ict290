@@ -1,7 +1,7 @@
 <map id="Camera::InitiateBoundingBoxes" name="Camera::InitiateBoundingBoxes">
 <area shape="rect" id="node1" title="Creates a linked list for each quadrant of the world and places the bounding box data in each." alt="" coords="5,35,172,76"/>
-<area shape="rect" id="node2" href="$class_collision.html#a30554164f1f1501dc707bcec81e3fd34" title=" " alt="" coords="220,42,396,69"/>
-<area shape="rect" id="node3" href="$class_collision.html#affd6aa970fc603b44dab681f551baef1" title=" " alt="" coords="444,5,615,47"/>
+<area shape="rect" id="node2" href="$class_collision.html#a30554164f1f1501dc707bcec81e3fd34" title="reads the BB info from AABB (dynamic array) and creates a Linked List with AABB data" alt="" coords="220,42,396,69"/>
+<area shape="rect" id="node3" href="$class_collision.html#affd6aa970fc603b44dab681f551baef1" title="Returns number of bounding boxes." alt="" coords="444,5,615,47"/>
 <area shape="rect" id="node5" href="$class_a_a_b_b.html#a1c8a263cbd356446535e88b521eab3d5" title=" " alt="" coords="474,71,585,98"/>
 <area shape="rect" id="node4" href="$class_a_a_b_b.html#a65be20483d52ea207e9569244c5fb1c4" title="Gets number of bounding boxes." alt="" coords="663,13,857,39"/>
 <area shape="rect" id="node6" href="$class_a_a_b_b.html#a0c8c0d63af1044663eb095c43b53e1a6" title="Deletes arrays and clears memory." alt="" coords="703,71,817,98"/>

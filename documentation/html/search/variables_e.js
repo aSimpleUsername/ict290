@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['obtained_1551',['obtained',['../class_c_easy_sound.html#a1e163bfd31003aed603af84b9464a82c',1,'CEasySound']]]
+  ['ratio_1494',['ratio',['../main_8cpp.html#a207ad05f99cc72068a92358861ff5e71',1,'main.cpp']]]
 ];

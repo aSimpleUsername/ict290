@@ -1,4 +1,4 @@
 <map id="Camera::ResetXYZ" name="Camera::ResetXYZ">
-<area shape="rect" id="node1" title=" " alt="" coords="173,5,305,32"/>
+<area shape="rect" id="node1" title="resets camera" alt="" coords="173,5,305,32"/>
 <area shape="rect" id="node2" href="$class_camera.html#a01f94c3543f56ede7af49dc778f19331" title=" " alt="" coords="5,5,125,32"/>
 </map>

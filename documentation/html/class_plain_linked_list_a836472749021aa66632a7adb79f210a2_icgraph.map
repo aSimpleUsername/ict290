@@ -1,4 +1,4 @@
 <map id="PlainLinkedList::Clear" name="PlainLinkedList::Clear">
-<area shape="rect" id="node1" title=" " alt="" coords="268,5,416,32"/>
+<area shape="rect" id="node1" title="Clears linked list and frees memory." alt="" coords="268,5,416,32"/>
 <area shape="rect" id="node2" href="$class_plain_linked_list.html#a9b11aabf026e1d65cbf16e854ff46533" title=" " alt="" coords="5,5,220,32"/>
 </map>

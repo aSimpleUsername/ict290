@@ -1,5 +1,5 @@
 <map id="PlainLinkedList::AddToStart" name="PlainLinkedList::AddToStart">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,188,57"/>
-<area shape="rect" id="node2" href="$class_plain_node.html#a0bffe61c0a30c8af32d5cb6ac59e4070" title=" " alt="" coords="236,5,373,32"/>
-<area shape="rect" id="node3" href="$class_plain_node.html#afe5be77c2dfbf7447105f0ea722e77f1" title=" " alt="" coords="237,56,373,83"/>
+<area shape="rect" id="node1" title="add a node to the start of the linked list" alt="" coords="5,31,188,57"/>
+<area shape="rect" id="node2" href="$class_plain_node.html#a0bffe61c0a30c8af32d5cb6ac59e4070" title="Return the address of the link to the next node in the list." alt="" coords="236,5,373,32"/>
+<area shape="rect" id="node3" href="$class_plain_node.html#afe5be77c2dfbf7447105f0ea722e77f1" title="Set the address of the link to the next node in the list." alt="" coords="237,56,373,83"/>
 </map>

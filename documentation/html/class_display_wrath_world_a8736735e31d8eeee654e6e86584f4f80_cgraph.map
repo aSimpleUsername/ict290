@@ -1,9 +1,9 @@
 <map id="DisplayWrathWorld::myinit" name="DisplayWrathWorld::myinit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,148,112"/>
-<area shape="rect" id="node2" href="$class_display_wrath_world.html#a3aa3581ed01847832e0237aae75a0a3b" title=" " alt="" coords="196,5,347,47"/>
-<area shape="rect" id="node3" href="$class_display_wrath_world.html#ae3a9edf55952cf102c48392fe4d67cfb" title=" " alt="" coords="200,71,343,112"/>
-<area shape="rect" id="node7" href="$class_display_wrath_world.html#af829995247bbe085be43fce42f303489" title=" " alt="" coords="200,136,343,177"/>
-<area shape="rect" id="node4" href="$class_display_wrath_world.html#a7c26c5074c902618f169c6367ab9e8e1" title=" " alt="" coords="395,5,537,47"/>
-<area shape="rect" id="node5" href="$class_display_wrath_world.html#a12e1cecb81a90f6c7a4fdf160b6c5b0e" title=" " alt="" coords="395,71,537,112"/>
-<area shape="rect" id="node6" href="$class_display_wrath_world.html#a24d2d0b8a2673588c35861752814fef4" title=" " alt="" coords="395,136,537,177"/>
+<area shape="rect" id="node1" title="initialises Wrath World" alt="" coords="5,71,148,112"/>
+<area shape="rect" id="node2" href="$class_display_wrath_world.html#a3aa3581ed01847832e0237aae75a0a3b" title="creates bounding boxes for collsion detection" alt="" coords="196,5,347,47"/>
+<area shape="rect" id="node3" href="$class_display_wrath_world.html#ae3a9edf55952cf102c48392fe4d67cfb" title="calls functions to create display lists" alt="" coords="200,71,343,112"/>
+<area shape="rect" id="node7" href="$class_display_wrath_world.html#af829995247bbe085be43fce42f303489" title="loads images and creates texture" alt="" coords="200,136,343,177"/>
+<area shape="rect" id="node4" href="$class_display_wrath_world.html#a7c26c5074c902618f169c6367ab9e8e1" title="draws the ground plane" alt="" coords="395,5,537,47"/>
+<area shape="rect" id="node5" href="$class_display_wrath_world.html#a12e1cecb81a90f6c7a4fdf160b6c5b0e" title="draws the portal plane" alt="" coords="395,71,537,112"/>
+<area shape="rect" id="node6" href="$class_display_wrath_world.html#a24d2d0b8a2673588c35861752814fef4" title="draws the skybox" alt="" coords="395,136,537,177"/>
 </map>

@@ -347,7 +347,7 @@ public:
 
 		/**
 		* @brief deletes image and clears memory
-		* @param the image
+		* @param tempImage
 		*/
 	void DeleteImageFromMemory(unsigned char* tempImage);
 

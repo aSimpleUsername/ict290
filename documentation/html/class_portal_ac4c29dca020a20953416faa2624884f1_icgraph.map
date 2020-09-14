@@ -1,8 +1,7 @@
 <map id="Portal::createPortal" name="Portal::createPortal">
-<area shape="rect" id="node1" title=" " alt="" coords="311,111,445,138"/>
-<area shape="rect" id="node2" href="$class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title=" " alt="" coords="119,5,263,47"/>
-<area shape="rect" id="node4" href="$class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title=" " alt="" coords="119,71,263,112"/>
-<area shape="rect" id="node5" href="$class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title=" " alt="" coords="119,136,262,177"/>
-<area shape="rect" id="node6" href="$class_display_shays_world.html#a6de35eaf895280932c6f4e6d368ae52b" title=" " alt="" coords="119,201,263,243"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,111,71,138"/>
+<area shape="rect" id="node1" title="Checks for collision of player of portal position. &#160;&#160;Returns true if collision of portal occurs,..." alt="" coords="311,78,445,105"/>
+<area shape="rect" id="node2" href="$class_display_shays_world.html#a63bdecbf84d84f468c41bcf8b71ebc6d" title="defines the portal that telports within the same world" alt="" coords="119,5,263,47"/>
+<area shape="rect" id="node4" href="$class_display_shays_world.html#ab1ceeefed5d51b752389adcd6bf6d572" title="defines the portal on top of the stairs" alt="" coords="119,71,263,112"/>
+<area shape="rect" id="node5" href="$class_display_wrath_world.html#a0c0f3e3e36eb290924585e1c14fb8e20" title="defines the return portal collision to Shays World" alt="" coords="119,136,262,177"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,78,71,105"/>
 </map>

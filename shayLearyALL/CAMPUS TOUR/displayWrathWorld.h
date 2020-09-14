@@ -54,7 +54,7 @@ public:
 
 		/**
 		* @brief deletes image and clears memory
-		* @pram the image to delete
+		* @param tempImage - to delete
 		*/
 	void DeleteImageFromMemory(unsigned char* tempImage);	// deletes image and clears memory
 

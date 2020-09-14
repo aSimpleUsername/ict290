@@ -1,7 +1,7 @@
 <map id="DisplayWrathWorld::drawPortal" name="DisplayWrathWorld::drawPortal">
-<area shape="rect" id="node1" title=" " alt="" coords="647,5,789,47"/>
-<area shape="rect" id="node2" href="$class_display_wrath_world.html#ae3a9edf55952cf102c48392fe4d67cfb" title=" " alt="" coords="456,5,599,47"/>
-<area shape="rect" id="node3" href="$class_display_wrath_world.html#a8736735e31d8eeee654e6e86584f4f80" title=" " alt="" coords="265,5,408,47"/>
+<area shape="rect" id="node1" title="draws the portal plane" alt="" coords="647,5,789,47"/>
+<area shape="rect" id="node2" href="$class_display_wrath_world.html#ae3a9edf55952cf102c48392fe4d67cfb" title="calls functions to create display lists" alt="" coords="456,5,599,47"/>
+<area shape="rect" id="node3" href="$class_display_wrath_world.html#a8736735e31d8eeee654e6e86584f4f80" title="initialises Wrath World" alt="" coords="265,5,408,47"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#a5d3fb9b91b5c167b70a1a0557e67f271" title=" " alt="" coords="5,13,71,39"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#aca3d26baec56d03f834fc9a9176cbca1" title=" " alt="" coords="119,38,217,65"/>
 </map>
