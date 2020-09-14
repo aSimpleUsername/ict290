@@ -436,6 +436,21 @@ C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\camera.cpp(201,14): warning C4244: 'argument': conversion from 'GLdouble' to 'const int', possible loss of data
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\camera.cpp(211,20): warning C4244: 'argument': conversion from 'GLdouble' to 'const int', possible loss of data
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\camera.cpp(211,13): warning C4244: 'argument': conversion from 'GLdouble' to 'const int', possible loss of data
+  cameraMap.cpp
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(29,18): warning C4244: 'argument': conversion from 'const int' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(36,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(36,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(37,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(37,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(38,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(38,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(39,49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(39,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(67,53): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(67,29): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(99,53): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\cameraMap.cpp(99,29): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  collision.cpp
   displayWrathWorld.cpp
 C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(14,62): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
   main.cpp

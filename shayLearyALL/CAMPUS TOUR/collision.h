@@ -24,41 +24,123 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Set Methods
 	//----------------------------------------------------------------------------------
-	// sets initial co-ordinates of bounding boxes (these set the co-ords is AABB, the array,
-	// the values for the list are copied from the array using CreateLinkedList).
+	/**
+		* @brief Sets AABB MaxX
+		* @param tempIndex - index of the AABB
+		* @param tempX - max x of AABB
+		* @return void
+	*/
 	void SetAABBMaxX(const int & tempIndex, const double &tempX) {m_AABB.SetMaxX(tempIndex, tempX);}
+	/**
+		* @brief Sets AABB MinX
+		* @param tempIndex - index of the AABB
+		* @param tempX - min x of AABB
+		* @return void
+	*/
 	void SetAABBMinX(const int & tempIndex, const double &tempX) {m_AABB.SetMinX(tempIndex, tempX);}
+	/**
+		* @brief Sets AABB MaxY
+		* @param tempIndex - index of the AABB
+		* @param tempY- max y of AABB
+		* @return void
+	*/
 	void SetAABBMaxY(const int & tempIndex, const double &tempY) {m_AABB.SetMaxY(tempIndex, tempY);}
+	/**
+		* @brief Sets AABB MinY
+		* @param tempIndex - index of the AABB
+		* @param tempY- min y of AABB
+		* @return void
+	*/
 	void SetAABBMinY(const int & tempIndex, const double &tempY) {m_AABB.SetMinY(tempIndex, tempY);}
+	/**
+		* @brief Sets AABB MaxZ
+		* @param tempIndex - index of the AABB
+		* @param tempZ- max z of AABB
+		* @return void
+	*/
 	void SetAABBMaxZ(const int & tempIndex, const double &tempZ) {m_AABB.SetMaxZ(tempIndex, tempZ);}
+	/**
+		* @brief Sets AABB MinZ
+		* @param tempIndex - index of the AABB
+		* @param tempZ- min z of AABB
+		* @return void
+	*/
 	void SetAABBMinZ(const int & tempIndex, const double &tempZ) {m_AABB.SetMinZ(tempIndex, tempZ);}
-
-	// sets the actual world co-ordinates
+	/**
+		* @brief Sets world X of object
+		* @param tempX - world x of AABB
+		* @return void
+	*/
 	void SetWorldX(const double &tempX) {m_worldSizeX = tempX;}
+	/**
+		* @brief Sets world Z of object
+		* @param tempZ - world z of AABB
+		* @return void
+	*/
 	void SetWorldZ(const double &tempZ) {m_worldSizeZ = tempZ;}
-
-	// set number of bounding boxes
+	/**
+		* @brief Sets number of bounding boxes
+		* @param tempSize - number of AABB
+		* @return void
+	*/
 	void SetNoBoundingBoxes(const int & tempSize) {m_AABB.SetNoBoundingBoxes(tempSize);}
 
 	//----------------------------------------------------------------------------------
 	//  Returns Methods
 	//----------------------------------------------------------------------------------
-	// returns co-ordinates of bounding boxes
+	/**
+		* @brief Returns Max x of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMaxX (const int & tempIndex) {return m_AABB.GetMaxX (tempIndex);}
+	/**
+		* @brief Returns Min x of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMinX (const int & tempIndex) {return m_AABB.GetMinX (tempIndex);}
+	/**
+		* @brief Returns Max y of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMaxY (const int & tempIndex) {return m_AABB.GetMaxY (tempIndex);}
+	/**
+		* @brief Returns Min y of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMinY (const int & tempIndex) {return m_AABB.GetMinY (tempIndex);}
+	/**
+		* @brief Returns Max z of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMaxZ (const int & tempIndex) {return m_AABB.GetMaxZ (tempIndex);}
+	/**
+		* @brief Returns Min z of bounding box
+		* @param tempIndex - index of AABB
+		* @return double
+	*/
 	double GetAABBMinZ (const int & tempIndex) {return m_AABB.GetMinZ (tempIndex);}
-
-	// returns number of bounding boxes
+	/**
+		* @brief Returns number of bounding boxes
+		* @return int
+	*/
 	int GetNoBoundingBoxes() {return m_AABB.GetNoBoundingBoxes();}
-
-	// returns TRUE if a collsion occurred
+	/**
+		* @brief Checks for collision returns true if occoured
+		* @param endX - x to check collision
+		* @param endY - y to check collision
+		* @param endZ - z to check collision
+		* @return bool
+		*/
 	bool Collide (double endX, double endY, double endZ);
-
-	// reads the BB info from AABB (dynamic array) and creates a Linked List
-	// containing BB data
+	/**
+		* @brief  reads the BB info from AABB (dynamic array) and creates a Linked List with AABB data
+		* @return void
+	*/
 	void CreateLinkedList();
 
 private:
@@ -76,7 +158,15 @@ private:
 	double m_worldSizeX;
 	double m_worldSizeZ;
 
-	// checks if collsion occurred (called from Collide)
+	// 
+	/**
+		* @brief  checks if collsion occurred (called from Collide)
+		* @param index - index of AABB to check
+		* @param endX - x to check collision
+		* @param endY - y to check collision
+		* @param endZ - z to check collision
+		* @return bool
+	*/
 	bool CheckCollision(int index, double endX, double endY, double endZ);
 
 	//----------------------------------------------------------------------------------
