@@ -95,6 +95,7 @@ void TexturedPolygons::CreatePNGTexture(int textureNo, unsigned char* image, int
 	glBindTexture(GL_TEXTURE_2D, m_texture[textureNo]);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+	//loads the texture using RGBA colour
 	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, imgWidth, imgHeight, GL_RGBA, GL_UNSIGNED_BYTE, image);
 }
 
