@@ -1,3 +1,6 @@
+// displayWrathWorld.cpp - displays the world of Wrath
+// Author: Group Team No Name 2
+// 14 Sep 20
 
 #ifndef DISPLAYWRATHWORLD_H
 #define DISPLAYWRATHWORLD_H
@@ -20,55 +23,96 @@
 #define SPACE_1						4
 #define PORTAL_1					5
 
+	/**
+	* @class displayWrathWorld
+	* @brief Class that defines how the wrath world will be displayed
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+	*/
 class DisplayWrathWorld
 {
 public:
-	// objects
-	Camera cam;
+	Camera cam;		
 	TexturedPolygons tp;
+
 	unsigned char* image = NULL;
 
-	//booleans
-	// display campus map
-	bool DisplayMap = false;
-	// display welcome screen
+	bool DisplayMap = false;	
 	bool DisplayWelcome = false;
-	// display exit screen
 	bool DisplayExit = false;
-	// display light fittings
 	
+		/**
+		* @brief initialises Wrath World
+		*/
 	void myinit();
-	// calls display functions below to draw the backdrops
+
+		/**
+		* @brief calls private display functions to draw the scene
+		*/
 	void DrawBackdrop();
 
-	// deletes image and clears memory
-	void DeleteImageFromMemory(unsigned char* tempImage);
+		/**
+		* @brief deletes image and clears memory
+		* @pram the image to delete
+		*/
+	void DeleteImageFromMemory(unsigned char* tempImage);	// deletes image and clears memory
 
+		/**
+		* @brief defines the return portal to Shays World
+		* @return */
 	bool stairsReturnPortal();
 
 private:
-	// varibles used for tarnslating graphics etc
-	GLdouble step, step2, stepLength;
-	// Glut Cylinder
-	GLUquadricObj* glu_cylinder;
+	Portal stepsReturn;	
 
-	// Stores raw image file
-	std::vector<unsigned char>* pngImage;
+	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
+	std::vector<unsigned char>* pngImage;		// Stores raw image file
+
+		/**
+		* @brief displays the skybox
+		*/
 	void displaySkyBox();
+
+		/**
+		* @brief dispolays the ground plane
+		*/
 	void displayGroundPlane();
+
+		/**
+		* @brief draws the portal
+		*/
 	void displayPortal();
 
-	// calls functions to create display lists (below)
+		/**
+		* @brief calls functions to create display lists
+		*/
 	void CreateTextureList();
-	// creates display lists
+
+		/**
+		* @brief draws the skybox
+		*/
 	void drawSkyBox();
+
+		/**
+		* @brief draws the ground plane
+		*/
 	void drawGroundPlane();
+
+		/**
+		* @brief draws the portal plane
+		*/
 	void drawPortal();
 
-	// loads images and creates texture
+		/**
+		* @brief loads images and creates texture
+		*/
 	void CreateTextures();
-	// creates bounding boxes for collsion detection
+	
+		/**
+		* @brief creates bounding boxes for collsion detection
+		*/
 	void CreateBoundingBoxes();
 };
 
