@@ -1,0 +1,12 @@
+What works:
+- Sufficient 3D Detail
+- User movement with  keyboard and mouse
+- Extension of bush court is modelled
+- Functional and unique stairs
+- Meaningful transition to game world.
+- Game world is slighly modelled.
+
+Doesn't work:
+- Texture rendering issues at distance (However same issue is present
+Shays world, STA travel sign next to computer labs)
+- Camera looks vertically up when player spawns
