@@ -17,7 +17,13 @@
 #include "EasySound.h"
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class Camera
+	* @brief Class that controls the Camera
+	* @author Group Team No Name 2
+	* @version
+	* @date
+*/
 class Camera
 {
 public:
@@ -258,7 +264,13 @@ public:
 	*/
 	void DisplayWelcomeScreen (const int & screenWidth, const int & screenHeight,
 							   const int & tempExit, const GLuint & tempImage);
-	// display no exit
+	/**
+		* @brief Displays Exit Screen
+		* @param screenWidth - width of screen
+		* @param screenHeight - height of
+		* @param tempImage - image of exit screen
+		* @return void
+	*/
 	void DisplayNoExit (const int & screenWidth, const int & screenHeight, 
 						const GLuint & tempImage);
 	Camera& operator = (const Camera& other);
@@ -291,22 +303,53 @@ private:
 	GLdouble m_yrotateSpeed;
 	GLdouble m_moveSpeed;
 	
-	// is it ok to move
+	/**
+		* @brief checking if ok to move on X
+		* @return bool
+	*/
 	bool MoveFBOK();
+	/**
+		* @brief checking if ok to move on Y
+		* @return bool
+	*/
 	bool MoveLROK();
+	/**
+		* @brief checking if ok to move on Z
+		* @return bool
+	*/
 	bool MoveUDOK();
-
-	// move around the world
+	/**
+		* @brief apply movements on x
+		* @return void
+	*/
 	void MoveFB();
+	/**
+		* @brief apply movements on y
+		* @return void
+	*/
 	void MoveLR();
+	/**
+		* @brief apply movements on z
+		* @return void
+	*/
 	void MoveUD();
 
-	// overloaded function for setting plain
+	/**
+		* @brief overloaded function for setting plains
+		* @param moveX - x position of plane
+		* @param moveZ - z position of plane
+		* @return void
+	*/
 	void SetPlains(const int & moveX, const int & moveZ);
-
-	// resets camera
+	/**
+		* @brief resets camera
+		* @return void
+	*/
 	void ResetXYZ();
-	// display new view
+	/**
+		* @brief displays new view
+		* @return void
+	*/
 	void callGLLookAt();
 
 	bool m_CollisionDetectionOn;
@@ -315,11 +358,6 @@ private:
 	Collision m_colDetect;
 	CameraMap m_map;
 	PlainLinkedList m_Plain;
-
-	// These functions were set up to climb stairs, but are not used.
-	// The Plain object is used instead
-	void ClimbSteps(GLdouble stepStart, GLdouble stepFinish, GLdouble stepHeight, GLdouble stepWidth, int noSteps);
-	void CheckSteps();
 
 	CEasySound *es;
 	CSound* stepSound;
