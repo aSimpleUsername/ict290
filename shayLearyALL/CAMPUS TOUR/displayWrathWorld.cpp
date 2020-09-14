@@ -2,9 +2,6 @@
 
 
 
-
-
-
 //--------------------------------------------------------------------------------------
 //  Initialize Settings
 //--------------------------------------------------------------------------------------
@@ -81,14 +78,10 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 
 bool DisplayWrathWorld::stairsReturnPortal()
 {
-	Portal stepsReturn;
-
 	stepsReturn.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
 	stepsReturn.portalDimensions(-500, -500, -500);
 	return(stepsReturn.createPortal(10500, 10500.0, 15000.0));
 }
-
-
 
 void DisplayWrathWorld::CreateTextures()
 {
@@ -136,12 +129,12 @@ void DisplayWrathWorld::displaySkyBox()
 
 void DisplayWrathWorld::drawSkyBox()
 {
-	tp.CreateDisplayList(XZ, 4, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// Bottom
-	tp.CreateDisplayList(XZ, 5, 1024, 1024, -10000.0, 92400.0, -30000.0, 100, 100);		// Top
-	tp.CreateDisplayList(YZ, 6, 1024, 1024, -10000.0, -10000.0, -30000.0, 100, 100);	// FRONT
-	tp.CreateDisplayList(YZ, 7, 1024, 1024, 30000.0, -10000.0, -30000.0, 100, 100);		// Back
-	tp.CreateDisplayList(XY, 8, 1024, 1024, -10000.0, -10000.0, -10000.0, 100, 100);	// Left
-	tp.CreateDisplayList(XY, 9, 1024, 1024, -10000.0, -10000.0, 72400, 100, 100);		// Right	
+	tp.CreateDisplayList(XZ, 4, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// Bottom
+	tp.CreateDisplayList(XZ, 5, 10240, 10240, -10000.0, 92400.0, -30000.0, 10, 10);		// Top
+	tp.CreateDisplayList(YZ, 6, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// FRONT
+	tp.CreateDisplayList(YZ, 7, 10240, 10240, 30000.0, -10000.0, -30000.0, 10, 10);		// Back
+	tp.CreateDisplayList(XY, 8, 10240, 10240, -10000.0, -10000.0, -10000.0, 10, 10);	// Left
+	tp.CreateDisplayList(XY, 9, 10240, 10240, -10000.0, -10000.0, 72400, 10, 10);		// Right	
 }
 
 void DisplayWrathWorld::displayGroundPlane()

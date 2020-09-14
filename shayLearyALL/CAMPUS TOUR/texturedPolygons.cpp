@@ -20,7 +20,7 @@ GLubyte* TexturedPolygons::LoadTexture(char* filename, int imgWidth, int imgHeig
 	unsigned char* image = NULL;
 	image = LoadRawImageFile(filename, imgWidth, imgHeight);
 	// inform user if file loaded
-	 std::cout << "Loading image file " << filename << "...\n";
+	//std::cout << "Loading image file " << filename << "...\n";
 	return image;
 }
 GLubyte* TexturedPolygons::LoadTexture(const char* filename)
@@ -30,7 +30,7 @@ GLubyte* TexturedPolygons::LoadTexture(const char* filename)
 	unsigned error = lodepng_decode32_file(&image, &width, &height, filename);
     if(error) std::cout << "decoder error " << error << ": " << lodepng_error_text(error) << std::endl;
 
-    std::cout << "Loading image file " << filename << "...\n";
+    //std::cout << "Loading image file " << filename << "...\n";
 	return image;
 }
 
