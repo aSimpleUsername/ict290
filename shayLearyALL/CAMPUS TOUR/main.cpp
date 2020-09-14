@@ -1,6 +1,7 @@
+// ICT290 Assignment 1 
 // main.cpp - runs our game world from Shay's world
-// group Noname 2
-// 13 Sep 20
+// Group Noname 2
+// 13/09/2020
 
 
 #include <math.h>
