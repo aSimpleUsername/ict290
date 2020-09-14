@@ -18,7 +18,13 @@
 #include "PlainNode.h"
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class PlainLinkedList
+	* @brief Class that defines the links between the Plain Nodes
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+ */
 class PlainLinkedList
 {
 public:
@@ -73,19 +79,56 @@ public:
 		* @return GLdouble
 	*/
 	GLdouble GetType (int ptrCount);
+	/**
+		* @brief Gets starting x
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetXstart (int ptrCount);
+	/**
+		* @brief Gets ending x
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetXend (int ptrCount);
+	/**
+		* @brief Gets starting y
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetYstart (int ptrCount);
+	/**
+		* @brief Gets ending x
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetYend (int ptrCount);
+	/**
+		* @brief Gets starting z
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetZstart (int ptrCount);
+	/**
+		* @brief Gets ending z
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetZend (int ptrCount);
-
-	// Return size of list
+	/**
+		* @brief Gets size of the plains list
+		* @return int
+	*/
 	int GetListSize ();
-	
-	// Return the address of the link to the next node in the list
+	/**
+		* @brief Return the address of the link to the next node in the list
+		* @return PlainNode
+	*/
     PlainNode *GetNext () const {return m_first->GetNext();}
-	// Return the address of the link to the first node in the list
+	/**
+		* @brief Return the address of the link to the first node in the list
+		* @return PlainNode
+	*/
 	PlainNode *GetFirst() const {return m_first;}
 
 
@@ -94,8 +137,11 @@ public:
 private:
 	// pointer to first node in list
 	PlainNode *m_first;
-
-	// used to clear memory
+	/**
+		* @brief Used to Clear Memory
+		* @param before - node before one to be deleted
+		* @return void
+	*/
 	void Delete (PlainNode *before);
 
 	// Privatised copy constructor and assignment operator

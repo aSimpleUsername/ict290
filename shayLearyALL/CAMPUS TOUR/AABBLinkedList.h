@@ -19,7 +19,13 @@
 #include <gl/glut.h>
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class AABBLinkedList
+	* @brief Class that defines how the linked list for AABB'S works
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+ */
 class AABBLinkedList
 {
 public:

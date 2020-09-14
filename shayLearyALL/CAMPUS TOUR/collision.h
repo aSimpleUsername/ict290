@@ -13,7 +13,13 @@
 #include "AABBLinkedList.h"
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class Collision
+	* @brief Class defines functions to handle collision detection
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+ */
 class Collision
 {
 public:

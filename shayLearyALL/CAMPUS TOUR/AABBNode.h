@@ -13,7 +13,13 @@
 #include <gl/glut.h>
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class AABBNode
+	* @brief Class that defines the paramaters of each AABB node 
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+ */
 class AABBNode
 {
 public:

@@ -16,7 +16,13 @@
 #include "lodepng.h"
 
 //--------------------------------------------------------------------------------------
-
+/**
+    * @class TexturedPolygons
+    * @brief Class that provides functions to texture surfaces
+    * @author Group Team No Name 2
+    * @version
+    * @date 14 Sep 20
+ */
 class TexturedPolygons
 {
 public:

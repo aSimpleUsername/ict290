@@ -22,7 +22,13 @@
 #include <gl/glut.h>
 
 //--------------------------------------------------------------------------------------
-
+/**
+    * @class AABB
+    * @brief Class that defines the paramaters of the Bounding Boxes
+    * @author Group Team No Name 2
+    * @version
+    * @date 14 Sep 20
+ */
 class AABB
 {
 private:

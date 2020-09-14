@@ -11,7 +11,13 @@
 #include <gl/glut.h>
 
 //--------------------------------------------------------------------------------------
-
+/**
+	* @class CameraMap
+	* @brief Class that defines how the map is displayed to the screen
+	* @author Group Team No Name 2
+	* @version
+	* @date 14 Sep 20
+ */
 class CameraMap
 {
 public:
