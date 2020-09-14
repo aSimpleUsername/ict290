@@ -28,17 +28,37 @@ public:
 	virtual ~PlainLinkedList() {Clear();}
 
 	//----------------------------------------------------------------------------------
-
-	// clears linked list and frees memory
+	/**
+		* @brief Clears linked list and frees memory
+		* @return void
+	*/
 	void Clear();
-
-	// add a node to the start of the linked list
+	/**
+		* @brief add a node to the start of the linked list
+		* @param tempXs - x start
+		* @param tempXe - x end
+		* @param tempYs - y start
+		* @param tempYe - y end
+		* @param tempZs - z start
+		* @param tempZe - z end
+		* @return bool
+	*/
 	bool AddToStart (const int tempType,
 				     const GLdouble tempXs, const GLdouble tempXe,
 				     const GLdouble tempYs, const GLdouble tempYe,
 				     const GLdouble tempZs, const GLdouble tempZe);
-	
-	// set the values of the node data
+	/**
+		* @brief set the values of the node data
+		* @param ptrCount - the pointer of the node
+		* @param tempType - type of data
+		* @param tempXs - x start
+		* @param tempXe - x end
+		* @param tempYs - y start
+		* @param tempYe - y end
+		* @param tempZs - z start
+		* @param tempZe - z end
+		* @return void
+	*/
 	void SetData(const int &ptrCount, const int tempType,
 				 const GLdouble tempXs, const GLdouble tempXe,
 				 const GLdouble tempYs, const GLdouble tempYe,
@@ -47,6 +67,11 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods
 	//----------------------------------------------------------------------------------
+	/**
+		* @brief Gets Type
+		* @param ptrCount - the pointer of the node
+		* @return GLdouble
+	*/
 	GLdouble GetType (int ptrCount);
 	GLdouble GetXstart (int ptrCount);
 	GLdouble GetXend (int ptrCount);
