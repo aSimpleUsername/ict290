@@ -142,6 +142,7 @@
     <ClInclude Include="AABB.H" />
     <ClInclude Include="AABBLinkedList.h" />
     <ClInclude Include="AABBNode.h" />
+    <ClInclude Include="BST.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraMap.h" />
     <ClInclude Include="collision.h" />
