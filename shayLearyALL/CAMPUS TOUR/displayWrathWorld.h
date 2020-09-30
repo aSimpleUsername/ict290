@@ -16,12 +16,14 @@
 #define YZ_FLIP 3
 #define XY_FLIP 4
 
-// Wall Brick Textures
+// Textures
 #define WELCOME_SCREEN				1
 #define EXIT_SCREEN					2
 #define GROUND_PLANE				3
 #define SPACE_1						4
 #define PORTAL_1					5
+#define SPACESHIP_WALL_1			6
+#define SPACESHIP_WALL_1_YZ			7
 
 	/**
 	* @class displayWrathWorld
@@ -82,9 +84,15 @@ private:
 	void displayGroundPlane();
 
 		/**
-		* @brief draws the portal
+		* @brief displays the portal
 		*/
 	void displayPortal();
+
+
+		/**
+		* @brief displays the walls
+		*/
+	void displayRoom1Walls();
 
 		/**
 		* @brief calls functions to create display lists
@@ -105,6 +113,11 @@ private:
 		* @brief draws the portal plane
 		*/
 	void drawPortal();
+
+		/**
+		* @brief draws the walls
+		*/
+	void drawRoom1Walls();
 
 		/**
 		* @brief loads images and creates texture
