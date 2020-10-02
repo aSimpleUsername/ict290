@@ -132,7 +132,6 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ObjPicking.cpp" />
     <ClCompile Include="PlainLinkedList.cpp" />
     <ClCompile Include="PlainNode.cpp" />
     <ClCompile Include="Portal.cpp" />

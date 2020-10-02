@@ -145,7 +145,7 @@ void Display()
 		}
 
 		// print postion to assist development
-		wrathWorld.cam.printPosition();
+		//wrathWorld.cam.printPosition();
 
 		// display images
 		wrathWorld.DrawBackdrop();

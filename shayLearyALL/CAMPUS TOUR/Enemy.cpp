@@ -11,6 +11,11 @@ Enemy::Enemy() {
 	this->y = 0;
 	this->z = 0;
 }
+Enemy::Enemy(const Enemy& obj) {
+	this->x = obj.x;
+	this->y = obj.y;
+	this->z = obj.z;
+}
 Enemy::~Enemy() {
 
 }
@@ -23,7 +28,6 @@ void Enemy::drawEnemy() {
 	glColor3f(1, 0, 0);
 	glutSolidSphere(300, 50, 50);
 	glPopMatrix();
-	std::cout << "drawn enemy" << x << " " << y << " " << z << " " << std::endl;
 }
 void Enemy::getAABB() {
 

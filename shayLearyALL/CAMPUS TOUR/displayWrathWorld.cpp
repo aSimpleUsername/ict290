@@ -14,7 +14,10 @@ void DisplayWrathWorld::myinit()
 	// settings for glut cylinders
 	//glu_cylinder = gluNewQuadric();
 	//gluQuadricTexture(glu_cylinder, GL_TRUE);
-	test.SetPosition(10020, 10455, 10000);
+
+
+	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
+
 	// set the world co-ordinates (used to set quadrants for bounding boxes)
 	cam.SetWorldCoordinates(36000.0, 43200.0);
 	// turn collision detection on
@@ -112,7 +115,10 @@ void DisplayWrathWorld::CreateTextures()
 
 void DisplayWrathWorld::DrawBackdrop()
 {
-	test.drawEnemy();
+	enemyObjects.getObjectFromBuffer(0).drawEnemy();
+	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.GetLR(), cam.GetUD(), cam.GetFB())) {
+		std::cout << "hit"<< std::endl;
+	}
 	displaySkyBox();
 	displayGroundPlane();
 	displayPortal();
