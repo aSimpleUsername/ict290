@@ -95,6 +95,11 @@ private:
 	void displayRoom1Walls();
 
 		/**
+		* @brief displays the server walls
+		*/
+	void displayServerWalls();
+
+		/**
 		* @brief calls functions to create display lists
 		*/
 	void CreateTextureList();
@@ -118,6 +123,11 @@ private:
 		* @brief draws the walls
 		*/
 	void drawRoom1Walls();
+
+		/**
+		* @brief draws the server walls
+		*/
+	void drawServerWalls();
 
 		/**
 		* @brief loads images and creates texture
