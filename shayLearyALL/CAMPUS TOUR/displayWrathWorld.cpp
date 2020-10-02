@@ -115,6 +115,9 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/spaceship_wall_1_YZ.png");
 	tp.CreatePNGTexture(SPACESHIP_WALL_1_YZ, image, 600, 600);
 
+	image = tp.LoadTexture("data/hexagon.png");
+	tp.CreatePNGTexture(CIRCUIT, image, 650, 1155);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -149,12 +152,15 @@ void DisplayWrathWorld::displayGroundPlane()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
 	glCallList(3);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(87);
 }
 
 void DisplayWrathWorld::drawGroundPlane()
 {
 	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, -30000.0, 50, 100);	// groundPlane
-
+	tp.CreateDisplayList(XZ, 87, 650, 1155, 0.0, 11500.0, -30000.0, 50, 50);	// ceiling
 }
 
 void DisplayWrathWorld::displayPortal()
