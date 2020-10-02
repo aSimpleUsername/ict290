@@ -24,6 +24,7 @@
 #define PORTAL_1					5
 #define SPACESHIP_WALL_1			6
 #define SPACESHIP_WALL_1_YZ			7
+#define CIRCUIT						8
 
 	/**
 	* @class displayWrathWorld
