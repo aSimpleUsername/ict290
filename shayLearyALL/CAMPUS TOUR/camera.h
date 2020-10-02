@@ -143,6 +143,9 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods-
 	//----------------------------------------------------------------------------------
+	GLdouble GetLX() { return m_lookX; }
+	GLdouble GetLY() { return m_lookY; }
+	GLdouble GetLZ() { return m_lookZ; }
 	/**
 		* @brief Gets Camera X
 		* @return GLdouble
@@ -215,6 +218,7 @@ public:
 		* @brief checks if ok to move
 		* @return void
 	*/
+	void printLook();
 	void CheckCamera();
 	/**
 		* @brief Used to pass direction to move or rotate in z direction
