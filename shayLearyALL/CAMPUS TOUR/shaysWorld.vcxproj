@@ -129,10 +129,13 @@
     <ClCompile Include="DisplayShaysWorld.cpp" />
     <ClCompile Include="displayWrathWorld.cpp" />
     <ClCompile Include="EasySound.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlainLinkedList.cpp" />
     <ClCompile Include="PlainNode.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Portal.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundTime.cpp" />
@@ -148,9 +151,12 @@
     <ClInclude Include="DisplayShaysWorld.h" />
     <ClInclude Include="displayWrathWorld.h" />
     <ClInclude Include="EasySound.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="lodepng.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Portal.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />

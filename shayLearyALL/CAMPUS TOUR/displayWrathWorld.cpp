@@ -125,6 +125,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayGroundPlane();
 	displayPortal();
 	displayRoom1Walls();
+	displayServerWalls();
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -140,7 +141,7 @@ void DisplayWrathWorld::drawSkyBox()
 	tp.CreateDisplayList(XZ, 5, 10240, 10240, -10000.0, 92400.0, -30000.0, 10, 10);		// Top
 	tp.CreateDisplayList(YZ, 6, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// FRONT
 	tp.CreateDisplayList(YZ, 7, 10240, 10240, 30000.0, -10000.0, -30000.0, 10, 10);		// Back 
-	tp.CreateDisplayList(XY, 8, 10240, 10240, -10000.0, -10000.0, -10000.0, 10, 10);	// Left
+	tp.CreateDisplayList(XY, 8, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// Left
 	tp.CreateDisplayList(XY, 9, 10240, 10240, -10000.0, -10000.0, 72400, 10, 10);		// Right	
 }
 
@@ -152,7 +153,7 @@ void DisplayWrathWorld::displayGroundPlane()
 
 void DisplayWrathWorld::drawGroundPlane()
 {
-	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, 0.0, 50, 50);	// groundPlane
+	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, -30000.0, 50, 100);	// groundPlane
 
 }
 
@@ -226,6 +227,122 @@ void DisplayWrathWorld::drawRoom1Walls()
 	tp.CreateDisplayList(YZ, 41, 500, 1000, 19000, 10000, -3500, 3.0, 6.0);
 }
 
+void DisplayWrathWorld::displayServerWalls()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 42; i <= 43; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 44; i <= 46; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	glCallList(47);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 48; i <= 52; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	glCallList(53);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 54; i <= 62; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 63; i <= 69; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 70; i <= 71; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 72; i <= 74; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 75; i <= 76; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 77; i <= 78; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 79; i <= 80; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 81; i <= 84; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 85; i <= 86; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::drawServerWalls()
+{
+	//server room
+	tp.CreateDisplayList(YZ, 42, 500, 1000, 7000, 10000, -9500, 3.0, 6.0);
+	tp.CreateDisplayList(YZ, 43, 500, 1000, 19000, 10000, -9500, 3.0, 6.0);
+
+	tp.CreateDisplayList(XY, 44, 1000, 500, 7000, 11000, -9500, 12.0, 1.0);
+	tp.CreateDisplayList(XY, 45, 1000, 500, 7000, 10000, -9500, 1.0, 2.0);
+	tp.CreateDisplayList(XY, 46, 1000, 500, 9000, 10000, -9500, 10.0, 2.0);
+
+	//side hall
+	tp.CreateDisplayList(YZ, 47, 500, 1000, 6000, 10000, -13500, 3.0, 10.0);
+	tp.CreateDisplayList(XY, 48, 1000, 500, 6000, 10000, -3500, 1.0, 3.0);
+
+	//hallway 1
+	tp.CreateDisplayList(XY, 49, 1000, 500, 6000, 11000, -11250, 13.0, 1.0);
+	tp.CreateDisplayList(XY, 50, 1000, 500, 6000, 10000, -11250, 2.0, 2.0);
+	tp.CreateDisplayList(XY, 51, 1000, 500, 16000, 10000, -11250, 1.0, 2.0);
+	tp.CreateDisplayList(XY, 52, 1000, 500, 6000, 10000, -11250, 11.0, 1.0);
+
+	//hallway 2
+	tp.CreateDisplayList(YZ, 53, 500, 1000, 19000, 10000, -13500, 3.0, 4.0);
+	tp.CreateDisplayList(XY, 54, 1000, 500, 6000, 11000, -13500, 13.0, 1.0);
+	tp.CreateDisplayList(XY, 55, 1000, 500, 6000, 10000, -13500, 1.0, 2.0);
+	tp.CreateDisplayList(XY, 56, 1000, 500, 8000, 10000, -13500, 11.0, 2.0);
+
+	//hallway mid window
+	tp.CreateDisplayList(XY, 57, 1000, 500, 6000, 11000, -11750, 13.0, 1.0);
+	tp.CreateDisplayList(XY, 58, 1000, 500, 6000, 10000, -11750, 2.0, 2.0);
+	tp.CreateDisplayList(XY, 59, 1000, 500, 16000, 10000, -11750, 1.0, 2.0);
+	tp.CreateDisplayList(XY, 60, 1000, 500, 6000, 10000, -11750, 11.0, 1.0);
+
+	tp.CreateDisplayList(XZ, 61, 1000, 500, 6000, 10500, -11750, 11.0, 1.0);
+	tp.CreateDisplayList(XZ, 62, 1000, 500, 6000, 11000, -11750, 13.0, 1.0);
+
+	tp.CreateDisplayList(YZ, 63, 500, 1000, 16000, 10000, -11750, 3.0, 0.5);
+	tp.CreateDisplayList(YZ, 64, 500, 1000, 17000, 10000, -11750, 3.0, 0.5);
+	tp.CreateDisplayList(YZ, 65, 500, 1000, 8000, 10000, -11750, 3.0, 0.5);
+
+	//last room
+	tp.CreateDisplayList(YZ, 66, 500, 1000, 7000, 10000, -18500, 3.0, 5.0);
+	tp.CreateDisplayList(YZ, 67, 500, 1000, 8000, 10000, -18500, 3.0, 2.0);
+	tp.CreateDisplayList(YZ, 68, 500, 1000, 8000, 10000, -15500, 3.0, 2.0);
+	tp.CreateDisplayList(YZ, 69, 500, 1000, 8000, 11000, -16500, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 70, 1000, 500, 7000, 11000, -18500, 1.0, 1.0);
+
+	//supply room
+	tp.CreateDisplayList(XY, 71, 1000, 500, 8000, 10000, -18500, 11.0, 3.0);
+	tp.CreateDisplayList(YZ, 72, 500, 1000, 19000, 10000, -18500, 3.0, 5.0);
+
+	//supply seperators
+	tp.CreateDisplayList(YZ, 73, 500, 1000, 10000, 10000, -16500, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 74, 500, 1000, 11000, 10000, -16500, 3.0, 1.0);
+	tp.CreateDisplayList(XY, 75, 1000, 500, 10000, 10000, -16500, 1.0, 3.0);
+	tp.CreateDisplayList(XY, 76, 1000, 500, 10000, 10000, -15500, 1.0, 3.0);
+
+	tp.CreateDisplayList(YZ, 77, 500, 1000, 16000, 10000, -16500, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 78, 500, 1000, 17000, 10000, -16500, 3.0, 1.0);
+	tp.CreateDisplayList(XY, 79, 1000, 500, 16000, 10000, -16500, 1.0, 3.0);
+	tp.CreateDisplayList(XY, 80, 1000, 500, 16000, 10000, -15500, 1.0, 3.0);
+
+	//supply mid divider
+	tp.CreateDisplayList(YZ, 81, 500, 1000, 13000, 10000, -18500, 3.0, 2.0);
+	tp.CreateDisplayList(YZ, 82, 500, 1000, 14000, 10000, -18500, 3.0, 2.0);
+	tp.CreateDisplayList(YZ, 83, 500, 1000, 13000, 10000, -15500, 3.0, 2.0);
+	tp.CreateDisplayList(YZ, 84, 500, 1000, 14000, 10000, -15500, 3.0, 2.0);
+
+	tp.CreateDisplayList(XY, 85, 1000, 500, 13000, 10000, -16500, 1.0, 3.0);
+	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
+}
+
 //--------------------------------------------------------------------------------------
 //  Create display lists
 //	Numbers indicate list numbers
@@ -236,6 +353,7 @@ void DisplayWrathWorld::CreateTextureList()
 	drawGroundPlane();			// 3
 	drawPortal();				//10
 	drawRoom1Walls();		//11-41
+	drawServerWalls();
 
 								//last number used: 11
 }
