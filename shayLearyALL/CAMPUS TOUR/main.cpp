@@ -117,8 +117,8 @@ void Display()
 		// displays the map
 		if (shaysWorld.DisplayMap) shaysWorld.cam.DisplayMap(width, height, shaysWorld.tp.GetTexture(MAP));
 		// display no exit sign (position check should really be in an object, but didn't have time)
-		if ((shaysWorld.cam.GetLR() > 35500.0) && (shaysWorld.cam.GetFB() < 25344.0) ||
-			(shaysWorld.cam.GetLR() > 34100.0) && (shaysWorld.cam.GetFB() > 41127.0))
+		if ((shaysWorld.cam.getX() > 35500.0) && (shaysWorld.cam.getZ() < 25344.0) ||
+			(shaysWorld.cam.getX() > 34100.0) && (shaysWorld.cam.getZ() > 41127.0))
 		{
 			shaysWorld.cam.DisplayNoExit(width, height, shaysWorld.tp.GetTexture(NO_EXIT));
 		}

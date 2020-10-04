@@ -12,6 +12,7 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
+#include "Entity.h"
 
 //--------------------------------------------------------------------------------------
 
@@ -311,12 +312,14 @@
 	* @version 1.1
 	* @date 14 Sep 20
 	*/
+
 class DisplayShaysWorld
 {
 public:
 	// objects
 	Camera cam;
 	TexturedPolygons tp;
+	Entity testEntity = Entity(-10000, 10450, 35000);
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;
@@ -485,6 +488,11 @@ private:
 		* @brief displays special portal
 		*/
 	void displaySpecialPortal();
+
+		/**
+		* @brief displays special portal
+		*/
+	void displayEnemies();
 
 		/**
 		* @brief calls functions to create display lists (below)

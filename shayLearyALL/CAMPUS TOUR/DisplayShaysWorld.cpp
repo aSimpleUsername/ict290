@@ -7,6 +7,7 @@
 //--------------------------------------------------------------------------------------
 //  Initialize Settings
 //--------------------------------------------------------------------------------------
+
 void DisplayShaysWorld::myinit()
 {
 	// set background (sky colour)
@@ -51,7 +52,7 @@ void DisplayShaysWorld::myinit()
 
 bool DisplayShaysWorld::stairsPortal()
 {
-	steps.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	steps.setLocation(cam.getX(), cam.getY(), cam.getZ());
 	steps.portalDimensions(-300, -200, -700);
 	return(steps.createPortal(1360, 11430, 40250));
 }
@@ -83,7 +84,7 @@ void DisplayShaysWorld::displaySpecialPortal()
 
 void DisplayShaysWorld::specialPortal()
 {
-	toStart.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	toStart.setLocation(cam.getX(), cam.getY(), cam.getZ());
 	toStart.portalDimensions(-500, -100, -600);
 	if (toStart.createPortal(-23000, 10500.0, 43000.0) == true)
 	{
@@ -1209,8 +1210,27 @@ void DisplayShaysWorld::DrawBackdrop()
 	displayPortal();
 	displaySpecialPortal();
 	displayStairRailing();
+	displayEnemies();
 	if (lightsOn) DisplayLights();
 }
+
+//--------------------------------------------------------------------------------------
+// Display Enemies TODO: Make this a state function in Enity.cpp
+//--------------------------------------------------------------------------------------
+void DisplayShaysWorld::displayEnemies()
+{	
+	if(Point3D(cam.getX(), cam.getY(), cam.getZ()).distance(testEntity.getPosition()) > 7500)		//if player less than 7500 units away
+		testEntity.patrol(-24000, -1800, 30000, 40000);
+	else
+	{
+		testEntity.seek(Point3D(cam.getX(), cam.getY(), cam.getZ()));
+		if (glutGet(GLUT_ELAPSED_TIME) > testEntity.m_timer)
+			testEntity.shoot();
+	}
+
+	testEntity.drawEntity();
+}
+
 
 //--------------------------------------------------------------------------------------
 // Display the chancellery window and door posts

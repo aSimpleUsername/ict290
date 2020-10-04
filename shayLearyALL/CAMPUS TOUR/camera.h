@@ -147,17 +147,17 @@ public:
 		* @brief Gets Camera X
 		* @return GLdouble
 	*/
-	GLdouble GetLR () {return m_x;}
+	GLdouble getX () {return m_x;}
 	/**
 		* @brief Gets Camera Y
 		* @return GLdouble
 	*/
-	GLdouble GetUD () {return m_y;}
+	GLdouble getY () {return m_y;}
 	/**
 		* @brief Gets Camera Z
 		* @return GLdouble
 	*/
-	GLdouble GetFB () {return m_z;}	
+	GLdouble getZ () {return m_z;}	
 	/**
 		* @brief Gets AABB Max X
 		* @param tempIndex - index of AABB
