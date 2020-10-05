@@ -28,7 +28,7 @@ void DisplayWrathWorld::myinit()
 
 
 	// set starting position of user
-	cam.Position(10000, 10450.0, 11000.0, 180.0);
+	cam.Position(10000, 10550.0, 11000.0, 180.0);
 
 	//ORIGINAL POSITION
 	/*
@@ -78,7 +78,7 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 
 bool DisplayWrathWorld::stairsReturnPortal()
 {
-	stepsReturn.setLocation(cam.GetLR(), cam.GetUD(), cam.GetFB());
+	stepsReturn.setLocation(cam.getX(), cam.getY(), cam.getZ());
 	stepsReturn.portalDimensions(-500, -500, -500);
 	return(stepsReturn.createPortal(10500, 10500.0, 15000.0));
 }

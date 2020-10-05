@@ -386,7 +386,7 @@ void Camera::callGLLookAt()
 void Camera::DisplayMap(const int & screenWidth, const int & screenHeight, 
 		                const GLuint & tempImage)
 {
-	m_map.DisplayMap(screenWidth, screenHeight, GetLR (), GetFB (), tempImage);
+	m_map.DisplayMap(screenWidth, screenHeight, getX (), getZ (), tempImage);
 }
 
 //--------------------------------------------------------------------------------------
