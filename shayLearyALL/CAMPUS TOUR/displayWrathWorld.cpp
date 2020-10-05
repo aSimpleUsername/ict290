@@ -124,19 +124,11 @@ void DisplayWrathWorld::CreateTextures()
 
 void DisplayWrathWorld::DrawBackdrop()
 {
-	enemyObjects.getObjectFromBuffer(0).drawEnemy();
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.GetLR(), cam.GetUD(), cam.GetFB())) {
-		std::cout << "hit"<< std::endl;
-	}
 	displaySkyBox();
 	displayGroundPlane();
 	displayPortal();
-<<<<<<< HEAD
 	displayRoom1Walls();
 	displayServerWalls();
-=======
-	
->>>>>>> charlie
 }
 
 void DisplayWrathWorld::displaySkyBox()
