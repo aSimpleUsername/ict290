@@ -1,7 +1,5 @@
 #include "displayWrathWorld.h"
 
-
-
 //--------------------------------------------------------------------------------------
 //  Initialize Settings
 //--------------------------------------------------------------------------------------
@@ -129,6 +127,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
+	//displayHealthPickups();
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -348,6 +347,24 @@ void DisplayWrathWorld::drawServerWalls()
 	tp.CreateDisplayList(XY, 85, 1000, 500, 13000, 10000, -16500, 1.0, 3.0);
 	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
 }
+/*
+void DisplayWrathWorld::placeHealthPickups()
+{
+	pick.setHealthBox(0, 9600, 10100, 5000, 5500);
+}
+
+void DisplayWrathWorld::displayHealthPickups()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 87; i <= 90; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::drawHealthPickups()
+{
+	//pick.setHealthBox(0, 9600, 10100, 5000, 5500);
+	tp.CreateDisplayList(XY, 87, 500, 500, 9600, 10100, 5000, 1.0, 1.0);
+}
+*/
 
 //--------------------------------------------------------------------------------------
 //  Create display lists
@@ -360,6 +377,8 @@ void DisplayWrathWorld::CreateTextureList()
 	drawPortal();				//10
 	drawRoom1Walls();		//11-41
 	drawServerWalls();
-
-								//last number used: 11
+	//if (pick.testHealth() == false) {
+	//	drawHealthPickups();
+	//}
+	//last number used: 11
 }

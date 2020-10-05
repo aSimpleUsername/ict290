@@ -8,6 +8,7 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
+#include "Pickups.h"
 
 // TEXTURE IMAGE AXISES
 #define XY		0
@@ -38,6 +39,7 @@ class DisplayWrathWorld
 public:
 	Camera cam;		
 	TexturedPolygons tp;
+	Pickups pick;
 
 	unsigned char* image = NULL;
 
@@ -100,6 +102,9 @@ private:
 		*/
 	void displayServerWalls();
 
+
+	void displayHealthPickups();
+
 		/**
 		* @brief calls functions to create display lists
 		*/
@@ -130,6 +135,9 @@ private:
 		*/
 	void drawServerWalls();
 
+
+	void drawHealthPickups();
+
 		/**
 		* @brief loads images and creates texture
 		*/
@@ -139,6 +147,8 @@ private:
 		* @brief creates bounding boxes for collsion detection
 		*/
 	void CreateBoundingBoxes();
+
+	void placeHealthPickups();
 };
 
 #endif DISPLAYWRATHWORLD_H
