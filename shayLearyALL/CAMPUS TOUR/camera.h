@@ -143,6 +143,24 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods-
 	//----------------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+	/**
+		* @brief Gets Camera look X
+		* @return GLdouble
+	*/
+	GLdouble GetLX() { return m_lookX; }
+	/**
+		* @brief Gets Camera look Y
+		* @return GLdouble
+	*/
+	GLdouble GetLY() { return m_lookY; }
+	/**
+		* @brief Gets Camera look Z
+		* @return GLdouble
+	*/
+	GLdouble GetLZ() { return m_lookZ; }
+>>>>>>> charlie
 	/**
 		* @brief Gets Camera X
 		* @return GLdouble
