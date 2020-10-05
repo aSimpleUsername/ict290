@@ -78,10 +78,14 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="point3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="projectile.cpp">
+=======
+    <ClCompile Include="Pickups.cpp">
+>>>>>>> vlad
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -152,10 +156,14 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="point3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="projectile.h">
+=======
+    <ClInclude Include="Pickups.h">
+>>>>>>> vlad
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
