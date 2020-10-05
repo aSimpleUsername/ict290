@@ -3,7 +3,7 @@
 #include <GL/glut.h>
 #include <stdlib.h>
 #include <vector>
-
+//this comment is to make shit work
 template <class T>
 class ObjPicking{
 public:
