@@ -69,6 +69,7 @@
     <ClCompile Include="displayWrathWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -84,6 +85,11 @@
     <ClCompile Include="projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+>>>>>>> charlie
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H">
@@ -143,21 +149,31 @@
     <ClInclude Include="displayWrathWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+=======
+    <ClInclude Include="BST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjPicking.h">
+>>>>>>> charlie
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="point3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="projectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> charlie
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc">

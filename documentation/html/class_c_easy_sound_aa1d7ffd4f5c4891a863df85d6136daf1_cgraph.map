@@ -1,0 +1,9 @@
+<map id="CEasySound::Load" name="CEasySound::Load">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$class_c_sound.html#a57c4b63acfa422461526dee33fc317d8" title=" " alt="" coords="216,5,339,32"/>
+<area shape="rect" id="node5" href="$class_c_sound_time.html#a2c7d5ed3ab0ca06783843ce011cf1620" title=" " alt="" coords="188,56,367,83"/>
+<area shape="rect" id="node6" href="$class_c_sound.html#a81b39696be6a9aff2aa09f1fed26e750" title=" " alt="" coords="209,107,345,133"/>
+<area shape="rect" id="node7" href="$class_c_sound_time.html#ac16e19ca4933f5ca7f316d8c409ca71d" title=" " alt="" coords="194,157,361,184"/>
+<area shape="rect" id="node3" href="$class_c_easy_sound.html#a89e74a3e4cf2bd0e72c3bbf6901dcb7c" title=" " alt="" coords="415,5,569,32"/>
+<area shape="rect" id="node4" href="$class_c_easy_sound.html#a4a18c7ef207c8a00470c19f07044f8b6" title=" " alt="" coords="617,5,800,32"/>
+</map>

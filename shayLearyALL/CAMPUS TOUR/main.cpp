@@ -14,9 +14,7 @@
 #include "Portal.h"
 #include "DisplayShaysWorld.h"
 #include "displayWrathWorld.h"
-
 //--------------------------------------------------------------------------------------
-
 #define PI 3.1415962654
 
 // USE THESE STTEINGS TO CHANGE SPEED (on different spec computers)
@@ -122,9 +120,9 @@ void Display()
 		{
 			shaysWorld.cam.DisplayNoExit(width, height, shaysWorld.tp.GetTexture(NO_EXIT));
 		}
-
 		// print postion to assist development
 		shaysWorld.cam.printPosition();
+		shaysWorld.cam.printLook();
 
 		// display images
 		shaysWorld.DrawBackdrop();
@@ -147,7 +145,7 @@ void Display()
 		}
 
 		// print postion to assist development
-		wrathWorld.cam.printPosition();
+		//wrathWorld.cam.printPosition();
 
 		// display images
 		wrathWorld.DrawBackdrop();
