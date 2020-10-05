@@ -75,6 +75,7 @@ int main(int argc, char **argv)
 
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
 	glutPassiveMotionFunc(mouseMove);
+	glutMotionFunc(mouseMove);
 	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
 
 	glutReshapeFunc(reshape);

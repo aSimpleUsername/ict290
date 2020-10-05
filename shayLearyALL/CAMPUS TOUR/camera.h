@@ -143,8 +143,6 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods-
 	//----------------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
 	/**
 		* @brief Gets Camera look X
 		* @return GLdouble
@@ -160,7 +158,6 @@ public:
 		* @return GLdouble
 	*/
 	GLdouble GetLZ() { return m_lookZ; }
->>>>>>> charlie
 	/**
 		* @brief Gets Camera X
 		* @return GLdouble
