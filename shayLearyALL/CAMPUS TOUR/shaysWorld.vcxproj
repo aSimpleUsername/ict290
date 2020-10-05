@@ -147,7 +147,6 @@
     <ClInclude Include="AABB.H" />
     <ClInclude Include="AABBLinkedList.h" />
     <ClInclude Include="AABBNode.h" />
-    <ClInclude Include="BST.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cameraMap.h" />
     <ClInclude Include="collision.h" />
@@ -157,7 +156,6 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="lodepng.h" />
-    <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
     <ClInclude Include="Player.h" />

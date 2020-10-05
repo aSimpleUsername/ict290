@@ -8,8 +8,7 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
-#include "Enemy.h"
-#include "ObjPicking.h"
+
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -69,8 +68,8 @@ public:
 	bool stairsReturnPortal();
 
 private:
-	ObjPicking<Enemy> enemyObjects;
 	Portal stepsReturn;	
+
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
 	std::vector<unsigned char>* pngImage;		// Stores raw image file

@@ -356,10 +356,6 @@ void Camera::printPosition(void)
 {
 	std::cout << "Current positon = X: " << m_x << ", Y: " << m_y << ", Z: " << m_z << std::endl;
 }
-void Camera::printLook()
-{
-	std::cout << "Current positon = X: " << m_lookX << ", Y: " << m_lookY << ", Z: " << m_lookZ << std::endl;
-}
 
 //----------------------------------------------------------------------------------------
 // Check ok to move

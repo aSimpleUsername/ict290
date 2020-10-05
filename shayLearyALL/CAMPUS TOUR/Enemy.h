@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "AABBNode.H"
 
 class Enemy{
@@ -19,5 +20,18 @@ private:
 		float x, y, z;
 		float radius = 300;
 		AABBNode hitBox;
+=======
+//Enemy class - Child class of entity, sharing health and shields
+
+#include "Entity.h"
+
+class Enemy : public Entity
+{
+public:
+	Enemy(double x, double y, double z);
+
+private:
+
+>>>>>>> parent of 0a161b5... Updating with hitreg
 };
 

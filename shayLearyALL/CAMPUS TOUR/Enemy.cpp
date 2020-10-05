@@ -1,5 +1,6 @@
 #include "Enemy.h"
 
+<<<<<<< HEAD
 Enemy::Enemy(float x, float y, float z) {
 	this->x = x;
 	this->y = y;
@@ -37,4 +38,11 @@ void Enemy::SetPosition(float x, float y, float z) {
 	this->y = y;
 	this->z = z;
 	updateHitBox(x, y, z);
+=======
+Enemy::Enemy(double x, double y, double z)
+	: Entity(x, y, z)
+{
+	setHealth(1);
+	setShields(1);
+>>>>>>> parent of 0a161b5... Updating with hitreg
 }

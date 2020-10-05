@@ -1,4 +1,7 @@
 #include "displayWrathWorld.h"
+
+
+
 //--------------------------------------------------------------------------------------
 //  Initialize Settings
 //--------------------------------------------------------------------------------------
@@ -11,12 +14,10 @@ void DisplayWrathWorld::myinit()
 	gluLookAt(0.0, 1.75, 0.0,
 		0.0, 1.75, -1,
 		0.0f, 1.0f, 0.0f);
+
 	// settings for glut cylinders
 	//glu_cylinder = gluNewQuadric();
 	//gluQuadricTexture(glu_cylinder, GL_TRUE);
-
-
-	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
 
 	// set the world co-ordinates (used to set quadrants for bounding boxes)
 	cam.SetWorldCoordinates(36000.0, 43200.0);
@@ -24,7 +25,7 @@ void DisplayWrathWorld::myinit()
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
 	cam.SetNoBoundingBoxes(5);
-	
+
 
 	// set starting position of user
 	cam.Position(10000, 10550.0, 11000.0, 180.0);
@@ -73,7 +74,6 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	//cam.SetAABBMinZ(0, 4688.0);
 	// current AABB array size = 5
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
-
 }
 
 bool DisplayWrathWorld::stairsReturnPortal()

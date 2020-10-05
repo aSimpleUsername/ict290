@@ -8,6 +8,7 @@
 
 #include <math.h>
 #include <GL/glut.h>
+
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
