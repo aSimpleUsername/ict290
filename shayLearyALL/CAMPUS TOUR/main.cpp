@@ -153,6 +153,8 @@ void Display()
 		// display images
 		wrathWorld.DrawBackdrop();
 
+		wrathWorld.health();
+
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
 	}

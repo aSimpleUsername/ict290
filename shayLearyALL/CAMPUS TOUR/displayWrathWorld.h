@@ -26,6 +26,8 @@
 #define SPACESHIP_WALL_1			6
 #define SPACESHIP_WALL_1_YZ			7
 #define CIRCUIT						8
+#define HEALTH						9
+#define SHIELD  					10
 
 	/**
 	* @class displayWrathWorld
@@ -69,8 +71,10 @@ public:
 		*/
 	bool stairsReturnPortal();
 
+	void health();
+
 private:
-	Portal stepsReturn;	
+	Portal stepsReturn;
 
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
@@ -105,6 +109,8 @@ private:
 
 	void displayHealthPickups();
 
+	void displayHealthPickups2();
+
 		/**
 		* @brief calls functions to create display lists
 		*/
@@ -137,6 +143,8 @@ private:
 
 
 	void drawHealthPickups();
+
+	void drawHealthPickups2();
 
 		/**
 		* @brief loads images and creates texture

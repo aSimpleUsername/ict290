@@ -78,7 +78,7 @@ bool DisplayWrathWorld::stairsReturnPortal()
 {
 	stepsReturn.setLocation(cam.getX(), cam.getY(), cam.getZ());
 	stepsReturn.portalDimensions(-500, -500, -500);
-	return(stepsReturn.createPortal(10500, 10500.0, 15000.0));
+	return(stepsReturn.createPortal(10500, 10600.0, 15000.0));
 }
 
 void DisplayWrathWorld::CreateTextures()
@@ -116,6 +116,12 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/hexagon.png");
 	tp.CreatePNGTexture(CIRCUIT, image, 650, 1155);
 
+	image = tp.LoadTexture("data/heart.png");
+	tp.CreatePNGTexture(HEALTH, image, 417, 390);
+
+	image = tp.LoadTexture("data/shield.png");
+	tp.CreatePNGTexture(SHIELD, image, 417, 390);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -127,7 +133,12 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-	//displayHealthPickups();
+	if (pick.getGathered(0) == false) {
+		displayHealthPickups();
+	}
+	if (pick.getGathered(1) == false) {
+		displayHealthPickups2();
+	}
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -347,24 +358,43 @@ void DisplayWrathWorld::drawServerWalls()
 	tp.CreateDisplayList(XY, 85, 1000, 500, 13000, 10000, -16500, 1.0, 3.0);
 	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
 }
-/*
-void DisplayWrathWorld::placeHealthPickups()
-{
-	pick.setHealthBox(0, 9600, 10100, 5000, 5500);
-}
 
 void DisplayWrathWorld::displayHealthPickups()
 {
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
-	for (int i = 87; i <= 90; ++i) glCallList(i);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 88; i <= 92; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::drawHealthPickups()
 {
-	//pick.setHealthBox(0, 9600, 10100, 5000, 5500);
-	tp.CreateDisplayList(XY, 87, 500, 500, 9600, 10100, 5000, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 88, 250, 250, 9600, 10100, 5000, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 89, 250, 250, 9600, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 90, 250, 250, 9600, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 91, 250, 250, 9850, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 92, 250, 250, 9600, 10350, 4750, 1.0, 1.0);
 }
-*/
+
+void DisplayWrathWorld::displayHealthPickups2()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 93; i <= 97; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::drawHealthPickups2()
+{
+	tp.CreateDisplayList(XY, 93, 250, 250, 10100, 10100, 5000, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 94, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 95, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 96, 250, 250, 10350, 10100, 4750, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 97, 250, 250, 10100, 10350, 4750, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::health()
+{
+	pick.setHealthBox(0, 9600, 9850, 4750, 5000);
+	pick.setHealthBox(1, 10100, 10350, 4750, 5000);
+	pick.checkHealthUp(cam.getX(), cam.getY(), cam.getZ());
+}
 
 //--------------------------------------------------------------------------------------
 //  Create display lists
@@ -377,8 +407,11 @@ void DisplayWrathWorld::CreateTextureList()
 	drawPortal();				//10
 	drawRoom1Walls();		//11-41
 	drawServerWalls();
-	//if (pick.testHealth() == false) {
-	//	drawHealthPickups();
-	//}
+	if (pick.getGathered(0) == false) {
+		drawHealthPickups();
+	}
+	if (pick.getGathered(1) == false) {
+		drawHealthPickups2();
+	}
 	//last number used: 11
 }

@@ -54,7 +54,7 @@ void Pickups::removeAmmoUp(int index)
 
 void Pickups::checkHealthUp(double xPos, double yPos, double zPos)
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
 		{
@@ -66,14 +66,7 @@ void Pickups::checkHealthUp(double xPos, double yPos, double zPos)
 	}
 }
 
-bool Pickups::testHealth()
+bool Pickups::getGathered(int i)
 {
-	if (healthUp[0].gathered)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return healthUp[i].gathered;
 }
