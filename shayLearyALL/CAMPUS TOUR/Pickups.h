@@ -3,7 +3,6 @@
 
 struct collect
 {
-	std::string type;
 	double xMin;
 	double xMax;
 	double zMin;
@@ -30,7 +29,7 @@ public:
 
 	void checkHealthUp(double xPos, double yPos, double zPos);
 
-	bool testHealth();
+	bool getGathered(int index);
 
 private:
 	collect healthUp[5];
