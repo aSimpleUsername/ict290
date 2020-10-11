@@ -12,7 +12,7 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
-#include "Entity.h"
+#include "Enemy.h"
 
 
 //--------------------------------------------------------------------------------------
@@ -320,7 +320,7 @@ public:
 	// objects
 	Camera cam;
 	TexturedPolygons tp;
-	Entity testEntity = Entity(-10000, 10450, 35000);
+	Enemy testEnemy = Enemy(-10000, 10450, 35000);
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;
