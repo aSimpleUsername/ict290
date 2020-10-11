@@ -30,6 +30,7 @@
 #define CIRCUIT						8
 #define HEALTH						9
 #define SHIELD  					10
+#define AMMO						11
 
 	/**
 	* @class displayWrathWorld
@@ -93,6 +94,15 @@ public:
 
 	void shieldChecksDisplay();
 
+	//ammo
+
+	void setAmmo();
+
+	void ammoChecksDraw();
+
+	void ammoChecksDisplay();
+
+
 private:
 	Portal stepsReturn;
 	//Enemy can be changed for whatever class
@@ -130,7 +140,9 @@ private:
 
 	void displayHealthPickups();
 
-	void displayHealthPickups2();
+	void displayShieldPickups();
+
+	void displayAmmoPickups();
 
 		/**
 		* @brief calls functions to create display lists
@@ -165,7 +177,9 @@ private:
 
 	void drawHealthPickups();
 
-	void drawHealthPickups2();
+	void drawShieldPickups();
+
+	void drawAmmoPickups();
 
 		/**
 		* @brief loads images and creates texture
