@@ -1225,11 +1225,13 @@ void DisplayShaysWorld::DrawBackdrop()
 //--------------------------------------------------------------------------------------
 void DisplayShaysWorld::displayEnemies()
 {	
-	if(Point3D(cam.getX(), cam.getY(), cam.getZ()).distance(testEnemy.getPosition()) > 7500)		//if player less than 7500 units away
+	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
+
+	if(player.getLocation().distance(testEnemy.getLocation()) > 7500)		//if player less than 7500 units away
 		testEnemy.patrol(-24000, -1800, 30000, 40000);
 	else
 	{
-		testEnemy.seek(Point3D(cam.getX(), cam.getY(), cam.getZ()));
+		testEnemy.seek(player.getLocation());
 		if (glutGet(GLUT_ELAPSED_TIME) > testEnemy.m_timer)
 			testEnemy.shoot();
 	}

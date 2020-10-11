@@ -46,12 +46,8 @@ void DisplayWrathWorld::myinit()
 	CreateTextures();
 
 	//Creating enemy object in the array at a given position
-	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
-
-
+	enemyObjects.addObjectToBuffer(&enemy0);			// room 1 
 }
-
-
 
 //--------------------------------------------------------------------------------------
 //  Delete raw image and clear memory
@@ -136,18 +132,12 @@ void DisplayWrathWorld::CreateTextures()
 
 void DisplayWrathWorld::DrawBackdrop()
 {
+	displayEnemies();
 	displaySkyBox();
 	displayGroundPlane();
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-
-	//enemy is drawn 
-	enemyObjects.getObjectFromBuffer(0).drawEnemy();
-	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())){
-		std::cout << "hit" << std::endl;
-	}
 
 	
 	healthChecksDisplay();
@@ -155,6 +145,31 @@ void DisplayWrathWorld::DrawBackdrop()
 	ammoChecksDisplay();
 
 }
+
+void DisplayWrathWorld::displayEnemies()
+{
+	// this can be a for loop with more enemies
+
+	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
+
+	if (player.getLocation().distance(enemyObjects.getObjectFromBuffer(0)->getLocation()) > 7500)		//if player less than 7500 units away
+		enemyObjects.getObjectFromBuffer(0)->patrol(7500, 18500, -2750, 2000);
+	else
+	{
+		enemyObjects.getObjectFromBuffer(0)->seek(player.getLocation());
+		if (glutGet(GLUT_ELAPSED_TIME) > enemyObjects.getObjectFromBuffer(0)->m_timer)
+			enemyObjects.getObjectFromBuffer(0)->shoot();
+	}
+
+	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
+	std::cout << enemyObjects.getObjectFromBuffer(0)->GetX() << ", " << enemyObjects.getObjectFromBuffer(0)->GetY() << ", " << enemyObjects.getObjectFromBuffer(0)->GetZ() << ", " << std::endl;
+
+	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
+	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
+		std::cout << "hit" << std::endl;
+	}
+}
+
 
 void DisplayWrathWorld::displaySkyBox()
 {

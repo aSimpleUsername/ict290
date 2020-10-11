@@ -13,13 +13,13 @@ public:
 		clearBuffer();
 	}
 
-	void addObjectToBuffer(T object);
-    T getObjectFromBuffer(int index) { return objBuffer[index]; }
+	void addObjectToBuffer(T *object);
+    T* getObjectFromBuffer(int index) { return objBuffer[index]; }
 	bool detectCollisionWithSphere(float rayX, float rayY,float rayZ,float camX,float camY,float camZ);
 private:
 	void removeObjectFromBuffer(int index);
 	void clearBuffer();
-	std::vector<T> objBuffer;
+	std::vector<T*> objBuffer;
 
 };
 
@@ -30,19 +30,19 @@ bool ObjPicking<T>::detectCollisionWithSphere(float rayX, float rayY, float rayZ
         float rayYStep = (rayY * i) + camY;
         float rayZStep = (rayZ * i) + camZ;
         for (int i = 0; i < objBuffer.size(); i++) {
-            float tempX = objBuffer[i].GetX();
-            float tempY = objBuffer[i].GetY();
-            float tempZ = objBuffer[i].GetZ();
-            float tempRad = objBuffer[i].GetRadius();
+            float tempX = objBuffer[i]->GetX();
+            float tempY = objBuffer[i]->GetY();
+            float tempZ = objBuffer[i]->GetZ();
+            float tempRad = objBuffer[i]->GetRadius();
             float dist = sqrt(pow(tempX - rayXStep,2) + pow(tempY - rayYStep,2) + pow(tempZ - rayZStep,2));
-            if (dist < objBuffer[i].GetRadius())
+            if (dist < objBuffer[i]->GetRadius())
                 return true;
         }
     }
     return false;
 }
 template <class T>
-void ObjPicking<T>::addObjectToBuffer(T object) {
+void ObjPicking<T>::addObjectToBuffer(T* object) {
     objBuffer.push_back(object);
 }
 template <class T>
@@ -53,5 +53,3 @@ template <class T>
 void ObjPicking<T>::clearBuffer() {
     objBuffer.clear();
 }
-
-

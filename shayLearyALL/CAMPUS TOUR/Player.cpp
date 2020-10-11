@@ -1,7 +1,6 @@
 #include "Player.h"
 
-Player::Player(double x, double y, double z)
-	: Entity(x, y, z)
+Player::Player()
 {
 	
 	setHealth(5);

@@ -22,13 +22,13 @@ public:
 	inline void incrementShields() {++m_shields; }
 	inline void decreaseHealth() { --m_health; }
 	inline void decreaseShields() { --m_shields; }
-	inline Point3D getPosition() { return m_position; }
-	inline float GetX() { return m_position.x; }
-	inline float GetY() { return m_position.y; }
-	inline float GetZ() { return m_position.z; }
+	inline Point3D getLocation() { return m_location; }
+	inline float GetX() { return m_location.x; }
+	inline float GetY() { return m_location.y; }
+	inline float GetZ() { return m_location.z; }
 
 protected:
-	Point3D m_position;
+	Point3D m_location;
 
 	int m_health;
 	int m_shields;

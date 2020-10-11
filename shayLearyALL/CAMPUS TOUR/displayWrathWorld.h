@@ -12,6 +12,7 @@
 //Classes for hit detection (enemy can be changed for your class)
 #include "ObjPicking.h"
 #include "Enemy.h"
+#include "Player.h"
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -45,7 +46,7 @@ public:
 	Camera cam;		
 	TexturedPolygons tp;
 	Pickups pick;
-
+	
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;	
@@ -102,12 +103,17 @@ public:
 
 	void ammoChecksDisplay();
 
-
 private:
 	Portal stepsReturn;
 	//Enemy can be changed for whatever class
-	ObjPicking<Enemy> enemyObjects;
+
+	Player player;
+	ObjPicking<Enemy> enemyObjects; 
+	Enemy enemy0 = Enemy(10000, 10550, 1000);	//room1
+
+
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
+
 
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
@@ -143,6 +149,11 @@ private:
 	void displayShieldPickups();
 
 	void displayAmmoPickups();
+
+		/**
+		* @brief displays enemies 
+		*/
+	void displayEnemies();
 
 		/**
 		* @brief calls functions to create display lists

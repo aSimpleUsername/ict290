@@ -13,6 +13,7 @@
 #include "texturedPolygons.h"
 #include "Portal.h"
 #include "Enemy.h"
+#include "Player.h"
 
 
 //--------------------------------------------------------------------------------------
@@ -320,6 +321,8 @@ public:
 	// objects
 	Camera cam;
 	TexturedPolygons tp;
+
+	Player player;
 	Enemy testEnemy = Enemy(-10000, 10450, 35000);
 	unsigned char* image = NULL;
 
