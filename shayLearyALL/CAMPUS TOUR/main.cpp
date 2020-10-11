@@ -153,7 +153,9 @@ void Display()
 		// display images
 		wrathWorld.DrawBackdrop();
 
-		wrathWorld.health();
+		wrathWorld.setHealth();
+		wrathWorld.setShields();
+		wrathWorld.collisionCheck();
 
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
