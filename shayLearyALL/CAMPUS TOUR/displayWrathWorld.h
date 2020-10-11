@@ -9,7 +9,9 @@
 #include "texturedPolygons.h"
 #include "Portal.h"
 #include "Pickups.h"
-
+//Classes for hit detection (enemy can be changed for your class)
+#include "ObjPicking.h"
+#include "Enemy.h"
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -75,7 +77,8 @@ public:
 
 private:
 	Portal stepsReturn;
-
+	//Enemy can be changed for whatever class
+	ObjPicking<Enemy> enemyObjects;
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
