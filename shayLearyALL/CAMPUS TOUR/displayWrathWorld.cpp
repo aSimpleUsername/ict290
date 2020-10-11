@@ -122,6 +122,9 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/shield.png");
 	tp.CreatePNGTexture(SHIELD, image, 417, 390);
 
+	image = tp.LoadTexture("data/ammo.png");
+	tp.CreatePNGTexture(AMMO, image, 417, 390);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -136,6 +139,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	
 	healthChecksDisplay();
 	shieldChecksDisplay();
+	ammoChecksDisplay();
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -371,19 +375,34 @@ void DisplayWrathWorld::drawHealthPickups()
 	tp.CreateDisplayList(XZ, 92, 250, 250, 9600, 10350, 4750, 1.0, 1.0);
 }
 
-void DisplayWrathWorld::displayHealthPickups2()
+void DisplayWrathWorld::displayShieldPickups()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
 	for (int i = 93; i <= 97; ++i) glCallList(i);
 }
 
-void DisplayWrathWorld::drawHealthPickups2()
+void DisplayWrathWorld::drawShieldPickups()
 {
 	tp.CreateDisplayList(XY, 93, 250, 250, 10100, 10100, 5000, 1.0, 1.0);
 	tp.CreateDisplayList(XY, 94, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
 	tp.CreateDisplayList(YZ, 95, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
 	tp.CreateDisplayList(YZ, 96, 250, 250, 10350, 10100, 4750, 1.0, 1.0);
 	tp.CreateDisplayList(XZ, 97, 250, 250, 10100, 10350, 4750, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::displayAmmoPickups()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 98; i <= 102; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::drawAmmoPickups()
+{
+	tp.CreateDisplayList(XY, 98, 250, 250, 10100, 10100, 4500, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 99, 250, 250, 10100, 10100, 4250, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 100, 250, 250, 10100, 10100, 4250, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 101, 250, 250, 10350, 10100, 4250, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 102, 250, 250, 10100, 10350, 4250, 1.0, 1.0);
 }
 
 void DisplayWrathWorld::setHealth()
@@ -396,10 +415,16 @@ void DisplayWrathWorld::setShields()
 	pick.setShieldBox(0, 10100, 10350, 4750, 5000);
 }
 
+void DisplayWrathWorld::setAmmo()
+{
+	pick.setAmmoBox(0, 10100, 10350, 4250, 4500);
+}
+
 void DisplayWrathWorld::collisionCheck()
 {
 	pick.checkHealthUp(cam.getX(), cam.getY(), cam.getZ());
 	pick.checkShieldUp(cam.getX(), cam.getY(), cam.getZ());
+	pick.checkAmmoUp(cam.getX(), cam.getY(), cam.getZ());
 }
 
 void DisplayWrathWorld::healthChecksDraw()
@@ -412,7 +437,14 @@ void DisplayWrathWorld::healthChecksDraw()
 void DisplayWrathWorld::shieldChecksDraw()
 {
 	if (pick.getGatheredShield(0) == false) {
-		drawHealthPickups2();
+		drawShieldPickups();
+	}
+}
+
+void DisplayWrathWorld::ammoChecksDraw()
+{
+	if (pick.getGatheredAmmo(0) == false) {
+		drawAmmoPickups();
 	}
 }
 
@@ -426,7 +458,14 @@ void DisplayWrathWorld::healthChecksDisplay()
 void DisplayWrathWorld::shieldChecksDisplay()
 {
 	if (pick.getGatheredShield(0) == false) {
-		displayHealthPickups2();
+		displayShieldPickups();
+	}
+}
+
+void DisplayWrathWorld::ammoChecksDisplay()
+{
+	if (pick.getGatheredAmmo(0) == false) {
+		displayAmmoPickups();
 	}
 }
 
@@ -444,5 +483,6 @@ void DisplayWrathWorld::CreateTextureList()
 	
 	healthChecksDraw();
 	shieldChecksDraw();
+	ammoChecksDraw();
 	//last number used: 11
 }

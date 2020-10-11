@@ -80,6 +80,20 @@ void Pickups::checkShieldUp(double xPos, double yPos, double zPos)
 	}
 }
 
+void Pickups::checkAmmoUp(double xPos, double yPos, double zPos)
+{
+	for (int i = 0; i < 1; i++)
+	{
+		if (xPos < ammoUp[i].xMax && xPos > ammoUp[i].xMin)
+		{
+			if (zPos < ammoUp[i].zMax && zPos > ammoUp[i].zMin)
+			{
+				removeAmmoUp(i);
+			}
+		}
+	}
+}
+
 bool Pickups::getGatheredHealth(int i)
 {
 	return healthUp[i].gathered;
@@ -88,4 +102,9 @@ bool Pickups::getGatheredHealth(int i)
 bool Pickups::getGatheredShield(int i)
 {
 	return shieldUp[i].gathered;
+}
+
+bool Pickups::getGatheredAmmo(int i)
+{
+	return ammoUp[i].gathered;
 }

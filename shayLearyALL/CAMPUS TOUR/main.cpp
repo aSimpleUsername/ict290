@@ -155,6 +155,7 @@ void Display()
 
 		wrathWorld.setHealth();
 		wrathWorld.setShields();
+		wrathWorld.setAmmo();
 		wrathWorld.collisionCheck();
 
 		glPopMatrix();
