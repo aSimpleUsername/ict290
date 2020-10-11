@@ -29,7 +29,13 @@ public:
 
 	void checkHealthUp(double xPos, double yPos, double zPos);
 
-	bool getGathered(int index);
+	void checkShieldUp(double xPos, double yPos, double zPos);
+
+	//void checkAmmoUp(double xPos, double yPos, double zPos);
+
+	bool getGatheredHealth(int index);
+
+	bool getGatheredShield(int index);
 
 private:
 	collect healthUp[5];

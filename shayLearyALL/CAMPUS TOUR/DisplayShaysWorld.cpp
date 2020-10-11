@@ -316,6 +316,12 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(51, 41300);
 	cam.SetAABBMinZ(51, 41100);
 
+	//Stops stairs clipping
+	cam.SetAABBMaxX(52, 2804);
+	cam.SetAABBMinX(52, 2604);
+	cam.SetAABBMaxZ(52, 40790);
+	cam.SetAABBMinZ(52, 39500);
+
 	// current AABB array size = 55
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }

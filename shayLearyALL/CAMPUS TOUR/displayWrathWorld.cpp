@@ -133,12 +133,9 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-	if (pick.getGathered(0) == false) {
-		displayHealthPickups();
-	}
-	if (pick.getGathered(1) == false) {
-		displayHealthPickups2();
-	}
+	
+	healthChecksDisplay();
+	shieldChecksDisplay();
 }
 
 void DisplayWrathWorld::displaySkyBox()
@@ -389,11 +386,48 @@ void DisplayWrathWorld::drawHealthPickups2()
 	tp.CreateDisplayList(XZ, 97, 250, 250, 10100, 10350, 4750, 1.0, 1.0);
 }
 
-void DisplayWrathWorld::health()
+void DisplayWrathWorld::setHealth()
 {
 	pick.setHealthBox(0, 9600, 9850, 4750, 5000);
-	pick.setHealthBox(1, 10100, 10350, 4750, 5000);
+}
+
+void DisplayWrathWorld::setShields()
+{
+	pick.setShieldBox(0, 10100, 10350, 4750, 5000);
+}
+
+void DisplayWrathWorld::collisionCheck()
+{
 	pick.checkHealthUp(cam.getX(), cam.getY(), cam.getZ());
+	pick.checkShieldUp(cam.getX(), cam.getY(), cam.getZ());
+}
+
+void DisplayWrathWorld::healthChecksDraw()
+{
+	if (pick.getGatheredHealth(0) == false) {
+		drawHealthPickups();
+	}
+}
+
+void DisplayWrathWorld::shieldChecksDraw()
+{
+	if (pick.getGatheredShield(0) == false) {
+		drawHealthPickups2();
+	}
+}
+
+void DisplayWrathWorld::healthChecksDisplay()
+{
+	if (pick.getGatheredHealth(0) == false) {
+		displayHealthPickups();
+	}
+}
+
+void DisplayWrathWorld::shieldChecksDisplay()
+{
+	if (pick.getGatheredShield(0) == false) {
+		displayHealthPickups2();
+	}
 }
 
 //--------------------------------------------------------------------------------------
@@ -407,11 +441,8 @@ void DisplayWrathWorld::CreateTextureList()
 	drawPortal();				//10
 	drawRoom1Walls();		//11-41
 	drawServerWalls();
-	if (pick.getGathered(0) == false) {
-		drawHealthPickups();
-	}
-	if (pick.getGathered(1) == false) {
-		drawHealthPickups2();
-	}
+	
+	healthChecksDraw();
+	shieldChecksDraw();
 	//last number used: 11
 }

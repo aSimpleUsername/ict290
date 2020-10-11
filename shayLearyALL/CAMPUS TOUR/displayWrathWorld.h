@@ -71,7 +71,25 @@ public:
 		*/
 	bool stairsReturnPortal();
 
-	void health();
+	// collision
+
+	void collisionCheck();
+
+	// health
+
+	void setHealth();
+
+	void healthChecksDraw();
+
+	void healthChecksDisplay();
+
+	// shields
+
+	void setShields();
+
+	void shieldChecksDraw();
+
+	void shieldChecksDisplay();
 
 private:
 	Portal stepsReturn;
@@ -155,8 +173,6 @@ private:
 		* @brief creates bounding boxes for collsion detection
 		*/
 	void CreateBoundingBoxes();
-
-	void placeHealthPickups();
 };
 
 #endif DISPLAYWRATHWORLD_H
