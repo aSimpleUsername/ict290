@@ -157,6 +157,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="lodepng.h" />
+    <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="Pickups.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
