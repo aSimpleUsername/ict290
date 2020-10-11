@@ -1,5 +1,6 @@
 //Entity class - Parent class of player and enemy, containing increments, setters and getters for health
 //Version 2
+#pragma once
 
 #include <GL/glut.h>
 #include "point3D.h"
@@ -10,6 +11,7 @@ class Entity
 public:
 	//constructors
 	Entity(double x, double y, double z);		//constructs entity on the given location
+	Entity();
 
 	//getters & setters
 	inline int getHealth() { return m_health; }
@@ -20,38 +22,15 @@ public:
 	inline void incrementShields() {++m_shields; }
 	inline void decreaseHealth() { --m_health; }
 	inline void decreaseShields() { --m_shields; }
-	inline Point3D getPosition() { return m_center; }
-
-	void seek(Point3D targetPosition);		//seeks target position
-	void patrol(double xmin, double xmax, double zmin, double zmax);		//patrols within given bounds
-	void drawEntity();
-	void drawProjectiles();	//TODO: make private
-	void shoot();			//TODO: make private, and add to state machine
-
-	double m_timer; // make private
+	inline Point3D getPosition() { return m_position; }
+	inline float GetX() { return m_position.x; }
+	inline float GetY() { return m_position.y; }
+	inline float GetZ() { return m_position.z; }
 
 protected:
-
-	Point3D m_p1, m_p2, m_p3, m_p4, m_p5, m_p6, m_p7, m_p8;		//the points that make up the box
-	Point3D m_center, m_heading;
-
-	double m_topSpeed, m_rotationSpeed;
-	double m_acceleration;
+	Point3D m_position;
 
 	int m_health;
 	int m_shields;
-
-	Point3D m_patrolTarget;
-
-	int m_projectileCount;
-	static const int MAX_PROJECTILES = 5;
-	Projectile m_projectiles[MAX_PROJECTILES];
-
-	double m_fireRate;
-
-
-	void rotateEntity(double rotationSpeed);
-	void calculateHeading();
-	void accelerate(float topSpeed);
 };
 
