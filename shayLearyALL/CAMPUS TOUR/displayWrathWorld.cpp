@@ -141,29 +141,19 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-<<<<<<< HEAD
-	if (pick.getGathered(0) == false) {
-		displayHealthPickups();
-	}
-	if (pick.getGathered(1) == false) {
-		displayHealthPickups2();
-	}
-	
+
 	//enemy is drawn 
 	enemyObjects.getObjectFromBuffer(0).drawEnemy();
 	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
 	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())){
 		std::cout << "hit" << std::endl;
 	}
-=======
+
 	
 	healthChecksDisplay();
 	shieldChecksDisplay();
-<<<<<<< HEAD
->>>>>>> vlad
-=======
 	ammoChecksDisplay();
->>>>>>> pr/53
+
 }
 
 void DisplayWrathWorld::displaySkyBox()

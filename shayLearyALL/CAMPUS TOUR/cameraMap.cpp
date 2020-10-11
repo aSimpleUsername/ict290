@@ -56,10 +56,6 @@ void CameraMap::DisplayMap(const int & screenWidth, const int & screenHeight,
 void CameraMap::DisplayWelcomeScreen (const int & screenWidth, const int & screenHeight, 
 									  const int & tempExit, const GLuint & tempImage)
 {
-	glEnable(GL_BLEND);
-
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
 
 	glPushMatrix();
 	glMatrixMode(GL_PROJECTION);
@@ -82,11 +78,9 @@ void CameraMap::DisplayWelcomeScreen (const int & screenWidth, const int & scree
 	{
 		glBindTexture(GL_TEXTURE_2D, tempImage);
 	}
-	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	// display image
 	glCallList(449);
 	// Reset Perspective Projection
-	glDisable(GL_BLEND);
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
 	glMatrixMode(GL_MODELVIEW);
