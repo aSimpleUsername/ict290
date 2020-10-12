@@ -34,11 +34,8 @@ void DisplayWrathWorld::myinit()
 	CreateTextures();
 
 	initEnemies();
-<<<<<<< HEAD
 	//Creating enemy object in the array at a given position
 	//enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
-=======
->>>>>>> connor
 }
 
 //--------------------------------------------------------------------------------------
@@ -154,11 +151,6 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> connor
 	healthChecksDisplay();
 	shieldChecksDisplay();
 	ammoChecksDisplay(); 

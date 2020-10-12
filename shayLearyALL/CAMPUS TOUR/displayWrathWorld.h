@@ -108,16 +108,10 @@ public:
 
 private:
 	Portal stepsReturn;
-<<<<<<< HEAD
+
 	//Enemy can be changed for whatever class
-	Player player;
-	ObjPicking<Enemy> enemyObjects; 
-	Enemy enemy0 = Enemy(10000, 10550, 1000);	//room1
-	Enemy enemy1 = Enemy(12500, 10550, 1000);	//room1
 
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
-
-=======
 	//Enemy can be changed for whatever class 
 
 	Player player;
@@ -127,8 +121,6 @@ private:
 	Enemy enemy1 = Enemy(7000, 15000, -3500, 0, 10550);	//room1
 	Enemy enemy2 = Enemy(11000, 15000, 0, 2500, 10550);	//room1
 	Enemy enemy3 = Enemy(15000, 19000, -3500, 2500, 10550);	//room1
->>>>>>> connor
-
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 
