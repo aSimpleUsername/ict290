@@ -54,13 +54,16 @@ void Pickups::removeAmmoUp(int index)
 
 void Pickups::checkHealthUp(double xPos, double yPos, double zPos)
 {
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 7; i++)
 	{
-		if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
+		if (healthUp[i].gathered == false)
 		{
-			if (zPos < healthUp[i].zMax && zPos > healthUp[i].zMin)
+			if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
 			{
-				removeHealthUp(i);
+				if (zPos < healthUp[i].zMax && zPos > healthUp[i].zMin)
+				{
+					removeHealthUp(i);
+				}
 			}
 		}
 	}
@@ -68,13 +71,16 @@ void Pickups::checkHealthUp(double xPos, double yPos, double zPos)
 
 void Pickups::checkShieldUp(double xPos, double yPos, double zPos)
 {
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 7; i++)
 	{
-		if (xPos < shieldUp[i].xMax && xPos > shieldUp[i].xMin)
+		if (shieldUp[i].gathered == false)
 		{
-			if (zPos < shieldUp[i].zMax && zPos > shieldUp[i].zMin)
+			if (xPos < shieldUp[i].xMax && xPos > shieldUp[i].xMin)
 			{
-				removeShieldUp(i);
+				if (zPos < shieldUp[i].zMax && zPos > shieldUp[i].zMin)
+				{
+					removeShieldUp(i);
+				}
 			}
 		}
 	}
@@ -82,13 +88,16 @@ void Pickups::checkShieldUp(double xPos, double yPos, double zPos)
 
 void Pickups::checkAmmoUp(double xPos, double yPos, double zPos)
 {
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 7; i++)
 	{
-		if (xPos < ammoUp[i].xMax && xPos > ammoUp[i].xMin)
+		if (ammoUp[i].gathered == false)
 		{
-			if (zPos < ammoUp[i].zMax && zPos > ammoUp[i].zMin)
+			if (xPos < ammoUp[i].xMax && xPos > ammoUp[i].xMin)
 			{
-				removeAmmoUp(i);
+				if (zPos < ammoUp[i].zMax && zPos > ammoUp[i].zMin)
+				{
+					removeAmmoUp(i);
+				}
 			}
 		}
 	}

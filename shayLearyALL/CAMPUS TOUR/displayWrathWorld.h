@@ -12,7 +12,10 @@
 //Classes for hit detection (enemy can be changed for your class)
 #include "ObjPicking.h"
 #include "Enemy.h"
+<<<<<<< HEAD
 #include "Player.h"
+=======
+>>>>>>> vlad
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -32,6 +35,9 @@
 #define HEALTH						9
 #define SHIELD  					10
 #define AMMO						11
+#define HEALTH_YZ					12
+#define SHIELD_YZ 					13
+#define AMMO_YZ						14
 
 	/**
 	* @class displayWrathWorld
@@ -106,6 +112,7 @@ public:
 private:
 	Portal stepsReturn;
 	//Enemy can be changed for whatever class
+<<<<<<< HEAD
 
 	Player player;
 	ObjPicking<Enemy> enemyObjects; 
@@ -113,6 +120,9 @@ private:
 	Enemy enemy1 = Enemy(12500, 10550, 1000);	//room1
 
 
+=======
+	ObjPicking<Enemy> enemyObjects;
+>>>>>>> vlad
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
 
@@ -150,12 +160,33 @@ private:
 		*/
 	void displayServerWalls();
 
+	////////////////////////////////////////////////////////////////////
 
 	void displayHealthPickups();
+	void displayHealthPickups1();
+	void displayHealthPickups2();
+	void displayHealthPickups3();
+	void displayHealthPickups4();
+	void displayHealthPickups5();
+	void displayHealthPickups6();
 
 	void displayShieldPickups();
+	void displayShieldPickups1();
+	void displayShieldPickups2();
+	void displayShieldPickups3();
+	void displayShieldPickups4();
+	void displayShieldPickups5();
+	void displayShieldPickups6();
 
 	void displayAmmoPickups();
+	void displayAmmoPickups1();
+	void displayAmmoPickups2();
+	void displayAmmoPickups3();
+	void displayAmmoPickups4();
+	void displayAmmoPickups5();
+	void displayAmmoPickups6();
+
+	////////////////////////////////////////////////////////////////////
 
 		/**
 		* @brief displays enemies 
@@ -192,12 +223,33 @@ private:
 		*/
 	void drawServerWalls();
 
+	////////////////////////////////////////////////////////////////////
 
 	void drawHealthPickups();
+	void drawHealthPickups1();
+	void drawHealthPickups2();
+	void drawHealthPickups3();
+	void drawHealthPickups4();
+	void drawHealthPickups5();
+	void drawHealthPickups6();
 
 	void drawShieldPickups();
+	void drawShieldPickups1();
+	void drawShieldPickups2();
+	void drawShieldPickups3();
+	void drawShieldPickups4();
+	void drawShieldPickups5();
+	void drawShieldPickups6();
 
 	void drawAmmoPickups();
+	void drawAmmoPickups1();
+	void drawAmmoPickups2();
+	void drawAmmoPickups3();
+	void drawAmmoPickups4();
+	void drawAmmoPickups5();
+	void drawAmmoPickups6();
+
+	////////////////////////////////////////////////////////////////////
 
 		/**
 		* @brief loads images and creates texture

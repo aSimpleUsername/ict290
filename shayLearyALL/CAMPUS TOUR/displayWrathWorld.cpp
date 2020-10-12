@@ -45,7 +45,14 @@ void DisplayWrathWorld::myinit()
 	CreateTextureList();
 	CreateTextures();
 
+<<<<<<< HEAD
 	initEnemies();
+=======
+	//Creating enemy object in the array at a given position
+	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
+
+
+>>>>>>> vlad
 }
 
 //--------------------------------------------------------------------------------------
@@ -141,6 +148,15 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/ammo.png");
 	tp.CreatePNGTexture(AMMO, image, 417, 390);
 
+	image = tp.LoadTexture("data/heartyz.png");
+	tp.CreatePNGTexture(HEALTH_YZ, image, 390, 417);
+
+	image = tp.LoadTexture("data/shieldyz.png");
+	tp.CreatePNGTexture(SHIELD_YZ, image, 390, 417);
+
+	image = tp.LoadTexture("data/ammoyz.png");
+	tp.CreatePNGTexture(AMMO_YZ, image, 390, 417);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -154,6 +170,16 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayRoom1Walls();
 	displayServerWalls();
 
+<<<<<<< HEAD
+=======
+	//enemy is drawn 
+	enemyObjects.getObjectFromBuffer(0).drawEnemy();
+	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
+	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())){
+		std::cout << "hit" << std::endl;
+	}
+
+>>>>>>> vlad
 	
 	healthChecksDisplay();
 	shieldChecksDisplay();
@@ -395,64 +421,532 @@ void DisplayWrathWorld::drawServerWalls()
 	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
 }
 
+// PICKUPS
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 void DisplayWrathWorld::displayHealthPickups()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
-	for (int i = 88; i <= 92; ++i) glCallList(i);
+	for (int i = 88; i <= 89; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 90; i <= 92; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups1()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 103; i <= 104; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 105; i <= 107; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups2()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 108; i <=109; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 110; i <= 112; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups3()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 113; i <= 114; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 115; i <= 117; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups4()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 118; i <= 119; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 120; i <= 122; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups5()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 163; i <= 164; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 165; i <= 167; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayHealthPickups6()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH));
+	for (int i = 168; i <= 169; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(HEALTH_YZ));
+	for (int i = 170; i <= 172; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::drawHealthPickups()
 {
-	tp.CreateDisplayList(XY, 88, 250, 250, 9600, 10100, 5000, 1.0, 1.0);
-	tp.CreateDisplayList(XY, 89, 250, 250, 9600, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 90, 250, 250, 9600, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 91, 250, 250, 9850, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(XZ, 92, 250, 250, 9600, 10350, 4750, 1.0, 1.0);
+	int x = 16000;
+	int y = 10100;
+	int z = -1500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 88, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 89, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 90, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 91, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 92, size, size, x, y + size, z - size, 1.0, 1.0);
 }
+
+void DisplayWrathWorld::drawHealthPickups1()
+{
+	int x = 11000;
+	int y = 10100;
+	int z = -6500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 103, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 104, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 105, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 106, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 107, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawHealthPickups2()
+{
+	int x = 11000;
+	int y = 10100;
+	int z = -7000;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 108, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 109, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 110, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 111, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 112, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawHealthPickups3()
+{
+	int x = 18000;
+	int y = 10100;
+	int z = -10400;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 113, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 114, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 115, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 116, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 117, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawHealthPickups4()
+{
+	int x = 18000;
+	int y = 10100;
+	int z = -12400;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 118, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 119, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 120, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 121, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 122, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawHealthPickups5()
+{
+	int x = 10375;
+	int y = 10100;
+	int z = -14250;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 163, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 164, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 165, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 166, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 167, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawHealthPickups6()
+{
+	int x = 16375;
+	int y = 10100;
+	int z = -17250;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 168, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 169, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 170, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 171, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 172, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+// END OF HEALTH 
+////////////////////////////////////////////////////////////////////////////////
 
 void DisplayWrathWorld::displayShieldPickups()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
-	for (int i = 93; i <= 97; ++i) glCallList(i);
+	for (int i = 93; i <= 94; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 95; i <= 97; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups1()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 123; i <= 124; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 125; i <= 127; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups2()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 128; i <= 129; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 130; i <= 132; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups3()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 133; i <= 134; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 135; i <= 137; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups4()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 138; i <= 139; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 140; i <= 142; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups5()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 173; i <= 174; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 175; i <= 177; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayShieldPickups6()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD));
+	for (int i = 178; i <= 179; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SHIELD_YZ));
+	for (int i = 180; i <= 182; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::drawShieldPickups()
 {
-	tp.CreateDisplayList(XY, 93, 250, 250, 10100, 10100, 5000, 1.0, 1.0);
-	tp.CreateDisplayList(XY, 94, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 95, 250, 250, 10100, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 96, 250, 250, 10350, 10100, 4750, 1.0, 1.0);
-	tp.CreateDisplayList(XZ, 97, 250, 250, 10100, 10350, 4750, 1.0, 1.0);
+	int x = 16000;
+	int y = 10100;
+	int z = -500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 93, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 94, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 95, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 96, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 97, size, size, x, y + size, z - size, 1.0, 1.0);
 }
+
+void DisplayWrathWorld::drawShieldPickups1()
+{
+	int x = 12000;
+	int y = 10100;
+	int z = -6500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 123, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 124, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 125, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 126, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 127, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawShieldPickups2()
+{
+	int x = 12000;
+	int y = 10100;
+	int z = -7000;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 128, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 129, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 130, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 131, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 132, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawShieldPickups3()
+{
+	int x = 6400;
+	int y = 10100;
+	int z = -6500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 133, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 134, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 135, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 136, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 137, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawShieldPickups4()
+{
+	int x = 6400;
+	int y = 10100;
+	int z = -7500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 138, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 139, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 140, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 141, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 142, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawShieldPickups5()
+{
+	int x = 10375;
+	int y = 10100;
+	int z = -17250;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 173, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 174, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 175, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 176, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 177, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawShieldPickups6()
+{
+	int x = 16375;
+	int y = 10100;
+	int z = -14250;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 178, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 179, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 180, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 181, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 182, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+// END OF SHIELD
+//////////////////////////////////////////////////////////////////////////////////////////
 
 void DisplayWrathWorld::displayAmmoPickups()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
-	for (int i = 98; i <= 102; ++i) glCallList(i);
+	for (int i = 98; i <= 99; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 100; i <= 102; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups1()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 143; i <= 144; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 145; i <= 147; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups2()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 148; i <= 149; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 150; i <= 152; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups3()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 153; i <= 154; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 155; i <= 157; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups4()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 158; i <= 159; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 160; i <= 162; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups5()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 183; i <= 184; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 185; i <= 187; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::displayAmmoPickups6()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO));
+	for (int i = 188; i <= 189; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(AMMO_YZ));
+	for (int i = 190; i <= 192; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::drawAmmoPickups()
 {
-	tp.CreateDisplayList(XY, 98, 250, 250, 10100, 10100, 4500, 1.0, 1.0);
-	tp.CreateDisplayList(XY, 99, 250, 250, 10100, 10100, 4250, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 100, 250, 250, 10100, 10100, 4250, 1.0, 1.0);
-	tp.CreateDisplayList(YZ, 101, 250, 250, 10350, 10100, 4250, 1.0, 1.0);
-	tp.CreateDisplayList(XZ, 102, 250, 250, 10100, 10350, 4250, 1.0, 1.0);
+	int x = 16000;
+	int y = 10100;
+	int z = 500;
+	int size = 250;
+	
+	tp.CreateDisplayList(XY, 98, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 99, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 100, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 101, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 102, size, size, x, y + size, z - size, 1.0, 1.0);
 }
+
+void DisplayWrathWorld::drawAmmoPickups1()
+{
+	int x = 13000;
+	int y = 10100;
+	int z = -6500;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 143, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 144, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 145, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 146, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 147, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawAmmoPickups2()
+{
+	int x = 13000;
+	int y = 10100;
+	int z = -7000;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 148, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 149, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 150, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 151, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 152, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawAmmoPickups3()
+{
+	int x = 6400;
+	int y = 10100;
+	int z = -7000;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 153, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 154, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 155, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 156, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 157, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawAmmoPickups4()
+{
+	int x = 6400;
+	int y = 10100;
+	int z = -8000;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 158, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 159, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 160, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 161, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 162, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawAmmoPickups5()
+{
+	int x = 12000;
+	int y = 10100;
+	int z = -15875;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 183, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 184, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 185, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 186, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 187, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+void DisplayWrathWorld::drawAmmoPickups6()
+{
+	int x = 18000;
+	int y = 10100;
+	int z = -15875;
+	int size = 250;
+
+	tp.CreateDisplayList(XY, 188, size, size, x, y, z, 1.0, 1.0);
+	tp.CreateDisplayList(XY, 189, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 190, size, size, x, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(YZ, 191, size, size, x + size, y, z - size, 1.0, 1.0);
+	tp.CreateDisplayList(XZ, 192, size, size, x, y + size, z - size, 1.0, 1.0);
+}
+
+// END OF AMMO
+///////////////////////////////////////////////////////////////////////////////////////////
 
 void DisplayWrathWorld::setHealth()
 {
-	pick.setHealthBox(0, 9600, 9850, 4750, 5000);
+	pick.setHealthBox(0, 16000, 16250, -1500, -1250);
+	pick.setHealthBox(1, 11000, 11250, -6500, -6250);
+	pick.setHealthBox(2, 11000, 11250, -7000, -6750);
+	pick.setHealthBox(3, 18000, 18250, -10400, -10150);
+	pick.setHealthBox(4, 18000, 18250, -12400, -12150);
+	pick.setHealthBox(5, 10375, 10625, -14250, -14000);
+	pick.setHealthBox(6, 16375, 16625, -17250, -17000);
 }
 
 void DisplayWrathWorld::setShields()
 {
-	pick.setShieldBox(0, 10100, 10350, 4750, 5000);
+	pick.setShieldBox(0, 16000, 16250, -500, -250);
+	pick.setShieldBox(1, 12000, 12250, -6500, -6250);
+	pick.setShieldBox(2, 12000, 12250, -7000, -6750);
+	pick.setShieldBox(3, 6400, 6650, -6500, -6250);
+	pick.setShieldBox(4, 6400, 6650, -7500, -7250);
+	pick.setShieldBox(5, 10375, 10625, -17250, -17000);
+	pick.setShieldBox(6, 16375, 16625, -14250, -14000);
 }
 
 void DisplayWrathWorld::setAmmo()
 {
-	pick.setAmmoBox(0, 10100, 10350, 4250, 4500);
+	pick.setAmmoBox(0, 16000, 16250, 250, 500);
+	pick.setAmmoBox(1, 13000, 13250, -6500, -6250);
+	pick.setAmmoBox(2, 13000, 13250, -7000, -6750);
+	pick.setAmmoBox(3, 6400, 6650, -7000, -6750);
+	pick.setAmmoBox(4, 6400, 6650, -8000, -7750);
+	pick.setAmmoBox(5, 12000, 12250, -15875, -15625);
+	pick.setAmmoBox(6, 18000, 18250, -15875, -15625);
 }
 
 void DisplayWrathWorld::collisionCheck()
@@ -467,12 +961,48 @@ void DisplayWrathWorld::healthChecksDraw()
 	if (pick.getGatheredHealth(0) == false) {
 		drawHealthPickups();
 	}
+	if (pick.getGatheredHealth(1) == false) {
+		drawHealthPickups1();
+	}
+	if (pick.getGatheredHealth(2) == false) {
+		drawHealthPickups2();
+	}
+	if (pick.getGatheredHealth(3) == false) {
+		drawHealthPickups3();
+	}
+	if (pick.getGatheredHealth(4) == false) {
+		drawHealthPickups4();
+	}
+	if (pick.getGatheredHealth(5) == false) {
+		drawHealthPickups5();
+	}
+	if (pick.getGatheredHealth(6) == false) {
+		drawHealthPickups6();
+	}
 }
 
 void DisplayWrathWorld::shieldChecksDraw()
 {
 	if (pick.getGatheredShield(0) == false) {
 		drawShieldPickups();
+	}
+	if (pick.getGatheredShield(1) == false) {
+		drawShieldPickups1();
+	}
+	if (pick.getGatheredShield(2) == false) {
+		drawShieldPickups2();
+	}
+	if (pick.getGatheredShield(3) == false) {
+		drawShieldPickups3();
+	}
+	if (pick.getGatheredShield(4) == false) {
+		drawShieldPickups4();
+	}
+	if (pick.getGatheredShield(5) == false) {
+		drawShieldPickups5();
+	}
+	if (pick.getGatheredShield(6) == false) {
+		drawShieldPickups6();
 	}
 }
 
@@ -481,12 +1011,48 @@ void DisplayWrathWorld::ammoChecksDraw()
 	if (pick.getGatheredAmmo(0) == false) {
 		drawAmmoPickups();
 	}
+	if (pick.getGatheredAmmo(1) == false) {
+		drawAmmoPickups1();
+	}
+	if (pick.getGatheredAmmo(2) == false) {
+		drawAmmoPickups2();
+	}
+	if (pick.getGatheredAmmo(3) == false) {
+		drawAmmoPickups3();
+	}
+	if (pick.getGatheredAmmo(4) == false) {
+		drawAmmoPickups4();
+	}
+	if (pick.getGatheredAmmo(5) == false) {
+		drawAmmoPickups5();
+	}
+	if (pick.getGatheredAmmo(6) == false) {
+		drawAmmoPickups6();
+	}
 }
 
 void DisplayWrathWorld::healthChecksDisplay()
 {
 	if (pick.getGatheredHealth(0) == false) {
 		displayHealthPickups();
+	}
+	if (pick.getGatheredHealth(1) == false) {
+		displayHealthPickups1();
+	}
+	if (pick.getGatheredHealth(2) == false) {
+		displayHealthPickups2();
+	}
+	if (pick.getGatheredHealth(3) == false) {
+		displayHealthPickups3();
+	}
+	if (pick.getGatheredHealth(4) == false) {
+		displayHealthPickups4();
+	}
+	if (pick.getGatheredHealth(5) == false) {
+		displayHealthPickups5();
+	}
+	if (pick.getGatheredHealth(6) == false) {
+		displayHealthPickups6();
 	}
 }
 
@@ -495,6 +1061,24 @@ void DisplayWrathWorld::shieldChecksDisplay()
 	if (pick.getGatheredShield(0) == false) {
 		displayShieldPickups();
 	}
+	if (pick.getGatheredShield(1) == false) {
+		displayShieldPickups1();
+	}
+	if (pick.getGatheredShield(2) == false) {
+		displayShieldPickups2();
+	}
+	if (pick.getGatheredShield(3) == false) {
+		displayShieldPickups3();
+	}
+	if (pick.getGatheredShield(4) == false) {
+		displayShieldPickups4();
+	}
+	if (pick.getGatheredShield(5) == false) {
+		displayShieldPickups5();
+	}
+	if (pick.getGatheredShield(6) == false) {
+		displayShieldPickups6();
+	}
 }
 
 void DisplayWrathWorld::ammoChecksDisplay()
@@ -502,7 +1086,28 @@ void DisplayWrathWorld::ammoChecksDisplay()
 	if (pick.getGatheredAmmo(0) == false) {
 		displayAmmoPickups();
 	}
+	if (pick.getGatheredAmmo(1) == false) {
+		displayAmmoPickups1();
+	}
+	if (pick.getGatheredAmmo(2) == false) {
+		displayAmmoPickups2();
+	}
+	if (pick.getGatheredAmmo(3) == false) {
+		displayAmmoPickups3();
+	}
+	if (pick.getGatheredAmmo(4) == false) {
+		displayAmmoPickups4();
+	}
+	if (pick.getGatheredAmmo(5) == false) {
+		displayAmmoPickups5();
+	}
+	if (pick.getGatheredAmmo(6) == false) {
+		displayAmmoPickups6();
+	}
 }
+
+// END OF PICKUPS
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 //--------------------------------------------------------------------------------------
 //  Create display lists
@@ -519,5 +1124,6 @@ void DisplayWrathWorld::CreateTextureList()
 	healthChecksDraw();
 	shieldChecksDraw();
 	ammoChecksDraw();
-	//last number used: 11
+
+	//last number used: 102
 }
