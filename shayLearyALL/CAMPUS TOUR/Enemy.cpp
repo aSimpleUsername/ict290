@@ -254,17 +254,32 @@ void Enemy::stateMachine()
 	{
 		seek(*m_enemyPosition);
 		drawProjectiles();
+
 		if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
 			shoot();
 
 		if (m_location.distance(*m_enemyPosition) > 3000)
-			accelerate(m_topSpeed);
+		{
+			if (canMove(m_topSpeed))
+				accelerate(m_topSpeed);
+		}
 		else if (m_location.distance(*m_enemyPosition) < 2500)   //back up if player gets too close
-			accelerate(-m_topSpeed);
+		{
+			if (canMove(-m_topSpeed))
+				accelerate(-m_topSpeed);
+		}
 		else
 			decelerate();
 
 	}
 	if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
 		m_timer += m_fireRate;
+}
+
+bool Enemy::canMove(double speed)
+{
+	return((m_location + m_heading.normalise() * speed * 10).x > m_bounds.xmin &&
+		(m_location + m_heading.normalise() * speed * 10).x < m_bounds.xmax &&
+		(m_location + m_heading.normalise() * speed * 10).z > m_bounds.zmin &&
+		(m_location + m_heading.normalise() * speed * 10).z < m_bounds.zmax);
 }

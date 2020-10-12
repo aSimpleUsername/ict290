@@ -55,7 +55,8 @@ private:
 	void calculateHeading();
 	void accelerate(float topSpeed);
 	void decelerate();
-	void patrol(double xmin, double xmax, double zmin, double zmax);		
+	void patrol(double xmin, double xmax, double zmin, double zmax);
+	bool canMove(double speed);		// checks if the next move will be out of bounds
 
 	struct
 	{
