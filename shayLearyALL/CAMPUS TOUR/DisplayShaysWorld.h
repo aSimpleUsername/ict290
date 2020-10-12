@@ -14,6 +14,7 @@
 #include "Portal.h"
 #include "Entity.h"
 
+
 //--------------------------------------------------------------------------------------
 
 #define PI 3.1415962654
@@ -357,7 +358,6 @@ public:
 private:
 	Portal steps;
 	Portal toStart;
-
 	GLdouble step, step2, stepLength;			// varibles used for tarnslating graphics etc
 	GLUquadricObj* glu_cylinder;				// Glut Cylinder
 

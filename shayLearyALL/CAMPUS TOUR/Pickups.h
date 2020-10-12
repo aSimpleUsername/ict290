@@ -40,8 +40,8 @@ public:
 	bool getGatheredAmmo(int index);
 
 private:
-	collect healthUp[5];
-	collect shieldUp[5];
-	collect ammoUp[5];
+	collect healthUp[7];
+	collect shieldUp[7];
+	collect ammoUp[7];
 };
 

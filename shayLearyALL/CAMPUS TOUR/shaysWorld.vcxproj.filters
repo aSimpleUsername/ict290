@@ -1,178 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
+    <ClCompile Include="AABB.CPP" />
+    <ClCompile Include="AABBLinkedList.cpp" />
+    <ClCompile Include="AABBNode.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cameraMap.cpp" />
+    <ClCompile Include="collision.cpp" />
+    <ClCompile Include="debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp" />
+    <ClCompile Include="DisplayShaysWorld.cpp" />
+    <ClCompile Include="displayWrathWorld.cpp" />
+    <ClCompile Include="EasySound.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="lodepng.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pickups.cpp" />
+    <ClCompile Include="PlainLinkedList.cpp" />
+    <ClCompile Include="PlainNode.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="point3D.cpp" />
+    <ClCompile Include="Portal.cpp" />
+    <ClCompile Include="projectile.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SoundTime.cpp" />
+    <ClCompile Include="texturedPolygons.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AABB.CPP">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AABBLinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AABBNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="cameraMap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="collision.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EasySound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlainLinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlainNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundTime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="texturedPolygons.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Portal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="lodepng.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DisplayShaysWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="displayWrathWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="point3D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="projectile.cpp">
-=======
-    <ClCompile Include="Pickups.cpp">
->>>>>>> vlad
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="AABB.H" />
+    <ClInclude Include="AABBLinkedList.h" />
+    <ClInclude Include="AABBNode.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="cameraMap.h" />
+    <ClInclude Include="collision.h" />
+    <ClInclude Include="DisplayShaysWorld.h" />
+    <ClInclude Include="displayWrathWorld.h" />
+    <ClInclude Include="EasySound.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="lodepng.h" />
+    <ClInclude Include="Pickups.h" />
+    <ClInclude Include="PlainLinkedList.h" />
+    <ClInclude Include="PlainNode.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="point3D.h" />
+    <ClInclude Include="Portal.h" />
+    <ClInclude Include="projectile.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="resource2.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="SoundTime.h" />
+    <ClInclude Include="texturedPolygons.h" />
+    <ClInclude Include="ObjPicking.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AABB.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AABBLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AABBNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cameraMap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="collision.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EasySound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlainLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlainNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundTime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="texturedPolygons.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Portal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="lodepng.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DisplayShaysWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="displayWrathWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="point3D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="projectile.h">
-=======
-    <ClInclude Include="Pickups.h">
->>>>>>> vlad
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Resource.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="Script1.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ResourceCompile Include="Resource.rc" />
+    <ResourceCompile Include="Script1.rc" />
   </ItemGroup>
 </Project>

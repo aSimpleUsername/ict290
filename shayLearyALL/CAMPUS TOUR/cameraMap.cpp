@@ -56,20 +56,22 @@ void CameraMap::DisplayMap(const int & screenWidth, const int & screenHeight,
 void CameraMap::DisplayWelcomeScreen (const int & screenWidth, const int & screenHeight, 
 									  const int & tempExit, const GLuint & tempImage)
 {
+
 	glPushMatrix();
 	glMatrixMode(GL_PROJECTION);
 	glPushMatrix();
 	glLoadIdentity();
 	gluOrtho2D(0, screenWidth, 0, screenHeight);
 	glScalef(1, -1, 1);
-	
 	// move to centre of screen
 	glTranslatef(screenWidth/2 -256.0, -screenHeight/2 -256.0, 0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();	
+
 	// display exit screen or welcome screen
 	if (tempExit == 1)
 	{
+
 		glBindTexture(GL_TEXTURE_2D, tempImage);
 	}
 	else

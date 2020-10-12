@@ -1176,7 +1176,7 @@ void DisplayShaysWorld::CreateTextures()
 
 	image = tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
-	image = tp.LoadTexture("data/welcome.png");
+	image = tp.LoadTexture("data/test.png");
 	tp.CreatePNGTexture(218, image, 512, 512);
 	image = tp.LoadTexture("data/thanks.png");
 	tp.CreatePNGTexture(219, image, 512, 512);
