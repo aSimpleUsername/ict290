@@ -13,10 +13,6 @@ void DisplayWrathWorld::myinit()
 		0.0, 1.75, -1,
 		0.0f, 1.0f, 0.0f);
 
-	// settings for glut cylinders
-	//glu_cylinder = gluNewQuadric();
-	//gluQuadricTexture(glu_cylinder, GL_TRUE);
-
 	// set the world co-ordinates (used to set quadrants for bounding boxes)
 	cam.SetWorldCoordinates(36000.0, 43200.0);
 	// turn collision detection on
@@ -27,14 +23,6 @@ void DisplayWrathWorld::myinit()
 
 	// set starting position of user
 	cam.Position(10000, 10550.0, 11000.0, 180.0);
-
-	//ORIGINAL POSITION
-	/*
-	cam.Position(32720.0, 9536.0,
-		4800.0, 180.0);
-		*/
-
-	//CreatePlains();
 
 	// creates bounding boxes and places in array
 	CreateBoundingBoxes();
@@ -61,7 +49,7 @@ void DisplayWrathWorld::initEnemies()
 
 
 	for(int i=0; i<enemyObjects.size(); ++i)
-		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer());
+		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer()); 
 }
 
 //--------------------------------------------------------------------------------------
@@ -157,8 +145,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	
 	healthChecksDisplay();
 	shieldChecksDisplay();
-	ammoChecksDisplay();
-
+	ammoChecksDisplay(); 
 }
 
 void DisplayWrathWorld::displayEnemies()
@@ -168,7 +155,7 @@ void DisplayWrathWorld::displayEnemies()
 	for (int i = 0; i<enemyObjects.size(); ++i)
 	{
 		enemyObjects.getObjectFromBuffer(i)->stateMachine();
-		enemyObjects.getObjectFromBuffer(i)->drawEnemy();
+		enemyObjects.getObjectFromBuffer(i)->drawEnemy(); 
 	}
 
 	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
