@@ -34,8 +34,11 @@ void DisplayWrathWorld::myinit()
 	CreateTextures();
 
 	initEnemies();
+<<<<<<< HEAD
 	//Creating enemy object in the array at a given position
 	//enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
+=======
+>>>>>>> connor
 }
 
 //--------------------------------------------------------------------------------------
@@ -43,11 +46,10 @@ void DisplayWrathWorld::myinit()
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::initEnemies()
 {
-	enemy0.setBounds(7500, 18500, -2750, 2000);			// room 1
-	enemyObjects.addObjectToBuffer(&enemy0);
-
-	enemy1.setBounds(7500, 18500, -2750, 2000);			// room 1
-	enemyObjects.addObjectToBuffer(&enemy1);			
+	enemyObjects.addObjectToBuffer(&enemy0);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy1);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy2);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy3);	//room 1
 
 
 	for(int i=0; i<enemyObjects.size(); ++i)
@@ -152,7 +154,11 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> connor
 	healthChecksDisplay();
 	shieldChecksDisplay();
 	ammoChecksDisplay(); 

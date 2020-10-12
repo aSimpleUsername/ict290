@@ -24,6 +24,31 @@ Enemy::Enemy(double x, double y, double z)
 	updateHitBox(x, y, z);
 }
 
+Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
+	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+	m_state(PATROL)
+{
+	m_location = Point3D::randomPointXZ(xmin, xmax, zmin, zmax, y);
+	//top 4 points going clockwise starting with front left
+	m_p1 = Point3D(m_location.x - 150, m_location.y + 200, m_location.z + 150);
+	m_p2 = Point3D(m_location.x - 150, m_location.y + 200, m_location.z - 150);
+	m_p3 = Point3D(m_location.x + 150, m_location.y + 200, m_location.z - 150);
+	m_p4 = Point3D(m_location.x + 150, m_location.y + 200, m_location.z + 150);
+	//bottom 4 points going clockwise starting with front left (player is 450 units tall)
+	m_p5 = Point3D(m_location.x - 150, m_location.y - 450, m_location.z + 150);
+	m_p6 = Point3D(m_location.x - 150, m_location.y - 450, m_location.z - 150);
+	m_p7 = Point3D(m_location.x + 150, m_location.y - 450, m_location.z - 150);
+	m_p8 = Point3D(m_location.x + 150, m_location.y - 450, m_location.z + 150);
+
+	m_health = 5;
+	m_shields = 0;
+
+	m_patrolTarget = Point3D(0.0, m_location.y, 0.0);
+	setBounds(xmin, xmax, zmin, zmax);
+
+	updateHitBox(m_location.x, m_location.y, m_location.z);
+}
+
 Enemy::Enemy()
 {
 
@@ -54,14 +79,6 @@ void Enemy::updateHitBox(float x, float y, float z)
 
 void Enemy::drawEnemy()
 {
-	// *** Remove once charlie makes hit ray work withg box *** //
-	//glPushMatrix();
-	//glTranslatef(m_position.x, m_position.y, m_position.z);
-	//glColor3f(1, 0, 0);
-	//glutSolidSphere(300, 50, 50);
-	//glPopMatrix();
-	// *** *** *** *** *** *** *** *** *** *** *** *** *** *** //
-
 	// top plane
 	glBegin(GL_POLYGON);
 	glVertex3d(m_p1.x, m_p1.y, m_p1.z);
@@ -262,11 +279,15 @@ void Enemy::stateMachine()
 		{
 			if (canMove(m_topSpeed))
 				accelerate(m_topSpeed);
+			else
+				decelerate();
 		}
 		else if (m_location.distance(*m_enemyPosition) < 2500)   //back up if player gets too close
 		{
 			if (canMove(-m_topSpeed))
 				accelerate(-m_topSpeed);
+			else
+				decelerate();
 		}
 		else
 			decelerate();
