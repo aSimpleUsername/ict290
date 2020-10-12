@@ -12,6 +12,7 @@ public:
 	virtual ~ObjPicking(){
 		clearBuffer();
 	}
+    int size();
 
 	void addObjectToBuffer(T *object);
     T* getObjectFromBuffer(int index) { return objBuffer[index]; }
@@ -22,6 +23,12 @@ private:
 	std::vector<T*> objBuffer;
 
 };
+
+template <class T>
+int ObjPicking<T>::size()
+{
+    return objBuffer.size();
+}
 
 template <class T>
 bool ObjPicking<T>::detectCollisionWithSphere(float rayX, float rayY, float rayZ, float camX, float camY, float camZ) {

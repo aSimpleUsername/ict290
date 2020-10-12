@@ -1,7 +1,8 @@
 #include "Enemy.h"
 
 Enemy::Enemy(double x, double y, double z)
-	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0))
+	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+		m_state(PATROL)
 {
 	//top 4 points going clockwise starting with front left
 	m_p1 = Point3D(x - 150, y + 200, z + 150);
@@ -38,6 +39,14 @@ Enemy::~Enemy()
 
 }
 
+void Enemy::setBounds(double xmin, double xmax, double zmin, double zmax)
+{
+	m_bounds.xmin = xmin;
+	m_bounds.xmax = xmax;
+	m_bounds.zmin = zmin;
+	m_bounds.zmax = zmax;
+}
+
 void Enemy::updateHitBox(float x, float y, float z)
 {
 	hitBox.SetData(x + 1, x, y + 1, y, z + 1, z);
@@ -52,11 +61,6 @@ void Enemy::drawEnemy()
 	//glutSolidSphere(300, 50, 50);
 	//glPopMatrix();
 	// *** *** *** *** *** *** *** *** *** *** *** *** *** *** //
-
-	accelerate(m_topSpeed);
-	drawProjectiles();
-	if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
-		m_timer += m_fireRate;
 
 	// top plane
 	glBegin(GL_POLYGON);
@@ -158,10 +162,31 @@ void Enemy::accelerate(float topSpeed)
 	calculateHeading();
 
 	if (topSpeed > 0 && m_acceleration < topSpeed)
-		m_acceleration += 0.1;
+		m_acceleration += 0.5;
 
 	if (topSpeed < 0 && m_acceleration > topSpeed)
-		m_acceleration -= 0.1;
+		m_acceleration -= 0.5;
+
+	m_p1 = m_p1 + m_heading.normalise() * m_acceleration;
+	m_p2 = m_p2 + m_heading.normalise() * m_acceleration;
+	m_p3 = m_p3 + m_heading.normalise() * m_acceleration;
+	m_p4 = m_p4 + m_heading.normalise() * m_acceleration;
+	m_p5 = m_p5 + m_heading.normalise() * m_acceleration;
+	m_p6 = m_p6 + m_heading.normalise() * m_acceleration;
+	m_p7 = m_p7 + m_heading.normalise() * m_acceleration;
+	m_p8 = m_p8 + m_heading.normalise() * m_acceleration;
+	m_location = m_location + m_heading.normalise() * m_acceleration;
+}
+
+
+void Enemy::decelerate()
+{
+	calculateHeading();
+	if (m_acceleration > 0)
+		m_acceleration -= 0.5;
+
+	if (m_acceleration < 0)
+		m_acceleration += 0.5;
 
 	m_p1 = m_p1 + m_heading.normalise() * m_acceleration;
 	m_p2 = m_p2 + m_heading.normalise() * m_acceleration;
@@ -204,4 +229,42 @@ void Enemy::patrol(double xmin, double xmax, double zmin, double zmax)
 		m_patrolTarget = Point3D::randomPointXZ(xmin, xmax, zmin, zmax, m_location.y);
 
 	seek(m_patrolTarget);
+}
+
+void Enemy::stateMachine()
+{
+	// Death State
+	if (m_health <= 0)
+		m_state = DEAD;
+
+	// Patrol State
+	if (m_state == PATROL)
+	{
+		patrol(m_bounds.xmin, m_bounds.xmax, m_bounds.zmin, m_bounds.zmin);
+		accelerate(m_topSpeed / 2);
+
+		if (m_location.distance(*m_enemyPosition) < 5000)   //attack if close to enemy
+			m_state = ATTACK;
+
+		// TO DO create attack if hit state change
+	}
+
+	// Attack State
+	if (m_state == ATTACK)
+	{
+		seek(*m_enemyPosition);
+		drawProjectiles();
+		if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
+			shoot();
+
+		if (m_location.distance(*m_enemyPosition) > 3000)
+			accelerate(m_topSpeed);
+		else if (m_location.distance(*m_enemyPosition) < 2500)   //back up if player gets too close
+			accelerate(-m_topSpeed);
+		else
+			decelerate();
+
+	}
+	if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
+		m_timer += m_fireRate;
 }

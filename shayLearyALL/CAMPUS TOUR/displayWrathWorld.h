@@ -110,12 +110,19 @@ private:
 	Player player;
 	ObjPicking<Enemy> enemyObjects; 
 	Enemy enemy0 = Enemy(10000, 10550, 1000);	//room1
+	Enemy enemy1 = Enemy(12500, 10550, 1000);	//room1
 
 
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
 
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
+
+
+		/**
+		* @brief initilises enemies
+		*/
+	void initEnemies();
 
 		/**
 		* @brief displays the skybox

@@ -45,8 +45,23 @@ void DisplayWrathWorld::myinit()
 	CreateTextureList();
 	CreateTextures();
 
-	//Creating enemy object in the array at a given position
-	enemyObjects.addObjectToBuffer(&enemy0);			// room 1 
+	initEnemies();
+}
+
+//--------------------------------------------------------------------------------------
+//  Initialize Enemies
+//--------------------------------------------------------------------------------------
+void DisplayWrathWorld::initEnemies()
+{
+	enemy0.setBounds(7500, 18500, -2750, 2000);			// room 1
+	enemyObjects.addObjectToBuffer(&enemy0);
+
+	enemy1.setBounds(7500, 18500, -2750, 2000);			// room 1
+	enemyObjects.addObjectToBuffer(&enemy1);			
+
+
+	for(int i=0; i<enemyObjects.size(); ++i)
+		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer());
 }
 
 //--------------------------------------------------------------------------------------
@@ -148,23 +163,14 @@ void DisplayWrathWorld::DrawBackdrop()
 
 void DisplayWrathWorld::displayEnemies()
 {
-	// this can be a for loop with more enemies
-
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
 
-	if (player.getLocation().distance(enemyObjects.getObjectFromBuffer(0)->getLocation()) > 7500)		//if player less than 7500 units away
-		enemyObjects.getObjectFromBuffer(0)->patrol(7500, 18500, -2750, 2000);
-	else
+	for (int i = 0; i<enemyObjects.size(); ++i)
 	{
-		enemyObjects.getObjectFromBuffer(0)->seek(player.getLocation());
-		if (glutGet(GLUT_ELAPSED_TIME) > enemyObjects.getObjectFromBuffer(0)->m_timer)
-			enemyObjects.getObjectFromBuffer(0)->shoot();
+		enemyObjects.getObjectFromBuffer(i)->stateMachine();
+		enemyObjects.getObjectFromBuffer(i)->drawEnemy();
 	}
 
-	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
-	std::cout << enemyObjects.getObjectFromBuffer(0)->GetX() << ", " << enemyObjects.getObjectFromBuffer(0)->GetY() << ", " << enemyObjects.getObjectFromBuffer(0)->GetZ() << ", " << std::endl;
-
-	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
 	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
 		std::cout << "hit" << std::endl;
 	}
