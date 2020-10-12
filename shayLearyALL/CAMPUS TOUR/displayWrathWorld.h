@@ -12,10 +12,7 @@
 //Classes for hit detection (enemy can be changed for your class)
 #include "ObjPicking.h"
 #include "Enemy.h"
-<<<<<<< HEAD
 #include "Player.h"
-=======
->>>>>>> vlad
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -112,17 +109,11 @@ public:
 private:
 	Portal stepsReturn;
 	//Enemy can be changed for whatever class
-<<<<<<< HEAD
-
 	Player player;
 	ObjPicking<Enemy> enemyObjects; 
 	Enemy enemy0 = Enemy(10000, 10550, 1000);	//room1
 	Enemy enemy1 = Enemy(12500, 10550, 1000);	//room1
 
-
-=======
-	ObjPicking<Enemy> enemyObjects;
->>>>>>> vlad
 	GLdouble step, step2, stepLength;		// varibles used for tarnslating graphics etc
 
 

@@ -33,14 +33,9 @@ void DisplayWrathWorld::myinit()
 	CreateTextureList();
 	CreateTextures();
 
-<<<<<<< HEAD
 	initEnemies();
-=======
 	//Creating enemy object in the array at a given position
-	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
-
-
->>>>>>> vlad
+	//enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
 }
 
 //--------------------------------------------------------------------------------------
@@ -158,17 +153,6 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayRoom1Walls();
 	displayServerWalls();
 
-<<<<<<< HEAD
-=======
-	//enemy is drawn 
-	enemyObjects.getObjectFromBuffer(0).drawEnemy();
-	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())){
-		std::cout << "hit" << std::endl;
-	}
-
->>>>>>> vlad
-	
 	healthChecksDisplay();
 	shieldChecksDisplay();
 	ammoChecksDisplay(); 
