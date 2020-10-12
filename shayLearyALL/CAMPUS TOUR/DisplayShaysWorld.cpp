@@ -43,6 +43,10 @@ void DisplayShaysWorld::myinit()
 	// load texture images and create display lists
 	CreateTextureList();
 	CreateTextures();
+
+	enemy0.setEnemyPosition(player.getPlayerLocationPointer());
+	enemy0.setBounds(-24000, -1800, 30000, 40000);
+	enemyObjects.addObjectToBuffer(&enemy0);			// courtyard
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1227,16 +1231,13 @@ void DisplayShaysWorld::displayEnemies()
 {	
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
 
-	if(player.getLocation().distance(testEnemy.getLocation()) > 7500)		//if player less than 7500 units away
-		testEnemy.patrol(-24000, -1800, 30000, 40000);
-	else
-	{
-		testEnemy.seek(player.getLocation());
-		if (glutGet(GLUT_ELAPSED_TIME) > testEnemy.m_timer)
-			testEnemy.shoot();
-	}
+	// this will be a for loop with more enemies
+	enemyObjects.getObjectFromBuffer(0)->stateMachine();
+	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
 
-	testEnemy.drawEnemy();
+	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
+		std::cout << "hit" << std::endl;
+	}
 }
 
 

@@ -12,6 +12,7 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
+#include "ObjPicking.h"
 #include "Enemy.h"
 #include "Player.h"
 
@@ -322,8 +323,6 @@ public:
 	Camera cam;
 	TexturedPolygons tp;
 
-	Player player;
-	Enemy testEnemy = Enemy(-10000, 10450, 35000);
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;
@@ -365,6 +364,10 @@ private:
 	GLUquadricObj* glu_cylinder;				// Glut Cylinder
 
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
+
+	Player player;
+	ObjPicking<Enemy> enemyObjects;
+	Enemy enemy0 = Enemy(-10000, 10450, 35000);	//courtyard
 
 	// functions to display display lists (images) and bind them to a texture
 		/**

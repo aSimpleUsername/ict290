@@ -6,15 +6,15 @@ C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,4
 C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(9,62): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,116): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,104): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,92): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,80): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,67): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168,54): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(32,27): warning C4018: '<': signed/unsigned mismatch
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(27): message : while compiling class template member function 'bool ObjPicking<Enemy>::detectCollisionWithSphere(float,float,float,float,float,float)'
-C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(168): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithSphere(float,float,float,float,float,float)' being compiled
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,116): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,104): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,92): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,80): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,67): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174,54): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(39,27): warning C4018: '<': signed/unsigned mismatch
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(34): message : while compiling class template member function 'bool ObjPicking<Enemy>::detectCollisionWithSphere(float,float,float,float,float,float)'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(174): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithSphere(float,float,float,float,float,float)' being compiled
 C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(111): message : see reference to class template instantiation 'ObjPicking<Enemy>' being compiled
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
