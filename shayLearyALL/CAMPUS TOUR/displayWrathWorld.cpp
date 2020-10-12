@@ -33,14 +33,7 @@ void DisplayWrathWorld::myinit()
 	CreateTextureList();
 	CreateTextures();
 
-<<<<<<< HEAD
 	initEnemies();
-=======
-	//Creating enemy object in the array at a given position
-	enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
-
-
->>>>>>> vlad
 }
 
 //--------------------------------------------------------------------------------------
@@ -48,11 +41,10 @@ void DisplayWrathWorld::myinit()
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::initEnemies()
 {
-	enemy0.setBounds(7500, 18500, -2750, 2000);			// room 1
-	enemyObjects.addObjectToBuffer(&enemy0);
-
-	enemy1.setBounds(7500, 18500, -2750, 2000);			// room 1
-	enemyObjects.addObjectToBuffer(&enemy1);			
+	enemyObjects.addObjectToBuffer(&enemy0);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy1);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy2);	//room 1
+	enemyObjects.addObjectToBuffer(&enemy3);	//room 1
 
 
 	for(int i=0; i<enemyObjects.size(); ++i)
@@ -157,17 +149,6 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
-
-<<<<<<< HEAD
-=======
-	//enemy is drawn 
-	enemyObjects.getObjectFromBuffer(0).drawEnemy();
-	//hit detection is called from current look position(LX,LY,lZ) if collision is detected it outputs hit to console
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())){
-		std::cout << "hit" << std::endl;
-	}
-
->>>>>>> vlad
 	
 	healthChecksDisplay();
 	shieldChecksDisplay();

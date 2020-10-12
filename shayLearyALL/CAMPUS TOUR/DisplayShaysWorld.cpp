@@ -45,7 +45,6 @@ void DisplayShaysWorld::myinit()
 	CreateTextures();
 
 	enemy0.setEnemyPosition(player.getPlayerLocationPointer());
-	enemy0.setBounds(-24000, -1800, 30000, 40000);
 	enemyObjects.addObjectToBuffer(&enemy0);			// courtyard
 }
 

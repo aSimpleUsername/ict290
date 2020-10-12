@@ -11,7 +11,8 @@
 class Enemy : public Entity {
 
 public:
-	Enemy(double x, double y, double z);
+	Enemy(double x, double y, double z);						// constructs from location
+	Enemy(double xmin, double xmax, double zmin, double zmax, double y);	// constructs from bounds
 	Enemy();
 	Enemy(const Enemy& obj);
 	virtual ~Enemy();
