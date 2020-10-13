@@ -158,15 +158,22 @@ void DisplayWrathWorld::DrawBackdrop()
 
 void DisplayWrathWorld::displayEnemies()
 {
+	Point3D ray(cam.GetLX(), cam.GetLY(), cam.GetLZ());
+	Point3D camPos(cam.getX(), cam.getY(), cam.getZ());
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
-
+/*
 	for (int i = 0; i<enemyObjects.size(); ++i)
 	{
 		enemyObjects.getObjectFromBuffer(i)->stateMachine();
 		enemyObjects.getObjectFromBuffer(i)->drawEnemy(); 
 	}
-
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
+*/
+	//if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
+		//std::cout << "hit" << std::endl;
+	//}
+	enemyObjects.getObjectFromBuffer(0)->stateMachine();
+	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
+	if (enemyObjects.detectCollisionWithBox(ray,camPos,enemyObjects.getObjectFromBuffer(0)->getAABB(), enemyObjects.getObjectFromBuffer(0)->getLocation())){
 		std::cout << "hit" << std::endl;
 	}
 }

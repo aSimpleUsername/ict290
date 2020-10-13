@@ -3,6 +3,7 @@
 #include <GL/glut.h>
 #include <stdlib.h>
 #include <vector>
+#include "point3D.h"
 //this comment is to make shit work
 template <class T>
 class ObjPicking{
@@ -17,6 +18,7 @@ public:
 	void addObjectToBuffer(T *object);
     T* getObjectFromBuffer(int index) { return objBuffer[index]; }
 	bool detectCollisionWithSphere(float rayX, float rayY,float rayZ,float camX,float camY,float camZ);
+    bool detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints,Point3D enemyLocation);
 private:
 	void removeObjectFromBuffer(int index);
 	void clearBuffer();
@@ -47,6 +49,53 @@ bool ObjPicking<T>::detectCollisionWithSphere(float rayX, float rayY, float rayZ
         }
     }
     return false;
+}
+template <class T>
+bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints, Point3D enemyLocation) {
+    float tMin = 0.0f;
+    float tMax = 10000000000.0f;
+    Point3D delta = enemyLocation - camPos;
+    Point3D axis[3];
+
+    axis[0] = obbPoints[7] - obbPoints[4];
+    axis[0] = axis[0].normalise();
+
+    axis[1] = obbPoints[5] - obbPoints[4];
+    axis[1] = axis[1].normalise();
+
+    axis[2] = obbPoints[0] - obbPoints[4];
+    axis[2] = axis[2].normalise();
+
+    for (int i = 0; i < 3;i++) {
+        float t1, t2;
+        float e = axis[i].dot(delta);
+        float f = axis[i].dot(ray);
+        //will crash if dont check for near 0
+        if (abs(f) > 1e-20f)
+        {
+            if (i == 2) 
+            {
+                t1 = ((e + 200) / f);
+                t2 = ((e - 450) / f);
+            }
+            else 
+            {
+                t1 = ((e + 150) / f);
+                t2 = ((e - 150) / f);
+            }
+
+            if (t1 > t2) { // if wrong order
+                std::swap(t1, t2);
+            }
+            if (t2 < tMax) 
+                tMax = t2;
+            if (t1 > tMin) 
+                tMin = t1;
+            if (tMax < tMin)
+                return false;
+        }
+    }
+    return true;
 }
 template <class T>
 void ObjPicking<T>::addObjectToBuffer(T* object) {

@@ -3,6 +3,7 @@
 #include <GL/glut.h>
 #include "AABBNode.H"
 #include "Entity.h"
+#include <vector>
 
 #define DEAD	0
 #define PATROL	1
@@ -16,7 +17,7 @@ public:
 	Enemy();
 	Enemy(const Enemy& obj);
 	virtual ~Enemy();
-	void getAABB();
+	std::vector<Point3D> getAABB();
 	void drawEnemy();
 	void SetPosition(float x, float y, float z);
 	inline float GetRadius() { return radius; }

@@ -116,9 +116,18 @@ void Enemy::drawEnemy()
 	glEnd();
 }
 
-void Enemy::getAABB()
+std::vector<Point3D> Enemy::getAABB()
 {
-
+	std::vector<Point3D> boundingBox;
+	boundingBox.push_back(m_p1);
+	boundingBox.push_back(m_p2);
+	boundingBox.push_back(m_p3);
+	boundingBox.push_back(m_p4);
+	boundingBox.push_back(m_p5);
+	boundingBox.push_back(m_p6);
+	boundingBox.push_back(m_p7);
+	boundingBox.push_back(m_p8);
+	return boundingBox;
 }
 
 void Enemy::SetPosition(float x, float y, float z)
