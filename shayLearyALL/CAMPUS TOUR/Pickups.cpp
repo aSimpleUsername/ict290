@@ -58,9 +58,11 @@ void Pickups::checkHealthUp(double xPos, double yPos, double zPos)
 	{
 		if (healthUp[i].gathered == false)
 		{
-			if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
+			if (zPos < healthUp[i].zMax && zPos > healthUp[i].zMin)
+			//if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
 			{
-				if (zPos < healthUp[i].zMax && zPos > healthUp[i].zMin)
+				//if (zPos < healthUp[i].zMax && zPos > healthUp[i].zMin)
+				if (xPos < healthUp[i].xMax && xPos > healthUp[i].xMin)
 				{
 					removeHealthUp(i);
 				}

@@ -35,6 +35,8 @@
 #define HEALTH_YZ					12
 #define SHIELD_YZ 					13
 #define AMMO_YZ						14
+#define ELECTRICITY					15
+#define VENT						16
 
 	/**
 	* @class displayWrathWorld
@@ -155,6 +157,10 @@ private:
 		*/
 	void displayServerWalls();
 
+	void displayPowerWalls();
+
+	void displayBossRoom();
+
 	////////////////////////////////////////////////////////////////////
 
 	void displayHealthPickups();
@@ -217,6 +223,10 @@ private:
 		* @brief draws the server walls
 		*/
 	void drawServerWalls();
+
+	void drawPowerWalls();
+
+	void drawBossRoom();
 
 	////////////////////////////////////////////////////////////////////
 

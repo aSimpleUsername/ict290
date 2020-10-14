@@ -22,7 +22,13 @@ void DisplayWrathWorld::myinit()
 
 
 	// set starting position of user
-	cam.Position(10000, 10550.0, 11000.0, 180.0);
+	//cam.Position(10000, 10550.0, 11000.0, 180.0);
+
+	//Boss room
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+
+	//electricity room
+	cam.Position(6780, 10550.0, -20950.0, 180.0);
 
 	// creates bounding boxes and places in array
 	CreateBoundingBoxes();
@@ -139,6 +145,12 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/ammoyz.png");
 	tp.CreatePNGTexture(AMMO_YZ, image, 390, 417);
 
+	image = tp.LoadTexture("data/electric.png");
+	tp.CreatePNGTexture(ELECTRICITY, image, 512, 384);
+
+	image = tp.LoadTexture("data/vent.png");
+	tp.CreatePNGTexture(VENT, image, 286, 320);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -151,6 +163,9 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayPortal();
 	displayRoom1Walls();
 	displayServerWalls();
+	displayPowerWalls();
+	displayBossRoom();
+
 	healthChecksDisplay();
 	shieldChecksDisplay();
 	ammoChecksDisplay(); 
@@ -188,11 +203,11 @@ void DisplayWrathWorld::displaySkyBox()
 
 void DisplayWrathWorld::drawSkyBox()
 {
-	tp.CreateDisplayList(XZ, 4, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// Bottom
-	tp.CreateDisplayList(XZ, 5, 10240, 10240, -10000.0, 92400.0, -30000.0, 10, 10);		// Top
-	tp.CreateDisplayList(YZ, 6, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// FRONT
-	tp.CreateDisplayList(YZ, 7, 10240, 10240, 30000.0, -10000.0, -30000.0, 10, 10);		// Back 
-	tp.CreateDisplayList(XY, 8, 10240, 10240, -10000.0, -10000.0, -30000.0, 10, 10);	// Left
+	tp.CreateDisplayList(XZ, 4, 10240, 10240, -10000.0, -10000.0, -60000.0, 10, 13);	// Bottom
+	tp.CreateDisplayList(XZ, 5, 10240, 10240, -10000.0, 92400.0, -60000.0, 10, 13);		// Top
+	tp.CreateDisplayList(YZ, 6, 10240, 10240, -10000.0, -10000.0, -60000.0, 10, 13);	// FRONT
+	tp.CreateDisplayList(YZ, 7, 10240, 10240, 30000.0, -10000.0, -60000.0, 10, 13);		// Back 
+	tp.CreateDisplayList(XY, 8, 10240, 10240, -10000.0, -10000.0, -60000.0, 10, 10);	// Left
 	tp.CreateDisplayList(XY, 9, 10240, 10240, -10000.0, -10000.0, 72400, 10, 10);		// Right	
 }
 
@@ -207,8 +222,8 @@ void DisplayWrathWorld::displayGroundPlane()
 
 void DisplayWrathWorld::drawGroundPlane()
 {
-	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, -30000.0, 50, 100);	// groundPlane
-	tp.CreateDisplayList(XZ, 87, 650, 1155, 0.0, 11500.0, -30000.0, 50, 50);	// ceiling
+	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, -54000.0, 60, 160);	// groundPlane
+	tp.CreateDisplayList(XZ, 87, 650, 1155, 0.0, 11500.0, -34000.0, 50, 50);	// ceiling
 }
 
 void DisplayWrathWorld::displayPortal()
@@ -395,6 +410,237 @@ void DisplayWrathWorld::drawServerWalls()
 
 	tp.CreateDisplayList(XY, 85, 1000, 500, 13000, 10000, -16500, 1.0, 3.0);
 	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
+}
+
+void DisplayWrathWorld::displayPowerWalls()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	glCallList(193);
+	glCallList(196);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 194; i <= 195; ++i) glCallList(i);
+	glCallList(197);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 198; i <= 203; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 204; i <= 211; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 212; i <= 213; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(VENT));
+	glCallList(214);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 215; i <= 218; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	glCallList(219);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ELECTRICITY));
+	for (int i = 246; i <= 252; ++i) glCallList(i);
+}
+
+void DisplayWrathWorld::drawPowerWalls()
+{
+	//electricity area
+	tp.CreateDisplayList(XY, 193, 1000, 500, 6000, 10000, -23500, 13.0, 3.0);
+	tp.CreateDisplayList(YZ, 194, 500, 1000, 6000, 10000, -23500, 3.0, 5.0);
+	tp.CreateDisplayList(YZ, 195, 500, 1000, 19000, 10000, -23500, 3.0, 5.0);
+
+	//after electricity
+	tp.CreateDisplayList(XY, 196, 1000, 500, 6000, 10000, -18500, 1.0, 3.0);
+	tp.CreateDisplayList(YZ, 197, 500, 1000, 19000, 10000, -28500, 3.0, 5.0);
+	tp.CreateDisplayList(XY, 198, 1000, 500, 6000, 10000, -28500, 5.5, 3.0);
+	tp.CreateDisplayList(XY, 199, 1000, 500, 6000, 11000, -28500, 7.5, 1.0);
+	tp.CreateDisplayList(XY, 200, 1000, 500, 13500, 10000, -28500, 5.5, 3.0);
+
+	//Entrance hallway
+	tp.CreateDisplayList(XY, 201, 500, 500, 11500, 11000, -25500, 4.0, 1.0);
+	tp.CreateDisplayList(XY, 202, 500, 500, 11000, 10000, -25500, 1.0, 3.0);
+	tp.CreateDisplayList(XY, 203, 500, 500, 13500, 10000, -25500, 1.0, 3.0);
+
+	tp.CreateDisplayList(YZ, 204, 500, 1000, 11000, 10000, -28500, 3, 3.0);
+	tp.CreateDisplayList(YZ, 205, 500, 1000, 11500, 10000, -28500, 3, 3.0);
+	tp.CreateDisplayList(YZ, 206, 500, 1000, 13500, 10000, -28500, 3, 3.0);
+	tp.CreateDisplayList(YZ, 207, 500, 1000, 14000, 10000, -28500, 3, 3.0);
+
+	//Hidden room
+	tp.CreateDisplayList(YZ, 208, 500, 1000, 6000, 10000, -28500, 3, 3);
+	tp.CreateDisplayList(YZ, 209, 500, 1000, 6000, 11000, -25500, 1, 1);
+	tp.CreateDisplayList(YZ, 210, 500, 1000, 6000, 10000, -24500, 3, 1);
+
+	tp.CreateDisplayList(YZ, 211, 500, 1000, 4000, 10000, -26500, 3, 3);
+	tp.CreateDisplayList(XY, 212, 1000, 500, 4000, 10000, -26500, 2, 3);
+	tp.CreateDisplayList(XY, 213, 1000, 500, 4000, 10000, -23500, 2, 3);
+	
+	//Vent
+	tp.CreateDisplayList(YZ, 214, 250, 500, 6000, 10000, -25500, 4, 2);
+
+	//Final Hallway
+	tp.CreateDisplayList(YZ, 215, 500, 1000, 11000, 10000, -34000, 1, 5.5);
+	tp.CreateDisplayList(YZ, 216, 500, 1000, 11000, 11000, -34000, 1, 5.5);
+	tp.CreateDisplayList(YZ, 217, 500, 1000, 14000, 10000, -34000, 1, 5.5);
+	tp.CreateDisplayList(YZ, 218, 500, 1000, 14000, 11000, -34000, 1, 5.5);
+	tp.CreateDisplayList(XY, 219, 1000, 500, 11000, 11000, -34000, 3, 4);
+
+	//electricity
+	tp.CreateDisplayList(XZ, 246, 500, 500, 9000, 10050.0, -23500.0, 2, 4);
+	tp.CreateDisplayList(XZ, 247, 500, 500, 13000, 10050.0, -23500.0, 6, 4);
+
+	tp.CreateDisplayList(XZ, 248, 500, 500, 9000, 10050.0, -19500.0, 14, 2);
+	tp.CreateDisplayList(XZ, 249, 500, 500, 9000, 10050.0, -20500.0, 6, 2);
+
+	tp.CreateDisplayList(XZ, 250, 500, 500, 11000, 10050.0, -22500.0, 2, 4);
+	tp.CreateDisplayList(XZ, 251, 500, 500, 13000, 10050.0, -21500.0, 2, 2);
+	tp.CreateDisplayList(XZ, 252, 500, 500, 15000, 10050.0, -20500.0, 2, 2);
+}
+
+void DisplayWrathWorld::displayBossRoom()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 220; i <= 227; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 228; i <= 231; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 232; i <= 233; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 234; i <= 235; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 236; i <= 237; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 238; i <= 239; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 240; i <= 241; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1_YZ));
+	for (int i = 242; i <= 243; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 244; i <= 245; ++i) glCallList(i);
+
+	//glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	//glCallList(230);
+	//glCallList(231);
+
+}
+
+void DisplayWrathWorld::drawBossRoom()
+{
+	tp.CreateDisplayList(XY, 220, 1000, 500, 1000, 10000, -34000, 10, 6);
+	tp.CreateDisplayList(XY, 221, 1000, 500, 14000, 10000, -34000, 10, 6);
+
+	//Front Window Supports
+	tp.CreateDisplayList(XY, 222, 1000, 500, 8500, 10000, -54000, 8, 1);
+
+	glNewList(223, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(1000, 10000, -45000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(1000, 10500, -45000);
+	glTexCoord2f(20.0, 1.0);
+	glVertex3f(8500, 10500, -54000);
+	glTexCoord2f(20.0, 0.0);
+	glVertex3f(8500, 10000, -54000);
+	glEnd();
+	glEndList();
+
+	glNewList(224, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(16500, 10000, -54000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(16500, 10500, -54000);
+	glTexCoord2f(20.0, 1.0);
+	glVertex3f(24000, 10500, -45000);
+	glTexCoord2f(20.0, 0.0);
+	glVertex3f(24000, 10000, -45000);
+	glEnd();
+	glEndList();
+
+	tp.CreateDisplayList(XY, 225, 1000, 500, 8500, 12500, -54000, 8, 1);
+
+	glNewList(226, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(1000, 12500, -45000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(1000, 13000, -45000);
+	glTexCoord2f(20.0, 1.0);
+	glVertex3f(8500, 13000, -54000);
+	glTexCoord2f(20.0, 0.0);
+	glVertex3f(8500, 12500, -54000);
+	glEnd();
+	glEndList();
+
+	glNewList(227, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(16500, 12500, -54000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(16500, 13000, -54000);
+	glTexCoord2f(20.0, 1.0);
+	glVertex3f(24000, 13000, -45000);
+	glTexCoord2f(20.0, 0.0);
+	glVertex3f(24000, 12500, -45000);
+	glEnd();
+	glEndList();
+
+	//Side walls
+	tp.CreateDisplayList(YZ, 228, 500, 1000, 1000, 10000, -45000, 6, 11);
+	tp.CreateDisplayList(YZ, 229, 500, 1000, 24000, 10000, -45000, 6, 11);
+
+	//Pillars
+	tp.CreateDisplayList(YZ, 230, 500, 1000, 3500, 10000, -39000, 6, 2.5);
+	tp.CreateDisplayList(YZ, 231, 500, 1000, 6000, 10000, -39000, 6, 2.5);
+	tp.CreateDisplayList(XY, 232, 1000, 500, 3500, 10000, -39000, 2.5, 6);
+	tp.CreateDisplayList(XY, 233, 1000, 500, 3500, 10000, -36500, 2.5, 6);
+
+	tp.CreateDisplayList(YZ, 234, 500, 1000, 19000, 10000, -39000, 6, 2.5);
+	tp.CreateDisplayList(YZ, 235, 500, 1000, 21500, 10000, -39000, 6, 2.5);
+	tp.CreateDisplayList(XY, 236, 1000, 500, 19000, 10000, -39000, 2.5, 6);
+	tp.CreateDisplayList(XY, 237, 1000, 500, 19000, 10000, -36500, 2.5, 6);
+
+	tp.CreateDisplayList(YZ, 238, 500, 1000, 15500, 10000, -42500, 6, 1);
+	tp.CreateDisplayList(YZ, 239, 500, 1000, 16500, 10000, -42500, 6, 1);
+	tp.CreateDisplayList(XY, 240, 1000, 500, 15500, 10000, -42500, 1, 6);
+	tp.CreateDisplayList(XY, 241, 1000, 500, 15500, 10000, -41500, 1, 6);
+
+	tp.CreateDisplayList(YZ, 242, 500, 1000, 8500, 10000, -42500, 6, 1);
+	tp.CreateDisplayList(YZ, 243, 500, 1000, 9500, 10000, -42500, 6, 1);
+	tp.CreateDisplayList(XY, 244, 1000, 500, 8500, 10000, -42500, 1, 6);
+	tp.CreateDisplayList(XY, 245, 1000, 500, 8500, 10000, -41500, 1, 6);
+
+
+	/*
+	//Ceiling
+	tp.CreateDisplayList(XZ, 230, 1000, 1000, 1000, 13000, -45000, 23, 11);
+	
+	//NEEDS FIXING
+	glNewList(231, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(1000, 13000, -45000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(24000, 13000, -45000);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(16500, 13000, -54000);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(8500, 13000, -54000);
+	glEnd();
+	glEndList();
+
+	*/
 }
 
 // PICKUPS
@@ -894,35 +1140,35 @@ void DisplayWrathWorld::drawAmmoPickups6()
 
 void DisplayWrathWorld::setHealth()
 {
-	pick.setHealthBox(0, 16000, 16250, -1500, -1250);
-	pick.setHealthBox(1, 11000, 11250, -6500, -6250);
-	pick.setHealthBox(2, 11000, 11250, -7000, -6750);
-	pick.setHealthBox(3, 18000, 18250, -10400, -10150);
-	pick.setHealthBox(4, 18000, 18250, -12400, -12150);
-	pick.setHealthBox(5, 10375, 10625, -14250, -14000);
-	pick.setHealthBox(6, 16375, 16625, -17250, -17000);
+	pick.setHealthBox(0, 16000, 16250, -1750, -1500);
+	pick.setHealthBox(1, 11000, 11250, -6750, -6500);
+	pick.setHealthBox(2, 11000, 11250, -7250, -7000);
+	pick.setHealthBox(3, 18000, 18250, -10650, -10400);
+	pick.setHealthBox(4, 18000, 18250, -12650, -12400);
+	pick.setHealthBox(5, 10375, 10625, -14500, -14250);
+	pick.setHealthBox(6, 16375, 16625, -17500, -17250);
 }
 
 void DisplayWrathWorld::setShields()
 {
-	pick.setShieldBox(0, 16000, 16250, -500, -250);
-	pick.setShieldBox(1, 12000, 12250, -6500, -6250);
-	pick.setShieldBox(2, 12000, 12250, -7000, -6750);
-	pick.setShieldBox(3, 6400, 6650, -6500, -6250);
-	pick.setShieldBox(4, 6400, 6650, -7500, -7250);
-	pick.setShieldBox(5, 10375, 10625, -17250, -17000);
-	pick.setShieldBox(6, 16375, 16625, -14250, -14000);
+	pick.setShieldBox(0, 16000, 16250, -750, -500);
+	pick.setShieldBox(1, 12000, 12250, -6750, -6500);
+	pick.setShieldBox(2, 12000, 12250, -7250, -7000);
+	pick.setShieldBox(3, 6400, 6650, -6750, -6500);
+	pick.setShieldBox(4, 6400, 6650, -7750, -7500);
+	pick.setShieldBox(5, 10375, 10625, -17500, -17250);
+	pick.setShieldBox(6, 16375, 16625, -14500, -14250);
 }
 
 void DisplayWrathWorld::setAmmo()
 {
 	pick.setAmmoBox(0, 16000, 16250, 250, 500);
-	pick.setAmmoBox(1, 13000, 13250, -6500, -6250);
-	pick.setAmmoBox(2, 13000, 13250, -7000, -6750);
-	pick.setAmmoBox(3, 6400, 6650, -7000, -6750);
-	pick.setAmmoBox(4, 6400, 6650, -8000, -7750);
-	pick.setAmmoBox(5, 12000, 12250, -15875, -15625);
-	pick.setAmmoBox(6, 18000, 18250, -15875, -15625);
+	pick.setAmmoBox(1, 13000, 13250, -6750, -6500);
+	pick.setAmmoBox(2, 13000, 13250, -7250, -7000);
+	pick.setAmmoBox(3, 6400, 6650, -7250, -7000);
+	pick.setAmmoBox(4, 6400, 6650, -8250, -8000);
+	pick.setAmmoBox(5, 12000, 12250, -16025, -15875);
+	pick.setAmmoBox(6, 18000, 18250, -16025, -15875);
 }
 
 void DisplayWrathWorld::collisionCheck()
@@ -1096,10 +1342,12 @@ void DisplayWrathWorld::CreateTextureList()
 	drawPortal();				//10
 	drawRoom1Walls();		//11-41
 	drawServerWalls();
+	drawPowerWalls();
+	drawBossRoom();
 	
 	healthChecksDraw();
 	shieldChecksDraw();
 	ammoChecksDraw();
 
-	//last number used: 102
+	//last number used: 246
 }
