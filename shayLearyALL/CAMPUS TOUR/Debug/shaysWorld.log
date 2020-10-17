@@ -12,12 +12,12 @@ C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Ob
           [
               _Ty=Point3D
           ]
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(191): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D)' being compiled
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(307): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D)' being compiled
           with
           [
               _Ty=Point3D
           ]
-C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(120): message : see reference to class template instantiation 'ObjPicking<Enemy>' being compiled
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(122): message : see reference to class template instantiation 'ObjPicking<Enemy>' being compiled
 C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(72,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
