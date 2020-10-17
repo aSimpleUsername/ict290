@@ -18,17 +18,17 @@ void DisplayWrathWorld::myinit()
 	// turn collision detection on
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
-	cam.SetNoBoundingBoxes(5);
+	cam.SetNoBoundingBoxes(25);
 
 
 	// set starting position of user
 	//cam.Position(10000, 10550.0, 11000.0, 180.0);
 
 	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
-	cam.Position(6780, 10550.0, -20950.0, 180.0);
+	//cam.Position(6780, 10550.0, -20950.0, 180.0);
 
 	// creates bounding boxes and places in array
 	CreateBoundingBoxes();
@@ -76,12 +76,122 @@ void DisplayWrathWorld::DeleteImageFromMemory(unsigned char* tempImage)
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::CreateBoundingBoxes()
 {
-	// chanc block
-	//cam.SetAABBMaxX(0, 35879.0);
-	//cam.SetAABBMinX(0, 33808.0);
-	//cam.SetAABBMaxZ(0, 22096.0);
-	//cam.SetAABBMinZ(0, 4688.0);
-	// current AABB array size = 5
+	cam.SetAABBMaxX(0, 7050.0);
+	cam.SetAABBMinX(0, 6900.0);
+	cam.SetAABBMaxZ(0, 12500.0);
+	cam.SetAABBMinZ(0, 8500.0);
+
+	cam.SetAABBMaxX(1, 13100.0);
+	cam.SetAABBMinX(1, 12950.0);
+	cam.SetAABBMaxZ(1, 12500.0);
+	cam.SetAABBMinZ(1, 8500.0);
+
+	cam.SetAABBMaxX(2, 9050.0);
+	cam.SetAABBMinX(2, 7000.0);
+	cam.SetAABBMaxZ(2, 8550.0);
+	cam.SetAABBMinZ(2, 2450.0);
+
+	cam.SetAABBMaxX(3, 19000.0);
+	cam.SetAABBMinX(3, 10950.0);
+	cam.SetAABBMaxZ(3, 8550.0);
+	cam.SetAABBMinZ(3, 2450.0);
+
+	cam.SetAABBMaxX(4, 9550.0);
+	cam.SetAABBMinX(4, 8450.0);
+	cam.SetAABBMaxZ(4, 11050.0);
+	cam.SetAABBMinZ(4, 9950.0);
+
+	cam.SetAABBMaxX(5, 11550.0);
+	cam.SetAABBMinX(5, 10450.0);
+	cam.SetAABBMaxZ(5, 11050.0);
+	cam.SetAABBMinZ(5, 9950.0);
+
+	cam.SetAABBMaxX(6, 11550.0);
+	cam.SetAABBMinX(6, 8450.0);
+	cam.SetAABBMaxZ(6, 10150.0);
+	cam.SetAABBMinZ(6, 9950.0);
+
+	cam.SetAABBMaxX(7, 19150.0);
+	cam.SetAABBMinX(7, 18950.0);
+	cam.SetAABBMaxZ(7, 2500.0);
+	cam.SetAABBMinZ(7, -28500.0);
+
+	cam.SetAABBMaxX(8, 7050.0);
+	cam.SetAABBMinX(8, 5950.0);
+	cam.SetAABBMaxZ(8, 2500.0);
+	cam.SetAABBMinZ(8, -3550.0);
+
+	cam.SetAABBMaxX(9, 6050.0);
+	cam.SetAABBMinX(9, 3950.0);
+	cam.SetAABBMaxZ(9, -3550.0);
+	cam.SetAABBMinZ(9, -23550.0);
+
+	cam.SetAABBMaxX(10, 7050.0);
+	cam.SetAABBMinX(10, 5950.0);
+	cam.SetAABBMaxZ(10, -13450.0);
+	cam.SetAABBMinZ(10, -18550.0);
+
+	cam.SetAABBMaxX(11, 4050.0);
+	cam.SetAABBMinX(11, 3950.0);
+	cam.SetAABBMaxZ(11, -23550.0);
+	cam.SetAABBMinZ(11, -26450.0);
+
+	cam.SetAABBMaxX(12, 6050.0);
+	cam.SetAABBMinX(12, 3950.0);
+	cam.SetAABBMaxZ(12, -26450.0);
+	cam.SetAABBMinZ(12, -28550.0);
+
+	cam.SetAABBMaxX(13, 11050.0);
+	cam.SetAABBMinX(13, 1050.0);
+	cam.SetAABBMaxZ(13, -28450.0);
+	cam.SetAABBMinZ(13, -34050.0);
+
+	cam.SetAABBMaxX(14, 1050.0);
+	cam.SetAABBMinX(14, 850.0);
+	cam.SetAABBMaxZ(14, -34050.0);
+	cam.SetAABBMinZ(14, -45050.0);
+
+	cam.SetAABBMaxX(15, 4800.0);
+	cam.SetAABBMinX(15, 1050.0);
+	cam.SetAABBMaxZ(15, -44950.0);
+	cam.SetAABBMinZ(15, -49500.0);
+
+	cam.SetAABBMaxX(16, 8550.0);
+	cam.SetAABBMinX(16, 4700.0);
+	cam.SetAABBMaxZ(16, -49450.0);
+	cam.SetAABBMinZ(16, -53950.0);
+
+	cam.SetAABBMaxX(17, 16550.0);
+	cam.SetAABBMinX(17, 8450.0);
+	cam.SetAABBMaxZ(17, -53950.0);
+	cam.SetAABBMinZ(17, -54150.0);
+
+	cam.SetAABBMaxX(18, 20400.0);
+	cam.SetAABBMinX(18, 16450.0);
+	cam.SetAABBMaxZ(18, -49450.0);
+	cam.SetAABBMinZ(18, -54150.0);
+
+	cam.SetAABBMaxX(19, 23950.0);
+	cam.SetAABBMinX(19, 20200.0);
+	cam.SetAABBMaxZ(19, -44950.0);
+	cam.SetAABBMinZ(19, -49550.0);
+
+	cam.SetAABBMaxX(20, 24150.0);
+	cam.SetAABBMinX(20, 23950.0);
+	cam.SetAABBMaxZ(20, -33950.0);
+	cam.SetAABBMinZ(20, -45050.0);
+
+	cam.SetAABBMaxX(21, 24050.0);
+	cam.SetAABBMinX(21, 13950.0);
+	cam.SetAABBMaxZ(21, -28450.0);
+	cam.SetAABBMinZ(21, -34050.0);
+
+	cam.SetAABBMaxX(22, 12950.0);
+	cam.SetAABBMinX(22, 7050.0);
+	cam.SetAABBMaxZ(22, 12650.0);
+	cam.SetAABBMinZ(22, 12450.0);
+
+	// current AABB array size = 25
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
@@ -149,7 +259,13 @@ void DisplayWrathWorld::CreateTextures()
 	tp.CreatePNGTexture(ELECTRICITY, image, 512, 384);
 
 	image = tp.LoadTexture("data/vent.png");
-	tp.CreatePNGTexture(VENT, image, 286, 320);
+	tp.CreatePNGTexture(VENT, image, 352, 626);
+
+	image = tp.LoadTexture("data/server.png");
+	tp.CreatePNGTexture(SERVER, image, 800, 508);
+
+	image = tp.LoadTexture("data/serveryz.png");
+	tp.CreatePNGTexture(SERVER_YZ, image, 508, 800);
 
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -339,6 +455,12 @@ void DisplayWrathWorld::displayServerWalls()
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
 	for (int i = 85; i <= 86; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SERVER));
+	for (int i = 253; i <= 260; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SERVER_YZ));
+	for (int i = 261; i <= 268; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::drawServerWalls()
@@ -410,6 +532,28 @@ void DisplayWrathWorld::drawServerWalls()
 
 	tp.CreateDisplayList(XY, 85, 1000, 500, 13000, 10000, -16500, 1.0, 3.0);
 	tp.CreateDisplayList(XY, 86, 1000, 500, 13000, 10000, -15500, 1.0, 3.0);
+
+	//servers xy walls
+	tp.CreateDisplayList(XY, 253, 1000, 500, 9000, 10000, -4700, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 254, 1000, 500, 14000, 10000, -4700, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 255, 1000, 500, 9000, 10000, -5900, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 256, 1000, 500, 14000, 10000, -5900, 3.0, 3.0);
+
+	tp.CreateDisplayList(XY, 257, 1000, 500, 9000, 10000, -7100, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 258, 1000, 500, 14000, 10000, -7100, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 259, 1000, 500, 9000, 10000, -8300, 3.0, 3.0);
+	tp.CreateDisplayList(XY, 260, 1000, 500, 14000, 10000, -8300, 3.0, 3.0);
+
+	//servers yz walls
+	tp.CreateDisplayList(YZ, 261, 500, 1200, 9000, 10000, -8300, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 262, 500, 1200, 9000, 10000, -5900, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 263, 500, 1200, 12000, 10000, -8300, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 264, 500, 1200, 12000, 10000, -5900, 3.0, 1.0);
+
+	tp.CreateDisplayList(YZ, 265, 500, 1200, 14000, 10000, -8300, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 266, 500, 1200, 14000, 10000, -5900, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 267, 500, 1200, 17000, 10000, -8300, 3.0, 1.0);
+	tp.CreateDisplayList(YZ, 268, 500, 1200, 17000, 10000, -5900, 3.0, 1.0);
 }
 
 void DisplayWrathWorld::displayPowerWalls()
@@ -478,7 +622,7 @@ void DisplayWrathWorld::drawPowerWalls()
 	tp.CreateDisplayList(XY, 213, 1000, 500, 4000, 10000, -23500, 2, 3);
 	
 	//Vent
-	tp.CreateDisplayList(YZ, 214, 250, 500, 6000, 10000, -25500, 4, 2);
+	tp.CreateDisplayList(YZ, 214, 1000, 1000, 6000, 10000, -25500, 1, 1);
 
 	//Final Hallway
 	tp.CreateDisplayList(YZ, 215, 500, 1000, 11000, 10000, -34000, 1, 5.5);
@@ -488,15 +632,15 @@ void DisplayWrathWorld::drawPowerWalls()
 	tp.CreateDisplayList(XY, 219, 1000, 500, 11000, 11000, -34000, 3, 4);
 
 	//electricity
-	tp.CreateDisplayList(XZ, 246, 500, 500, 9000, 10050.0, -23500.0, 2, 4);
-	tp.CreateDisplayList(XZ, 247, 500, 500, 13000, 10050.0, -23500.0, 6, 4);
+	tp.CreateDisplayList(XZ, 246, 500, 500, 9000, 10010.0, -23500.0, 2, 4);
+	tp.CreateDisplayList(XZ, 247, 500, 500, 13000, 10010.0, -23500.0, 6, 4);
 
-	tp.CreateDisplayList(XZ, 248, 500, 500, 9000, 10050.0, -19500.0, 14, 2);
-	tp.CreateDisplayList(XZ, 249, 500, 500, 9000, 10050.0, -20500.0, 6, 2);
+	tp.CreateDisplayList(XZ, 248, 500, 500, 9000, 10010.0, -19500.0, 14, 2);
+	tp.CreateDisplayList(XZ, 249, 500, 500, 9000, 10010.0, -20500.0, 6, 2);
 
-	tp.CreateDisplayList(XZ, 250, 500, 500, 11000, 10050.0, -22500.0, 2, 4);
-	tp.CreateDisplayList(XZ, 251, 500, 500, 13000, 10050.0, -21500.0, 2, 2);
-	tp.CreateDisplayList(XZ, 252, 500, 500, 15000, 10050.0, -20500.0, 2, 2);
+	tp.CreateDisplayList(XZ, 250, 500, 500, 11000, 10010.0, -22500.0, 2, 4);
+	tp.CreateDisplayList(XZ, 251, 500, 500, 13000, 10010.0, -21500.0, 2, 2);
+	tp.CreateDisplayList(XZ, 252, 500, 500, 15000, 10010.0, -20500.0, 2, 2);
 }
 
 void DisplayWrathWorld::displayBossRoom()
@@ -528,9 +672,29 @@ void DisplayWrathWorld::displayBossRoom()
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
 	for (int i = 244; i <= 245; ++i) glCallList(i);
 
-	//glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
-	//glCallList(230);
-	//glCallList(231);
+	//controls xy
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SERVER));
+	glCallList(269);
+	glCallList(271);
+	glCallList(275);
+	glCallList(277);
+	for (int i = 281; i <= 282; ++i) glCallList(i);
+
+	//controls yz
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SERVER_YZ));
+	glCallList(270);
+	glCallList(272);
+	glCallList(276);
+	glCallList(278);
+	for (int i = 284; i <= 285; ++i) glCallList(i);
+
+	//control tops
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SERVER));
+	glCallList(273);
+	glCallList(274);
+	glCallList(279);
+	glCallList(280);
+	glCallList(283);
 
 }
 
@@ -621,6 +785,70 @@ void DisplayWrathWorld::drawBossRoom()
 	tp.CreateDisplayList(XY, 244, 1000, 500, 8500, 10000, -42500, 1, 6);
 	tp.CreateDisplayList(XY, 245, 1000, 500, 8500, 10000, -41500, 1, 6);
 
+	//Control panels left 
+	tp.CreateDisplayList(XY, 269, 1000, 500, 1000, 10000, -45000, 3.75, 1);
+	tp.CreateDisplayList(YZ, 270, 500, 1000, 4750, 10000, -49500, 1, 4.5);
+
+	tp.CreateDisplayList(XY, 271, 1000, 500, 4750, 10000, -49500, 3.75, 1);
+	tp.CreateDisplayList(YZ, 272, 500, 1000, 8500, 10000, -54000, 1, 4.5);
+
+	glNewList(273, GL_COMPILE);
+	glBegin(GL_TRIANGLES);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(1000, 10500, -45000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(4750, 10500, -45000);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(4750, 10500, -49500);
+	glEnd();
+	glEndList();
+
+	glNewList(274, GL_COMPILE);
+	glBegin(GL_TRIANGLES);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(4750, 10500, -49500);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(8500, 10500, -49500);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(8500, 10500, -54000);
+	glEnd();
+	glEndList();
+
+	//Control Panels right
+	tp.CreateDisplayList(XY, 275, 1000, 500, 20250, 10000, -45000, 3.75, 1);
+	tp.CreateDisplayList(YZ, 276, 500, 1000, 20250, 10000, -49500, 1, 4.5);
+
+	tp.CreateDisplayList(XY, 277, 1000, 500, 16500, 10000, -49500, 3.75, 1);
+	tp.CreateDisplayList(YZ, 278, 500, 1000, 16500, 10000, -54000, 1, 4.5);
+
+	glNewList(279, GL_COMPILE);
+	glBegin(GL_TRIANGLES);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(24000, 10500, -45000);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(20250, 10500, -45000);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(20250, 10500, -49500);
+	glEnd();
+	glEndList();
+
+	glNewList(280, GL_COMPILE);
+	glBegin(GL_TRIANGLES);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(20250, 10500, -49500);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(16500, 10500, -49500);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(16500, 10500, -54000);
+	glEnd();
+	glEndList();
+
+	//Centre controls
+	tp.CreateDisplayList(XY, 281, 1000, 500, 10500, 10000, -49500, 4, 1);
+	tp.CreateDisplayList(XY, 282, 1000, 500, 10500, 10000, -50500, 4, 1);
+	tp.CreateDisplayList(XZ, 283, 1000, 1000, 10500, 10500, -50500, 4, 1);
+	tp.CreateDisplayList(YZ, 284, 500, 1000, 10500, 10000, -50500, 1, 1);
+	tp.CreateDisplayList(YZ, 285, 500, 1000, 14500, 10000, -50500, 1, 1);
 
 	/*
 	//Ceiling
@@ -1349,5 +1577,5 @@ void DisplayWrathWorld::CreateTextureList()
 	shieldChecksDraw();
 	ammoChecksDraw();
 
-	//last number used: 246
+	//last number used: 285 (17/10/2020)
 }

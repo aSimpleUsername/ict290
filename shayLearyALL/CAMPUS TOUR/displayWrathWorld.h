@@ -37,6 +37,8 @@
 #define AMMO_YZ						14
 #define ELECTRICITY					15
 #define VENT						16
+#define SERVER						17
+#define SERVER_YZ					18
 
 	/**
 	* @class displayWrathWorld
