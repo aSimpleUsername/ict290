@@ -49,14 +49,11 @@ void DisplayWrathWorld::myinit()
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::initEnemies()
 {
-	enemyObjects.addObjectToBuffer(&enemy0);	//room 1
-	enemyObjects.addObjectToBuffer(&enemy1);	//room 1
-	enemyObjects.addObjectToBuffer(&enemy2);	//room 1
-	enemyObjects.addObjectToBuffer(&enemy3);	//room 1
-
-
-	for(int i=0; i<enemyObjects.size(); ++i)
-		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer()); 
+	for (int i = 0; i < NUM_ENEMIES; ++i)
+	{
+		enemyObjects.addObjectToBuffer(&enemies[i]);
+		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer());
+	}
 }
 
 //--------------------------------------------------------------------------------------
