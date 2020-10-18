@@ -75,8 +75,8 @@ bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vec
         {
             if (i == 2) 
             {
-                t1 = ((e + 200) / f);
-                t2 = ((e - 450) / f);
+                t1 = ((e + 150) / f);
+                t2 = ((e - 150) / f);
             }
             else 
             {
