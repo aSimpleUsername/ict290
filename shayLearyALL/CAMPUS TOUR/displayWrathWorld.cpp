@@ -59,6 +59,7 @@ void DisplayWrathWorld::initEnemies()
 //--------------------------------------------------------------------------------------
 //  Delete raw image and clear memory
 //--------------------------------------------------------------------------------------
+
 void DisplayWrathWorld::DeleteImageFromMemory(unsigned char* tempImage)
 {
 	tempImage = NULL;
@@ -289,16 +290,17 @@ void DisplayWrathWorld::displayEnemies()
 	Point3D ray(cam.GetLX(), cam.GetLY(), cam.GetLZ());
 	Point3D camPos(cam.getX(), cam.getY(), cam.getZ());
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
-/*
-	for (int i = 0; i<enemyObjects.size(); ++i)
+
+	for (int i = 0; i < enemyObjects.size(); ++i)
 	{
 		enemyObjects.getObjectFromBuffer(i)->stateMachine();
-		enemyObjects.getObjectFromBuffer(i)->drawEnemy(); 
+		enemyObjects.getObjectFromBuffer(i)->drawEnemy();
 	}
-*/
-	//if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
-		//std::cout << "hit" << std::endl;
-	//}
+
+	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
+		std::cout << "hit" << std::endl;
+	}
+
 	enemyObjects.getObjectFromBuffer(0)->stateMachine();
 	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
 	if (enemyObjects.detectCollisionWithBox(ray,camPos,enemyObjects.getObjectFromBuffer(0)->getAABB(), enemyObjects.getObjectFromBuffer(0)->getLocation())){

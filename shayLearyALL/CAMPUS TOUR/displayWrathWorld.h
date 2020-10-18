@@ -120,7 +120,10 @@ private:
 
 	Player player;
 	ObjPicking<Enemy> enemyObjects; 
+<<<<<<< HEAD
 
+=======
+>>>>>>> connor
 
 	static int const NUM_ENEMIES = 4;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
@@ -128,7 +131,10 @@ private:
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
 									Enemy(15000, 19000, -3500, 2500, 10550) };		// room 1
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> connor
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 
