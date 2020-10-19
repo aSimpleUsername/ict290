@@ -110,6 +110,19 @@ void Enemy::drawProjectiles()
 		m_projectiles[i].drawProjectile();
 }
 
+void Enemy::checkHit(Entity* target)
+{
+	for (int j = 0; j < MAX_PROJECTILES; ++j)
+	{
+		if (m_projectiles[j].m_location.distance(target->getLocation()) < 200)
+		{
+			target->decreaseHealth();
+			m_projectiles[j].m_location = Point3D(0.0, 0.0, 0.0);
+			m_projectiles[j].m_heading = Point3D(0.0, 0.0, 0.0);
+		}
+	}
+}
+
 void Enemy::calculateHeading()
 {
 	Point3D frontCenter;

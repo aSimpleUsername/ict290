@@ -37,6 +37,7 @@ public:
 	double m_timer;															//TODO: make private
 
 	void stateMachine();
+	void checkHit(Entity* target);
 
 private:
 	void updateHitBox(float x, float y, float z);
