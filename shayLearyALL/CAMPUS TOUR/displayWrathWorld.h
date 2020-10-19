@@ -13,6 +13,7 @@
 #include "ObjPicking.h"
 #include "Enemy.h"
 #include "Player.h"
+#include "userInterface.h"
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -56,6 +57,7 @@ public:
 	Camera cam;		
 	TexturedPolygons tp;
 	Pickups pick;
+	UserInterface ui;
 	
 	unsigned char* image = NULL;
 

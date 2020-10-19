@@ -1230,6 +1230,15 @@ void DisplayShaysWorld::DrawBackdrop()
 	displayStairRailing();
 	displayEnemies();
 	if (lightsOn) DisplayLights();
+
+	ui.playerHealth(player.getHealth());
+	ui.info(player.GetX(), player.GetY(), player.GetZ());
+
+	if (player.getHealth() <= 0)
+	{
+		cam.dead = true;
+		DisplayExit = true;
+	}
 }
 
 //--------------------------------------------------------------------------------------
@@ -1244,7 +1253,7 @@ void DisplayShaysWorld::displayEnemies()
 	enemyObjects.getObjectFromBuffer(0)->stateMachine();
 
 	//bottom
-	glNewList(286, GL_COMPILE);
+	glNewList(751, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
@@ -1258,7 +1267,7 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	//top
-	glNewList(287, GL_COMPILE);
+	glNewList(752, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
@@ -1272,7 +1281,7 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	//front
-	glNewList(288, GL_COMPILE);
+	glNewList(753, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
@@ -1286,7 +1295,7 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	//back
-	glNewList(289, GL_COMPILE);
+	glNewList(754, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
@@ -1300,7 +1309,7 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	//Left
-	glNewList(290, GL_COMPILE);
+	glNewList(755, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
@@ -1314,7 +1323,7 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	//Right
-	glNewList(291, GL_COMPILE);
+	glNewList(756, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
@@ -1328,19 +1337,21 @@ void DisplayShaysWorld::displayEnemies()
 	glEndList();
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_SIDE));
-	glCallList(286);		// bottom
-	glCallList(287);		// top
-	glCallList(290);		// left
-	glCallList(291);		// right
+	glCallList(751);		// bottom
+	glCallList(752);		// top
+	glCallList(755);		// left
+	glCallList(756);		// right
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_FRONT));
-	glCallList(288);		// front
+	glCallList(753);		// front
 
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
-	glCallList(289);		// back
+	glCallList(754);		// back
 
 	if (enemyObjects.detectCollisionWithBox(ray, camPos, enemyObjects.getObjectFromBuffer(0)->getAABB(), enemyObjects.getObjectFromBuffer(0)->getLocation()))
-		std::cout << "hit" << std::endl;
+		ui.hitmarker();
+
+	enemy.checkHit(&player);
 }
 
 
@@ -5827,6 +5838,7 @@ void DisplayShaysWorld::CreateTextureList()
 	drawPortal();				// 593
 	drawSpecialPortal(); //750
 	drawStairRailing();
+								//enemies 751-756
 
-	//last number used: 750
+	//last number used: 756
 }

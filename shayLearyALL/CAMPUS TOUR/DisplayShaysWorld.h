@@ -15,6 +15,7 @@
 #include "ObjPicking.h"
 #include "Enemy.h"
 #include "Player.h"
+#include "userInterface.h"
 
 
 
@@ -307,6 +308,7 @@
 #define VENDING_MACHINE_3			245
 #define VLAD						246
 #define BIN_TOP						247
+//Enemy TEXTURES
 #define ENEMY_FRONT					248
 #define ENEMY_BACK					249
 #define ENEMY_SIDE					250
@@ -326,6 +328,8 @@ public:
 	// objects
 	Camera cam;
 	TexturedPolygons tp;
+	UserInterface ui;
+
 
 	unsigned char* image = NULL;
 

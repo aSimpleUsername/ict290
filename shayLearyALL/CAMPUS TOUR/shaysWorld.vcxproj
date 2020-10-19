@@ -143,6 +143,7 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundTime.cpp" />
     <ClCompile Include="texturedPolygons.cpp" />
+    <ClCompile Include="userInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundTime.h" />
     <ClInclude Include="texturedPolygons.h" />
+    <ClInclude Include="userInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />

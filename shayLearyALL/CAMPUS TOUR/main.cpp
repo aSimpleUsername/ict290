@@ -124,9 +124,6 @@ void Display()
 			shaysWorld.cam.DisplayNoExit(width, height, shaysWorld.tp.GetTexture(NO_EXIT));
 		}
 
-		// print postion to assist development
-		shaysWorld.cam.printPosition();
-
 		// display images
 		shaysWorld.DrawBackdrop();
 
@@ -146,9 +143,6 @@ void Display()
 			shaysWorld.myinit();
 			shaysWorld.cam.Position(1400, 11234, 39740, 0);
 		}
-
-		// print postion to assist development
-		wrathWorld.cam.printPosition();
 
 		// display images
 		wrathWorld.DrawBackdrop();

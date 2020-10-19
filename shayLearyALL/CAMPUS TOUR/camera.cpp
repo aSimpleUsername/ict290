@@ -350,14 +350,6 @@ void Camera::Position (GLdouble const & tempX, GLdouble const & tempY,
 }
 
 //----------------------------------------------------------------------------------------
-// Prints the current postion of camera to assist in development
-//----------------------------------------------------------------------------------------
-void Camera::printPosition(void)
-{
-	std::cout << "Current positon = X: " << m_x << ", Y: " << m_y << ", Z: " << m_z << std::endl;
-}
-
-//----------------------------------------------------------------------------------------
 // Check ok to move
 //----------------------------------------------------------------------------------------
 void Camera::CheckCamera()
@@ -373,10 +365,23 @@ void Camera::CheckCamera()
 //----------------------------------------------------------------------------------------
 void Camera::callGLLookAt()
 {
-	glLoadIdentity();
-	gluLookAt(m_x, m_y, m_z, 
-		      m_x + m_lookX, m_y + m_lookY, m_z + m_lookZ,
-			  0.0f, 1.0f, 0.0f);
+	if (!dead)
+	{
+		glLoadIdentity();
+		gluLookAt(m_x, m_y, m_z,
+			m_x + m_lookX, m_y + m_lookY, m_z + m_lookZ,
+			0.0f, 1.0f, 0.0f);
+	}
+	else
+	{
+		glLoadIdentity();
+		gluLookAt(m_x, m_y, m_z,
+			m_x + m_lookX, m_y + m_lookY, m_z + m_lookZ,
+			-1.0f, 0.0f, 0.0f);
+		m_moveSpeed = 0;
+		m_xrotateSpeed = 0;
+		m_yrotateSpeed = 0;
+	}
 }
 
 //--------------------------------------------------------------------------------------

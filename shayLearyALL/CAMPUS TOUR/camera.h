@@ -10,7 +10,6 @@
 
 #define PI 3.1415962654
 
-#include <stdio.h>	// for printPostion()
 #include "collision.h"
 #include "cameraMap.h"
 #include "PlainLinkedList.h"
@@ -30,6 +29,7 @@ public:
 
 	Camera();
 	virtual ~Camera() {es->Unload(stepSound);}
+	bool dead = false;
 
 	//----------------------------------------------------------------------------------
 	
@@ -221,11 +221,6 @@ public:
 				   GLdouble const & tempY,
 				   GLdouble const & tempZ,
 				   GLdouble const & tempAngle);
-	/**
-		* @brief prints position to camera
-		* @return void
-	*/
-	void printPosition(void);
 	/**
 		* @brief checks if ok to move
 		* @return void

@@ -22,10 +22,10 @@ void DisplayWrathWorld::myinit()
 
 
 	// set starting position of user
-	//cam.Position(10000, 10550.0, 11000.0, 180.0);
+	cam.Position(10000, 10550.0, 11000.0, 180.0);
 
 	//Boss room
-	cam.Position(13500, 10550.0, -46820.0, 180.0);
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -40,8 +40,6 @@ void DisplayWrathWorld::myinit()
 	CreateTextures();
 
 	initEnemies();
-	//Creating enemy object in the array at a given position
-	//enemyObjects.addObjectToBuffer(Enemy(10020, 10455, 10000));
 }
 
 //--------------------------------------------------------------------------------------
@@ -292,6 +290,15 @@ void DisplayWrathWorld::DrawBackdrop()
 	healthChecksDisplay();
 	shieldChecksDisplay();
 	ammoChecksDisplay(); 
+
+	ui.playerHealth(player.getHealth());
+	ui.info(player.GetX(), player.GetY(), player.GetZ());
+
+	if (player.getHealth() <= 0)
+	{
+		cam.dead = true;
+		DisplayExit = true;
+	}
 }
 
 void DisplayWrathWorld::displayEnemies()
@@ -401,8 +408,9 @@ void DisplayWrathWorld::displayEnemies()
 		glCallList(289);		// back
 
 		if (enemyObjects.detectCollisionWithBox(ray, camPos, enemyObjects.getObjectFromBuffer(i)->getAABB(), enemyObjects.getObjectFromBuffer(i)->getLocation()))
-			std::cout << "hit" << std::endl;
+			ui.hitmarker();
 
+		enemies[i].checkHit(&player);
 	}
 
 }
