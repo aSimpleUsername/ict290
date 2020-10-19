@@ -265,6 +265,15 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/serveryz.png");
 	tp.CreatePNGTexture(SERVER_YZ, image, 508, 800);
 
+	image = tp.LoadTexture("data/enemy_front.png");
+	tp.CreatePNGTexture(ENEMY_FRONT, image, 500, 500);
+
+	image = tp.LoadTexture("data/enemy_back.png");
+	tp.CreatePNGTexture(ENEMY_BACK, image, 500, 500);
+
+	image = tp.LoadTexture("data/enemy_side.png");
+	tp.CreatePNGTexture(ENEMY_SIDE, image, 500, 500);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -291,21 +300,111 @@ void DisplayWrathWorld::displayEnemies()
 	Point3D camPos(cam.getX(), cam.getY(), cam.getZ());
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
 
-	for (int i = 0; i < enemyObjects.size(); ++i)
+	for (int i = 0; i < NUM_ENEMIES; ++i)
 	{
 		enemyObjects.getObjectFromBuffer(i)->stateMachine();
-		enemyObjects.getObjectFromBuffer(i)->drawEnemy();
+
+		//bottom
+		glNewList(286, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[4].x, enemies[i].getPoints()[4].y, enemies[i].getPoints()[4].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[5].x, enemies[i].getPoints()[5].y, enemies[i].getPoints()[5].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[6].x, enemies[i].getPoints()[6].y, enemies[i].getPoints()[6].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[7].x, enemies[i].getPoints()[7].y, enemies[i].getPoints()[7].z);
+		glEnd();
+		glEndList();
+
+		//top
+		glNewList(287, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[0].x, enemies[i].getPoints()[0].y, enemies[i].getPoints()[0].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[1].x, enemies[i].getPoints()[1].y, enemies[i].getPoints()[1].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[2].x, enemies[i].getPoints()[2].y, enemies[i].getPoints()[2].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[3].x, enemies[i].getPoints()[3].y, enemies[i].getPoints()[3].z);
+		glEnd();
+		glEndList();
+
+		//front
+		glNewList(288, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[4].x, enemies[i].getPoints()[4].y, enemies[i].getPoints()[4].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[0].x, enemies[i].getPoints()[0].y, enemies[i].getPoints()[0].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[3].x, enemies[i].getPoints()[3].y, enemies[i].getPoints()[3].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[7].x, enemies[i].getPoints()[7].y, enemies[i].getPoints()[7].z);
+		glEnd();
+		glEndList();
+
+		//back
+		glNewList(289, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[6].x, enemies[i].getPoints()[6].y, enemies[i].getPoints()[6].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[2].x, enemies[i].getPoints()[2].y, enemies[i].getPoints()[2].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[1].x, enemies[i].getPoints()[1].y, enemies[i].getPoints()[1].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[5].x, enemies[i].getPoints()[5].y, enemies[i].getPoints()[5].z);
+		glEnd();
+		glEndList();
+
+		//Left
+		glNewList(290, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[5].x, enemies[i].getPoints()[5].y, enemies[i].getPoints()[5].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[1].x, enemies[i].getPoints()[1].y, enemies[i].getPoints()[1].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[0].x, enemies[i].getPoints()[0].y, enemies[i].getPoints()[0].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[4].x, enemies[i].getPoints()[4].y, enemies[i].getPoints()[4].z);
+		glEnd();
+		glEndList();
+
+		//Right
+		glNewList(291, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[7].x, enemies[i].getPoints()[7].y, enemies[i].getPoints()[7].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[3].x, enemies[i].getPoints()[3].y, enemies[i].getPoints()[3].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemies[i].getPoints()[2].x, enemies[i].getPoints()[2].y, enemies[i].getPoints()[2].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemies[i].getPoints()[6].x, enemies[i].getPoints()[6].y, enemies[i].getPoints()[6].z);
+		glEnd();
+		glEndList();
+
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_SIDE));
+		glCallList(286);		// bottom
+		glCallList(287);		// top
+		glCallList(290);		// left
+		glCallList(291);		// right
+
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_FRONT));
+		glCallList(288);		// front
+
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
+		glCallList(289);		// back
+
+		if (enemyObjects.detectCollisionWithBox(ray, camPos, enemyObjects.getObjectFromBuffer(i)->getAABB(), enemyObjects.getObjectFromBuffer(i)->getLocation()))
+			std::cout << "hit" << std::endl;
+
 	}
 
-	if (enemyObjects.detectCollisionWithSphere(cam.GetLX(), cam.GetLY(), cam.GetLZ(), cam.getX(), cam.getY(), cam.getZ())) {
-		std::cout << "hit" << std::endl;
-	}
-
-	enemyObjects.getObjectFromBuffer(0)->stateMachine();
-	enemyObjects.getObjectFromBuffer(0)->drawEnemy();
-	if (enemyObjects.detectCollisionWithBox(ray,camPos,enemyObjects.getObjectFromBuffer(0)->getAABB(), enemyObjects.getObjectFromBuffer(0)->getLocation())){
-		std::cout << "hit" << std::endl;
-	}
 }
 
 
@@ -1564,6 +1663,7 @@ void DisplayWrathWorld::ammoChecksDisplay()
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::CreateTextureList()
 {
+
 	drawSkyBox();				// 4-9
 	drawGroundPlane();			// 3
 	drawPortal();				//10
@@ -1576,5 +1676,7 @@ void DisplayWrathWorld::CreateTextureList()
 	shieldChecksDraw();
 	ammoChecksDraw();
 
-	//last number used: 285 (17/10/2020)
+							//286-291 used in drawEnemies()
+
+	//last number used: 291 (18/10/2020)
 }

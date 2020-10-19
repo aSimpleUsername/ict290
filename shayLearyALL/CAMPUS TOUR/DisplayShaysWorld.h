@@ -307,7 +307,10 @@
 #define VENDING_MACHINE_3			245
 #define VLAD						246
 #define BIN_TOP						247
-// 246 Next
+#define ENEMY_FRONT					248
+#define ENEMY_BACK					249
+#define ENEMY_SIDE					250
+// 251 Next
 
 	/**
 	* @class DisplayShaysWorld
@@ -368,7 +371,7 @@ private:
 
 	Player player;
 	ObjPicking<Enemy> enemyObjects;
-	Enemy enemy0 = Enemy(-24000, -1800, 30000, 40000, 10450);	//courtyard
+	Enemy enemy = Enemy(-24000, -1800, 30000, 40000, 10450);	//courtyard
 
 	// functions to display display lists (images) and bind them to a texture
 		/**

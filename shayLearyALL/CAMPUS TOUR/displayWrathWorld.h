@@ -39,6 +39,9 @@
 #define VENT						16
 #define SERVER						17
 #define SERVER_YZ					18
+#define ENEMY_FRONT					19
+#define ENEMY_BACK					20
+#define ENEMY_SIDE					21
 
 	/**
 	* @class displayWrathWorld
@@ -127,8 +130,6 @@ private:
 									Enemy(7000, 15000, -3500, 0, 10550),			// room 1
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
 									Enemy(15000, 19000, -3500, 2500, 10550) };		// room 1
-
-	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 
 		/**

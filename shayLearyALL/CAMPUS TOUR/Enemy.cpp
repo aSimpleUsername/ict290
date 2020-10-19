@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-Enemy::Enemy(double x, double y, double z)
+/*Enemy::Enemy(double x, double y, double z)
 	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
 		m_state(PATROL)
 {
@@ -22,7 +22,7 @@ Enemy::Enemy(double x, double y, double z)
 	m_patrolTarget = Point3D(0.0, y, 0.0);
 
 	updateHitBox(x, y, z);
-}
+}*/
 
 Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
 	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
@@ -30,15 +30,15 @@ Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
 {
 	m_location = Point3D::randomPointXZ(xmin, xmax, zmin, zmax, y);
 	//top 4 points going clockwise starting with front left
-	m_p1 = Point3D(m_location.x - 150, m_location.y + 200, m_location.z + 150);
-	m_p2 = Point3D(m_location.x - 150, m_location.y + 200, m_location.z - 150);
-	m_p3 = Point3D(m_location.x + 150, m_location.y + 200, m_location.z - 150);
-	m_p4 = Point3D(m_location.x + 150, m_location.y + 200, m_location.z + 150);
+	m_points[0] = Point3D(m_location.x - SCALE, m_location.y + SCALE, m_location.z + SCALE);
+	m_points[1] = Point3D(m_location.x - SCALE, m_location.y + SCALE, m_location.z - SCALE);
+	m_points[2] = Point3D(m_location.x + SCALE, m_location.y + SCALE, m_location.z - SCALE);
+	m_points[3] = Point3D(m_location.x + SCALE, m_location.y + SCALE, m_location.z + SCALE);
 	//bottom 4 points going clockwise starting with front left (player is 450 units tall)
-	m_p5 = Point3D(m_location.x - 150, m_location.y - 450, m_location.z + 150);
-	m_p6 = Point3D(m_location.x - 150, m_location.y - 450, m_location.z - 150);
-	m_p7 = Point3D(m_location.x + 150, m_location.y - 450, m_location.z - 150);
-	m_p8 = Point3D(m_location.x + 150, m_location.y - 450, m_location.z + 150);
+	m_points[4] = Point3D(m_location.x - SCALE, m_location.y - SCALE, m_location.z + SCALE);
+	m_points[5] = Point3D(m_location.x - SCALE, m_location.y - SCALE, m_location.z - SCALE);
+	m_points[6] = Point3D(m_location.x + SCALE, m_location.y - SCALE, m_location.z - SCALE);
+	m_points[7] = Point3D(m_location.x + SCALE, m_location.y - SCALE, m_location.z + SCALE);
 
 	m_health = 5;
 	m_shields = 0;
@@ -77,56 +77,11 @@ void Enemy::updateHitBox(float x, float y, float z)
 	hitBox.SetData(x + 1, x, y + 1, y, z + 1, z);
 }
 
-void Enemy::drawEnemy()
-{
-	// top plane
-	glBegin(GL_POLYGON);
-	glVertex3d(m_p1.x, m_p1.y, m_p1.z);
-	glVertex3d(m_p2.x, m_p2.y, m_p2.z);
-	glVertex3d(m_p3.x, m_p3.y, m_p3.z);
-	glVertex3d(m_p4.x, m_p4.y, m_p4.z);
-	glEnd();
-	// front plane
-	glBegin(GL_POLYGON);
-	glVertex3d(m_p1.x, m_p1.y, m_p1.z);
-	glVertex3d(m_p4.x, m_p4.y, m_p4.z); 
-	glVertex3d(m_p8.x, m_p8.y, m_p8.z);
-	glVertex3d(m_p5.x, m_p5.y, m_p5.z);
-	glEnd();
-	// left plane
-	glBegin(GL_POLYGON);
-	glVertex3d(m_p2.x, m_p2.y, m_p2.z);
-	glVertex3d(m_p1.x, m_p1.y, m_p1.z);
-	glVertex3d(m_p5.x, m_p5.y, m_p5.z);
-	glVertex3d(m_p6.x, m_p6.y, m_p6.z);
-	glEnd();
-	// back plane
-	glBegin(GL_POLYGON);
-	glVertex3d(m_p3.x, m_p3.y, m_p3.z);
-	glVertex3d(m_p2.x, m_p2.y, m_p2.z);
-	glVertex3d(m_p6.x, m_p6.y, m_p6.z);
-	glVertex3d(m_p7.x, m_p7.y, m_p7.z);
-	glEnd();
-	// right plane
-	glBegin(GL_POLYGON);
-	glVertex3d(m_p4.x, m_p4.y, m_p4.z);
-	glVertex3d(m_p3.x, m_p3.y, m_p3.z);
-	glVertex3d(m_p7.x, m_p7.y, m_p7.z);
-	glVertex3d(m_p8.x, m_p8.y, m_p8.z);
-	glEnd();
-}
-
 std::vector<Point3D> Enemy::getAABB()
 {
 	std::vector<Point3D> boundingBox;
-	boundingBox.push_back(m_p1);
-	boundingBox.push_back(m_p2);
-	boundingBox.push_back(m_p3);
-	boundingBox.push_back(m_p4);
-	boundingBox.push_back(m_p5);
-	boundingBox.push_back(m_p6);
-	boundingBox.push_back(m_p7);
-	boundingBox.push_back(m_p8);
+	for (int i = 0; i < POINTS_SIZE; ++i)
+		boundingBox.push_back(m_points[i]);
 	return boundingBox;
 }
 
@@ -158,9 +113,9 @@ void Enemy::drawProjectiles()
 void Enemy::calculateHeading()
 {
 	Point3D frontCenter;
-	frontCenter.x = (m_p1.x + m_p4.x) / 2;
+	frontCenter.x = (m_points[0].x + m_points[3].x) / 2;
 	frontCenter.y = m_location.y;
-	frontCenter.z = (m_p1.z + m_p4.z) / 2;
+	frontCenter.z = (m_points[0].z + m_points[3].z) / 2;
 
 	m_heading = frontCenter - m_location;
 }
@@ -168,18 +123,16 @@ void Enemy::calculateHeading()
 //rotates all points around the center point
 void Enemy::rotateEntity(double rotationSpeed)
 {
-	Point3D* pArray[] = { &m_p1, &m_p2, &m_p3, &m_p4, &m_p5, &m_p6, &m_p7, &m_p8 };
-
-	for (int i = 0; i < 8; ++i)
+	for (int i = 0; i < POINTS_SIZE; ++i)
 	{
-		double x1 = pArray[i]->x - m_location.x;
-		double z1 = pArray[i]->z - m_location.z;
+		double x1 = m_points[i].x - m_location.x;
+		double z1 = m_points[i].z - m_location.z;
 
 		double x2 = x1 * cos(rotationSpeed) - z1 * sin(rotationSpeed);
 		double z2 = x1 * sin(rotationSpeed) + z1 * cos(rotationSpeed);
 
-		pArray[i]->x = x2 + m_location.x;
-		pArray[i]->z = z2 + m_location.z;
+		m_points[i].x = x2 + m_location.x;
+		m_points[i].z = z2 + m_location.z;
 	}
 }
 
@@ -193,17 +146,10 @@ void Enemy::accelerate(float topSpeed)
 	if (topSpeed < 0 && m_acceleration > topSpeed)
 		m_acceleration -= 0.5;
 
-	m_p1 = m_p1 + m_heading.normalise() * m_acceleration;
-	m_p2 = m_p2 + m_heading.normalise() * m_acceleration;
-	m_p3 = m_p3 + m_heading.normalise() * m_acceleration;
-	m_p4 = m_p4 + m_heading.normalise() * m_acceleration;
-	m_p5 = m_p5 + m_heading.normalise() * m_acceleration;
-	m_p6 = m_p6 + m_heading.normalise() * m_acceleration;
-	m_p7 = m_p7 + m_heading.normalise() * m_acceleration;
-	m_p8 = m_p8 + m_heading.normalise() * m_acceleration;
+	for (int i = 0; i < POINTS_SIZE; ++i)
+		m_points[i] = m_points[i] + m_heading.normalise() * m_acceleration;
 	m_location = m_location + m_heading.normalise() * m_acceleration;
 }
-
 
 void Enemy::decelerate()
 {
@@ -214,14 +160,8 @@ void Enemy::decelerate()
 	if (m_acceleration < 0)
 		m_acceleration += 0.5;
 
-	m_p1 = m_p1 + m_heading.normalise() * m_acceleration;
-	m_p2 = m_p2 + m_heading.normalise() * m_acceleration;
-	m_p3 = m_p3 + m_heading.normalise() * m_acceleration;
-	m_p4 = m_p4 + m_heading.normalise() * m_acceleration;
-	m_p5 = m_p5 + m_heading.normalise() * m_acceleration;
-	m_p6 = m_p6 + m_heading.normalise() * m_acceleration;
-	m_p7 = m_p7 + m_heading.normalise() * m_acceleration;
-	m_p8 = m_p8 + m_heading.normalise() * m_acceleration;
+	for (int i = 0; i < POINTS_SIZE; ++i)
+		m_points[i] = m_points[i] + m_heading.normalise() * m_acceleration;
 	m_location = m_location + m_heading.normalise() * m_acceleration;
 }
 
