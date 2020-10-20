@@ -22,13 +22,13 @@ void DisplayWrathWorld::myinit()
 
 
 	// set starting position of user
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
 	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
-	//cam.Position(6780, 10550.0, -20950.0, 180.0);
+	cam.Position(6780, 10550.0, -20950.0, 180.0);
 
 	// creates bounding boxes and places in array
 	CreateBoundingBoxes();
@@ -443,7 +443,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	ammoChecksDisplay(); 
 
 	ui.playerHealth(player.getHealth());
-	ui.info(cam.GetLX(), cam.GetLY(), cam.GetLZ());
+	ui.info(cam.getX(), cam.getY(), cam.getZ());
 
 	if (player.getHealth() <= 0)
 	{
@@ -595,8 +595,8 @@ void DisplayWrathWorld::displayGroundPlane()
 
 void DisplayWrathWorld::drawGroundPlane()
 {
-	tp.CreateDisplayList(XZ, 3, 431, 431, 0.0, 10000.0, -54000.0, 60, 160);	// groundPlane
-	tp.CreateDisplayList(XZ, 87, 650, 1155, 0.0, 11500.0, -34000.0, 50, 50);	// ceiling
+	tp.CreateDisplayList(XZ, 3, 431, 431, 1000.0, 10000.0, -54000.0, 54, 155);	// groundPlane
+	tp.CreateDisplayList(XZ, 87, 650, 1155, 1000.0, 11500.0, -34000.0, 36, 41);	// ceiling
 }
 
 // PORTALS
@@ -685,7 +685,7 @@ void DisplayWrathWorld::elecPortal()
 	electricityPortal.portalDimensions(-500, -500, -1000);
 	if (electricityPortal.createPortal(19000, 10600.0, -20500.0))
 	{
-		cam.Position(18000, 10550, -26000, 180);
+		cam.Position(18000, 10550, -26000, 270);
 	}
 }
 
@@ -695,7 +695,7 @@ void DisplayWrathWorld::postElecPortal()
 	postElectricityPortal.portalDimensions(-500, -500, -1000);
 	if (postElectricityPortal.createPortal(19000, 10600.0, -25500.0))
 	{
-		cam.Position(18000, 10550, -21000, 180);
+		cam.Position(18000, 10550, -21000, 270);
 	}
 }
 
@@ -705,7 +705,7 @@ void DisplayWrathWorld::bossPortalL()
 	bossPortal1.portalDimensions(-500, -500, -1000);
 	if (bossPortal1.createPortal(1500, 10600.0, -43250.0))
 	{
-		cam.Position(23000, 10550, -43750, 180);
+		cam.Position(23000, 10550, -43750, 90);
 	}
 }
 
@@ -715,7 +715,7 @@ void DisplayWrathWorld::bossPortalR()
 	bossPortal2.portalDimensions(-500, -500, -1000);
 	if (bossPortal2.createPortal(24000, 10600.0, -43250.0))
 	{
-		cam.Position(2000, 10550, -43750, 180);
+		cam.Position(2000, 10550, -43750, 90);
 	}
 }
 
@@ -1012,6 +1012,34 @@ void DisplayWrathWorld::drawPowerWalls()
 	tp.CreateDisplayList(XZ, 252, 500, 500, 15000, 10010.0, -20500.0, 2, 2);
 }
 
+// ELECTRICITY CHECK
+/////////////////////////////////////////////////////////////////////////////////////////////
+void DisplayWrathWorld::electricFloor(float maxX, float minX, float maxZ, float minZ)
+{
+	float x = cam.getX();
+	float z = cam.getZ();
+
+	if (x < maxX && x > minX)
+	{
+		if (z < maxZ && z > minZ)
+		{
+			player.decreaseHealth();
+		}
+	}
+}
+
+void DisplayWrathWorld::electricFloorCheck()
+{
+	electricFloor(10000, 9000, -21500, -23500);
+	electricFloor(16000, 13000, -21500, -23500);
+	electricFloor(16000, 9000, -18500, -19500);
+	electricFloor(12000, 9000, -19500, -20500);
+	electricFloor(12000, 11000, -20500, -22500);
+	electricFloor(14000, 13000, -20500, -21500); 
+	electricFloor(16000, 15000, -19500, -20500);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 void DisplayWrathWorld::displayBossRoom()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
@@ -1064,6 +1092,10 @@ void DisplayWrathWorld::displayBossRoom()
 	glCallList(279);
 	glCallList(280);
 	glCallList(283);
+
+	//ceiling
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	for (int i = 310; i <= 311; ++i) glCallList(i);
 
 }
 
@@ -1219,25 +1251,24 @@ void DisplayWrathWorld::drawBossRoom()
 	tp.CreateDisplayList(YZ, 284, 500, 1000, 10500, 10000, -50500, 1, 1);
 	tp.CreateDisplayList(YZ, 285, 500, 1000, 14500, 10000, -50500, 1, 1);
 
-	/*
+	
 	//Ceiling
-	tp.CreateDisplayList(XZ, 230, 1000, 1000, 1000, 13000, -45000, 23, 11);
+	tp.CreateDisplayList(XZ, 310, 1000, 1000, 1000, 13000, -45000, 23, 11);
 	
 	//NEEDS FIXING
-	glNewList(231, GL_COMPILE);
+	glNewList(311, GL_COMPILE);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
-	glVertex3f(1000, 13000, -45000);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(24000, 13000, -45000);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(16500, 13000, -54000);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(8500, 13000, -54000);
+	glVertex3f(1000.0, 13000.0, -45000.0);
+	glTexCoord2f(0.0, 10.0);
+	glVertex3f(24000.0, 13000.0, -45000.0);
+	glTexCoord2f(10.0, 10.0);
+	glVertex3f(16500.0, 13000.0, -54000.0);
+	glTexCoord2f(10.0, 0.0);
+	glVertex3f(8500.0, 13000.0, -54000.0);
 	glEnd();
 	glEndList();
 
-	*/
 }
 
 // PICKUPS
