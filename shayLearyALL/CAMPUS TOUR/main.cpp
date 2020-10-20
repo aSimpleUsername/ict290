@@ -158,6 +158,7 @@ void Display()
 		wrathWorld.servPortalR();
 		wrathWorld.bossPortalL();
 		wrathWorld.bossPortalR();
+		wrathWorld.electricFloorCheck();
 
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);

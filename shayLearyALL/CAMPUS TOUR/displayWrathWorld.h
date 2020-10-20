@@ -131,6 +131,10 @@ public:
 
 	void bossPortalR();
 
+	void electricFloor(float maxX, float minX, float maxZ, float minZ);
+
+	void electricFloorCheck();
+
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
