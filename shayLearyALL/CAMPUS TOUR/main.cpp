@@ -112,6 +112,10 @@ void Display()
 		{
 			isShaysWorld = false;
 			wrathWorld.myinit();
+			wrathWorld.cam.SetAngleUD(shaysWorld.cam.GetAngleUD());
+			wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
+			wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+			wrathWorld.cam.SetMoveSpeed(movementSpeed);
 		}
 		shaysWorld.specialPortal();
 
@@ -141,7 +145,7 @@ void Display()
 		{
 			isShaysWorld = true;
 			shaysWorld.myinit();
-			shaysWorld.cam.Position(1400, 11234, 39740, 0);
+			shaysWorld.cam.Position(1400, 11234, 39740, 90);
 		}
 
 		// display images

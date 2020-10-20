@@ -26,6 +26,7 @@
     <ClCompile Include="SoundTime.cpp" />
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
+    <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H" />
@@ -55,6 +56,7 @@
     <ClInclude Include="texturedPolygons.h" />
     <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="userInterface.h" />
+    <ClInclude Include="weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />

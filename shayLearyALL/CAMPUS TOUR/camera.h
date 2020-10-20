@@ -36,6 +36,12 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Set Methods
 	//----------------------------------------------------------------------------------
+	/**
+		* @brief Sets up down angle
+		* @param angle - angle to set it to
+		* @return void
+	*/
+	void SetAngleUD(GLdouble angle) { m_rotateAngleUD = angle;}
 	// sets initial value for bounding boxes (in the array AABB)
 	/**
 		* @brief Sets Max X of AABB
@@ -143,6 +149,12 @@ public:
 	//----------------------------------------------------------------------------------
 	//  Get Methods-
 	//----------------------------------------------------------------------------------
+	/**
+		* @brief Gets Camera Up Down Angle
+		* @return GLdouble
+	*/
+	GLdouble GetAngleUD() {return m_rotateAngleUD;}
+	
 	/**
 		* @brief Gets Camera look X
 		* @return GLdouble
