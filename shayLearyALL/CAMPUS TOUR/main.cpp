@@ -152,6 +152,13 @@ void Display()
 		wrathWorld.setAmmo();
 		wrathWorld.collisionCheck();
 
+		wrathWorld.elecPortal();
+		wrathWorld.postElecPortal();
+		wrathWorld.servPortalL();
+		wrathWorld.servPortalR();
+		wrathWorld.bossPortalL();
+		wrathWorld.bossPortalR();
+
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
 	}

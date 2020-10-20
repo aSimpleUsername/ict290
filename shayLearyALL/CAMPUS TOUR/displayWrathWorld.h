@@ -43,6 +43,9 @@
 #define ENEMY_FRONT					19
 #define ENEMY_BACK					20
 #define ENEMY_SIDE					21
+#define PORTAL_2					22	
+#define BOSS_FRONT					23
+#define BOSS_BACK					24
 
 	/**
 	* @class displayWrathWorld
@@ -114,9 +117,28 @@ public:
 	void ammoChecksDraw();
 
 	void ammoChecksDisplay();
+	
+	//portals
+	void elecPortal();
+
+	void postElecPortal();
+
+	void servPortalR();
+
+	void servPortalL();
+
+	void bossPortalL();
+
+	void bossPortalR();
 
 private:
 	Portal stepsReturn;
+	Portal serverPortal1;
+	Portal serverPortal2;
+	Portal electricityPortal;
+	Portal postElectricityPortal;
+	Portal bossPortal1;
+	Portal bossPortal2;
 
 	//Enemy can be changed for whatever class
 
@@ -197,6 +219,8 @@ private:
 
 	////////////////////////////////////////////////////////////////////
 
+	void displayInnerPortals();
+
 		/**
 		* @brief displays enemies 
 		*/
@@ -263,6 +287,8 @@ private:
 	void drawAmmoPickups6();
 
 	////////////////////////////////////////////////////////////////////
+
+	void drawInnerPortals();
 
 		/**
 		* @brief loads images and creates texture
