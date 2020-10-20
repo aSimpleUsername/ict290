@@ -18,11 +18,11 @@ void DisplayWrathWorld::myinit()
 	// turn collision detection on
 	cam.SetCollisionDetectionOn(true);
 	// set number of bounding boxes required
-	cam.SetNoBoundingBoxes(25);
+	cam.SetNoBoundingBoxes(55);
 
 
 	// set starting position of user
-	cam.Position(10000, 10550.0, 11000.0, 180.0);
+	cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
 	//cam.Position(13500, 10550.0, -46820.0, 180.0);
@@ -187,15 +187,156 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(22, 12650.0);
 	cam.SetAABBMinZ(22, 12450.0);
 
-	// current AABB array size = 25
+	//interior
+	cam.SetAABBMaxX(23, 17000.0);
+	cam.SetAABBMinX(23, 7000.0);
+	cam.SetAABBMaxZ(23, -3450.0);
+	cam.SetAABBMinZ(23, -3550.0);
+
+	cam.SetAABBMaxX(24, 19000.0);
+	cam.SetAABBMinX(24, 18000.0);
+	cam.SetAABBMaxZ(24, -3450.0);
+	cam.SetAABBMinZ(24, -3550.0);
+
+	cam.SetAABBMaxX(25, 12050.0);
+	cam.SetAABBMinX(25, 8950.0);
+	cam.SetAABBMaxZ(25, -4650.0);
+	cam.SetAABBMinZ(25, -5950.0);
+
+	cam.SetAABBMaxX(26, 12050.0);
+	cam.SetAABBMinX(26, 8950.0);
+	cam.SetAABBMaxZ(26, -7050.0);
+	cam.SetAABBMinZ(26, -8350.0);
+
+	cam.SetAABBMaxX(27, 17050.0);
+	cam.SetAABBMinX(27, 13950.0);
+	cam.SetAABBMaxZ(27, -4650.0);
+	cam.SetAABBMinZ(27, -5950.0);
+
+	cam.SetAABBMaxX(28, 17050.0);
+	cam.SetAABBMinX(28, 13950.0);
+	cam.SetAABBMaxZ(28, -7050.0);
+	cam.SetAABBMinZ(28, -8350.0);
+
+	cam.SetAABBMaxX(29, 7050.0);
+	cam.SetAABBMinX(29, 6950.0);
+	cam.SetAABBMaxZ(29, -3500.0);
+	cam.SetAABBMinZ(29, -9500.0);
+
+	cam.SetAABBMaxX(30, 8000.0);
+	cam.SetAABBMinX(30, 6950.0);
+	cam.SetAABBMaxZ(30, -9450.0);
+	cam.SetAABBMinZ(30, -9550.0);
+
+	cam.SetAABBMaxX(31, 19000.0);
+	cam.SetAABBMinX(31, 9000.0);
+	cam.SetAABBMaxZ(31, -9450.0);
+	cam.SetAABBMinZ(31, -9550.0);
+
+	cam.SetAABBMaxX(32, 17050.0);
+	cam.SetAABBMinX(32, 6000.0);
+	cam.SetAABBMaxZ(32, -11200.0);
+	cam.SetAABBMinZ(32, -11800.0);
+
+	cam.SetAABBMaxX(33, 19000.0);
+	cam.SetAABBMinX(33, 8000.0);
+	cam.SetAABBMaxZ(33, -13450.0);
+	cam.SetAABBMinZ(33, -13550.0);
+
+	cam.SetAABBMaxX(34, 8050.0);
+	cam.SetAABBMinX(34, 7950.0);
+	cam.SetAABBMaxZ(34, -13500.0);
+	cam.SetAABBMinZ(34, -15500.0);
+
+	cam.SetAABBMaxX(35, 8050.0);
+	cam.SetAABBMinX(35, 7950.0);
+	cam.SetAABBMaxZ(35, -16500.0);
+	cam.SetAABBMinZ(35, -18500.0);
+
+	cam.SetAABBMaxX(36, 14050.0);
+	cam.SetAABBMinX(36, 12950.0);
+	cam.SetAABBMaxZ(36, -13500.0);
+	cam.SetAABBMinZ(36, -15550.0);
+
+	cam.SetAABBMaxX(37, 14050.0);
+	cam.SetAABBMinX(37, 12950.0);
+	cam.SetAABBMaxZ(37, -16450.0);
+	cam.SetAABBMinZ(37, -18500.0);
+
+	cam.SetAABBMaxX(38, 11050.0);
+	cam.SetAABBMinX(38, 9950.0);
+	cam.SetAABBMaxZ(38, -15450.0);
+	cam.SetAABBMinZ(38, -16550.0);
+
+	cam.SetAABBMaxX(39, 17050.0);
+	cam.SetAABBMinX(39, 15950.0);
+	cam.SetAABBMaxZ(39, -15450.0);
+	cam.SetAABBMinZ(39, -16550.0);
+
+	cam.SetAABBMaxX(40, 19000.0);
+	cam.SetAABBMinX(40, 8000.0);
+	cam.SetAABBMaxZ(40, -18450.0);
+	cam.SetAABBMinZ(40, -18550.0);
+
+	cam.SetAABBMaxX(41, 19000.0);
+	cam.SetAABBMinX(41, 6000.0);
+	cam.SetAABBMaxZ(41, -23450.0);
+	cam.SetAABBMinZ(41, -23550.0);
+
+	cam.SetAABBMaxX(42, 6050.0);
+	cam.SetAABBMinX(42, 5950.0);
+	cam.SetAABBMaxZ(42, -23500.0);
+	cam.SetAABBMinZ(42, -24500.0);
+
+	cam.SetAABBMaxX(43, 6050.0);
+	cam.SetAABBMinX(43, 5950.0);
+	cam.SetAABBMaxZ(43, -25500.0);
+	cam.SetAABBMinZ(43, -26500.0);
+
+	cam.SetAABBMaxX(44, 11550.0);
+	cam.SetAABBMinX(44, 10950.0);
+	cam.SetAABBMaxZ(44, -25450.0);
+	cam.SetAABBMinZ(44, -28550.0);
+
+	cam.SetAABBMaxX(45, 14050.0);
+	cam.SetAABBMinX(45, 13450.0);
+	cam.SetAABBMaxZ(45, -25450.0);
+	cam.SetAABBMinZ(45, -28550.0);
+
+	cam.SetAABBMaxX(46, 6050.0);
+	cam.SetAABBMinX(46, 3450.0);
+	cam.SetAABBMaxZ(46, -36450.0);
+	cam.SetAABBMinZ(46, -39050.0);
+
+	cam.SetAABBMaxX(47, 21550.0);
+	cam.SetAABBMinX(47, 18950.0);
+	cam.SetAABBMaxZ(47, -36450.0);
+	cam.SetAABBMinZ(47, -39050.0);
+
+	cam.SetAABBMaxX(48, 9550.0);
+	cam.SetAABBMinX(48, 8450.0);
+	cam.SetAABBMaxZ(48, -41450.0);
+	cam.SetAABBMinZ(48, -42550.0);
+
+	cam.SetAABBMaxX(49, 16550.0);
+	cam.SetAABBMinX(49, 15450.0);
+	cam.SetAABBMaxZ(49, -41450.0);
+	cam.SetAABBMinZ(49, -42550.0);
+
+	cam.SetAABBMaxX(50, 14550.0);
+	cam.SetAABBMinX(50, 10450.0);
+	cam.SetAABBMaxZ(50, -49450.0);
+	cam.SetAABBMinZ(50, -50550.0);
+
+	// current AABB array size = 55
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
 bool DisplayWrathWorld::stairsReturnPortal()
 {
 	stepsReturn.setLocation(cam.getX(), cam.getY(), cam.getZ());
-	stepsReturn.portalDimensions(-500, -500, -500);
-	return(stepsReturn.createPortal(10500, 10600.0, 15000.0));
+	stepsReturn.portalDimensions(-900, -500, -500);
+	return(stepsReturn.createPortal(10450, 10600.0, 10600.0));
 }
 
 void DisplayWrathWorld::CreateTextures()
@@ -272,6 +413,15 @@ void DisplayWrathWorld::CreateTextures()
 	image = tp.LoadTexture("data/enemy_side.png");
 	tp.CreatePNGTexture(ENEMY_SIDE, image, 500, 500);
 
+	image = tp.LoadTexture("data/portalv2.png");
+	tp.CreatePNGTexture(PORTAL_2, image, 2000, 2000);
+
+	image = tp.LoadTexture("data/boss_front.png");
+	tp.CreatePNGTexture(BOSS_FRONT, image, 500, 500);
+
+	image = tp.LoadTexture("data/boss_back.png");
+	tp.CreatePNGTexture(BOSS_BACK, image, 500, 500);
+
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
@@ -282,6 +432,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	displaySkyBox();
 	displayGroundPlane();
 	displayPortal();
+	displayInnerPortals();
 	displayRoom1Walls();
 	displayServerWalls();
 	displayPowerWalls();
@@ -296,8 +447,8 @@ void DisplayWrathWorld::DrawBackdrop()
 
 	if (player.getHealth() <= 0)
 	{
-		cam.dead = true;
-		DisplayExit = true;
+		//cam.dead = true;
+		//DisplayExit = true;
 	}
 }
 
@@ -448,6 +599,8 @@ void DisplayWrathWorld::drawGroundPlane()
 	tp.CreateDisplayList(XZ, 87, 650, 1155, 0.0, 11500.0, -34000.0, 50, 50);	// ceiling
 }
 
+// PORTALS
+/////////////////////////////////////////////////////////////////////////////////////////
 void DisplayWrathWorld::displayPortal()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL_1));
@@ -456,8 +609,117 @@ void DisplayWrathWorld::displayPortal()
 
 void DisplayWrathWorld::drawPortal()
 {
-	tp.CreateDisplayList(XY, 10, 512, 385, 10000, 10000, 15000, 1.0, 2);
+	tp.CreateDisplayList(XY, 10, 900, 1000, 9550, 10000, 10150, 1.0, 1);
 }
+
+void DisplayWrathWorld::displayInnerPortals()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(PORTAL_2));
+	for (int i = 292; i <= 297; i++) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACESHIP_WALL_1));
+	for (int i = 298; i <= 309; i++) glCallList(i);
+}
+
+void DisplayWrathWorld::drawInnerPortals()
+{
+	//electricity
+	tp.CreateDisplayList(YZ, 292, 1000, 1000, 18900, 10000, -21500, 1.0, 1);
+	tp.CreateDisplayList(YZ, 293, 1000, 1000, 18900, 10000, -26500, 1.0, 1);
+
+	//server
+	tp.CreateDisplayList(XY, 294, 1000, 1000, 7500, 10000, -3600, 1.0, 1);
+	tp.CreateDisplayList(XY, 295, 1000, 1000, 17500, 10000, -9400, 1.0, 1);
+
+	//boss
+	tp.CreateDisplayList(YZ, 296, 1000, 1000, 1100, 10000, -44250, 1.0, 1);
+	tp.CreateDisplayList(YZ, 297, 1000, 1000, 23900, 10000, -44250, 1.0, 1);
+
+	//side supports
+	//electricity
+	tp.CreateDisplayList(XY, 298, 100, 250, 18900, 10000, -21500, 1.0, 4);
+	tp.CreateDisplayList(XY, 299, 100, 250, 18900, 10000, -20500, 1.0, 4);
+
+	tp.CreateDisplayList(XY, 300, 100, 250, 18900, 10000, -26500, 1.0, 4);
+	tp.CreateDisplayList(XY, 301, 100, 250, 18900, 10000, -25500, 1.0, 4);
+
+	//server
+	tp.CreateDisplayList(YZ, 302, 250, 100, 7500, 10000, -3600, 4, 1);
+	tp.CreateDisplayList(YZ, 303, 250, 100, 8500, 10000, -3600, 4, 1);
+
+	tp.CreateDisplayList(YZ, 304, 250, 100, 17500, 10000, -9500, 4, 1);
+	tp.CreateDisplayList(YZ, 305, 250, 100, 18500, 10000, -9500, 4, 1);
+
+	//boss
+	tp.CreateDisplayList(XY, 306, 100, 250, 1000, 10000, -44250, 1.0, 4);
+	tp.CreateDisplayList(XY, 307, 100, 250, 1000, 10000, -43250, 1.0, 4);
+
+	tp.CreateDisplayList(XY, 308, 100, 250, 23900, 10000, -44250, 1.0, 4);
+	tp.CreateDisplayList(XY, 309, 100, 250, 23900, 10000, -43250, 1.0, 4);
+}
+
+void DisplayWrathWorld::servPortalL()
+{
+	serverPortal1.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	serverPortal1.portalDimensions(-1000, -500, -500);
+	if (serverPortal1.createPortal(8500, 10600.0, -3500.0))
+	{
+		cam.Position(18000, 10550, -8500, 180);
+	}
+}
+
+void DisplayWrathWorld::servPortalR()
+{
+	serverPortal2.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	serverPortal2.portalDimensions(-1000, -500, -500);
+	if (serverPortal2.createPortal(18500, 10600.0, -9000.0))
+	{
+		cam.Position(8000, 10550, -4500, 180);
+	}
+}
+
+void DisplayWrathWorld::elecPortal()
+{
+	electricityPortal.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	electricityPortal.portalDimensions(-500, -500, -1000);
+	if (electricityPortal.createPortal(19000, 10600.0, -20500.0))
+	{
+		cam.Position(18000, 10550, -26000, 180);
+	}
+}
+
+void DisplayWrathWorld::postElecPortal()
+{
+	postElectricityPortal.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	postElectricityPortal.portalDimensions(-500, -500, -1000);
+	if (postElectricityPortal.createPortal(19000, 10600.0, -25500.0))
+	{
+		cam.Position(18000, 10550, -21000, 180);
+	}
+}
+
+void DisplayWrathWorld::bossPortalL()
+{
+	bossPortal1.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	bossPortal1.portalDimensions(-500, -500, -1000);
+	if (bossPortal1.createPortal(1500, 10600.0, -43250.0))
+	{
+		cam.Position(23000, 10550, -43750, 180);
+	}
+}
+
+void DisplayWrathWorld::bossPortalR()
+{
+	bossPortal2.setLocation(cam.getX(), cam.getY(), cam.getZ());
+	bossPortal2.portalDimensions(-500, -500, -1000);
+	if (bossPortal2.createPortal(24000, 10600.0, -43250.0))
+	{
+		cam.Position(2000, 10550, -43750, 180);
+	}
+}
+
+// END OF PORTALS
+/////////////////////////////////////////////////////////////////////////////////////////
 
 void DisplayWrathWorld::displayRoom1Walls()
 {
@@ -1675,6 +1937,7 @@ void DisplayWrathWorld::CreateTextureList()
 	drawSkyBox();				// 4-9
 	drawGroundPlane();			// 3
 	drawPortal();				//10
+	drawInnerPortals();
 	drawRoom1Walls();		//11-41
 	drawServerWalls();
 	drawPowerWalls();
@@ -1686,5 +1949,5 @@ void DisplayWrathWorld::CreateTextureList()
 
 							//286-291 used in drawEnemies()
 
-	//last number used: 291 (18/10/2020)
+	//last number used: 309 (20/10/2020)
 }
