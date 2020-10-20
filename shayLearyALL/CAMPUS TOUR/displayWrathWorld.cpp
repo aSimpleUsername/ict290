@@ -443,7 +443,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	ammoChecksDisplay(); 
 
 	ui.playerHealth(player.getHealth());
-	ui.info(player.GetX(), player.GetY(), player.GetZ());
+	ui.info(cam.GetLX(), cam.GetLY(), cam.GetLZ());
 
 	if (player.getHealth() <= 0)
 	{
@@ -665,6 +665,7 @@ void DisplayWrathWorld::servPortalL()
 	if (serverPortal1.createPortal(8500, 10600.0, -3500.0))
 	{
 		cam.Position(18000, 10550, -8500, 180);
+
 	}
 }
 
@@ -674,7 +675,7 @@ void DisplayWrathWorld::servPortalR()
 	serverPortal2.portalDimensions(-1000, -500, -500);
 	if (serverPortal2.createPortal(18500, 10600.0, -9000.0))
 	{
-		cam.Position(8000, 10550, -4500, 180);
+		cam.Position(8000, 10550, -4500, 0);
 	}
 }
 

@@ -342,9 +342,8 @@ void Camera::Position (GLdouble const & tempX, GLdouble const & tempY,
 	m_lookZ = -cos(m_rotateAngleLR);
 	m_lookXX = sin(m_rotateAngleLR + (float) PI/2.0);
 	m_lookZZ = -cos(m_rotateAngleLR + (float) PI/2.0);
-	m_rotateAngleUD = 0.0;
-	m_deltaAngleUD = 0.0;
-
+	//m_rotateAngleUD = 0.0;
+	//m_deltaAngleUD = 0.0;
 	// redislay
 	callGLLookAt();
 }
