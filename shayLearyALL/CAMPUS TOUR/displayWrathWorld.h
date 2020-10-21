@@ -61,7 +61,7 @@ public:
 	TexturedPolygons tp;
 	Pickups pick;
 	UserInterface ui;
-	
+	ObjPicking<Enemy> enemyObjects;
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;	
@@ -150,7 +150,7 @@ private:
 	//Enemy can be changed for whatever class 
 
 	Player player;
-	ObjPicking<Enemy> enemyObjects; 
+	
 
 
 	static int const NUM_ENEMIES = 4;

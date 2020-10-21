@@ -558,9 +558,6 @@ void DisplayWrathWorld::displayEnemies()
 		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
 		glCallList(289);		// back
 
-		if (enemyObjects.detectCollisionWithBox(ray, camPos, enemyObjects.getObjectFromBuffer(i)->getAABB(), enemyObjects.getObjectFromBuffer(i)->getLocation()))
-			ui.hitmarker();
-
 		enemies[i].checkHit(&player);
 	}
 

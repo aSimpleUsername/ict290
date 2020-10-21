@@ -19,6 +19,7 @@ public:
     T* getObjectFromBuffer(int index) { return objBuffer[index]; }
 	bool detectCollisionWithSphere(float rayX, float rayY,float rayZ,float camX,float camY,float camZ);
     bool detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints,Point3D enemyLocation);
+    T* checkCollisionWithBox(Point3D ray, Point3D camPos);
 private:
 	void removeObjectFromBuffer(int index);
 	void clearBuffer();
@@ -50,6 +51,7 @@ bool ObjPicking<T>::detectCollisionWithSphere(float rayX, float rayY, float rayZ
     }
     return false;
 }
+
 template <class T>
 bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints, Point3D enemyLocation) {
     float tMin = 0.0f;
@@ -87,6 +89,15 @@ bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vec
         }
     }
     return true;
+}
+template <class T>
+T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos) {
+    for(int i = 0; i < objBuffer.size();i++) {
+        if (detectCollisionWithBox(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation())) {
+            return objBuffer[i];
+        }
+    }
+    return NULL;
 }
 template <class T>
 void ObjPicking<T>::addObjectToBuffer(T* object) {
