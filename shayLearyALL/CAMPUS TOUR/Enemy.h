@@ -27,7 +27,6 @@ public:
 	inline void setEnemyPosition(Point3D* enemyPosition) { m_enemyPosition = enemyPosition; }
 	inline Point3D* getPoints() { return(m_points); }
 
-
 	void seek(Point3D targetPosition);										//seeks target position															//patrols within given bounds
 	void drawProjectiles();													//TODO: make private
 	void shoot();															//TODO: make private, and add to state machine

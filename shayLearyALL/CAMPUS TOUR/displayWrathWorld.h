@@ -152,7 +152,6 @@ private:
 
 	Player player;
 
-	ObjPicking<Enemy> enemyObjects;
 	ObjPicking<EnemyBoss> enemyBossObject;
 
 
