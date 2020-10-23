@@ -27,6 +27,7 @@
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
     <ClCompile Include="weapon.cpp" />
+    <ClCompile Include="enemyBoss.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H" />
@@ -57,9 +58,13 @@
     <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="userInterface.h" />
     <ClInclude Include="weapon.h" />
+    <ClInclude Include="enemyBoss.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
     <ResourceCompile Include="Script1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".DS_Store" />
   </ItemGroup>
 </Project>
