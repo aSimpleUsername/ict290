@@ -1,44 +1,20 @@
 #include "Enemy.h"
 
-/*Enemy::Enemy(double x, double y, double z)
-	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
-		m_state(PATROL)
-{
-	//top 4 points going clockwise starting with front left
-	m_p1 = Point3D(x - 150, y + 200, z + 150);
-	m_p2 = Point3D(x - 150, y + 200, z - 150);
-	m_p3 = Point3D(x + 150, y + 200, z - 150);
-	m_p4 = Point3D(x + 150, y + 200, z + 150);
-	//bottom 4 points going clockwise starting with front left (player is 450 units tall)
-	m_p5 = Point3D(x - 150, y - 450, z + 150);
-	m_p6 = Point3D(x - 150, y - 450, z - 150);
-	m_p7 = Point3D(x + 150, y - 450, z - 150);
-	m_p8 = Point3D(x + 150, y - 450, z + 150);
-
-	m_health = 5;
-	m_shields = 0;
-
-	m_location = Point3D(x, y, z);
-	m_patrolTarget = Point3D(0.0, y, 0.0);
-
-	updateHitBox(x, y, z);
-}*/
-
 Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
-	: m_topSpeed(10), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
-	m_state(PATROL)
+	: m_topSpeed(20), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+	m_state(PATROL), m_scale(150)
 {
-	m_location = Point3D::randomPointXZ(xmin, xmax, zmin, zmax, y);
+	m_location = Point3D::randomPointXZ(xmin + 2 * m_scale, xmax - 2 * m_scale, zmin + 2 * m_scale, zmax - 2 * m_scale, y);		// 2*SCALE ensures that the enemy spawns inside the bounds and not on the edge
 	//top 4 points going clockwise starting with front left
-	m_points[0] = Point3D(m_location.x - SCALE, m_location.y + SCALE, m_location.z + SCALE);
-	m_points[1] = Point3D(m_location.x - SCALE, m_location.y + SCALE, m_location.z - SCALE);
-	m_points[2] = Point3D(m_location.x + SCALE, m_location.y + SCALE, m_location.z - SCALE);
-	m_points[3] = Point3D(m_location.x + SCALE, m_location.y + SCALE, m_location.z + SCALE);
+	m_points[0] = Point3D(m_location.x - m_scale, m_location.y + m_scale, m_location.z + m_scale);
+	m_points[1] = Point3D(m_location.x - m_scale, m_location.y + m_scale, m_location.z - m_scale);
+	m_points[2] = Point3D(m_location.x + m_scale, m_location.y + m_scale, m_location.z - m_scale);
+	m_points[3] = Point3D(m_location.x + m_scale, m_location.y + m_scale, m_location.z + m_scale);
 	//bottom 4 points going clockwise starting with front left (player is 450 units tall)
-	m_points[4] = Point3D(m_location.x - SCALE, m_location.y - SCALE, m_location.z + SCALE);
-	m_points[5] = Point3D(m_location.x - SCALE, m_location.y - SCALE, m_location.z - SCALE);
-	m_points[6] = Point3D(m_location.x + SCALE, m_location.y - SCALE, m_location.z - SCALE);
-	m_points[7] = Point3D(m_location.x + SCALE, m_location.y - SCALE, m_location.z + SCALE);
+	m_points[4] = Point3D(m_location.x - m_scale, m_location.y - m_scale, m_location.z + m_scale);
+	m_points[5] = Point3D(m_location.x - m_scale, m_location.y - m_scale, m_location.z - m_scale);
+	m_points[6] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z - m_scale);
+	m_points[7] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z + m_scale);
 
 	m_health = 5;
 	m_shields = 0;
@@ -239,14 +215,14 @@ void Enemy::stateMachine()
 
 		if (m_location.distance(*m_enemyPosition) > 3000)
 		{
-			if (canMove(m_topSpeed))
+			if (canMove(m_topSpeed*2))
 				accelerate(m_topSpeed);
 			else
 				decelerate();
 		}
 		else if (m_location.distance(*m_enemyPosition) < 2500)   //back up if player gets too close
 		{
-			if (canMove(-m_topSpeed))
+			if (canMove(-m_topSpeed*2))
 				accelerate(-m_topSpeed);
 			else
 				decelerate();

@@ -1,18 +1,197 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: Two or more files with the name of .NETFramework,Version=v4.0.AssemblyAttributes.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp, Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: Two or more files with the name of .NETFramework,Version=v4.0.AssemblyAttributes.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp, Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp.
+  displayWrathWorld.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math_defines.h(28,1): warning C4005: 'M_PI': macro redefinition
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\dependencies\SDL2\include\SDL_stdinc.h(508): message : see previous definition of 'M_PI'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(9,62): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(473,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(473,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(473,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(475,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(475,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(475,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(477,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(477,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(477,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(479,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(479,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(479,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(487,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(487,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(487,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(489,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(489,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(489,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(491,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(491,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(491,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(493,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(493,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(493,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(501,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(501,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(501,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(503,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(503,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(503,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(505,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(505,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(505,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(507,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(507,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(507,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(515,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(515,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(515,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(517,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(517,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(517,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(519,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(519,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(519,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(521,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(521,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(521,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(529,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(529,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(529,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(531,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(531,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(531,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(533,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(533,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(533,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(535,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(535,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(535,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(543,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(543,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(543,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(545,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(545,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(545,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(547,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(547,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(547,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(549,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(549,68): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(549,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(585,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(585,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(585,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(587,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(587,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(587,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(589,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(589,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(589,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(591,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(591,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(591,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(599,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(599,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(599,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(601,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(601,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(601,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(603,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(603,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(603,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(605,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(605,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(605,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(613,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(613,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(613,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(615,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(615,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(615,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(617,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(617,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(617,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(619,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(619,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(619,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(627,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(627,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(627,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(629,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(629,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(629,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(631,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(631,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(631,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(633,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(633,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(633,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(641,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(641,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(641,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(643,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(643,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(643,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(645,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(645,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(645,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(647,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(647,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(647,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(655,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(655,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(655,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(657,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(657,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(657,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(659,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(659,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(659,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(661,78): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(661,55): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(661,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(1133,10): warning C4244: 'initializing': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(1134,10): warning C4244: 'initializing': conversion from 'GLdouble' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(71,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(54): message : while compiling class template member function 'bool ObjPicking<Enemy>::detectCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D)'
+          with
+          [
+              _Ty=Point3D
+          ]
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.cpp(565): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D)' being compiled
+          with
+          [
+              _Ty=Point3D
+          ]
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(154): message : see reference to class template instantiation 'ObjPicking<Enemy>' being compiled
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(72,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  enemyBoss.cpp
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(13,118): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(13,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(13,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(13,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(13,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(31,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(31,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(31,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_math_defines.h(22,1): warning C4005: 'M_PI': macro redefinition
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\dependencies\SDL2\include\SDL_stdinc.h(508): message : see previous definition of 'M_PI'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(43,1): warning C4005: 'ENEMY_FRONT': macro redefinition
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(312): message : see previous definition of 'ENEMY_FRONT'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(44,1): warning C4005: 'ENEMY_BACK': macro redefinition
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(313): message : see previous definition of 'ENEMY_BACK'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(45,1): warning C4005: 'ENEMY_SIDE': macro redefinition
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(314): message : see previous definition of 'ENEMY_SIDE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math_defines.h(28,1): warning C4005: 'M_PI': macro redefinition
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\dependencies\SDL2\include\SDL_stdinc.h(508): message : see previous definition of 'M_PI'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(44,1): warning C4005: 'ENEMY_FRONT': macro redefinition
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(312): message : see previous definition of 'ENEMY_FRONT'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(45,1): warning C4005: 'ENEMY_BACK': macro redefinition
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(313): message : see previous definition of 'ENEMY_BACK'
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(46,1): warning C4005: 'ENEMY_SIDE': macro redefinition
+C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(314): message : see previous definition of 'ENEMY_SIDE'
+  Generating Code...
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
 DisplayShaysWorld.obj : warning LNK4248: unresolved typeref token (0100001B) for 'GLUquadric'; image may not run
-  shaysWorld.vcxproj -> C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
+  shaysWorld.vcxproj -> C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
