@@ -20,16 +20,6 @@ void DisplayWrathWorld::myinit()
 	// set number of bounding boxes required
 	cam.SetNoBoundingBoxes(55);
 
-
-	// set starting position of user
-	//cam.Position(10000, 10550.0, 12150.0, 180.0);
-
-	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
-
-	//electricity room
-	cam.Position(6780, 10550.0, -20950.0, 180.0);
-
 	// creates bounding boxes and places in array
 	CreateBoundingBoxes();
 	// copies bounding boxes from array to linked lists (one fopr each quadrant)
@@ -40,6 +30,16 @@ void DisplayWrathWorld::myinit()
 	CreateTextures();
 
 	initEnemies();
+
+	// set starting position of user
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
+
+	//Boss room
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
+
+	//electricity room
+	//cam.Position(6780, 10550.0, -20950.0, 180.0);
+
 }
 
 //--------------------------------------------------------------------------------------
@@ -52,6 +52,9 @@ void DisplayWrathWorld::initEnemies()
 		enemyObjects.addObjectToBuffer(&enemies[i]);
 		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer());
 	}
+
+	enemyBossObject.addObjectToBuffer(&boss);
+	enemyBossObject.getObjectFromBuffer(0)->setEnemyPosition(player.getPlayerLocationPointer());
 }
 
 //--------------------------------------------------------------------------------------
@@ -429,6 +432,7 @@ void DisplayWrathWorld::CreateTextures()
 void DisplayWrathWorld::DrawBackdrop()
 {
 	displayEnemies();
+	displayBoss();
 	displaySkyBox();
 	displayGroundPlane();
 	displayPortal();
@@ -561,6 +565,116 @@ void DisplayWrathWorld::displayEnemies()
 		enemies[i].checkHit(&player);
 	}
 
+}
+
+void DisplayWrathWorld::displayBoss()
+{
+	Point3D ray(cam.GetLX(), cam.GetLY(), cam.GetLZ());
+	Point3D camPos(cam.getX(), cam.getY(), cam.getZ());
+	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
+
+	enemyBossObject.getObjectFromBuffer(0)->stateMachine();
+
+	//bottom
+	glNewList(286, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[4].x, boss.getPoints()[4].y, boss.getPoints()[4].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[5].x, boss.getPoints()[5].y, boss.getPoints()[5].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[6].x, boss.getPoints()[6].y, boss.getPoints()[6].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[7].x, boss.getPoints()[7].y, boss.getPoints()[7].z);
+	glEnd();
+	glEndList();
+
+	//top
+	glNewList(287, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[0].x, boss.getPoints()[0].y, boss.getPoints()[0].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[1].x, boss.getPoints()[1].y, boss.getPoints()[1].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[2].x, boss.getPoints()[2].y, boss.getPoints()[2].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[3].x, boss.getPoints()[3].y, boss.getPoints()[3].z);
+	glEnd();
+	glEndList();
+
+	//front
+	glNewList(288, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[4].x, boss.getPoints()[4].y, boss.getPoints()[4].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[0].x, boss.getPoints()[0].y, boss.getPoints()[0].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[3].x, boss.getPoints()[3].y, boss.getPoints()[3].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[7].x, boss.getPoints()[7].y, boss.getPoints()[7].z);
+	glEnd();
+	glEndList();
+
+	//back
+	glNewList(289, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[6].x, boss.getPoints()[6].y, boss.getPoints()[6].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[2].x, boss.getPoints()[2].y, boss.getPoints()[2].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[1].x, boss.getPoints()[1].y, boss.getPoints()[1].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[5].x, boss.getPoints()[5].y, boss.getPoints()[5].z);
+	glEnd();
+	glEndList();
+
+	//Left
+	glNewList(290, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[5].x, boss.getPoints()[5].y, boss.getPoints()[5].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[1].x, boss.getPoints()[1].y, boss.getPoints()[1].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[0].x, boss.getPoints()[0].y, boss.getPoints()[0].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[4].x, boss.getPoints()[4].y, boss.getPoints()[4].z);
+	glEnd();
+	glEndList();
+
+	//Right
+	glNewList(291, GL_COMPILE);
+	glBegin(GL_QUADS);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(boss.getPoints()[7].x, boss.getPoints()[7].y, boss.getPoints()[7].z);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(boss.getPoints()[3].x, boss.getPoints()[3].y, boss.getPoints()[3].z);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(boss.getPoints()[2].x, boss.getPoints()[2].y, boss.getPoints()[2].z);
+	glTexCoord2f(1.0, 0.0);
+	glVertex3f(boss.getPoints()[6].x, boss.getPoints()[6].y, boss.getPoints()[6].z);
+	glEnd();
+	glEndList();
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_SIDE));
+	glCallList(286);		// bottom
+	glCallList(287);		// top
+	glCallList(290);		// left
+	glCallList(291);		// right
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BOSS_FRONT));
+	glCallList(288);		// front
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BOSS_BACK));
+	glCallList(289);		// back
+
+	if (enemyBossObject.detectCollisionWithBox(ray, camPos, enemyBossObject.getObjectFromBuffer(0)->getAABB(), enemyBossObject.getObjectFromBuffer(0)->getLocation()))
+		ui.hitmarker();
+
+	boss.checkHit(&player);
 }
 
 
