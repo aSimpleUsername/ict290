@@ -290,6 +290,10 @@ void processKeys()
 		if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
 			wrathWorld.cam.DirectionFB(0);
 	}
+	else {
+		wrathWorld.cam.SetMoveSpeed(0);
+		shaysWorld.cam.SetMoveSpeed(0);
+	}
 
 	if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
 	{
