@@ -34,10 +34,10 @@ void DisplayWrathWorld::myinit()
 	setUpPowerups();
 
 	// set starting position of user
-	//cam.Position(10000, 10550.0, 12150.0, 180.0);
+	cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	cam.Position(13500, 10550.0, -46820.0, 180.0);
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -53,10 +53,16 @@ void DisplayWrathWorld::initEnemies()
 	{
 		enemyObjects.addObjectToBuffer(&enemies[i]);
 		enemyObjects.getObjectFromBuffer(i)->setEnemyPosition(player.getPlayerLocationPointer());
+
+		for (int j = 0; j < enemies[i].MAX_PROJECTILES; ++j)
+			enemies[i].getProjectiles(j)->setCollision(&cam.m_colDetect);
 	}
 
 	enemyBossObject.addObjectToBuffer(&boss);
 	enemyBossObject.getObjectFromBuffer(0)->setEnemyPosition(player.getPlayerLocationPointer());
+
+	for (int i = 0; i < boss.MAX_PROJECTILES; ++i)
+		boss.getProjectiles(i)->setCollision(&cam.m_colDetect);
 }
 
 //--------------------------------------------------------------------------------------

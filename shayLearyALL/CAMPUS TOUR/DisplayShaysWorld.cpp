@@ -46,6 +46,9 @@ void DisplayShaysWorld::myinit()
 
 	enemy.setEnemyPosition(player.getPlayerLocationPointer());
 	enemyObjects.addObjectToBuffer(&enemy);			// courtyard
+
+	for (int i = 0; i < enemy.MAX_PROJECTILES; ++i)
+		enemy.getProjectiles(i)->setCollision(&cam.m_colDetect);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////

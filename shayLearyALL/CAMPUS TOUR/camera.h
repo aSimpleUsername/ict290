@@ -296,6 +296,7 @@ public:
 	void DisplayNoExit (const int & screenWidth, const int & screenHeight, 
 						const GLuint & tempImage);
 	Camera& operator = (const Camera& other);
+	Collision m_colDetect;
 private:
 
 	//steep incline increments
@@ -377,7 +378,6 @@ private:
 	bool m_CollisionDetectionOn;
 
 	// objects
-	Collision m_colDetect;
 	CameraMap m_map;
 	PlainLinkedList m_Plain;
 
