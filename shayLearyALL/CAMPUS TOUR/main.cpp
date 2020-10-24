@@ -155,10 +155,7 @@ void Display()
 		// display images
 		wrathWorld.DrawBackdrop();
 
-		wrathWorld.setHealth();
-		wrathWorld.setShields();
-		wrathWorld.setAmmo();
-		wrathWorld.collisionCheck();
+		wrathWorld.collectionCheck();
 
 		wrathWorld.elecPortal();
 		wrathWorld.postElecPortal();

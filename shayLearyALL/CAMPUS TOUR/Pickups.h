@@ -1,47 +1,36 @@
 //Stores various pickups and powerup locations
 #include <string>
 
-struct collect
-{
-	double xMin;
-	double xMax;
-	double zMin;
-	double zMax;
-	bool gathered;
-};
-
 class Pickups
 {
 public:
 	Pickups();
-	
-	void setHealthBox(int index, double minX, double maxX, double minZ, double maxZ);
+	//NEW
+	/////////////////////////////////////////////////////////////////////////////
 
-	void setShieldBox(int index, double minX, double maxX, double minZ, double maxZ);
+	int getSize();
 
-	void setAmmoBox(int index, double minX, double maxX, double minZ, double maxZ);
+	double getX();
 
-	void removeHealthUp(int index);
+	double getY();
 
-	void removeShieldUp(int index);
+	double getZ();
 
-	void removeAmmoUp(int index);
+	void setGathT();
 
-	void checkHealthUp(double xPos, double yPos, double zPos);
+	bool getGath();
 
-	void checkShieldUp(double xPos, double yPos, double zPos);
+	void setPickup(double xValue, double yValue, double zValue, int sizeValue);
 
-	void checkAmmoUp(double xPos, double yPos, double zPos);
-
-	bool getGatheredHealth(int index);
-
-	bool getGatheredShield(int index);
-
-	bool getGatheredAmmo(int index);
+	void checkCollision(double xPos, double zPos);
 
 private:
-	collect healthUp[7];
-	collect shieldUp[7];
-	collect ammoUp[7];
+	//NEW
+	/////////////////////////////////////////////////////////////////////////////
+	int size;
+	double x;
+	double y;
+	double z;
+	bool gath;
 };
 
