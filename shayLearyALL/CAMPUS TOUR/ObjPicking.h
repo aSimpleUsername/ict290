@@ -93,7 +93,8 @@ bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vec
 template <class T>
 T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos) {
     for(int i = 0; i < objBuffer.size();i++) {
-        if (detectCollisionWithBox(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation())) {
+        if (detectCollisionWithBox(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation()) &&
+                objBuffer[i]->getHealth() > 0) {
             return objBuffer[i];
         }
     }
