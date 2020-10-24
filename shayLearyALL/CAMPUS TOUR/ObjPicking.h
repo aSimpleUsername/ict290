@@ -75,8 +75,8 @@ bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vec
         //will crash if dont check for near 0
         if (abs(f) > 1e-20f)
         {
-            t1 = ((e + 150) / f);
-            t2 = ((e - 150) / f);
+            t1 = ((e + objBuffer[0]->getScale()) / f);
+            t2 = ((e - objBuffer[0]->getScale()) / f);
             if (t1 > t2) { // if wrong order
                 std::swap(t1, t2);
             }

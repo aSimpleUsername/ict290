@@ -26,6 +26,7 @@ public:
 	void setBounds(double xmin, double xmax, double zmin, double zmax);
 	inline void setEnemyPosition(Point3D* enemyPosition) { m_enemyPosition = enemyPosition; }
 	inline Point3D* getPoints() { return(m_points); }
+	inline int getScale() { return m_scale; }
 
 	void seek(Point3D targetPosition);										//seeks target position															//patrols within given bounds
 	void drawProjectiles();													//TODO: make private
@@ -39,6 +40,8 @@ protected:
 	void updateHitBox(float x, float y, float z);
 	float radius = 300;
 	AABBNode hitBox;
+
+	int const MAX_HEALTH = 5;
 
 	int m_scale;
 	Point3D m_heading;

@@ -328,6 +328,7 @@ public:
 	Camera cam;
 	TexturedPolygons tp;
 	UserInterface ui;
+	ObjPicking<Enemy> enemyObjects;
 
 
 	unsigned char* image = NULL;
@@ -341,6 +342,11 @@ public:
 		* @brief initialises Shays World
 		*/
 	void myinit();
+
+		/**
+		* @brief respawns player
+		*/
+	void respawn();
 
 		/**
 		* @brief calls display functions below to draw the backdrops
@@ -373,7 +379,6 @@ private:
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 	Player player;
-	ObjPicking<Enemy> enemyObjects;
 	Enemy enemy = Enemy(-24000, -1800, 30000, 40000, 10450);	//courtyard
 
 	// functions to display display lists (images) and bind them to a texture

@@ -3,8 +3,9 @@
 
 #include "ObjPicking.h"
 #include "Enemy.h"
+#include "enemyBoss.h"
 #include "point3D.h"
-#include <iostream>
+
 class Weapon {
     private:
         int totalAmmo;
@@ -13,7 +14,8 @@ class Weapon {
     public:
         Weapon();
         void addAmmo(int amount);
-        void shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies);
+        bool shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies);
+        bool shoot(Point3D ray, Point3D camPos, ObjPicking<EnemyBoss> enemies);
         void reload();
         void drawWeapon();
 

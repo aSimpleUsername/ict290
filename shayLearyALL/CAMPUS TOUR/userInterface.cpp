@@ -41,6 +41,15 @@ void UserInterface::info(double x, double y, double z)
 
 void UserInterface::hitmarker()
 {
-    std::string string = "HIT!";
-    renderText(1920/2 - 20, 1080/2 + 50, GLUT_BITMAP_HELVETICA_18, string);
+    if (hit)
+    {
+        m_timer = glutGet(GLUT_ELAPSED_TIME) + 100;
+        hit = false;
+    }
+
+    if (glutGet(GLUT_ELAPSED_TIME) < m_timer)
+    {
+        std::string string = "HIT!";
+        renderText(1920 / 2 - 20, 1080 / 2 + 50, GLUT_BITMAP_HELVETICA_18, string);
+    }
 }
