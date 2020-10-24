@@ -451,7 +451,7 @@ void DisplayWrathWorld::displayEnemies()
 
 	for (int i = 0; i < NUM_ENEMIES; ++i)
 	{
-		if (enemies[i].getHealth() > 0 && player.getHealth() > 0)
+		if (enemies[i].getHealth() > 0)
 		{
 			enemyObjects.getObjectFromBuffer(i)->stateMachine();
 

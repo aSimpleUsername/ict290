@@ -53,6 +53,7 @@ void Display();
 void reshape(int w, int h);
 void IncrementFrameCount();
 void timerCallback(int value);
+void setGameMode();
 
 
 //--------------------------------------------------------------------------------------
@@ -62,13 +63,7 @@ int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutGameModeString("1920x1080:32@60");
-	if (glutGameModeGet(GLUT_GAME_MODE_POSSIBLE))
-		glutEnterGameMode();
-	else {
-		printf("The select mode is not available\n");
-		exit(1);
-	}
+	setGameMode();
 
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
@@ -89,6 +84,41 @@ int main(int argc, char **argv)
 	glutReshapeFunc(reshape);
 	glutMainLoop();
  	return(0);
+}
+
+//--------------------------------------------------------------------------------------
+//  Sets the correct game mode for monitor
+//--------------------------------------------------------------------------------------
+void setGameMode()
+{
+	int i = 0;
+	do
+	{
+		switch (i)
+		{
+		case 0:
+			glutGameModeString("1920x1080:32@240");
+			break;
+		case 1:
+			glutGameModeString("1920x1080:32@165");
+			break;
+		case 2:
+			glutGameModeString("1920x1080:32@144");
+			break;
+		case 3:
+			glutGameModeString("1920x1080:32@120");
+			break;
+		case 4:
+			glutGameModeString("1920x1080:32@60");
+			break;
+		default:
+			std::cout << "Cannot run on this system";
+			exit(1);
+		}
+
+		++i;
+	} while (!glutGameModeGet(GLUT_GAME_MODE_POSSIBLE));
+	glutEnterGameMode();
 }
 
 //--------------------------------------------------------------------------------------
@@ -451,10 +481,10 @@ void IncrementFrameCount()
 }
 
 //--------------------------------------------------------------------------------------
-//runs the program at 60fps on all systems
+//runs the program at 120fps on all systems
 //--------------------------------------------------------------------------------------
 void timerCallback(int value)
 {
 	glutPostRedisplay();
-	glutTimerFunc(1000 / 60, timerCallback, 1);
+	glutTimerFunc(1000 / 120, timerCallback, 1);
 }
