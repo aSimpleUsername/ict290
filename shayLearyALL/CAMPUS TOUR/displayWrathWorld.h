@@ -48,6 +48,7 @@
 #define PORTAL_2					22	
 #define BOSS_FRONT					23
 #define BOSS_BACK					24
+#define GUN							25
 
 	/**
 	* @class displayWrathWorld
@@ -129,6 +130,8 @@ public:
 	void displayAmmo();
 
 	void collectionCheck();
+
+	void drawUI();
 
 private:
 	Portal stepsReturn;
