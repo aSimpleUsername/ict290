@@ -52,6 +52,8 @@ bool isShaysWorld = true;
 void Display();
 void reshape(int w, int h);
 void IncrementFrameCount();
+void timerCallback(int value);
+
 
 //--------------------------------------------------------------------------------------
 //  Main function
@@ -70,13 +72,13 @@ int main(int argc, char **argv)
 
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
+	glutTimerFunc(1000 / 60, timerCallback, 1);
 
 	glutIgnoreKeyRepeat(1);
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
 
 	glutDisplayFunc(Display);
-	glutIdleFunc(Display);
 	glutMouseFunc(Mouse);
 
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
@@ -446,4 +448,13 @@ void IncrementFrameCount()
 		frameCount = 0;
 		lastClock = clock();
 	}
+}
+
+//--------------------------------------------------------------------------------------
+//runs the program at 60fps on all systems
+//--------------------------------------------------------------------------------------
+void timerCallback(int value)
+{
+	glutPostRedisplay();
+	glutTimerFunc(1000 / 60, timerCallback, 1);
 }
