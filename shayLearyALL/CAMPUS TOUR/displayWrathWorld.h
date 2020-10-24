@@ -12,6 +12,7 @@
 //Classes for hit detection (enemy can be changed for your class)
 #include "ObjPicking.h"
 #include "Enemy.h"
+#include "enemyBoss.h"
 #include "Player.h"
 #include "userInterface.h"
 // TEXTURE IMAGE AXISES
@@ -150,14 +151,17 @@ private:
 	//Enemy can be changed for whatever class 
 
 	Player player;
-	
+
+	ObjPicking<EnemyBoss> enemyBossObject;
 
 
 	static int const NUM_ENEMIES = 4;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
-									Enemy(7000, 15000, -3500, 0, 10550),			// room 1
+									Enemy(7000, 15000, -3000, 0, 10550),			// room 1
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
-									Enemy(15000, 19000, -3500, 2500, 10550) };		// room 1
+									Enemy(15000, 19000, -3000, 2500, 10550) };		// room 1
+
+	EnemyBoss boss = EnemyBoss(9500, 15500, -49000, -36500, 10550);
 
 
 		/**
@@ -229,6 +233,11 @@ private:
 		* @brief displays enemies 
 		*/
 	void displayEnemies();
+
+		/**
+		* @brief displays boss
+		*/
+	void displayBoss();
 
 		/**
 		* @brief calls functions to create display lists

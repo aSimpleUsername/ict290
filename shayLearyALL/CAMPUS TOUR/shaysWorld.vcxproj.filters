@@ -27,7 +27,11 @@
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
     <ClCompile Include="weapon.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="stb_image.cpp" />
+=======
+    <ClCompile Include="enemyBoss.cpp" />
+>>>>>>> 9af41963373d23358230b58f4bd33b9af12d5751
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H" />
@@ -58,10 +62,17 @@
     <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="userInterface.h" />
     <ClInclude Include="weapon.h" />
+<<<<<<< HEAD
     <ClInclude Include="stb_image.h" />
+=======
+    <ClInclude Include="enemyBoss.h" />
+>>>>>>> 9af41963373d23358230b58f4bd33b9af12d5751
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
     <ResourceCompile Include="Script1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".DS_Store" />
   </ItemGroup>
 </Project>
