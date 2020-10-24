@@ -342,7 +342,7 @@ void DisplayWrathWorld::respawn()
 	cam.Position(10000, 10550.0, 12150.0, 180.0);
 	player.resetHealth();
 	for (int i = 0; i < NUM_ENEMIES; ++i)
-		enemies[i].resetHealth();
+		enemies[i].reset();
 	cam.dead = false;
 }
 
