@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
-	: m_topSpeed(20), m_rotationSpeed(0.025), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+	: m_topSpeed(20), m_rotationSpeed(0.035), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
 	m_state(PATROL), m_scale(150)
 {
 	m_location = Point3D::randomPointXZ(xmin + 2 * m_scale, xmax - 2 * m_scale, zmin + 2 * m_scale, zmax - 2 * m_scale, y);		// 2*SCALE ensures that the enemy spawns inside the bounds and not on the edge
@@ -37,6 +37,13 @@ Enemy::Enemy(const Enemy& obj)
 
 Enemy::~Enemy()
 {
+
+}
+
+void Enemy::reset()
+{
+	m_health = MAX_HEALTH;
+	m_state = PATROL;
 
 }
 
@@ -201,7 +208,8 @@ void Enemy::stateMachine()
 		if (m_location.distance(*m_enemyPosition) < 5000)   //attack if close to enemy
 			m_state = ATTACK;
 
-		// TO DO create attack if hit state change
+		if (m_health < MAX_HEALTH)
+			m_state = ATTACK;
 	}
 
 	// Attack State

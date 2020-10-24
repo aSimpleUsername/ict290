@@ -15,8 +15,8 @@ Projectile::Projectile(Point3D location, Point3D heading)
 
 void Projectile::drawProjectile()
 {
-	m_location.x += m_heading.normalise().x * 75;
-	m_location.z += m_heading.normalise().z * 75;
+	m_location.x += m_heading.normalise().x * 30;		// 30 = speed
+	m_location.z += m_heading.normalise().z * 30;
 
 	glPushMatrix();
 	glTranslated(m_location.x, m_location.y, m_location.z);
