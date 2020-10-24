@@ -417,6 +417,8 @@ void DisplayWrathWorld::CreateTextures()
 	tp.LoadPNGTexture(BOSS_FRONT, "data/boss_front.png");
 	
 	tp.LoadPNGTexture(BOSS_BACK, "data/boss_back.png");
+
+	tp.LoadPNGTexture(GUN, "data/gun.png");
 	
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -442,6 +444,9 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.playerShield(player.getShields());
 	ui.info(cam.getX(), cam.getY(), cam.getZ());
 	ui.hitmarker();
+	ui.healthBar(1920, 1080, tp.GetTexture(HEALTH));
+	ui.shieldBar(1920, 1080, tp.GetTexture(SHIELD));
+	ui.ammoCount(1920, 1080, tp.GetTexture(GUN));
 
 	if (player.getHealth() <= 0)
 	{
@@ -1525,6 +1530,18 @@ void DisplayWrathWorld::collectionCheck()
 // END OF PICKUPS
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+void DisplayWrathWorld::drawUI()
+{
+	//health bar
+	tp.CreateDisplayList(0, 350, 50.0, 50.0, 0.0, 0.0, 0.0, 10.0, 1.0);
+
+	//shield bar
+	tp.CreateDisplayList(0, 351, 50.0, 50.0, 0.0, 0.0, 0.0, 10.0, 1.0);
+
+	//ammo
+	tp.CreateDisplayList(0, 352, 1000.0, 600.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+}
+
 //--------------------------------------------------------------------------------------
 //  Create display lists
 //	Numbers indicate list numbers
@@ -1540,6 +1557,8 @@ void DisplayWrathWorld::CreateTextureList()
 	drawServerWalls();
 	drawPowerWalls();
 	drawBossRoom();
+
+	drawUI();
 
 							//286-291 used in drawEnemies()
 

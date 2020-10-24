@@ -63,3 +63,78 @@ void UserInterface::hitmarker()
         renderText(1920 / 2 - 20, 1080 / 2 + 50, GLUT_BITMAP_HELVETICA_18, string);
     }
 }
+
+void UserInterface::healthBar(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(0, -250, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(350);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::shieldBar(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(0, -150, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(351);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::ammoCount(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(850, -520, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(352);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
