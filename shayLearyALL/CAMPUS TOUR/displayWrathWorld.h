@@ -5,6 +5,7 @@
 #ifndef DISPLAYWRATHWORLD_H
 #define DISPLAYWRATHWORLD_H
 
+#include <vector>
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Portal.h"
@@ -64,6 +65,9 @@ public:
 	UserInterface ui;
 	ObjPicking<Enemy> enemyObjects;
 	unsigned char* image = NULL;
+	std::vector<Pickups> hPowerup;
+	std::vector<Pickups> sPowerup;
+	std::vector<Pickups> aPowerup;
 
 	bool DisplayMap = false;	
 	bool DisplayWelcome = false;
@@ -90,34 +94,6 @@ public:
 		* @return  if player is withing the bounds of portal
 		*/
 	bool stairsReturnPortal();
-
-	// collision
-
-	void collisionCheck();
-
-	// health
-
-	void setHealth();
-
-	void healthChecksDraw();
-
-	void healthChecksDisplay();
-
-	// shields
-
-	void setShields();
-
-	void shieldChecksDraw();
-
-	void shieldChecksDisplay();
-
-	//ammo
-
-	void setAmmo();
-
-	void ammoChecksDraw();
-
-	void ammoChecksDisplay();
 	
 	//portals
 	void elecPortal();
@@ -135,6 +111,18 @@ public:
 	void electricFloor(float maxX, float minX, float maxZ, float minZ);
 
 	void electricFloorCheck();
+
+	// NEW
+	////////////////////////////////////////////////////////////////////////
+	void setUpPowerups();
+
+	void displayHealth();
+
+	void displayShields();
+
+	void displayAmmo();
+
+	void collectionCheck();
 
 private:
 	Portal stepsReturn;
@@ -201,30 +189,6 @@ private:
 
 	////////////////////////////////////////////////////////////////////
 
-	void displayHealthPickups();
-	void displayHealthPickups1();
-	void displayHealthPickups2();
-	void displayHealthPickups3();
-	void displayHealthPickups4();
-	void displayHealthPickups5();
-	void displayHealthPickups6();
-
-	void displayShieldPickups();
-	void displayShieldPickups1();
-	void displayShieldPickups2();
-	void displayShieldPickups3();
-	void displayShieldPickups4();
-	void displayShieldPickups5();
-	void displayShieldPickups6();
-
-	void displayAmmoPickups();
-	void displayAmmoPickups1();
-	void displayAmmoPickups2();
-	void displayAmmoPickups3();
-	void displayAmmoPickups4();
-	void displayAmmoPickups5();
-	void displayAmmoPickups6();
-
 	////////////////////////////////////////////////////////////////////
 
 	void displayInnerPortals();
@@ -274,30 +238,6 @@ private:
 	void drawBossRoom();
 
 	////////////////////////////////////////////////////////////////////
-
-	void drawHealthPickups();
-	void drawHealthPickups1();
-	void drawHealthPickups2();
-	void drawHealthPickups3();
-	void drawHealthPickups4();
-	void drawHealthPickups5();
-	void drawHealthPickups6();
-
-	void drawShieldPickups();
-	void drawShieldPickups1();
-	void drawShieldPickups2();
-	void drawShieldPickups3();
-	void drawShieldPickups4();
-	void drawShieldPickups5();
-	void drawShieldPickups6();
-
-	void drawAmmoPickups();
-	void drawAmmoPickups1();
-	void drawAmmoPickups2();
-	void drawAmmoPickups3();
-	void drawAmmoPickups4();
-	void drawAmmoPickups5();
-	void drawAmmoPickups6();
 
 	////////////////////////////////////////////////////////////////////
 
