@@ -4,5 +4,5 @@ Player::Player()
 {
 	
 	setHealth(10);
-	setShields(0);
+	setShields(10);
 }

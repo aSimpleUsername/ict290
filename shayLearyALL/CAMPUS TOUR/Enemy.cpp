@@ -92,7 +92,14 @@ void Enemy::checkHit(Entity* target)
 	{
 		if (m_projectiles[j].m_location.distance(target->getLocation()) < 200)
 		{
-			target->decreaseHealth();
+			if (target->getShields() > 0)
+			{
+				target->decreaseShields();
+			}
+			else
+			{
+				target->decreaseHealth();
+			}
 			m_projectiles[j].m_location = Point3D(0.0, 0.0, 0.0);
 			m_projectiles[j].m_heading = Point3D(0.0, 0.0, 0.0);
 		}
