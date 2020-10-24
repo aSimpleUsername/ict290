@@ -46,7 +46,7 @@ void TexturedPolygons::LoadPNGTexture(int textureNo, const char* filename)
 GLubyte* TexturedPolygons::LoadRawImageFile(char* filename, int width, int height)
 {
 	FILE* file;
-	unsigned char* image;
+	unsigned char* image = 0;
 	// create memory space w x h x 3 (3 stores RGB values)
 	image = (unsigned char*)malloc(sizeof(unsigned char) * width * height * 3);
 	file = fopen(filename, "rb" );

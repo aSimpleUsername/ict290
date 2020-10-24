@@ -61,7 +61,12 @@ int main(int argc, char **argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutGameModeString("1920x1080:32@60");
-	glutEnterGameMode();
+	if (glutGameModeGet(GLUT_GAME_MODE_POSSIBLE))
+		glutEnterGameMode();
+	else {
+		printf("The select mode is not available\n");
+		exit(1);
+	}
 
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
@@ -257,36 +262,37 @@ void releaseKey(unsigned char key, int x, int y)
 void processKeys()
 {
 	int speed = 3;
+	if (!wrathWorld.cam.dead && !shaysWorld.cam.dead) {
+		if ((keyStates['a'] || keyStates['A']) && isShaysWorld)		//step left
+			shaysWorld.cam.DirectionLR(-speed);
+		if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
+			wrathWorld.cam.DirectionLR(-speed);
 
-	if ((keyStates['a'] || keyStates['A']) && isShaysWorld)		//step left
-		shaysWorld.cam.DirectionLR(-speed);
-	if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
-		wrathWorld.cam.DirectionLR(-speed);
+		if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
+			shaysWorld.cam.DirectionLR(speed);
+		if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
+			wrathWorld.cam.DirectionLR(speed);
 
-	if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
-		shaysWorld.cam.DirectionLR(speed);
-	if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
-		wrathWorld.cam.DirectionLR(speed);
+		if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
+			shaysWorld.cam.DirectionFB(speed);
+		if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
+			wrathWorld.cam.DirectionFB(speed);
 
-	if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
-		shaysWorld.cam.DirectionFB(speed);
-	if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
-		wrathWorld.cam.DirectionFB(speed);
+		if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
+			shaysWorld.cam.DirectionFB(-speed);
+		if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
+			wrathWorld.cam.DirectionFB(-speed);
 
-	if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
-		shaysWorld.cam.DirectionFB(-speed);
-	if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
-		wrathWorld.cam.DirectionFB(-speed);
+		if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
+			shaysWorld.cam.DirectionLR(0);
+		if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
+			wrathWorld.cam.DirectionLR(0);
 
-	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
-		shaysWorld.cam.DirectionLR(0);
-	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
-		wrathWorld.cam.DirectionLR(0);
-
-	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
-		shaysWorld.cam.DirectionFB(0);
-	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
-		wrathWorld.cam.DirectionFB(0);
+		if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
+			shaysWorld.cam.DirectionFB(0);
+		if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
+			wrathWorld.cam.DirectionFB(0);
+	}
 
 	if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
 	{
