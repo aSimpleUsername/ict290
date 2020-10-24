@@ -67,8 +67,9 @@ void CameraMap::DisplayWelcomeScreen (const int & screenWidth, const int & scree
 	glTranslatef(screenWidth/2 -256.0, -screenHeight/2 -256.0, 0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();	
-
-	// display exit screen or welcome screen
+	glEnable(GL_TEXTURE_2D);
+	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_CULL_FACE);
 	if (tempExit == 1)
 	{
 
@@ -78,6 +79,7 @@ void CameraMap::DisplayWelcomeScreen (const int & screenWidth, const int & scree
 	{
 		glBindTexture(GL_TEXTURE_2D, tempImage);
 	}
+	glEnable(GL_DEPTH_TEST);
 	// display image
 	glCallList(449);
 	// Reset Perspective Projection

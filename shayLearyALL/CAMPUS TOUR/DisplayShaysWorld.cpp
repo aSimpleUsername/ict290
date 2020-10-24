@@ -633,8 +633,7 @@ void DisplayShaysWorld::CreateTextures()
 	image = tp.LoadTexture("data/glassboardSide.raw", 2, 16);
 	tp.CreateTexture(GLASS_B_SIDE, image, 2, 16);
 
-	image = tp.LoadTexture("data/grass.png");
-	tp.CreatePNGTexture(GRASS, image, 64, 64);
+	tp.LoadPNGTexture(GRASS, "data/grass.png");
 
 	image = tp.LoadTexture("data/grass2.raw", 64, 64);
 	tp.CreateTexture(GRASS_2, image, 64, 64);
@@ -1101,100 +1100,92 @@ void DisplayShaysWorld::CreateTextures()
 	tp.CreateTexture(WINDOW_LIB_LONG, image, 256, 128);
 
 	//NEW TEXTURES
-	image = tp.LoadTexture("data/spaceportal.png");
-	tp.CreatePNGTexture(PORTAL, image, 512, 385);
+	tp.LoadPNGTexture(PORTAL, "data/spaceportal.png");
 
-	image = tp.LoadTexture("data/bingreen.png");
-	tp.CreatePNGTexture(BIN_GREEN, image, 128, 198);
 
-	image = tp.LoadTexture("data/binred.png");
-	tp.CreatePNGTexture(BIN_RED, image, 134, 198);
+	tp.LoadPNGTexture(BIN_GREEN, "data/bingreen.png");
 
-	image = tp.LoadTexture("data/bookshopdoor.png");
-	tp.CreatePNGTexture(BOOKSHOP_DOOR, image, 283, 281);
 
-	image = tp.LoadTexture("data/bookshopwindow1.png");
-	tp.CreatePNGTexture(BOOKSHOP_WINDOW_1, image, 397, 292);
+	tp.LoadPNGTexture(BIN_RED, "data/binred.png");
 
-	image = tp.LoadTexture("data/bookshopwindow2.png");
-	tp.CreatePNGTexture(BOOKSHOP_WINDOW_2, image, 217, 284);
 
-	image = tp.LoadTexture("data/bookshopwindow3.png");
-	tp.CreatePNGTexture(BOOKSHOP_WINDOW_3, image, 361, 284);
+	tp.LoadPNGTexture(BOOKSHOP_DOOR, "data/bookshopdoor.png");
 
-	image = tp.LoadTexture("data/charlie.png");
-	tp.CreatePNGTexture(CHARLIE, image, 512, 512);
 
-	image = tp.LoadTexture("data/connor.png");
-	tp.CreatePNGTexture(CONNOR, image, 512, 512);
+	tp.LoadPNGTexture(BOOKSHOP_WINDOW_1, "data/bookshopwindow1.png");
 
-	image = tp.LoadTexture("data/courtyardboard.png");
-	tp.CreatePNGTexture(COURTYARD_BOARD, image, 468, 278);
 
-	image = tp.LoadTexture("data/courtyardboard2.png");
-	tp.CreatePNGTexture(COURTYARD_BOARD_2, image, 481, 239);
+	tp.LoadPNGTexture(BOOKSHOP_WINDOW_2, "data/bookshopwindow2.png");
+	
 
-	image = tp.LoadTexture("data/courtyarddoor1.png");
-	tp.CreatePNGTexture(COURTYARD_DOOR_1, image, 294, 335);
+	tp.LoadPNGTexture(BOOKSHOP_WINDOW_3, "data/bookshopwindow3.png");
 
-	image = tp.LoadTexture("data/courtyarddoor2.png");
-	tp.CreatePNGTexture(COURTYARD_DOOR_2, image, 136, 293);
 
-	image = tp.LoadTexture("data/courtyarddoor3.png");
-	tp.CreatePNGTexture(COURTYARD_DOOR_3, image, 221, 258);
+	tp.LoadPNGTexture(CHARLIE,"data/charlie.png");
 
-	image = tp.LoadTexture("data/courtyarddoor4.png");
-	tp.CreatePNGTexture(COURTYARD_DOOR_4, image, 137, 312);
 
-	image = tp.LoadTexture("data/courtyarddoor5.png");
-	tp.CreatePNGTexture(COURTYARD_DOOR_5, image, 404, 321);
+	tp.LoadPNGTexture(CONNOR, "data/connor.png");
 
-	image = tp.LoadTexture("data/courtyardexit.png");
-	tp.CreatePNGTexture(COURTYARD_EXIT, image, 500, 375);
 
-	image = tp.LoadTexture("data/courtyardwindow1.png");
-	tp.CreatePNGTexture(COURTYARD_WINDOW_1, image, 173, 216);
+	tp.LoadPNGTexture(COURTYARD_BOARD, "data/courtyardboard.png");
 
-	image = tp.LoadTexture("data/fireextinguisher.png");
-	tp.CreatePNGTexture(FIRE_EXTINGUISHER, image, 126, 335);
 
-	image = tp.LoadTexture("data/level1sign.png");
-	tp.CreatePNGTexture(LEVEL_1_SIGN, image, 185, 314);
+	tp.LoadPNGTexture(COURTYARD_BOARD_2, "data/courtyardboard2.png");
 
-	image = tp.LoadTexture("data/vendingmachine1.png");
-	tp.CreatePNGTexture(VENDING_MACHINE_1, image, 197, 334);
 
-	image = tp.LoadTexture("data/vendingmachine2.png");
-	tp.CreatePNGTexture(VENDING_MACHINE_2, image, 201, 324);
+	tp.LoadPNGTexture(COURTYARD_DOOR_1, "data/courtyarddoor1.png");
 
-	image = tp.LoadTexture("data/vendingmachine3.png");
-	tp.CreatePNGTexture(VENDING_MACHINE_3, image, 179, 345);
 
-	image = tp.LoadTexture("data/vlad.png");
-	tp.CreatePNGTexture(VLAD, image, 512, 512);
+	tp.LoadPNGTexture(COURTYARD_DOOR_2, "data/courtyarddoor2.png");
 
-	image = tp.LoadTexture("data/bintop.png");
-	tp.CreatePNGTexture(BIN_TOP, image, 1300, 867);
+
+	tp.LoadPNGTexture(COURTYARD_DOOR_3, "data/courtyarddoor3.png");
+
+
+	tp.LoadPNGTexture(COURTYARD_DOOR_4, "data/courtyarddoor4.png");
+
+
+	tp.LoadPNGTexture(COURTYARD_DOOR_5, "data/courtyarddoor5.png");
+
+
+	tp.LoadPNGTexture(COURTYARD_EXIT, "data/courtyardexit.png");
+
+
+	tp.LoadPNGTexture(COURTYARD_WINDOW_1, "data/courtyardwindow1.png");
+
+
+	tp.LoadPNGTexture(FIRE_EXTINGUISHER, "data/fireextinguisher.png");
+
+
+	tp.LoadPNGTexture(LEVEL_1_SIGN, "data/level1sign.png");
+
+	tp.LoadPNGTexture(VENDING_MACHINE_1, "data/vendingmachine1.png");
+
+
+	tp.LoadPNGTexture(VENDING_MACHINE_2, "data/vendingmachine2.png");
+
+
+	tp.LoadPNGTexture(VENDING_MACHINE_3, "data/vendingmachine3.png");
+
+	tp.LoadPNGTexture(VLAD, "data/vlad.png");
+
+	tp.LoadPNGTexture(BIN_TOP, "data/bintop.png");
 	// END OF NEW TEXTURES
 
-	image = tp.LoadTexture("data/enemy_front.png");
-	tp.CreatePNGTexture(ENEMY_FRONT, image, 500, 500);
+	tp.LoadPNGTexture(ENEMY_FRONT, "data/enemy_front.png");
 
-	image = tp.LoadTexture("data/enemy_back.png");
-	tp.CreatePNGTexture(ENEMY_BACK, image, 500, 500);
+	tp.LoadPNGTexture(ENEMY_BACK, "data/enemy_back.png");
 
-	image = tp.LoadTexture("data/enemy_side.png");
-	tp.CreatePNGTexture(ENEMY_SIDE, image, 500, 500);
+	tp.LoadPNGTexture(ENEMY_SIDE, "data/enemy_side.png");
 
-	image = tp.LoadTexture("data/map.raw", 256, 256);
+	tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
-	image = tp.LoadTexture("data/test.png");
-	tp.CreatePNGTexture(218, image, 512, 512);
-	image = tp.LoadTexture("data/thanks.png");
-	tp.CreatePNGTexture(219, image, 512, 512);
 
+	tp.LoadPNGTexture(218, "data/test.png");
+	tp.LoadPNGTexture(219, "data/thanks.png");
 
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
 }

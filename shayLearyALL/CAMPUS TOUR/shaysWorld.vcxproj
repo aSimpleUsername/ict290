@@ -142,6 +142,7 @@
     <ClCompile Include="projectile.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundTime.cpp" />
+    <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
     <ClCompile Include="weapon.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="resource2.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundTime.h" />
+    <ClInclude Include="stb_image.h" />
     <ClInclude Include="texturedPolygons.h" />
     <ClInclude Include="userInterface.h" />
     <ClInclude Include="weapon.h" />

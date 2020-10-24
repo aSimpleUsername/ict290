@@ -23,15 +23,20 @@ GLubyte* TexturedPolygons::LoadTexture(char* filename, int imgWidth, int imgHeig
 	//std::cout << "Loading image file " << filename << "...\n";
 	return image;
 }
-GLubyte* TexturedPolygons::LoadTexture(const char* filename)
+void TexturedPolygons::LoadPNGTexture(int textureNo, const char* filename)
 {
-	unsigned char* image;
-	unsigned width, height;
-	unsigned error = lodepng_decode32_file(&image, &width, &height, filename);
-    if(error) std::cout << "decoder error " << error << ": " << lodepng_error_text(error) << std::endl;
+	int width, height, nrChannels;
+	unsigned char* data = stbi_load(filename, &width, &height, &nrChannels, 4);
 
-    //std::cout << "Loading image file " << filename << "...\n";
-	return image;
+	glBindTexture(GL_TEXTURE_2D, m_texture[textureNo]);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+	//gluBuild2DMipmaps(GL_TEXTURE_2D, 4, width, height, GL_RGBA, GL_UNSIGNED_BYTE, data);
+	stbi_image_free(data);
 }
 
 //--------------------------------------------------------------------------------------
@@ -90,23 +95,6 @@ void TexturedPolygons::CreateTexture(int textureNo, unsigned char* image, int im
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
 	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, imgWidth, imgHeight, GL_RGB, GL_UNSIGNED_BYTE, image);
 }
-void TexturedPolygons::CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight)
-{
-	glBindTexture(GL_TEXTURE_2D, m_texture[textureNo]);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	//loads the texture using RGBA colour
-	gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGBA, imgWidth, imgHeight, GL_RGBA, GL_UNSIGNED_BYTE, image);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-	//used to make the image look blocky
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-
-	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imgWidth, imgHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
-}
-
-
 
 //--------------------------------------------------------------------------------------
 //  Calls functions to create display lists, depending on parameters.

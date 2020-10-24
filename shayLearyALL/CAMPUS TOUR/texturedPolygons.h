@@ -14,6 +14,7 @@
 #include <stdio.h>	// should really be using c++, but didn't get time to change
 #include <stdlib.h>
 #include "lodepng.h"
+#include "stb_image.h"
 
 //--------------------------------------------------------------------------------------
 /**
@@ -48,10 +49,11 @@ public:
 	GLubyte* LoadTexture(char *filename, int imgWidth, int imgHeight);
     /**
         * @brief Loads the texture
+        * @param textureNo - texture number
         * @param filename - name of the file
-        * @return GLubyte*
+        * @return void
     */
-	GLubyte* LoadTexture(const char* filename);
+	void LoadPNGTexture(int textureNo, const char* filename);
     /**
         * @brief Set the number of textures to be used
         * @param textureNo - number of the texture
@@ -67,15 +69,7 @@ public:
         * @return void
     */
 	void CreateTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
-	/**
-        * @brief Creates PNG texture and set required values for texture mapping
-        * @param textureNo - number of the texture
-        * @param image - character array of the image
-        * @param imgWidth - width of the image
-        * @param imgHeight - height of the image
-        * @return void
-    */
-    void CreatePNGTexture(int textureNo, unsigned char* image, int imgWidth, int imgHeight);
+
     /**
         * @brief Calls function to creates display list to contain image
         * @param XYZ 

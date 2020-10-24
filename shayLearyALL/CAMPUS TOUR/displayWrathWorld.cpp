@@ -349,80 +349,60 @@ void DisplayWrathWorld::CreateTextures()
 
 	image = tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
-	image = tp.LoadTexture("data/welcome.png");
+	tp.LoadPNGTexture(WELCOME_SCREEN, "data/welcome.png");
 
-	tp.CreatePNGTexture(WELCOME_SCREEN, image, 512, 512);
+	tp.LoadPNGTexture(EXIT_SCREEN, "data/thanks.png");
 
-	image = tp.LoadTexture("data/thanks.png");
-	tp.CreatePNGTexture(EXIT_SCREEN, image, 512, 512);
+	tp.LoadPNGTexture(GROUND_PLANE, "data/groundPlane.png");
 
-	image = tp.LoadTexture("data/groundPlane.png");
-	tp.CreatePNGTexture(GROUND_PLANE, image, 431, 431);
+	tp.LoadPNGTexture(SPACE_1, "data/space_1.png");
+	
 
-	image = tp.LoadTexture("data/space_1.png");
-	tp.CreatePNGTexture(SPACE_1, image, 1024, 1024);
+	tp.LoadPNGTexture(PORTAL_1, "data/spaceportal.png");
+	
 
-	image = tp.LoadTexture("data/spaceportal.png");
-	tp.CreatePNGTexture(PORTAL_1, image, 512, 385);
+	tp.LoadPNGTexture(SPACESHIP_WALL_1, "data/spaceship_wall_1.png");
+	
 
-	image = tp.LoadTexture("data/spaceship_wall_1.png");
-	tp.CreatePNGTexture(SPACESHIP_WALL_1, image, 600, 600);
+	tp.LoadPNGTexture(SPACESHIP_WALL_1_YZ, "data/spaceship_wall_1_YZ.png");
 
-	image = tp.LoadTexture("data/spaceship_wall_1_YZ.png");
-	tp.CreatePNGTexture(SPACESHIP_WALL_1_YZ, image, 600, 600);
+	tp.LoadPNGTexture(CIRCUIT, "data/hexagon.png");
+	
+	tp.LoadPNGTexture(HEALTH, "data/heart.png");
 
-	image = tp.LoadTexture("data/hexagon.png");
-	tp.CreatePNGTexture(CIRCUIT, image, 650, 1155);
+	tp.LoadPNGTexture(SHIELD, "data/shield.png");
+	
 
-	image = tp.LoadTexture("data/heart.png");
-	tp.CreatePNGTexture(HEALTH, image, 417, 390);
+	tp.LoadPNGTexture(AMMO, "data/ammo.png");
+	
+	tp.LoadPNGTexture(HEALTH_YZ, "data/heartyz.png");
+	
+	tp.LoadPNGTexture(SHIELD_YZ, "data/shieldyz.png");
+	
 
-	image = tp.LoadTexture("data/shield.png");
-	tp.CreatePNGTexture(SHIELD, image, 417, 390);
+	tp.LoadPNGTexture(AMMO_YZ, "data/ammoyz.png");
 
-	image = tp.LoadTexture("data/ammo.png");
-	tp.CreatePNGTexture(AMMO, image, 417, 390);
+	tp.LoadPNGTexture(ELECTRICITY, "data/electric.png");
 
-	image = tp.LoadTexture("data/heartyz.png");
-	tp.CreatePNGTexture(HEALTH_YZ, image, 390, 417);
+	tp.LoadPNGTexture(VENT, "data/vent.png");
 
-	image = tp.LoadTexture("data/shieldyz.png");
-	tp.CreatePNGTexture(SHIELD_YZ, image, 390, 417);
+	tp.LoadPNGTexture(SERVER, "data/server.png");
 
-	image = tp.LoadTexture("data/ammoyz.png");
-	tp.CreatePNGTexture(AMMO_YZ, image, 390, 417);
+	tp.LoadPNGTexture(SERVER_YZ, "data/serveryz.png");
 
-	image = tp.LoadTexture("data/electric.png");
-	tp.CreatePNGTexture(ELECTRICITY, image, 512, 384);
+	tp.LoadPNGTexture(ENEMY_FRONT,"data/enemy_front.png");
 
-	image = tp.LoadTexture("data/vent.png");
-	tp.CreatePNGTexture(VENT, image, 352, 626);
+	tp.LoadPNGTexture(ENEMY_BACK, "data/enemy_back.png");
 
-	image = tp.LoadTexture("data/server.png");
-	tp.CreatePNGTexture(SERVER, image, 800, 508);
+	tp.LoadPNGTexture(ENEMY_SIDE, "data/enemy_side.png");
 
-	image = tp.LoadTexture("data/serveryz.png");
-	tp.CreatePNGTexture(SERVER_YZ, image, 508, 800);
+	tp.LoadPNGTexture(PORTAL_2, "data/portalv2.png");
 
-	image = tp.LoadTexture("data/enemy_front.png");
-	tp.CreatePNGTexture(ENEMY_FRONT, image, 500, 500);
-
-	image = tp.LoadTexture("data/enemy_back.png");
-	tp.CreatePNGTexture(ENEMY_BACK, image, 500, 500);
-
-	image = tp.LoadTexture("data/enemy_side.png");
-	tp.CreatePNGTexture(ENEMY_SIDE, image, 500, 500);
-
-	image = tp.LoadTexture("data/portalv2.png");
-	tp.CreatePNGTexture(PORTAL_2, image, 2000, 2000);
-
-	image = tp.LoadTexture("data/boss_front.png");
-	tp.CreatePNGTexture(BOSS_FRONT, image, 500, 500);
-
-	image = tp.LoadTexture("data/boss_back.png");
-	tp.CreatePNGTexture(BOSS_BACK, image, 500, 500);
-
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+	tp.LoadPNGTexture(BOSS_FRONT, "data/boss_front.png");
+	
+	tp.LoadPNGTexture(BOSS_BACK, "data/boss_back.png");
+	
+	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
 
