@@ -259,80 +259,95 @@ void processKeys()
 	int speed = 3;
 
 	if ((keyStates['a'] || keyStates['A']) && isShaysWorld)		//step left
-shaysWorld.cam.DirectionLR(-speed);
-if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
-wrathWorld.cam.DirectionLR(-speed);
+		shaysWorld.cam.DirectionLR(-speed);
+	if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
+		wrathWorld.cam.DirectionLR(-speed);
 
-if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
-shaysWorld.cam.DirectionLR(speed);
-if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
-wrathWorld.cam.DirectionLR(speed);
+	if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
+		shaysWorld.cam.DirectionLR(speed);
+	if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
+		wrathWorld.cam.DirectionLR(speed);
 
-if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
-shaysWorld.cam.DirectionFB(speed);
-if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
-wrathWorld.cam.DirectionFB(speed);
+	if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
+		shaysWorld.cam.DirectionFB(speed);
+	if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
+		wrathWorld.cam.DirectionFB(speed);
 
-if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
-shaysWorld.cam.DirectionFB(-speed);
-if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
-wrathWorld.cam.DirectionFB(-speed);
+	if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
+		shaysWorld.cam.DirectionFB(-speed);
+	if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
+		wrathWorld.cam.DirectionFB(-speed);
 
-if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
-shaysWorld.cam.DirectionLR(0);
-if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
-wrathWorld.cam.DirectionLR(0);
+	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
+		shaysWorld.cam.DirectionLR(0);
+	if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
+		wrathWorld.cam.DirectionLR(0);
 
-if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
-shaysWorld.cam.DirectionFB(0);
-if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
-wrathWorld.cam.DirectionFB(0);
+	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
+		shaysWorld.cam.DirectionFB(0);
+	if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
+		wrathWorld.cam.DirectionFB(0);
 
-if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
-{
-	if (shaysWorld.DisplayMap)
+	if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
 	{
-		shaysWorld.DisplayMap = false;
+		if (shaysWorld.DisplayMap)
+		{
+			shaysWorld.DisplayMap = false;
+		}
+		else
+		{
+			shaysWorld.DisplayMap = true;
+		}
 	}
-	else
-	{
-		shaysWorld.DisplayMap = true;
-	}
-}
 
-if ((keyStates['p'] || keyStates['P']) && isShaysWorld)	// change world - temp
-{
-	wrathWorld.myinit();
-	isShaysWorld = false;
-}
-
-if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
-{
-	shaysWorld.cam.SetXRotateSpeed(0.0f);
-	shaysWorld.cam.SetYRotateSpeed(0.0f);
-	shaysWorld.cam.SetMoveSpeed(0.0f);
-	shaysWorld.DisplayExit = true;
-}
-if ((keyStates[27]) && !isShaysWorld)	// exit tour (escape key)
-{
-	wrathWorld.cam.SetXRotateSpeed(0.0f);
-	wrathWorld.cam.SetYRotateSpeed(0.0f);
-	wrathWorld.cam.SetMoveSpeed(0.0f);
-	wrathWorld.DisplayExit = true;
-}
-
-// display light fittings
-if ((keyStates['l'] || keyStates['L']) && isShaysWorld)
-{
-	if (shaysWorld.lightsOn)
+	if ((keyStates['p'] || keyStates['P']) && isShaysWorld)	// change world - temp
 	{
-		shaysWorld.lightsOn = false;
+		wrathWorld.myinit();
+		isShaysWorld = false;
 	}
-	else
+
+	if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
 	{
-		shaysWorld.lightsOn = true;
+		shaysWorld.cam.SetXRotateSpeed(0.0f);
+		shaysWorld.cam.SetYRotateSpeed(0.0f);
+		shaysWorld.cam.SetMoveSpeed(0.0f);
+		shaysWorld.DisplayExit = true;
 	}
-}
+	if ((keyStates[27]) && !isShaysWorld)	// exit tour (escape key)
+	{
+		wrathWorld.cam.SetXRotateSpeed(0.0f);
+		wrathWorld.cam.SetYRotateSpeed(0.0f);
+		wrathWorld.cam.SetMoveSpeed(0.0f);
+		wrathWorld.DisplayExit = true;
+	}
+
+	// display light fittings
+	if ((keyStates['l'] || keyStates['L']) && isShaysWorld)
+	{
+		if (shaysWorld.lightsOn)
+		{
+			shaysWorld.lightsOn = false;
+		}
+		else
+		{
+			shaysWorld.lightsOn = true;
+		}
+	}
+
+	// Respawn player
+	if ((keyStates['r'] || keyStates['R']) && isShaysWorld)
+	{
+		shaysWorld.respawn();
+		shaysWorld.cam.SetXRotateSpeed(xrotationSpeed);
+		shaysWorld.cam.SetYRotateSpeed(yrotationSpeed);
+	}
+	if ((keyStates['r'] || keyStates['R']) && !isShaysWorld)
+	{
+		wrathWorld.respawn();
+		wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
+		wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+	}
+
 }
 
 //--------------------------------------------------------------------------------------
@@ -350,6 +365,17 @@ void Mouse(int button, int state, int x, int y)
 			shaysWorld.DeleteImageFromMemory(shaysWorld.image);
 			exit(1);
 		}
+
+		if (canShoot) {
+			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
+			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
+			
+			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects))
+				shaysWorld.ui.hit = true;
+			
+			//general shoot logic (regardless of hit or miss)
+			canShoot = false;
+		}
 	}
 	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && !isShaysWorld)
 	{
@@ -364,13 +390,16 @@ void Mouse(int button, int state, int x, int y)
 		if (canShoot) {
 			Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
 			Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
-			playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects);
-			wrathWorld.ui.hitmarker();
+
+			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject))
+				wrathWorld.ui.hit = true;		
+
+			// general shoot logic (regardless of hit or miss)
 			canShoot = false;
 		}
 	}
 
-	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_UP)) && !isShaysWorld) {
+	if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_UP)) {
 		canShoot = true;
 	}
 	

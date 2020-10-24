@@ -329,6 +329,12 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
+void DisplayShaysWorld::respawn()
+{
+	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	player.resetHealth();
+}
+
 //--------------------------------------------------------------------------------------
 // Set up co-ordinates of different plains
 //--------------------------------------------------------------------------------------
@@ -1224,11 +1230,12 @@ void DisplayShaysWorld::DrawBackdrop()
 
 	ui.playerHealth(player.getHealth());
 	ui.info(player.GetX(), player.GetY(), player.GetZ());
+	ui.hitmarker();
 
 	if (player.getHealth() <= 0)
 	{
 		cam.dead = true;
-		DisplayExit = true;
+		//DisplayExit = true;
 	}
 }
 
@@ -1236,113 +1243,114 @@ void DisplayShaysWorld::DrawBackdrop()
 // Display Enemies TODO: Make this a state function in Enity.cpp
 //--------------------------------------------------------------------------------------
 void DisplayShaysWorld::displayEnemies()
-{	
+{
 	Point3D ray(cam.GetLX(), cam.GetLY(), cam.GetLZ());
 	Point3D camPos(cam.getX(), cam.getY(), cam.getZ());
 	player.updateLocation(cam.getX(), cam.getY(), cam.getZ());
 
-	enemyObjects.getObjectFromBuffer(0)->stateMachine();
+	if (enemy.getHealth() > 0 && player.getHealth() > 0)
+	{
 
-	//bottom
-	glNewList(751, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
-	glEnd();
-	glEndList();
+		enemyObjects.getObjectFromBuffer(0)->stateMachine();
 
-	//top
-	glNewList(752, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
-	glEnd();
-	glEndList();
+		//bottom
+		glNewList(751, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
+		glEnd();
+		glEndList();
 
-	//front
-	glNewList(753, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
-	glEnd();
-	glEndList();
+		//top
+		glNewList(752, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
+		glEnd();
+		glEndList();
 
-	//back
-	glNewList(754, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
-	glEnd();
-	glEndList();
+		//front
+		glNewList(753, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
+		glEnd();
+		glEndList();
 
-	//Left
-	glNewList(755, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
-	glEnd();
-	glEndList();
+		//back
+		glNewList(754, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
+		glEnd();
+		glEndList();
 
-	//Right
-	glNewList(756, GL_COMPILE);
-	glBegin(GL_QUADS);
-	glTexCoord2f(0.0, 0.0);
-	glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
-	glTexCoord2f(0.0, 1.0);
-	glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
-	glTexCoord2f(1.0, 1.0);
-	glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
-	glTexCoord2f(1.0, 0.0);
-	glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
-	glEnd();
-	glEndList();
+		//Left
+		glNewList(755, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[5].x, enemy.getPoints()[5].y, enemy.getPoints()[5].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[1].x, enemy.getPoints()[1].y, enemy.getPoints()[1].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[0].x, enemy.getPoints()[0].y, enemy.getPoints()[0].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[4].x, enemy.getPoints()[4].y, enemy.getPoints()[4].z);
+		glEnd();
+		glEndList();
 
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_SIDE));
-	glCallList(751);		// bottom
-	glCallList(752);		// top
-	glCallList(755);		// left
-	glCallList(756);		// right
+		//Right
+		glNewList(756, GL_COMPILE);
+		glBegin(GL_QUADS);
+		glTexCoord2f(0.0, 0.0);
+		glVertex3f(enemy.getPoints()[7].x, enemy.getPoints()[7].y, enemy.getPoints()[7].z);
+		glTexCoord2f(0.0, 1.0);
+		glVertex3f(enemy.getPoints()[3].x, enemy.getPoints()[3].y, enemy.getPoints()[3].z);
+		glTexCoord2f(1.0, 1.0);
+		glVertex3f(enemy.getPoints()[2].x, enemy.getPoints()[2].y, enemy.getPoints()[2].z);
+		glTexCoord2f(1.0, 0.0);
+		glVertex3f(enemy.getPoints()[6].x, enemy.getPoints()[6].y, enemy.getPoints()[6].z);
+		glEnd();
+		glEndList();
 
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_FRONT));
-	glCallList(753);		// front
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_SIDE));
+		glCallList(751);		// bottom
+		glCallList(752);		// top
+		glCallList(755);		// left
+		glCallList(756);		// right
 
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
-	glCallList(754);		// back
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_FRONT));
+		glCallList(753);		// front
 
-	if (enemyObjects.detectCollisionWithBox(ray, camPos, enemyObjects.getObjectFromBuffer(0)->getAABB(), enemyObjects.getObjectFromBuffer(0)->getLocation()))
-		ui.hitmarker();
+		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
+		glCallList(754);		// back
 
-	enemy.checkHit(&player);
+		enemy.checkHit(&player);
+	}
 }
 
 

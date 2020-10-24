@@ -26,10 +26,12 @@ public:
 	inline float GetX() { return m_location.x; }
 	inline float GetY() { return m_location.y; }
 	inline float GetZ() { return m_location.z; }
+	inline void resetHealth() { m_health = MAX_HEALTH; }
 
 protected:
 	Point3D m_location;
 
+	int const MAX_HEALTH = 10;
 	int m_health;
 	int m_shields;
 };
