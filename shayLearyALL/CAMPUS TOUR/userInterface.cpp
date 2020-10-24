@@ -33,6 +33,16 @@ void UserInterface::playerHealth(int playerHealth)
     renderText(10, 20, GLUT_BITMAP_TIMES_ROMAN_24, string);
 }
 
+void UserInterface::playerShield(int playerShield)
+{
+    if (playerShield < 0)       //prevents health going into negatives after death
+        playerShield = 0;
+
+    glColor3d(0.0, 0.0, 0.0);
+    std::string string = "Shield: " + std::to_string(playerShield * 10);        // I think 100 health looks better than 10 health but up to you guys 
+    renderText(10, 60, GLUT_BITMAP_TIMES_ROMAN_24, string);
+}
+
 void UserInterface::info(double x, double y, double z)
 {
     std::string string = "Current location:   X = " + std::to_string(x) + ", Y = " + std::to_string(y) + ", Z = " + std::to_string(z);    

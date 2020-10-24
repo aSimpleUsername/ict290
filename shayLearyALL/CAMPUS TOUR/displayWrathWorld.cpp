@@ -34,10 +34,10 @@ void DisplayWrathWorld::myinit()
 	setUpPowerups();
 
 	// set starting position of user
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -433,12 +433,13 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayAmmo();
 
 	ui.playerHealth(player.getHealth());
+	ui.playerShield(player.getShields());
 	ui.info(cam.getX(), cam.getY(), cam.getZ());
 	ui.hitmarker();
 
 	if (player.getHealth() <= 0)
 	{
-		cam.dead = true;
+		//cam.dead = true;
 		//DisplayExit = true;
 	}
 }
@@ -696,8 +697,8 @@ void DisplayWrathWorld::displayGroundPlane()
 
 void DisplayWrathWorld::drawGroundPlane()
 {
-	tp.CreateDisplayList(XZ, 3, 431, 431, 1000.0, 10000.0, -54000.0, 54, 155);	// groundPlane
-	tp.CreateDisplayList(XZ, 87, 650, 1155, 1000.0, 11500.0, -34000.0, 36, 41);	// ceiling
+	tp.CreateDisplayList(XZ, 3, 1000, 1000, 1000.0, 10000.0, -54000.0, 24, 68);	// groundPlane
+	tp.CreateDisplayList(XZ, 87, 1000, 2000, 1000.0, 11500.0, -34000.0, 24, 24);	// ceiling
 }
 
 // PORTALS
@@ -806,7 +807,7 @@ void DisplayWrathWorld::bossPortalL()
 	bossPortal1.portalDimensions(-500, -500, -1000);
 	if (bossPortal1.createPortal(1500, 10600.0, -43250.0))
 	{
-		cam.Position(23000, 10550, -43750, 90);
+		cam.Position(23000, 10550, -43750, 270);
 	}
 }
 
@@ -1377,32 +1378,47 @@ void DisplayWrathWorld::drawBossRoom()
 
 void DisplayWrathWorld::setUpPowerups()
 {
-	Pickups h1;
-	Pickups h2;
+	Pickups h1, h2, h3 ,h4;
+	Pickups s1, s2, s3;
+	Pickups a1, a2, a3, a4, a5, a6, a7, a8, a9;
 
-	Pickups s1;
-	Pickups s2;
+	h1.setPickup(13000, 10100, -6500, 250);
+	h2.setPickup(18000, 10100, -11500, 250);
+	h3.setPickup(17500, 10100, -22500, 250);
+	h4.setPickup(12500, 10100, -52000, 250);
 
-	Pickups a1;
-	Pickups a2;
+	s1.setPickup(6500, 10100, -7500, 250);
+	s2.setPickup(18000, 10100, -16000, 250);
+	s3.setPickup(13500, 10100, -52000, 250);
 
-	h1.setPickup(16000, 10100, -1500, 250);
-	h2.setPickup(15000, 10100, -1500, 250);
-
-	s1.setPickup(14000, 10100, -1500, 250);
-	s2.setPickup(13000, 10100, -1500, 250);
-
-	a1.setPickup(12000, 10100, -1500, 250);
-	a2.setPickup(11000, 10100, -1500, 250);
+	a1.setPickup(18000, 10100, -6500, 250);
+	a2.setPickup(8000, 10100, -6500, 250);
+	a3.setPickup(6500, 10100, -8500, 250);
+	a4.setPickup(13500, 10100, -16000, 250);
+	a5.setPickup(7500, 10100, -22000, 250);
+	a6.setPickup(17500, 10100, -19500, 250);
+	a7.setPickup(12500, 10100, -31000, 250);
+	a8.setPickup(2250, 10100, -36000, 250);
+	a9.setPickup(22500, 10100, -36000, 250);
 
 	hPowerup.push_back(h1);
 	hPowerup.push_back(h2);
+	hPowerup.push_back(h3);
+	hPowerup.push_back(h4);
 
 	sPowerup.push_back(s1);
 	sPowerup.push_back(s2);
+	sPowerup.push_back(s3);
 
 	aPowerup.push_back(a1);
 	aPowerup.push_back(a2);
+	aPowerup.push_back(a3);
+	aPowerup.push_back(a4);
+	aPowerup.push_back(a5);
+	aPowerup.push_back(a6);
+	aPowerup.push_back(a7);
+	aPowerup.push_back(a8);
+	aPowerup.push_back(a9);
 }
 
 void DisplayWrathWorld::displayHealth()
@@ -1463,21 +1479,29 @@ void DisplayWrathWorld::collectionCheck()
 {
 	for (int i = 0; i < hPowerup.size(); i++)
 	{
-		hPowerup[i].checkCollision(cam.getX(), cam.getZ());
-
-		if (hPowerup[i].getGath())
+		if (player.getHealth() < player.getMaxHealth())
 		{
-			hPowerup.erase(hPowerup.begin() + i);
+			hPowerup[i].checkCollision(cam.getX(), cam.getZ());
+
+			if (hPowerup[i].getGath())
+			{
+				hPowerup.erase(hPowerup.begin() + i);
+				player.incrementHealth();
+			}
 		}
 	}
 
 	for (int i = 0; i < sPowerup.size(); i++)
 	{
-		sPowerup[i].checkCollision(cam.getX(), cam.getZ());
-
-		if (sPowerup[i].getGath())
+		if (player.getShields() < player.getMaxShield())
 		{
-			sPowerup.erase(sPowerup.begin() + i);
+			sPowerup[i].checkCollision(cam.getX(), cam.getZ());
+
+			if (sPowerup[i].getGath())
+			{
+				sPowerup.erase(sPowerup.begin() + i);
+				player.incrementShields();
+			}
 		}
 	}
 
@@ -1513,5 +1537,5 @@ void DisplayWrathWorld::CreateTextureList()
 
 							//286-291 used in drawEnemies()
 
-	//last number used: 321 (24/10/2020)
+	//last number used: 326 (24/10/2020)
 }
