@@ -63,6 +63,7 @@ public:
 	Pickups pick;
 	UserInterface ui;
 	ObjPicking<Enemy> enemyObjects;
+	ObjPicking<EnemyBoss> enemyBossObject;
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;	
@@ -78,6 +79,11 @@ public:
 		* @brief calls private display functions to draw the scene
 		*/
 	void DrawBackdrop();
+
+		/**
+		* @brief respawns player
+		*/
+	void respawn();
 
 		/**
 		* @brief deletes image and clears memory
@@ -151,9 +157,6 @@ private:
 	//Enemy can be changed for whatever class 
 
 	Player player;
-
-	ObjPicking<EnemyBoss> enemyBossObject;
-
 
 	static int const NUM_ENEMIES = 4;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
