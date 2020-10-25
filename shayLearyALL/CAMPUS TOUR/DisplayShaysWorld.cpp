@@ -1199,7 +1199,7 @@ void DisplayShaysWorld::CreateTextures()
 	tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
 
-	tp.LoadPNGTexture(218, "data/test.png");
+	tp.LoadPNGTexture(218, "data/welcome.png");
 	tp.LoadPNGTexture(219, "data/thanks.png");
 
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
