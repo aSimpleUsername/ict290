@@ -17,7 +17,13 @@ public:
 		const GLuint& tempImage);
 	void shieldBar(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
-	void ammoCount(const int& screenWidth, const int& screenHeight,
+	void ammoCount1(const int& screenWidth, const int& screenHeight,
+		const GLuint& tempImage);
+	void ammoCount2(const int& screenWidth, const int& screenHeight,
+		const GLuint& tempImage);
+	void rAmmoCount1(const int& screenWidth, const int& screenHeight,
+		const GLuint& tempImage);
+	void rAmmoCount2(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
 	void bossHealthBar(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
