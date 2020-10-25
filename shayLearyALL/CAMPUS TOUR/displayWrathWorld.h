@@ -172,7 +172,7 @@ private:
 
 	Player player;
 
-	static int const NUM_ENEMIES = 35;
+	static int const NUM_ENEMIES = 41;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
 									Enemy(7000, 15000, -3000, 0, 10550),			// room 1
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
@@ -183,7 +183,12 @@ private:
 									Enemy(9000, 17000, -9100.0, -8400, 10550),		// server room 
 									Enemy(17100, 18900, -9200, -3800, 10550),		// server room 
 									Enemy(9000, 17000, -7000, -6100, 10550),		// server room 
-																					// window room 
+
+									Enemy(8000, 10000, -12250, -13200, 10550),		// window room 
+									Enemy(10000, 12000, -12250, -13200, 10550),		// window room 
+									Enemy(12000, 14000, -12250, -13200, 10550),		// window room  
+									Enemy(14000, 16000, -12250, -13200, 10550),		// window room 
+																					
 									Enemy(8000, 10000, -18000, -16500, 10550),		// room 4
 									Enemy(10000, 12900, -18000, -16500, 10550),		// room 4 
 									Enemy(13000, 15800, -16000, -15500, 10550),		// room 4 
@@ -212,6 +217,8 @@ private:
 									Enemy(15000, 23800, -44600, -42800, 10550),		// boss room
 									Enemy(16700, 23800, -42800, -41100, 10550),		// boss room
 									Enemy(15000, 18800, -41100, -34200, 10550),		// boss room
+									Enemy(11100, 12450, -34200, -32200, 10550),		// boss room
+									Enemy(12450, 13800, -34200, -32200, 10550),		// boss room
 									};
 
 	EnemyBoss boss = EnemyBoss(9500, 15500, -49000, -36500, 10550);
