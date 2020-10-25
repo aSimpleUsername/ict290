@@ -134,31 +134,6 @@ void UserInterface::shieldBar(const int& screenWidth, const int& screenHeight,
     glPopMatrix();
 }
 
-void UserInterface::ammoCount(const int& screenWidth, const int& screenHeight,
-    const GLuint& tempImage)
-{
-    glPushMatrix();
-    glMatrixMode(GL_PROJECTION);
-    glPushMatrix();
-    glLoadIdentity();
-    gluOrtho2D(0, screenWidth, 0, screenHeight);
-    glScalef(1, -1, 1);
-
-    // move to centre of screen
-    glTranslatef(1620, -300, 0);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    // display sign
-    glBindTexture(GL_TEXTURE_2D, tempImage);
-    // display image
-    glCallList(352);
-    // Reset Perspective Projection
-    glMatrixMode(GL_PROJECTION);
-    glPopMatrix();
-    glMatrixMode(GL_MODELVIEW);
-    glPopMatrix();
-}
-
 void UserInterface::bossHealthBar(const int& screenWidth, const int& screenHeight,
     const GLuint& tempImage)
 {
@@ -277,6 +252,106 @@ void UserInterface::transparent(const int& screenWidth, const int& screenHeight,
     glBindTexture(GL_TEXTURE_2D, tempImage);
     // display image
     glCallList(357);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::ammoCount1(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(1520, -300, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(352);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::ammoCount2(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(1620, -300, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(359);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::rAmmoCount1(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(1670, -175, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(360);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::rAmmoCount2(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(1770, -175, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(361);
     // Reset Perspective Projection
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
