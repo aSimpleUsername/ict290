@@ -270,7 +270,7 @@ void UserInterface::ammoCount1(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(1520, -300, 0);
+    glTranslatef(1520, -250, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
@@ -295,7 +295,7 @@ void UserInterface::ammoCount2(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(1620, -300, 0);
+    glTranslatef(1620, -250, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
@@ -320,7 +320,7 @@ void UserInterface::rAmmoCount1(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(1670, -175, 0);
+    glTranslatef(1670, -150, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
@@ -345,7 +345,7 @@ void UserInterface::rAmmoCount2(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(1770, -175, 0);
+    glTranslatef(1720, -150, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign

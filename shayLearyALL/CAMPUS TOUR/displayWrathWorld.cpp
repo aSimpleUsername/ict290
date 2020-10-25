@@ -361,11 +361,6 @@ void DisplayWrathWorld::reload()
 	player.reload();
 }
 
-int DisplayWrathWorld::reachAmmo()
-{
-	return player.getAmmo();
-}
-
 void DisplayWrathWorld::SetWallPoints() {
 	
 	for (int i = 0; i < cam.m_colDetect.GetNoBoundingBoxes(); i++) {
@@ -465,6 +460,26 @@ void DisplayWrathWorld::CreateTextures()
 	tp.LoadPNGTexture(TRANSPARENT_1, "data/transparent.png");
 
 	tp.LoadPNGTexture(HITMARKER, "data/hitmarker.png");
+
+	tp.LoadPNGTexture(NUM_0, "data/num_0.png");
+
+	tp.LoadPNGTexture(NUM_1, "data/num_1.png");
+
+	tp.LoadPNGTexture(NUM_2, "data/num_2.png");
+
+	tp.LoadPNGTexture(NUM_3, "data/num_3.png");
+
+	tp.LoadPNGTexture(NUM_4, "data/num_4.png");
+
+	tp.LoadPNGTexture(NUM_5, "data/num_5.png");
+
+	tp.LoadPNGTexture(NUM_6, "data/num_6.png");
+
+	tp.LoadPNGTexture(NUM_7, "data/num_7.png");
+
+	tp.LoadPNGTexture(NUM_8, "data/num_8.png");
+
+	tp.LoadPNGTexture(NUM_9, "data/num_9.png");
 	
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);.
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -493,18 +508,16 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
 	ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
-	ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
-	ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
-	ui.rAmmoCount1(1920, 1080, tp.GetTexture(AMMO));
-	ui.rAmmoCount2(1920, 1080, tp.GetTexture(AMMO));
+	ammoLogic();
+	//ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
+	//ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
+	//ui.rAmmoCount1(1920, 1080, tp.GetTexture(AMMO));
+	//ui.rAmmoCount2(1920, 1080, tp.GetTexture(AMMO));
 	ui.bossHealthBar(1920, 1080, tp.GetTexture(BOSS_HEALTH));
 	ui.bossName(1920, 1080, tp.GetTexture(BOSS_NAME));
 	ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
 	ui.weapon(1920, 1080, tp.GetTexture(GUN));
 	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
-
-	//ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
-	//ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
 
 	if (player.getHealth() <= 0)
 	{
@@ -513,6 +526,33 @@ void DisplayWrathWorld::DrawBackdrop()
 	}
 
 	drawUI();
+}
+
+void DisplayWrathWorld::ammoLogic()
+{
+	int arr[] = { NUM_0, NUM_1, NUM_2, NUM_3, NUM_4, NUM_5, NUM_6, NUM_7, NUM_8, NUM_9};
+	
+	if(player.getReserveAmmo() >= 0)
+	{
+		int remainder = player.getAmmo() % 10;
+
+		ui.ammoCount1(1920, 1080, tp.GetTexture(arr[(player.getAmmo() - remainder) / 10]));
+		ui.ammoCount2(1920, 1080, tp.GetTexture(arr[remainder]));
+
+		int rRemainder = player.getReserveAmmo() % 10;
+
+		ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
+		ui.rAmmoCount2(1920, 1080, tp.GetTexture(arr[rRemainder]));
+	}
+	else
+	{
+		ui.ammoCount1(1920, 1080, tp.GetTexture(arr[0]));
+		ui.ammoCount2(1920, 1080, tp.GetTexture(arr[0]));
+
+		ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[0]));
+		ui.rAmmoCount2(1920, 1080, tp.GetTexture(arr[0]));
+	}
+	
 }
 
 void DisplayWrathWorld::displayEnemies()
@@ -1622,8 +1662,8 @@ void DisplayWrathWorld::drawUI()
 	tp.CreateDisplayList(0, 359, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 
 	//reserve ammo
-	tp.CreateDisplayList(0, 360, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
-	tp.CreateDisplayList(0, 361, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 360, 50.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 361, 50.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 }
 
 //--------------------------------------------------------------------------------------

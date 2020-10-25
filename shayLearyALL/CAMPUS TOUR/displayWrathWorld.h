@@ -62,6 +62,16 @@
 #define PLAYER_HIT					30
 #define TRANSPARENT_1				31
 #define HITMARKER					32
+#define NUM_0						33
+#define NUM_1						34
+#define NUM_2						35
+#define NUM_3						36
+#define NUM_4						37
+#define NUM_5						38
+#define NUM_6						39
+#define NUM_7						40
+#define NUM_8						41
+#define NUM_9						42
 
 	/**
 	* @class displayWrathWorld
@@ -155,7 +165,7 @@ public:
 
 	void reload();
 
-	int reachAmmo();
+	void ammoLogic();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
