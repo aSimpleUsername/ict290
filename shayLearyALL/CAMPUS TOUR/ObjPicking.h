@@ -109,8 +109,8 @@ bool ObjPicking<T>::detectCollisionWithAABB(Point3D ray, Point3D camPos, Point3D
 
     axis[2] = Point3D(0, 0, 1);
     axis[2] = axis[2].normalise();
-    float max[3] = { aabbMax.x, aabbMax.y, aabbMax.z };
-    float min[3] = { aabbMin.x, aabbMin.y, aabbMin.z };
+    float max[3] = { aabbMax.x, 100000, aabbMax.z };
+    float min[3] = { aabbMin.x, 0, aabbMin.z };
     for (int i = 0; i < 3; i++) {
         float t1, t2;
         float e = axis[i].dot(delta);
@@ -143,7 +143,6 @@ T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector
     int index =0;
     for(int i = 0; i < objBuffer.size();i++) {
         if (detectCollisionWithOBB(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation(),tempDistance) && objBuffer[i]->getHealth() > 0) {
-            //std::cout << "Distance to enemy is: " << obbDistance << std::endl;
             if (tempDistance < obbDistance) {
                 obbDistance = tempDistance;
                 index = i;
@@ -151,19 +150,16 @@ T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector
             }
         }
     }
-    /*
     for (int i = 0; i < maxPoints.size(); i++) {
-        Point3D center = Point3D(maxPoints[i].x - ((maxPoints[i].x - minPoints[i].x) / 2), maxPoints[i].y - ((maxPoints[i].y - minPoints[i].y) / 2), maxPoints[i].z - ((maxPoints[i].z - minPoints[i].z) / 2));
+        Point3D center = Point3D(maxPoints[i].x - ((maxPoints[i].x - minPoints[i].x) / 2), 10550, maxPoints[i].z - ((maxPoints[i].z - minPoints[i].z) / 2));
         if (detectCollisionWithAABB(ray, camPos, minPoints[i], maxPoints[i], center, tempDistance)) {
-            //std::cout << "Distance to wall is: " << tempDistance << std::endl;
-            if (tempDistance < wallDistance) {
+            if (tempDistance < wallDistance && tempDistance != 0) {
                 wallDistance = tempDistance;
                 
             }
         }
     }
-    */
-    if (wallDistance > obbDistance && obbDistance != 0) {
+    if (wallDistance > obbDistance && obbDistance != 0 && wallDistance !=0) {
         return objBuffer[index];
     }
     return NULL;

@@ -417,10 +417,12 @@ void Mouse(int button, int state, int x, int y)
 			//PlaySound(TEXT("sounds/shot.wav"), NULL, SND_FILENAME | SND_ASYNC);// - the correct code
 			//stepSound->Play();
 			engine->play2D("sounds/shot.wav", false);
+			
 			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
 			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
 			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects, shaysWorld.maxWallPoints, shaysWorld.minWallPoints))
 				shaysWorld.ui.hit = true;
+			shaysWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
 			//general shoot logic (regardless of hit or miss)
 			canShoot = false;
 		}
@@ -440,7 +442,7 @@ void Mouse(int button, int state, int x, int y)
 			Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
 			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints,wrathWorld.minWallPoints))
 				wrathWorld.ui.hit = true;		
-
+			wrathWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
 			// general shoot logic (regardless of hit or miss)
 			canShoot = false;
 		}
