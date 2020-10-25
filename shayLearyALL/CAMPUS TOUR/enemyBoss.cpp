@@ -9,7 +9,7 @@ EnemyBoss::EnemyBoss(double xmin, double xmax, double zmin, double zmax, double 
 	m_heading = (Point3D(0.0, 0.0, 0.0));
 	m_state = PATROL;
 	m_scale = 450;
-	m_maxHealth = 50;
+	m_maxHealth = MAX_HEALTH;
 
 	m_location = Point3D::randomPointXZ(xmin + 2 * m_scale, xmax - 2 * m_scale, zmin + 2 * m_scale, zmax - 2 * m_scale, y);		// 2*SCALE ensures that the enemy spawns inside the bounds and not on the edge
 	//top 4 points going clockwise starting with front left
