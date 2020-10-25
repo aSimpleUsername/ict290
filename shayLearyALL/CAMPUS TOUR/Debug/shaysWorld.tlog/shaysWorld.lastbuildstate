@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.27.29110:TargetPlatformVersion=10.0.17763.0:TargetFrameworkVersion=v4.0::EnableManagedIncrementalBuild=true:
 Debug|Win32|C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\|
-=======
-PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.27.29110:TargetPlatformVersion=10.0.19041.0:TargetFrameworkVersion=v4.0::EnableManagedIncrementalBuild=true:
-Debug|Win32|C:\school\20s2\ict290\groupProject\ict290\shayLearyALL\CAMPUS TOUR\|
->>>>>>> 234d03f00f74a6181a12791f5ffbd949f618ff06
