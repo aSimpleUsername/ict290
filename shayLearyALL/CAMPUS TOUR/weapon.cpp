@@ -9,16 +9,10 @@ void Weapon::takeAmmo(int amount){
 void Weapon::addAmmo(int amount){
     totalAmmo += amount;
 }
-<<<<<<< HEAD
+
 bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints) {
-    if (enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints) != NULL){
-        
+    if (enemies.checkCollisionWithBox(ray, camPos, maxPoints,minPoints) != NULL){
         enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints)->decreaseHealth();
-=======
-bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies) {
-    if (enemies.checkCollisionWithBox(ray, camPos) != NULL){
-        enemies.checkCollisionWithBox(ray, camPos)->decreaseHealth();
->>>>>>> vlad
         return true;
     }
     else

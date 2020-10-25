@@ -470,12 +470,10 @@ void DisplayWrathWorld::DrawBackdrop()
 	//ui.playerHealth(player.getHealth());
 	//ui.playerShield(player.getShields());
 	ui.info(cam.getX(), cam.getY(), cam.getZ());
-<<<<<<< HEAD
-	ui.hitmarker();
+	//ui.hitmarker();
 	ui.healthBar(1920, 1080, tp.GetTexture(HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(SHIELD));
 	ui.ammoCount(1920, 1080, tp.GetTexture(GUN));
-=======
 	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
 	ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
@@ -486,7 +484,6 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.weapon(1920, 1080, tp.GetTexture(GUN));
 	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
 
->>>>>>> vlad
 	if (player.getHealth() <= 0)
 	{
 		cam.dead = true;
