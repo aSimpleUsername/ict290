@@ -33,10 +33,10 @@ void DisplayWrathWorld::myinit()
 	//NEW
 	setUpPowerups();
 	// set starting position of user 
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -1601,18 +1601,20 @@ void DisplayWrathWorld::drawBossRoom()
 
 void DisplayWrathWorld::setUpPowerups()
 {
-	Pickups h1, h2, h3 ,h4;
-	Pickups s1, s2, s3;
-	Pickups a1, a2, a3, a4, a5, a6, a7, a8, a9;
+	Pickups h1, h2, h3, h4, h5;
+	Pickups s1, s2, s3, s4;
+	Pickups a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13;
 
 	h1.setPickup(13000, 10100, -6500, 250);
 	h2.setPickup(18000, 10100, -11500, 250);
 	h3.setPickup(17500, 10100, -22500, 250);
 	h4.setPickup(12500, 10100, -52000, 250);
+	h5.setPickup(5000, 10100, -24500, 250);
 
 	s1.setPickup(6500, 10100, -7500, 250);
 	s2.setPickup(18000, 10100, -16000, 250);
 	s3.setPickup(13500, 10100, -52000, 250);
+	s4.setPickup(5000, 10100, -25000, 250);
 
 	a1.setPickup(18000, 10100, -6500, 250);
 	a2.setPickup(8000, 10100, -6500, 250);
@@ -1623,15 +1625,21 @@ void DisplayWrathWorld::setUpPowerups()
 	a7.setPickup(12500, 10100, -31000, 250);
 	a8.setPickup(2250, 10100, -36000, 250);
 	a9.setPickup(22500, 10100, -36000, 250);
+	a10.setPickup(8000, 10100, -27000, 250);
+	a11.setPickup(16000, 10100, -27000, 250);
+	a12.setPickup(4500, 10100, -24500, 250);
+	a13.setPickup(4500, 10100, -25000, 250);
 
 	hPowerup.push_back(h1);
 	hPowerup.push_back(h2);
 	hPowerup.push_back(h3);
 	hPowerup.push_back(h4);
+	hPowerup.push_back(h5);
 
 	sPowerup.push_back(s1);
 	sPowerup.push_back(s2);
 	sPowerup.push_back(s3);
+	sPowerup.push_back(s4);
 
 	aPowerup.push_back(a1);
 	aPowerup.push_back(a2);
@@ -1642,6 +1650,10 @@ void DisplayWrathWorld::setUpPowerups()
 	aPowerup.push_back(a7);
 	aPowerup.push_back(a8);
 	aPowerup.push_back(a9);
+	aPowerup.push_back(a10);
+	aPowerup.push_back(a11);
+	aPowerup.push_back(a12);
+	aPowerup.push_back(a13);
 }
 
 void DisplayWrathWorld::displayHealth()
