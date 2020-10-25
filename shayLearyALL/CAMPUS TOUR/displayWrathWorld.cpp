@@ -480,6 +480,8 @@ void DisplayWrathWorld::CreateTextures()
 	tp.LoadPNGTexture(NUM_8, "data/num_8.png");
 
 	tp.LoadPNGTexture(NUM_9, "data/num_9.png");
+	tp.LoadPNGTexture(WIN, "data/win.png");
+	tp.LoadPNGTexture(LOSE, "data/lose.png");
 	
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);.
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -519,13 +521,13 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.weapon(1920, 1080, tp.GetTexture(GUN));
 	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
 
-	if (player.getHealth() <= 0)
-	{
-		//cam.dead = true;
-		//DisplayExit = true;
-	}
+	
 
 	drawUI();
+	if (player.getHealth() <= 0)
+	{
+		LoseState();
+	}
 }
 
 void DisplayWrathWorld::ammoLogic()
@@ -780,7 +782,13 @@ void DisplayWrathWorld::displayBoss()
 	}
 }
 
-
+void DisplayWrathWorld::WinState() {
+	
+}
+void DisplayWrathWorld::LoseState() {
+		cam.dead = true;
+		cam.DisplayWelcomeScreen(1920, 1080, 0, tp.GetTexture(LOSE));
+}
 void DisplayWrathWorld::displaySkyBox()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(SPACE_1));

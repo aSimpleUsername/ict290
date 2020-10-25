@@ -218,6 +218,7 @@ void Display()
 	// displays the exit screen
 	if (shaysWorld.DisplayExit) shaysWorld.cam.DisplayWelcomeScreen(width, height, 0, shaysWorld.tp.GetTexture(EXIT));
 	if (wrathWorld.DisplayExit) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(EXIT_SCREEN));
+	if (wrathWorld.lose) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(LOSE));
 	// clear buffers
 	glFlush();
 	glutSwapBuffers();

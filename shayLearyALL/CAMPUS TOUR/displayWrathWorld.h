@@ -72,7 +72,8 @@
 #define NUM_7						40
 #define NUM_8						41
 #define NUM_9						42
-
+#define WIN							43
+#define LOSE						44
 	/**
 	* @class displayWrathWorld
 	* @brief Class that defines how the wrath world will be displayed
@@ -98,6 +99,7 @@ public:
 	bool DisplayMap = false;	
 	bool DisplayWelcome = false;
 	bool DisplayExit = false;
+	bool lose = false;
 	irrklang::ISoundEngine *engine;
 		/**
 		* @brief initialises Wrath World
@@ -166,6 +168,10 @@ public:
 	void reload();
 
 	void ammoLogic();
+	
+	void WinState();
+	
+	void LoseState();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
