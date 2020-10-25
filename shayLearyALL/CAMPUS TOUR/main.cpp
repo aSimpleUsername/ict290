@@ -397,9 +397,8 @@ void processKeys()
 	if ((keyStates['p'] || keyStates['P']) && !isShaysWorld)
 	{
 		wrathWorld.respawn();
-		//wrathWorld.respawn();
-		//wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
-		//wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+		wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
+		wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
 	}
 
 }
@@ -454,7 +453,7 @@ void Mouse(int button, int state, int x, int y)
 				Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
 				Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
 				if (playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints, wrathWorld.minWallPoints))
-					wrathWorld.ui.hit = true;
+					wrathWorld.ui.m_hit = true;
 				wrathWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
 
 				wrathWorld.reduceAmmo();
