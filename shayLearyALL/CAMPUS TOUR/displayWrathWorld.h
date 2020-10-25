@@ -74,6 +74,7 @@
 #define NUM_9						42
 #define WIN							43
 #define LOSE						44
+#define T_WINDOW					45
 	/**
 	* @class displayWrathWorld
 	* @brief Class that defines how the wrath world will be displayed
@@ -342,7 +343,10 @@ private:
 		* @brief creates bounding boxes for collsion detection
 		*/
 	void CreateBoundingBoxes();
-	
+
+	void drawWindows();
+
+	void displayWindows();
 };
 
 #endif DISPLAYWRATHWORLD_H

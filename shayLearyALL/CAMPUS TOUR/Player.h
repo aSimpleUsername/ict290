@@ -18,6 +18,7 @@ public:
 	void setReserveAmmo(int a);
 	int getReserveAmmo();
 	void reload();
+	int getMaxReserveAmmo();
 
 private:
 	int const MAX_HEALTH = 10;

@@ -33,10 +33,10 @@ void DisplayWrathWorld::myinit()
 	//NEW
 	setUpPowerups();
 	// set starting position of user 
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -76,8 +76,6 @@ void DisplayWrathWorld::DeleteImageFromMemory(unsigned char* tempImage)
 		delete[] tempImage;
 	}
 }
-
-
 
 
 void DisplayWrathWorld::CreateBoundingBoxes()
@@ -485,11 +483,38 @@ void DisplayWrathWorld::CreateTextures()
 	tp.LoadPNGTexture(NUM_8, "data/num_8.png");
 
 	tp.LoadPNGTexture(NUM_9, "data/num_9.png");
+
 	tp.LoadPNGTexture(WIN, "data/win.png");
+
 	tp.LoadPNGTexture(LOSE, "data/lose.png");
+
+	tp.LoadPNGTexture(T_WINDOW, "data/window.png");
 	
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);.
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+}
+
+void DisplayWrathWorld::drawWindows()
+{
+	//mid
+	tp.CreateDisplayList(XY, 362, 1000, 500, 8000, 10500, -11250, 8.0, 1);
+	tp.CreateDisplayList(XY, 363, 1000, 500, 8000, 10500, -11750, 8.0, 1);
+
+	//server
+	tp.CreateDisplayList(XY, 364, 1000, 500, 10500, 10500, -49500, 4.0, 5);
+	tp.CreateDisplayList(XY, 365, 1000, 500, 10500, 10500, -50500, 4.0, 5);
+
+	tp.CreateDisplayList(YZ, 366, 500, 1000, 10500, 10500, -50500, 5.0, 1);
+	tp.CreateDisplayList(YZ, 367, 500, 1000, 14500, 10500, -50500, 5.0, 1);
+}
+
+void DisplayWrathWorld::displayWindows()
+{
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(T_WINDOW));
+	for (int i = 362; i <= 365; ++i) glCallList(i);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(T_WINDOW));
+	for (int i = 366; i <= 367; ++i) glCallList(i);
 }
 
 void DisplayWrathWorld::DrawBackdrop()
@@ -507,6 +532,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayHealth();
 	displayShields();
 	displayAmmo();
+	displayWindows();
 
 	drawUI();
 	if (player.getHealth() <= 0)
@@ -672,8 +698,8 @@ void DisplayWrathWorld::displayEnemies()
 			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
 			glCallList(289);		// back
 
-			if (enemies[i].checkHit(&player))
-				ui.m_playerHit = true;
+			//if (enemies[i].checkHit(&player))
+			//	ui.m_playerHit = true;
 
 			if (player.GetZ() < -30000)
 				enemies[i].setState(ATTACK);
@@ -1642,11 +1668,15 @@ void DisplayWrathWorld::collectionCheck()
 
 	for (int i = 0; i < aPowerup.size(); i++)
 	{
-		aPowerup[i].checkCollision(cam.getX(), cam.getZ());
-
-		if (aPowerup[i].getGath())
+		if (player.getReserveAmmo() < player.getMaxReserveAmmo())
 		{
-			aPowerup.erase(aPowerup.begin() + i);
+			aPowerup[i].checkCollision(cam.getX(), cam.getZ());
+
+			if (aPowerup[i].getGath())
+			{
+				aPowerup.erase(aPowerup.begin() + i);
+				player.incrementAmmo();
+			}
 		}
 	}
 }
@@ -1704,8 +1734,9 @@ void DisplayWrathWorld::CreateTextureList()
 	drawServerWalls();
 	drawPowerWalls();
 	drawBossRoom();
+	drawWindows();
 
 	//286-291 used in drawEnemies()
 
-	//last number used: 326 (24/10/2020)
+	//last number used: 361 (26/10/2020)
 }
