@@ -17,6 +17,7 @@ void Entity::incrementHealth()
 	if (m_health < MAX_HEALTH)
 	{
 		m_health++;
+		m_health++;
 	}
 }
 
@@ -24,6 +25,7 @@ void Entity::incrementShields()
 {
 	if (m_shields < MAX_SHIELD)
 	{
+		m_shields++;
 		m_shields++;
 	}
 }
