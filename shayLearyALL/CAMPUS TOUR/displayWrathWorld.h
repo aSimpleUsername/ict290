@@ -149,7 +149,7 @@ private:
 
 	Player player;
 
-	static int const NUM_ENEMIES = 18;
+	static int const NUM_ENEMIES = 27;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
 									Enemy(7000, 15000, -3000, 0, 10550),			// room 1
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
@@ -170,6 +170,16 @@ private:
 									Enemy(16000, 18900, -18000, -16500, 10550),		// room 4 
 									Enemy(16000, 18900, -15300, -13900, 10550),		// room 4
 									Enemy(14100, 16000, -15500, -13900, 10550),		// room 4
+
+									Enemy(16000, 18500, -23000, -21700, 10550),		// electric room
+									Enemy(16000, 18500, -21700, -21300, 10550),		// electric room
+									Enemy(16000, 18500, -21300, -19000, 10550),		// electric room
+									Enemy(13500, 16000, -23000, -21700, 10550),		// electric room
+									Enemy(13500, 16000, -21700, -21300, 10550),		// electric room
+									Enemy(13500, 16000, -21300, -19000, 10550),		// electric room
+									Enemy(11000, 13500, -23000, -21700, 10550),		// electric room
+									Enemy(11000, 13500, -21700, -21300, 10550),		// electric room
+									Enemy(11000, 13500, -21300, -19000, 10550),		// electric room
 									};
 
 	EnemyBoss boss = EnemyBoss(9500, 15500, -49000, -36500, 10550);

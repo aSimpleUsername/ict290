@@ -210,7 +210,7 @@ void Enemy::stateMachine()
 	if (m_state == PATROL)
 	{
 		patrol(m_bounds.xmin, m_bounds.xmax, m_bounds.zmin, m_bounds.zmin);
-		accelerate(m_topSpeed / 2);
+		accelerate(m_topSpeed / 3);
 
 		if (m_location.distance(*m_enemyPosition) < 5000)   //attack if close to enemy
 			m_state = ATTACK;
