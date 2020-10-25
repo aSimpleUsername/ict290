@@ -39,7 +39,7 @@ public:
 	double m_timer;															//TODO: make private
 
 	void stateMachine(irrklang::ISoundEngine *engine);
-	void checkHit(Entity* target);
+	bool checkHit(Entity* target);
 
 protected:
 	void updateHitBox(float x, float y, float z);

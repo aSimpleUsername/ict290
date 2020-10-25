@@ -94,7 +94,7 @@ void Enemy::drawProjectiles()
 		m_projectiles[i].drawProjectile();
 }
 
-void Enemy::checkHit(Entity* target)
+bool Enemy::checkHit(Entity* target)
 {
 	for (int j = 0; j < MAX_PROJECTILES; ++j)
 	{
@@ -110,8 +110,11 @@ void Enemy::checkHit(Entity* target)
 			}
 			m_projectiles[j].m_location = Point3D(0.0, 0.0, 0.0);
 			m_projectiles[j].m_heading = Point3D(0.0, 0.0, 0.0);
+
+			return true;
 		}
 	}
+	return false;
 }
 
 void Enemy::calculateHeading()

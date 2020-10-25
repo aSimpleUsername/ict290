@@ -623,7 +623,8 @@ void DisplayWrathWorld::displayEnemies()
 			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
 			glCallList(289);		// back
 
-			enemies[i].checkHit(&player);
+			if (enemies[i].checkHit(&player))
+				ui.m_playerHit = true;
 		}
 	}
 
