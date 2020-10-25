@@ -6,7 +6,8 @@
 class UserInterface
 {
 public:
-	bool hit = false;							// true when player hits enemy
+	bool m_hit = false;							// true when player hits enemy
+	bool m_playerHit = false;					// true when player is hit
 
 	void playerHealth(int playerHealth);		//displays player health
 	void playerShield(int playerShield);		//displays player shield
@@ -38,7 +39,8 @@ public:
 
 private:
 	void renderText(float x, float y, void* font, std::string string);
-	double m_timer;
+	double m_hitTimer;
+	double m_playerHitTimer;
 
 };
 

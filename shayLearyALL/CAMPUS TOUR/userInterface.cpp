@@ -52,13 +52,13 @@ void UserInterface::info(double x, double y, double z)
 void UserInterface::hitmarker(const int& screenWidth, const int& screenHeight,
     const GLuint& tempImage)
 {
-    if (hit)
+    if (m_hit)
     {
-        m_timer = glutGet(GLUT_ELAPSED_TIME) + 100;
-        hit = false;
+        m_hitTimer = glutGet(GLUT_ELAPSED_TIME) + 100;
+        m_hit = false;
     }
 
-    if (glutGet(GLUT_ELAPSED_TIME) < m_timer)
+    if (glutGet(GLUT_ELAPSED_TIME) < m_hitTimer)
     {
         glPushMatrix();
         glMatrixMode(GL_PROJECTION);
@@ -212,26 +212,35 @@ void UserInterface::weapon(const int& screenWidth, const int& screenHeight,
 void UserInterface::playerHit(const int& screenWidth, const int& screenHeight,
     const GLuint& tempImage)
 {
-    glPushMatrix();
-    glMatrixMode(GL_PROJECTION);
-    glPushMatrix();
-    glLoadIdentity();
-    gluOrtho2D(0, screenWidth, 0, screenHeight);
-    glScalef(1, -1, 1);
+    if (m_playerHit)
+    {
+        m_playerHitTimer = glutGet(GLUT_ELAPSED_TIME) + 300;
+        m_playerHit = false;
+    }
 
-    // move to centre of screen
-    glTranslatef(0, -screenHeight, 0);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    // display sign
-    glBindTexture(GL_TEXTURE_2D, tempImage);
-    // display image
-    glCallList(356);
-    // Reset Perspective Projection
-    glMatrixMode(GL_PROJECTION);
-    glPopMatrix();
-    glMatrixMode(GL_MODELVIEW);
-    glPopMatrix();
+    if (glutGet(GLUT_ELAPSED_TIME) < m_playerHitTimer)
+    {
+        glPushMatrix();
+        glMatrixMode(GL_PROJECTION);
+        glPushMatrix();
+        glLoadIdentity();
+        gluOrtho2D(0, screenWidth, 0, screenHeight);
+        glScalef(1, -1, 1);
+
+        // move to centre of screen
+        glTranslatef(0, -screenHeight, 0);
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
+        // display sign
+        glBindTexture(GL_TEXTURE_2D, tempImage);
+        // display image
+        glCallList(356);
+        // Reset Perspective Projection
+        glMatrixMode(GL_PROJECTION);
+        glPopMatrix();
+        glMatrixMode(GL_MODELVIEW);
+        glPopMatrix();
+    }
 }
 
 void UserInterface::transparent(const int& screenWidth, const int& screenHeight,
