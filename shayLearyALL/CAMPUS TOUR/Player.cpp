@@ -15,11 +15,7 @@ void Player::incrementAmmo()
 		setReserveAmmo(90);
 	}
 	else {
-<<<<<<< HEAD
 		ammoReserve += 30;
-=======
-		ammoReserve = ammoReserve + 30;
->>>>>>> vlad
 	}
 
 }
