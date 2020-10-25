@@ -1,61 +1,18 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: Two or more files with the name of .NETFramework,Version=v4.0.AssemblyAttributes.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp, Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp.
-  weapon.cpp
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(144,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(139): message : while compiling class template member function 'T *ObjPicking<T>::checkCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,std::vector<_Ty,std::allocator<_Ty>>)'
-          with
-          [
-              T=Enemy,
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\weapon.cpp(14): message : see reference to function template instantiation 'T *ObjPicking<T>::checkCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,std::vector<_Ty,std::allocator<_Ty>>)' being compiled
-          with
-          [
-              T=Enemy,
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\weapon.cpp(13): message : see reference to class template instantiation 'ObjPicking<Enemy>' being compiled
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(153,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(76,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(59): message : while compiling class template member function 'bool ObjPicking<Enemy>::detectCollisionWithOBB(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D,float &)'
-          with
-          [
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(145): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithOBB(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,Point3D,float &)' being compiled
-          with
-          [
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(139): message : while compiling class template member function 'T *ObjPicking<T>::checkCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,std::vector<_Ty,std::allocator<_Ty>>)'
-          with
-          [
-              T=Enemy,
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\weapon.cpp(14): message : see reference to function template instantiation 'T *ObjPicking<T>::checkCollisionWithBox(Point3D,Point3D,std::vector<Point3D,std::allocator<_Ty>>,std::vector<_Ty,std::allocator<_Ty>>)' being compiled
-          with
-          [
-              T=Enemy,
-              _Ty=Point3D
-          ]
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(77,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(112,29): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(98): message : while compiling class template member function 'bool ObjPicking<Enemy>::detectCollisionWithAABB(Point3D,Point3D,Point3D,Point3D,Point3D,float &)'
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(155): message : see reference to function template instantiation 'bool ObjPicking<Enemy>::detectCollisionWithAABB(Point3D,Point3D,Point3D,Point3D,Point3D,float &)' being compiled
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(112,29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(112,48): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(112,48): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(113,29): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(113,29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(113,43): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(113,43): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(116,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\ObjPicking.h(117,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  enemyBoss.cpp
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(26,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(27,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(28,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(14,118): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(14,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(14,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(14,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(14,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(32,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(32,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\enemyBoss.cpp(32,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
 DisplayShaysWorld.obj : warning LNK4248: unresolved typeref token (0100001B) for 'GLUquadric'; image may not run
-  shaysWorld.vcxproj -> C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
+  shaysWorld.vcxproj -> C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\shaysWorld.exe
