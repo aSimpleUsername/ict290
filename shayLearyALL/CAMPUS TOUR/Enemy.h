@@ -30,6 +30,7 @@ public:
 	inline Point3D* getPoints() { return(m_points); }
 	inline int getScale() { return m_scale; }
 	inline Projectile* getProjectiles(int index) { return &m_projectiles[index]; }
+	inline void setState(int state) { m_state = state; }
 
 	void reset();
 	void seek(Point3D targetPosition);										//seeks target position															//patrols within given bounds
