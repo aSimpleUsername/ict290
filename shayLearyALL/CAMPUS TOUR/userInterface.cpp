@@ -367,3 +367,28 @@ void UserInterface::rAmmoCount2(const int& screenWidth, const int& screenHeight,
     glMatrixMode(GL_MODELVIEW);
     glPopMatrix();
 }
+
+void UserInterface::context(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(50, -screenHeight + 50, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(757);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}

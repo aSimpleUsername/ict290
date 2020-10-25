@@ -313,6 +313,7 @@
 #define ENEMY_FRONT					248
 #define ENEMY_BACK					249
 #define ENEMY_SIDE					250
+
 #define INFO						251
 // 251 Next
 
@@ -376,6 +377,8 @@ public:
 		* @brief sets AABB wall points
 		*/
 	void SetWallPoints();
+
+	void drawUI();
 
 private:
 	Portal steps;

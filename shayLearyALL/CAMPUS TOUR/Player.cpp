@@ -15,7 +15,7 @@ void Player::incrementAmmo()
 		setReserveAmmo(90);
 	}
 	else {
-		ammoReserve + 30;
+		ammoReserve = ammoReserve + 30;
 	}
 
 }

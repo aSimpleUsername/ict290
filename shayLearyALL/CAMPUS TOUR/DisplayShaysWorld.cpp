@@ -1247,15 +1247,22 @@ void DisplayShaysWorld::DrawBackdrop()
 	displayEnemies();
 	if (lightsOn) DisplayLights();
 
-	ui.playerHealth(player.getHealth());
+	//ui.playerHealth(player.getHealth());
 	ui.info(player.GetX(), player.GetY(), player.GetZ());
 	//ui.hitmarker();
+	ui.context(1920, 1080, tp.GetTexture(INFO));
 
 	if (player.getHealth() <= 0)
 	{
 		cam.dead = true;
 		//DisplayExit = true;
 	}
+}
+
+void DisplayShaysWorld::drawUI()
+{
+	//info screen
+	tp.CreateDisplayList(0, 757, 300.0, 300.0, 0.0, 0.0, 0.0, 1, 1.0);
 }
 
 //--------------------------------------------------------------------------------------
@@ -5856,6 +5863,7 @@ void DisplayShaysWorld::CreateTextureList()
 	drawPortal();				// 593
 	drawSpecialPortal(); //750
 	drawStairRailing();
+	drawUI();
 								//enemies 751-756
 
 	//last number used: 756
