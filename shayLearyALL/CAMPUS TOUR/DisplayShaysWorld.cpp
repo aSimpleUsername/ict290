@@ -1243,7 +1243,7 @@ void DisplayShaysWorld::DrawBackdrop()
 
 	ui.playerHealth(player.getHealth());
 	ui.info(player.GetX(), player.GetY(), player.GetZ());
-	ui.hitmarker();
+	//ui.hitmarker();
 
 	if (player.getHealth() <= 0)
 	{

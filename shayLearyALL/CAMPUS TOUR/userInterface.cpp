@@ -49,7 +49,8 @@ void UserInterface::info(double x, double y, double z)
     renderText(10, 1060, GLUT_BITMAP_HELVETICA_18, string);
 }
 
-void UserInterface::hitmarker()
+void UserInterface::hitmarker(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
 {
     if (hit)
     {
@@ -59,9 +60,28 @@ void UserInterface::hitmarker()
 
     if (glutGet(GLUT_ELAPSED_TIME) < m_timer)
     {
-        std::string string = "HIT!";
-        renderText(1920 / 2 - 20, 1080 / 2 + 50, GLUT_BITMAP_HELVETICA_18, string);
+        glPushMatrix();
+        glMatrixMode(GL_PROJECTION);
+        glPushMatrix();
+        glLoadIdentity();
+        gluOrtho2D(0, screenWidth, 0, screenHeight);
+        glScalef(1, -1, 1);
+
+        // move to centre of screen
+        glTranslatef(screenWidth / 2 - 25, -screenHeight / 2 - 25, 0);
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
+        // display sign
+        glBindTexture(GL_TEXTURE_2D, tempImage);
+        // display image
+        glCallList(358);
+        // Reset Perspective Projection
+        glMatrixMode(GL_PROJECTION);
+        glPopMatrix();
+        glMatrixMode(GL_MODELVIEW);
+        glPopMatrix();
     }
+    
 }
 
 void UserInterface::healthBar(const int& screenWidth, const int& screenHeight,
@@ -75,7 +95,7 @@ void UserInterface::healthBar(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(0, -250, 0);
+    glTranslatef(0, -150, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
@@ -100,7 +120,7 @@ void UserInterface::shieldBar(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(0, -150, 0);
+    glTranslatef(0, -250, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
@@ -125,13 +145,138 @@ void UserInterface::ammoCount(const int& screenWidth, const int& screenHeight,
     glScalef(1, -1, 1);
 
     // move to centre of screen
-    glTranslatef(850, -520, 0);
+    glTranslatef(1620, -300, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     // display sign
     glBindTexture(GL_TEXTURE_2D, tempImage);
     // display image
     glCallList(352);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::bossHealthBar(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(460, -screenHeight + 50, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(353);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::bossName(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(850, -screenHeight, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(354);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::weapon(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslated(450, -386 * 2.25, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(355);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::playerHit(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(0, -screenHeight, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(356);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
+void UserInterface::transparent(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(600, -screenHeight + 100, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(357);
     // Reset Perspective Projection
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
