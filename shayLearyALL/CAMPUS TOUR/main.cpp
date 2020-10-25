@@ -8,9 +8,9 @@
 #include <GL/glut.h>
 #include <time.h>
 
-#include <Mmsystem.h>
-#include <mciapi.h>
-#pragma comment(lib, "Winmm.lib")
+#include <iostream>
+#include <irrKlang.h>
+#pragma comment(lib, "irrKlang.lib")
 
 //#include <windows.h> // only used if mouse is required (not portable)
 #include "camera.h"
@@ -59,8 +59,7 @@ void reshape(int w, int h);
 void IncrementFrameCount();
 void timerCallback(int value);
 void setGameMode();
-CEasySound* es;
-CSound* stepSound;
+irrklang::ISoundEngine* engine = irrklang::createIrrKlangDevice();
 //--------------------------------------------------------------------------------------
 //  Main function
 //--------------------------------------------------------------------------------------
@@ -73,12 +72,12 @@ int main(int argc, char **argv)
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
 	glutTimerFunc(1000 / 60, timerCallback, 1);
-
+	if (!engine)
+		return 0; // error starting up the engine
 	glutIgnoreKeyRepeat(1);
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
-	es = CEasySound::Instance();
-	stepSound = es->GetSound(es->Load("sounds/shot.wav"));
+
 	glutDisplayFunc(Display);
 	glutMouseFunc(Mouse);
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
@@ -416,7 +415,8 @@ void Mouse(int button, int state, int x, int y)
 		if (canShoot) {
 			//mciSendString("play sounds/shot.wav", NULL, 0, NULL);
 			//PlaySound(TEXT("sounds/shot.wav"), NULL, SND_FILENAME | SND_ASYNC);// - the correct code
-			stepSound->Play();
+			//stepSound->Play();
+			engine->play2D("sounds/shot.wav", false);
 			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
 			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
 			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects, shaysWorld.maxWallPoints, shaysWorld.minWallPoints))
@@ -448,7 +448,6 @@ void Mouse(int button, int state, int x, int y)
 
 	if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_UP)) {
 		canShoot = true;
-		stepSound->Stop();
 	}
 	
 	
