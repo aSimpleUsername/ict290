@@ -107,3 +107,8 @@ Point3D Point3D::randomPointXZ(int xmin, int xmax, int zmin, int zmax, int y)
 
     return result;
 }
+
+int Point3D::randomInt(int range)
+{
+    return rand() % range;
+}

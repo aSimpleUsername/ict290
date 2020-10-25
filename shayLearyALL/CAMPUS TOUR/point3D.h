@@ -27,4 +27,5 @@ public:
 	bool operator==(const Point3D& other);
 
 	static Point3D randomPointXZ(int xmin, int xmax, int zmin, int zmax, int y);
+	static int randomInt(int range);
 };
