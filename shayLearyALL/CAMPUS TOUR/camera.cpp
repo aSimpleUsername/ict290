@@ -150,7 +150,7 @@ void Camera::MoveFB()
 		GLdouble startZ = m_z + moveZ * 5.0;
 
 		// check if collsion
-		if (!(m_colDetect.Collide(startX + m_lookX, m_y + m_lookY, startZ + m_lookZ)))
+		if (!(m_colDetect.Collide(m_x + moveX, m_y, m_z + moveZ)))
 		{
 			// increment position
 			m_x += moveX;
@@ -192,7 +192,7 @@ void Camera::MoveLR()
 		GLdouble startZ = m_z + moveZ * m_moveSpeed * 1.0;
 
 		// check if collsion
-		if (!(m_colDetect.Collide(startX + m_lookXX, m_y + m_lookYY, startZ + m_lookZZ)))
+		if (!(m_colDetect.Collide(m_x + moveX, m_y, m_z + moveZ)))
 		{
 			// increment position
 			m_x += moveX;
