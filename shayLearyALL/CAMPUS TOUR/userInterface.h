@@ -36,6 +36,8 @@ public:
 		const GLuint& tempImage);
 	void transparent(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
+	void context(const int& screenWidth, const int& screenHeight,
+		const GLuint& tempImage);
 
 private:
 	void renderText(float x, float y, void* font, std::string string);

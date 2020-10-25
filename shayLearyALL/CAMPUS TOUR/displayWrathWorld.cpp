@@ -551,9 +551,9 @@ void DisplayWrathWorld::DrawBackdrop()
 	}
 	else
 	{
-		ui.playerHealth(player.getAmmo());
-		ui.playerShield(player.getReserveAmmo());
-		ui.info(cam.getX(), cam.getY(), cam.getZ());
+		//ui.playerHealth(player.getAmmo());
+		//ui.playerShield(player.getReserveAmmo());
+		//ui.info(cam.getX(), cam.getY(), cam.getZ());
 
 		ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
 		ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
