@@ -350,12 +350,6 @@ void processKeys()
 		}
 	}
 
-	if ((keyStates['p'] || keyStates['P']) && isShaysWorld)	// change world - temp
-	{
-		wrathWorld.myinit();
-		isShaysWorld = false;
-	}
-
 	if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
 	{
 		shaysWorld.cam.SetXRotateSpeed(0.0f);
@@ -394,6 +388,14 @@ void processKeys()
 	if ((keyStates['r'] || keyStates['R']) && !isShaysWorld)
 	{
 		wrathWorld.reload();
+		//wrathWorld.respawn();
+		//wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
+		//wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+	}
+
+	if ((keyStates['p'] || keyStates['P']) && !isShaysWorld)
+	{
+		wrathWorld.respawn();
 		//wrathWorld.respawn();
 		//wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
 		//wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
@@ -445,19 +447,20 @@ void Mouse(int button, int state, int x, int y)
 		}
 
 		if (canShoot) {
-			engine->play2D("sounds/gunshot.wav", false);
-			Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
-			Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
-			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints,wrathWorld.minWallPoints))
-				wrathWorld.ui.hit = true;		
-			wrathWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
-			
-			
-			wrathWorld.reduceAmmo();
-			wrathWorld.ammoCheck();
+			if (wrathWorld.grabAmmo() > 0)
+			{
+				engine->play2D("sounds/gunshot.wav", false);
+				Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
+				Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
+				if (playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints, wrathWorld.minWallPoints))
+					wrathWorld.ui.hit = true;
+				wrathWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
 
-			// general shoot logic (regardless of hit or miss)
-			canShoot = false;
+				wrathWorld.reduceAmmo();
+
+				// general shoot logic (regardless of hit or miss)
+				canShoot = false;
+			}
 		}
 	}
 

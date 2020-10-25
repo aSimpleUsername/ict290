@@ -166,6 +166,8 @@ public:
 	void reload();
 
 	void ammoLogic();
+
+	int grabAmmo();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
