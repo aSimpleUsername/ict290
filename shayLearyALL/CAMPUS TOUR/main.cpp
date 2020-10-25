@@ -420,21 +420,6 @@ void Mouse(int button, int state, int x, int y)
 			shaysWorld.DeleteImageFromMemory(shaysWorld.image);
 			exit(1);
 		}
-
-		if (canShoot) {
-			//mciSendString("play sounds/shot.wav", NULL, 0, NULL);
-			//PlaySound(TEXT("sounds/shot.wav"), NULL, SND_FILENAME | SND_ASYNC);// - the correct code
-			//stepSound->Play();
-			engine->play2D("sounds/gunshot.wav", false);
-			
-			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
-			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
-			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects, shaysWorld.maxWallPoints, shaysWorld.minWallPoints))
-				shaysWorld.ui.m_hit = true;
-			shaysWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
-			//general shoot logic (regardless of hit or miss)
-			canShoot = false;
-		}
 	}
 	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && !isShaysWorld)
 	{
