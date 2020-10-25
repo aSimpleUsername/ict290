@@ -486,29 +486,42 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayShields();
 	displayAmmo();
 
-	ui.playerHealth(player.getAmmo());
-	ui.playerShield(player.getReserveAmmo());
-	ui.info(cam.getX(), cam.getY(), cam.getZ());
 
-	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
-	ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
-	ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
-	ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
-	ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
-	ui.rAmmoCount1(1920, 1080, tp.GetTexture(AMMO));
-	ui.rAmmoCount2(1920, 1080, tp.GetTexture(AMMO));
-	ui.bossHealthBar(1920, 1080, tp.GetTexture(BOSS_HEALTH));
-	ui.bossName(1920, 1080, tp.GetTexture(BOSS_NAME));
-	ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
-	ui.weapon(1920, 1080, tp.GetTexture(GUN));
-	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
+	if (player.getHealth() <= 0)
+	{
+		cam.dead = true;
+		//DisplayExit = true;
+	}
+	else
+	{
+		ui.playerHealth(player.getAmmo());
+		ui.playerShield(player.getReserveAmmo());
+		ui.info(cam.getX(), cam.getY(), cam.getZ());
+
+		ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
+		ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
+		ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
+		ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
+		ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
+		ui.rAmmoCount1(1920, 1080, tp.GetTexture(AMMO));
+		ui.rAmmoCount2(1920, 1080, tp.GetTexture(AMMO));
+		if (player.GetZ() < -30000)												// if player in boss room
+		{
+			ui.bossHealthBar(1920, 1080, tp.GetTexture(BOSS_HEALTH));
+			ui.bossName(1920, 1080, tp.GetTexture(BOSS_NAME));
+		}
+
+		ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
+		ui.weapon(1920, 1080, tp.GetTexture(GUN));
+		ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
+	}
 
 	//ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
 	//ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
 
 	if (player.getHealth() <= 0)
 	{
-		//cam.dead = true;
+		cam.dead = true;
 		//DisplayExit = true;
 	}
 
@@ -625,6 +638,9 @@ void DisplayWrathWorld::displayEnemies()
 
 			if (enemies[i].checkHit(&player))
 				ui.m_playerHit = true;
+
+			if (player.GetZ() < -30000)
+				enemies[i].setState(ATTACK);
 		}
 	}
 
@@ -737,6 +753,9 @@ void DisplayWrathWorld::displayBoss()
 		glCallList(289);		// back
 
 		boss.checkHit(&player);
+
+		if (player.GetZ() < -30000)
+			boss.setState(ATTACK);
 	}
 }
 
