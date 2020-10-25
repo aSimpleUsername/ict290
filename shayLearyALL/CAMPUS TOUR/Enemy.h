@@ -31,7 +31,7 @@ public:
 
 	void reset();
 	void seek(Point3D targetPosition);										//seeks target position															//patrols within given bounds
-	static const int MAX_PROJECTILES = 5;
+	static const int MAX_PROJECTILES = 10;
 	void drawProjectiles();													//TODO: make private
 	void shoot();															//TODO: make private, and add to state machine
 	double m_timer;															//TODO: make private
@@ -48,6 +48,7 @@ protected:
 	Point3D m_heading;
 	double m_topSpeed, m_rotationSpeed;
 	double m_acceleration;
+	int m_maxHealth;
 
 	Point3D m_patrolTarget;
 	Point3D* m_enemyPosition;
@@ -77,7 +78,4 @@ protected:
 	// points that make up the 
 	static const int POINTS_SIZE = 8;
 	Point3D m_points[POINTS_SIZE];
-
-private:
-	int const MAX_HEALTH = 5;
 };

@@ -1,8 +1,8 @@
 #include "Enemy.h"
 
 Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
-	: m_topSpeed(20), m_rotationSpeed(0.035), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
-	m_state(PATROL), m_scale(150)
+	: m_topSpeed(25), m_rotationSpeed(0.035), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+	m_state(PATROL), m_scale(150), m_maxHealth(5)
 {
 	m_location = Point3D::randomPointXZ(xmin + 2 * m_scale, xmax - 2 * m_scale, zmin + 2 * m_scale, zmax - 2 * m_scale, y);		// 2*SCALE ensures that the enemy spawns inside the bounds and not on the edge
 	//top 4 points going clockwise starting with front left
@@ -16,7 +16,7 @@ Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
 	m_points[6] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z - m_scale);
 	m_points[7] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z + m_scale);
 
-	m_health = MAX_HEALTH;
+	m_health = m_maxHealth;
 	m_shields = 0;
 
 	m_patrolTarget = Point3D(0.0, m_location.y, 0.0);
@@ -42,7 +42,7 @@ Enemy::~Enemy()
 
 void Enemy::reset()
 {
-	m_health = MAX_HEALTH;
+	m_health = m_maxHealth;
 	m_state = PATROL;
 
 }
@@ -215,7 +215,7 @@ void Enemy::stateMachine()
 		if (m_location.distance(*m_enemyPosition) < 5000)   //attack if close to enemy
 			m_state = ATTACK;
 
-		if (m_health < MAX_HEALTH)
+		if (m_health < m_maxHealth)
 			m_state = ATTACK;
 	}
 
