@@ -1376,6 +1376,8 @@ void DisplayShaysWorld::displayEnemies()
 		glCallList(754);		// back
 
 		enemy.checkHit(&player);
+
+		enemy.setState(DEAD);
 	}
 }
 

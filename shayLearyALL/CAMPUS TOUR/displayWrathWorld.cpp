@@ -707,8 +707,8 @@ void DisplayWrathWorld::displayEnemies()
 			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
 			glCallList(289);		// back
 
-			if (enemies[i].checkHit(&player))
-				ui.m_playerHit = true;
+			//if (enemies[i].checkHit(&player))
+				//ui.m_playerHit = true;
 
 			if (player.GetZ() < -30000)
 				enemies[i].setState(ATTACK);
@@ -823,7 +823,7 @@ void DisplayWrathWorld::displayBoss()
 		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BOSS_BACK));
 		glCallList(289);		// back
 
-		boss.checkHit(&player);
+		//boss.checkHit(&player);
 
 		if (player.GetZ() < -30000)
 			boss.setState(ATTACK);
@@ -861,15 +861,54 @@ void DisplayWrathWorld::displayGroundPlane()
 {
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
 	glCallList(3);
-
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
 	glCallList(87);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(400);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(401);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(402);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(403);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(404);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(405);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(406);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(407);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(408);
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
+	glCallList(409);
 }
 
 void DisplayWrathWorld::drawGroundPlane()
 {
-	tp.CreateDisplayList(XZ, 3, 1000, 1000, 1000.0, 10000.0, -54000.0, 24, 68);	// groundPlane
-	tp.CreateDisplayList(XZ, 87, 1000, 2000, 1000.0, 11500.0, -34000.0, 24, 24);	// ceiling
+	tp.CreateDisplayList(XZ, 3, 1000, 1000, 7000, 10000.0, 8500, 6, 4);					// groundPlane 
+	tp.CreateDisplayList(XZ, 87, 1000, 2000, 7000, 11500.0, 8500, 6, 2);				// ceiling
+
+	tp.CreateDisplayList(XZ, 400, 1000, 1000, 9000, 10000.0, 2500, 3, 6);				// groundPlane 
+	tp.CreateDisplayList(XZ, 401, 1000, 2000, 9000, 11500.0, 2500, 3, 3);				// ceiling
+
+	tp.CreateDisplayList(XZ, 402, 1000, 1000, 7000, 10000.0, -3500, 12, 6);				// groundPlane 
+	tp.CreateDisplayList(XZ, 403, 1000, 2000, 7000, 11500.0, -3500, 12, 3);				// ceiling
+
+	tp.CreateDisplayList(XZ, 404, 1000, 1000, 6000, 10000.0, -23500, 13, 20);			// groundPlane 
+	tp.CreateDisplayList(XZ, 405, 1000, 2000, 6000, 11500.0, -23500, 13, 10);			// ceiling
+
+	tp.CreateDisplayList(XZ, 406, 1000, 1000, 4000, 10000.0, -28500, 15, 5);			// groundPlane 
+	tp.CreateDisplayList(XZ, 407, 1000, 2000, 4000, 11500.0, -28500, 15, 2.5);			// ceiling
+
+	tp.CreateDisplayList(XZ, 408, 1000, 1000, 11000, 10000.0, -34000, 3, 5.5);			// groundPlane 
+	tp.CreateDisplayList(XZ, 409, 1000, 2000, 11000, 11500.0, -34000, 3, 2.25);			// ceiling
 }
 
 // PORTALS
@@ -1369,6 +1408,16 @@ void DisplayWrathWorld::displayBossRoom()
 	//ceiling
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(CIRCUIT));
 	for (int i = 310; i <= 311; ++i) glCallList(i);
+	
+	//floor
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(410);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(412);
+
+	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(GROUND_PLANE));
+	glCallList(414);
 
 }
 
@@ -1525,8 +1574,11 @@ void DisplayWrathWorld::drawBossRoom()
 	tp.CreateDisplayList(YZ, 285, 500, 1000, 14500, 10000, -50500, 1, 1);
 
 	
-	//Ceiling
-	tp.CreateDisplayList(XZ, 310, 1000, 1000, 1000, 13000, -45000, 23, 11);
+	tp.CreateDisplayList(XZ, 310, 1000, 2000, 1000, 13000, -45000, 23, 5.5);		//Ceiling
+	tp.CreateDisplayList(XZ, 410, 1000, 1000, 1000, 10000.0, -45000, 23, 11);		//floor
+
+	tp.CreateDisplayList(XZ, 412, 1000, 1000, 4500, 10000.0, -49500, 15.75, 4.5);		//floor
+	tp.CreateDisplayList(XZ, 414, 1000, 1000, 8500, 10000.0, -54000, 8, 4.5);		//floor
 	
 	//NEEDS FIXING
 	glNewList(311, GL_COMPILE);

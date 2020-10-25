@@ -389,7 +389,7 @@ private:
 	std::vector<unsigned char>* pngImage;		// Stores raw image file
 
 	Player player;
-	Enemy enemy = Enemy(-24000, -1800, 30000, 40000, 10450);	//courtyard
+	Enemy enemy = Enemy(-5000, -3000, 35500, 40000, 10150);	//courtyard
 
 	// functions to display display lists (images) and bind them to a texture
 		/**
