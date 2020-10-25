@@ -8,6 +8,6 @@ public:
 	EnemyBoss(double xmin, double xmax, double zmin, double zmax, double y);
 
 private:
-	int MAX_HEALTH = 50;
+	int MAX_HEALTH = 100;
 };
 

@@ -10,7 +10,7 @@ void Weapon::addAmmo(int amount){
     totalAmmo += amount;
 }
 bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies) {
-    if (enemies.checkCollisionWithBox(ray, camPos) != NULL) {
+    if (enemies.checkCollisionWithBox(ray, camPos) != NULL){
         enemies.checkCollisionWithBox(ray, camPos)->decreaseHealth();
         return true;
     }
