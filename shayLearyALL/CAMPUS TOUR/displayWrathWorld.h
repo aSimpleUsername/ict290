@@ -49,13 +49,6 @@
 #define BOSS_FRONT					23
 #define BOSS_BACK					24
 #define GUN							25
-#define BOSS_NAME					26
-#define BOSS_HEALTH					27
-#define PLAYER_HEALTH				28
-#define PLAYER_SHIELD				29
-#define PLAYER_HIT					30
-#define TRANSPARENT_1				31
-#define HITMARKER					32
 
 	/**
 	* @class displayWrathWorld

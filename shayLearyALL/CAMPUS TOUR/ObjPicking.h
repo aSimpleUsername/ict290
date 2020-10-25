@@ -142,18 +142,12 @@ T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector
     float wallDistance = FLT_MAX;
     int index =0;
     for(int i = 0; i < objBuffer.size();i++) {
-<<<<<<< HEAD
         if (detectCollisionWithOBB(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation(),tempDistance) && objBuffer[i]->getHealth() > 0) {
             if (tempDistance < obbDistance) {
                 obbDistance = tempDistance;
                 index = i;
                
             }
-=======
-        if (detectCollisionWithBox(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation()) &&
-                objBuffer[i]->getHealth() > 0) {
-            return objBuffer[i];
->>>>>>> vlad
         }
     }
     for (int i = 0; i < maxPoints.size(); i++) {

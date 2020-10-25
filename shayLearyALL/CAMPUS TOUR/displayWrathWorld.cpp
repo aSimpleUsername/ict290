@@ -34,10 +34,10 @@ void DisplayWrathWorld::myinit()
 	setUpPowerups();
 
 	// set starting position of user
-	//cam.Position(10000, 10550.0, 12150.0, 180.0);
+	cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	cam.Position(13500, 10550.0, -46820.0, 180.0);
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -432,20 +432,6 @@ void DisplayWrathWorld::CreateTextures()
 	tp.LoadPNGTexture(BOSS_BACK, "data/boss_back.png");
 
 	tp.LoadPNGTexture(GUN, "data/gun.png");
-
-	tp.LoadPNGTexture(BOSS_NAME, "data/boss_name.png");
-
-	tp.LoadPNGTexture(BOSS_HEALTH, "data/boss_health.png");
-
-	tp.LoadPNGTexture(PLAYER_HEALTH, "data/player_health.png");
-
-	tp.LoadPNGTexture(PLAYER_SHIELD, "data/player_shield.png");
-
-	tp.LoadPNGTexture(PLAYER_HIT, "data/player_hit.png");
-
-	tp.LoadPNGTexture(TRANSPARENT_1, "data/transparent.png");
-
-	tp.LoadPNGTexture(HITMARKER, "data/hitmarker.png");
 	
 	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);.
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
@@ -467,33 +453,18 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayShields();
 	displayAmmo();
 
-	//ui.playerHealth(player.getHealth());
-	//ui.playerShield(player.getShields());
+	ui.playerHealth(player.getHealth());
+	ui.playerShield(player.getShields());
 	ui.info(cam.getX(), cam.getY(), cam.getZ());
-<<<<<<< HEAD
 	ui.hitmarker();
 	ui.healthBar(1920, 1080, tp.GetTexture(HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(SHIELD));
 	ui.ammoCount(1920, 1080, tp.GetTexture(GUN));
-=======
-	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
-	ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
-	ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
-	ui.ammoCount(1920, 1080, tp.GetTexture(AMMO));
-	ui.bossHealthBar(1920, 1080, tp.GetTexture(BOSS_HEALTH));
-	ui.bossName(1920, 1080, tp.GetTexture(BOSS_NAME));
-	ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
-	ui.weapon(1920, 1080, tp.GetTexture(GUN));
-	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
-
->>>>>>> vlad
 	if (player.getHealth() <= 0)
 	{
 		cam.dead = true;
 		//DisplayExit = true;
 	}
-
-	drawUI();
 }
 
 void DisplayWrathWorld::displayEnemies()
@@ -1574,32 +1545,13 @@ void DisplayWrathWorld::collectionCheck()
 void DisplayWrathWorld::drawUI()
 {
 	//health bar
-	tp.CreateDisplayList(0, 350, 50.0, 50.0, 0.0, 0.0, 0.0, player.getHealth(), 1.0);
+	tp.CreateDisplayList(0, 350, 50.0, 50.0, 0.0, 0.0, 0.0, 10.0, 1.0);
 
 	//shield bar
-	tp.CreateDisplayList(0, 351, 50.0, 50.0, 0.0, 0.0, 0.0, player.getShields(), 1.0);
+	tp.CreateDisplayList(0, 351, 50.0, 50.0, 0.0, 0.0, 0.0, 10.0, 1.0);
 
 	//ammo
-	tp.CreateDisplayList(0, 352, 300.0, 300.0, 0.0, 0.0, 0.0, 1.0, 1.0);
-
-	//boss health bar
-	tp.CreateDisplayList(0, 353, 10.0, 50.0, 0.0, 0.0, 0.0, boss.getHealth(), 1.0);
-	//tp.CreateDisplayList(0, 353, 20.0, 50.0, 0.0, 0.0, 0.0, boss.getHealth(), 1.0);
-
-	//boss name
-	tp.CreateDisplayList(0, 354, 200.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
-
-	//weapon
-	tp.CreateDisplayList(0, 355, 646 * 2.25, 387 * 2.25, 0.0, 0.0, 0.0, 1.0, 1.0);
-
-	//player hit
-	tp.CreateDisplayList(0, 356, 1920, 1080, 0.0, 0.0, 0.0, 1.0, 1.0);
-
-	//transparent to stop line in gun texture bug
-	tp.CreateDisplayList(0, 357, 1100, 300, 0.0, 0.0, 0.0, 1.0, 1.0);
-
-	//hitmarker
-	tp.CreateDisplayList(0, 358, 50, 50, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 352, 1000.0, 600.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 }
 
 //--------------------------------------------------------------------------------------
@@ -1608,6 +1560,7 @@ void DisplayWrathWorld::drawUI()
 //--------------------------------------------------------------------------------------
 void DisplayWrathWorld::CreateTextureList()
 {
+
 	drawSkyBox();				// 4-9
 	drawGroundPlane();			// 3
 	drawPortal();				//10
@@ -1617,7 +1570,9 @@ void DisplayWrathWorld::CreateTextureList()
 	drawPowerWalls();
 	drawBossRoom();
 
-	//286-291 used in drawEnemies()
+	drawUI();
+
+							//286-291 used in drawEnemies()
 
 	//last number used: 326 (24/10/2020)
 }
