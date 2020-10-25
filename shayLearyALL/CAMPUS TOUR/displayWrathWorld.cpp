@@ -493,12 +493,18 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
 	ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(PLAYER_SHIELD));
-	ui.ammoCount(1920, 1080, tp.GetTexture(AMMO));
+	ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
+	ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
+	ui.rAmmoCount1(1920, 1080, tp.GetTexture(AMMO));
+	ui.rAmmoCount2(1920, 1080, tp.GetTexture(AMMO));
 	ui.bossHealthBar(1920, 1080, tp.GetTexture(BOSS_HEALTH));
 	ui.bossName(1920, 1080, tp.GetTexture(BOSS_NAME));
 	ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
 	ui.weapon(1920, 1080, tp.GetTexture(GUN));
 	ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
+
+	//ui.ammoCount1(1920, 1080, tp.GetTexture(AMMO));
+	//ui.ammoCount2(1920, 1080, tp.GetTexture(AMMO));
 
 	if (player.getHealth() <= 0)
 	{
@@ -1592,9 +1598,6 @@ void DisplayWrathWorld::drawUI()
 	//shield bar
 	tp.CreateDisplayList(0, 351, 50.0, 50.0, 0.0, 0.0, 0.0, player.getShields(), 1.0);
 
-	//ammo
-	tp.CreateDisplayList(0, 352, 300.0, 300.0, 0.0, 0.0, 0.0, 1.0, 1.0);
-
 	//boss health bar
 	tp.CreateDisplayList(0, 353, 10.0, 50.0, 0.0, 0.0, 0.0, boss.getHealth(), 1.0);
 	//tp.CreateDisplayList(0, 353, 20.0, 50.0, 0.0, 0.0, 0.0, boss.getHealth(), 1.0);
@@ -1613,6 +1616,14 @@ void DisplayWrathWorld::drawUI()
 
 	//hitmarker
 	tp.CreateDisplayList(0, 358, 50, 50, 0.0, 0.0, 0.0, 1.0, 1.0);
+
+	//ammo
+	tp.CreateDisplayList(0, 352, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 359, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+
+	//reserve ammo
+	tp.CreateDisplayList(0, 360, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 361, 100.0, 100.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 }
 
 //--------------------------------------------------------------------------------------
