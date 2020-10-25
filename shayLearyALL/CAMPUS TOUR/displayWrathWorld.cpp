@@ -37,10 +37,10 @@ void DisplayWrathWorld::myinit()
 	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	cam.Position(13500, 10550.0, -46820.0, 180.0);
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
-	//cam.Position(6780, 10550.0, -20950.0, 180.0);
+	cam.Position(6780, 10550.0, -20950.0, 180.0);
 
 }
 
