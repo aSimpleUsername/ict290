@@ -16,6 +16,8 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "userInterface.h"
+#include <irrKlang.h>
+#pragma comment(lib, "irrKlang.lib")
 
 
 //--------------------------------------------------------------------------------------
@@ -332,7 +334,7 @@ public:
 	std::vector<Point3D> maxWallPoints;
 	std::vector<Point3D> minWallPoints;
 	unsigned char* image = NULL;
-
+	irrklang::ISoundEngine* engine;
 	bool DisplayMap = false;
 	bool DisplayWelcome = true;
 	bool DisplayExit = false;

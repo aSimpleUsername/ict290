@@ -10,12 +10,18 @@
 #include "texturedPolygons.h"
 #include "Portal.h"
 #include "Pickups.h"
+
+
+#include <irrKlang.h>
+#pragma comment(lib, "irrKlang.lib")
+
 //Classes for hit detection (enemy can be changed for your class)
 #include "ObjPicking.h"
 #include "Enemy.h"
 #include "enemyBoss.h"
 #include "Player.h"
 #include "userInterface.h"
+
 // TEXTURE IMAGE AXISES
 #define XY		0
 #define XZ		1
@@ -82,7 +88,7 @@ public:
 	bool DisplayMap = false;	
 	bool DisplayWelcome = false;
 	bool DisplayExit = false;
-	
+	irrklang::ISoundEngine *engine;
 		/**
 		* @brief initialises Wrath World
 		*/

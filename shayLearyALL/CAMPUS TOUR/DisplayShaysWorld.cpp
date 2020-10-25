@@ -1264,7 +1264,7 @@ void DisplayShaysWorld::displayEnemies()
 	if (enemy.getHealth() > 0 && player.getHealth() > 0)
 	{
 
-		enemyObjects.getObjectFromBuffer(0)->stateMachine();
+		enemyObjects.getObjectFromBuffer(0)->stateMachine(engine);
 
 		//bottom
 		glNewList(751, GL_COMPILE);

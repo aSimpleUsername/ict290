@@ -12,7 +12,7 @@ void DisplayWrathWorld::myinit()
 	gluLookAt(0.0, 1.75, 0.0,
 		0.0, 1.75, -1,
 		0.0f, 1.0f, 0.0f);
-
+	
 	// set the world co-ordinates (used to set quadrants for bounding boxes)
 	cam.SetWorldCoordinates(36000.0, 43200.0);
 	// turn collision detection on
@@ -500,7 +500,7 @@ void DisplayWrathWorld::displayEnemies()
 	{
 		if (enemies[i].getHealth() > 0)
 		{
-			enemyObjects.getObjectFromBuffer(i)->stateMachine();
+			enemyObjects.getObjectFromBuffer(i)->stateMachine(engine);
 
 			//bottom
 			glNewList(286, GL_COMPILE);
@@ -612,7 +612,7 @@ void DisplayWrathWorld::displayBoss()
 
 	if (boss.getHealth() > 0)
 	{
-		enemyBossObject.getObjectFromBuffer(0)->stateMachine();
+		enemyBossObject.getObjectFromBuffer(0)->stateMachine(engine);
 
 		//bottom
 		glNewList(286, GL_COMPILE);

@@ -68,7 +68,6 @@ int main(int argc, char **argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	setGameMode();
-
 	initKeyStates();	//clear keystate array
 	shaysWorld.myinit();
 	glutTimerFunc(1000 / 60, timerCallback, 1);
@@ -77,14 +76,16 @@ int main(int argc, char **argv)
 	glutIgnoreKeyRepeat(1);
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
-
+	
 	glutDisplayFunc(Display);
 	glutMouseFunc(Mouse);
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
 	glutPassiveMotionFunc(mouseMove);
 	glutMotionFunc(mouseMove);
 	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
-
+	
+	wrathWorld.engine = engine;
+	shaysWorld.engine = engine;
 	glutReshapeFunc(reshape);
 	glutMainLoop();
 
@@ -416,7 +417,7 @@ void Mouse(int button, int state, int x, int y)
 			//mciSendString("play sounds/shot.wav", NULL, 0, NULL);
 			//PlaySound(TEXT("sounds/shot.wav"), NULL, SND_FILENAME | SND_ASYNC);// - the correct code
 			//stepSound->Play();
-			engine->play2D("sounds/shot.wav", false);
+			engine->play2D("sounds/gunshot.wav", false);
 			
 			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
 			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
@@ -438,6 +439,7 @@ void Mouse(int button, int state, int x, int y)
 		}
 
 		if (canShoot) {
+			engine->play2D("sounds/gunshot.wav", false);
 			Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
 			Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
 			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints,wrathWorld.minWallPoints))

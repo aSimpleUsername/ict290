@@ -4,6 +4,8 @@
 #include "AABBNode.H"
 #include "Entity.h"
 #include <vector>
+#include <irrKlang.h>
+#pragma comment(lib, "irrKlang.lib")
 
 // Enemy states
 #define DEAD	0
@@ -36,7 +38,7 @@ public:
 	void shoot();															//TODO: make private, and add to state machine
 	double m_timer;															//TODO: make private
 
-	void stateMachine();
+	void stateMachine(irrklang::ISoundEngine *engine);
 	void checkHit(Entity* target);
 
 protected:

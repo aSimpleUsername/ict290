@@ -200,7 +200,7 @@ void Enemy::patrol(double xmin, double xmax, double zmin, double zmax)
 	seek(m_patrolTarget);
 }
 
-void Enemy::stateMachine()
+void Enemy::stateMachine(irrklang::ISoundEngine *engine)
 {
 	// Death State
 	if (m_health <= 0)
@@ -225,8 +225,11 @@ void Enemy::stateMachine()
 		seek(*m_enemyPosition);
 		drawProjectiles();
 
-		if (glutGet(GLUT_ELAPSED_TIME) > m_timer)
+		if (glutGet(GLUT_ELAPSED_TIME) > m_timer) {
 			shoot();
+			engine->play2D("sounds/shot.wav", false);
+		}
+			
 
 		if (m_location.distance(*m_enemyPosition) > 3000)
 		{
