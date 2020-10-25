@@ -313,6 +313,7 @@
 #define ENEMY_FRONT					248
 #define ENEMY_BACK					249
 #define ENEMY_SIDE					250
+#define INFO						251
 // 251 Next
 
 	/**
@@ -502,6 +503,10 @@ private:
 		* @brief displays lights
 		*/
 	void DisplayLights();
+		/**
+		* @brief Displays info panel
+		*/
+	void DisplayInfo();
 	
 		/**
 		* @brief displays portals

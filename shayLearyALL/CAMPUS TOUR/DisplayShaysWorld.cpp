@@ -340,6 +340,9 @@ void DisplayShaysWorld::SetWallPoints() {
 	}
 }
 
+void DisplayShaysWorld::DisplayInfo() {
+
+}
 
 void DisplayShaysWorld::respawn()
 {
@@ -1197,6 +1200,8 @@ void DisplayShaysWorld::CreateTextures()
 	tp.LoadPNGTexture(ENEMY_BACK, "data/enemy_back.png");
 
 	tp.LoadPNGTexture(ENEMY_SIDE, "data/enemy_side.png");
+
+	tp.LoadPNGTexture(INFO, "data/info.png");
 
 	tp.LoadTexture("data/map.raw", 256, 256);
 	tp.CreateTexture(217, image, 256, 256);
