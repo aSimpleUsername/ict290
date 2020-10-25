@@ -78,9 +78,9 @@ void DisplayWrathWorld::DeleteImageFromMemory(unsigned char* tempImage)
 	}
 }
 
-//--------------------------------------------------------------------------------------
-// Set up bounding boxes for collsion detection
-//--------------------------------------------------------------------------------------
+
+
+
 void DisplayWrathWorld::CreateBoundingBoxes()
 {
 	cam.SetAABBMaxX(0, 7050.0);
@@ -339,9 +339,21 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(50, -49450.0);
 	cam.SetAABBMinZ(50, -50550.0);
 
+	SetWallPoints();
+
 	// current AABB array size = 55
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
+
+void DisplayWrathWorld::SetWallPoints() {
+	
+	for (int i = 0; i < cam.m_colDetect.GetNoBoundingBoxes(); i++) {
+		maxWallPoints.push_back(Point3D(cam.GetAABBMaxX(i), cam.GetAABBMaxY(i), cam.GetAABBMaxZ(i)));
+		minWallPoints.push_back(Point3D(cam.GetAABBMinX(i), cam.GetAABBMinY(i), cam.GetAABBMinZ(i)));
+	}
+}
+
+
 
 void DisplayWrathWorld::respawn()
 {
@@ -447,7 +459,6 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.healthBar(1920, 1080, tp.GetTexture(HEALTH));
 	ui.shieldBar(1920, 1080, tp.GetTexture(SHIELD));
 	ui.ammoCount(1920, 1080, tp.GetTexture(GUN));
-
 	if (player.getHealth() <= 0)
 	{
 		//cam.dead = true;

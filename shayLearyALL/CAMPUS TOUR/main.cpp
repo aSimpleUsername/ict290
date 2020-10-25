@@ -8,6 +8,10 @@
 #include <GL/glut.h>
 #include <time.h>
 
+#include <Mmsystem.h>
+#include <mciapi.h>
+#pragma comment(lib, "Winmm.lib")
+
 //#include <windows.h> // only used if mouse is required (not portable)
 #include "camera.h"
 #include "texturedPolygons.h"
@@ -16,6 +20,7 @@
 #include "displayWrathWorld.h"
 #include "weapon.h"
 #include "point3D.h"
+#include "camera.h"
 //--------------------------------------------------------------------------------------
 
 #define PI 3.1415962654
@@ -54,8 +59,8 @@ void reshape(int w, int h);
 void IncrementFrameCount();
 void timerCallback(int value);
 void setGameMode();
-
-
+CEasySound* es;
+CSound* stepSound;
 //--------------------------------------------------------------------------------------
 //  Main function
 //--------------------------------------------------------------------------------------
@@ -72,10 +77,10 @@ int main(int argc, char **argv)
 	glutIgnoreKeyRepeat(1);
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
-
+	es = CEasySound::Instance();
+	stepSound = es->GetSound(es->Load("sounds/shot.wav"));
 	glutDisplayFunc(Display);
 	glutMouseFunc(Mouse);
-
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
 	glutPassiveMotionFunc(mouseMove);
 	glutMotionFunc(mouseMove);
@@ -83,6 +88,7 @@ int main(int argc, char **argv)
 
 	glutReshapeFunc(reshape);
 	glutMainLoop();
+
  	return(0);
 }
 
@@ -389,6 +395,7 @@ void processKeys()
 
 }
 
+
 //--------------------------------------------------------------------------------------
 //  Mouse Buttons
 //--------------------------------------------------------------------------------------
@@ -398,6 +405,7 @@ void Mouse(int button, int state, int x, int y)
 
 	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && isShaysWorld)
 	{
+		
 		if ((shaysWorld.DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
 			&& (y <= height / 2.0 + 256.0) && (y >= height / 2.0 - 256.0))
 		{
@@ -406,12 +414,13 @@ void Mouse(int button, int state, int x, int y)
 		}
 
 		if (canShoot) {
+			//mciSendString("play sounds/shot.wav", NULL, 0, NULL);
+			//PlaySound(TEXT("sounds/shot.wav"), NULL, SND_FILENAME | SND_ASYNC);// - the correct code
+			stepSound->Play();
 			Point3D ray(shaysWorld.cam.GetLX(), shaysWorld.cam.GetLY(), shaysWorld.cam.GetLZ());
 			Point3D camPos(shaysWorld.cam.getX(), shaysWorld.cam.getY(), shaysWorld.cam.getZ());
-			
-			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects))
+			if(playerWeapon.shoot(ray, camPos, shaysWorld.enemyObjects, shaysWorld.maxWallPoints, shaysWorld.minWallPoints))
 				shaysWorld.ui.hit = true;
-			
 			//general shoot logic (regardless of hit or miss)
 			canShoot = false;
 		}
@@ -429,8 +438,7 @@ void Mouse(int button, int state, int x, int y)
 		if (canShoot) {
 			Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
 			Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
-
-			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject))
+			if(playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints,wrathWorld.minWallPoints))
 				wrathWorld.ui.hit = true;		
 
 			// general shoot logic (regardless of hit or miss)
@@ -440,6 +448,7 @@ void Mouse(int button, int state, int x, int y)
 
 	if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_UP)) {
 		canShoot = true;
+		stepSound->Stop();
 	}
 	
 	

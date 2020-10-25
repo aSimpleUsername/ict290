@@ -12,6 +12,7 @@
     <ClCompile Include="displayWrathWorld.cpp" />
     <ClCompile Include="EasySound.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="enemyBoss.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
@@ -24,14 +25,10 @@
     <ClCompile Include="projectile.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundTime.cpp" />
+    <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
     <ClCompile Include="weapon.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="stb_image.cpp" />
-=======
-    <ClCompile Include="enemyBoss.cpp" />
->>>>>>> 9af41963373d23358230b58f4bd33b9af12d5751
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.H" />
@@ -44,8 +41,10 @@
     <ClInclude Include="displayWrathWorld.h" />
     <ClInclude Include="EasySound.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="enemyBoss.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="lodepng.h" />
+    <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="Pickups.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
@@ -58,15 +57,10 @@
     <ClInclude Include="resource2.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundTime.h" />
+    <ClInclude Include="stb_image.h" />
     <ClInclude Include="texturedPolygons.h" />
-    <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="userInterface.h" />
     <ClInclude Include="weapon.h" />
-<<<<<<< HEAD
-    <ClInclude Include="stb_image.h" />
-=======
-    <ClInclude Include="enemyBoss.h" />
->>>>>>> 9af41963373d23358230b58f4bd33b9af12d5751
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />

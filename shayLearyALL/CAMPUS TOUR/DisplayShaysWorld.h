@@ -329,8 +329,8 @@ public:
 	TexturedPolygons tp;
 	UserInterface ui;
 	ObjPicking<Enemy> enemyObjects;
-
-
+	std::vector<Point3D> maxWallPoints;
+	std::vector<Point3D> minWallPoints;
 	unsigned char* image = NULL;
 
 	bool DisplayMap = false;
@@ -369,6 +369,10 @@ public:
 		* @param tempImage
 		*/
 	void DeleteImageFromMemory(unsigned char* tempImage);
+		/**
+		* @brief sets AABB wall points
+		*/
+	void SetWallPoints();
 
 private:
 	Portal steps;

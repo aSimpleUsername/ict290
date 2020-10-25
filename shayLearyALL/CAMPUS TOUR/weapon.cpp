@@ -9,18 +9,19 @@ void Weapon::takeAmmo(int amount){
 void Weapon::addAmmo(int amount){
     totalAmmo += amount;
 }
-bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies) {
-    if (enemies.checkCollisionWithBox(ray, camPos) != NULL){
-        enemies.checkCollisionWithBox(ray, camPos)->decreaseHealth();
+bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints) {
+    if (enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints) != NULL){
+        
+        enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints)->decreaseHealth();
         return true;
     }
     else
         return false;
 }
 
-bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<EnemyBoss> enemies) {
-    if (enemies.checkCollisionWithBox(ray, camPos) != NULL) {
-        enemies.checkCollisionWithBox(ray, camPos)->decreaseHealth();
+bool Weapon::shoot(Point3D ray, Point3D camPos, ObjPicking<EnemyBoss> enemies, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints) {
+    if (enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints) != NULL) {
+        enemies.checkCollisionWithBox(ray, camPos, maxPoints, minPoints)->decreaseHealth();
         return true;
     }
     else

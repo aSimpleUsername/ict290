@@ -328,9 +328,19 @@ void DisplayShaysWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxZ(52, 40790);
 	cam.SetAABBMinZ(52, 39500);
 
+	SetWallPoints();
 	// current AABB array size = 55
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
+
+void DisplayShaysWorld::SetWallPoints() {
+
+	for (int i = 0; i < cam.m_colDetect.GetNoBoundingBoxes(); i++) {
+		maxWallPoints.push_back(Point3D(cam.GetAABBMaxX(i), cam.GetAABBMaxY(i), cam.GetAABBMaxZ(i)));
+		minWallPoints.push_back(Point3D(cam.GetAABBMinX(i), cam.GetAABBMinY(i), cam.GetAABBMinZ(i)));
+	}
+}
+
 
 void DisplayShaysWorld::respawn()
 {

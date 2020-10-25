@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <vector>
 #include "point3D.h"
+#include "AABBNode.h"
+#include "camera.h"
 //this comment is to make shit work
 template <class T>
 class ObjPicking{
@@ -18,8 +20,9 @@ public:
 	void addObjectToBuffer(T *object);
     T* getObjectFromBuffer(int index) { return objBuffer[index]; }
 	bool detectCollisionWithSphere(float rayX, float rayY,float rayZ,float camX,float camY,float camZ);
-    bool detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints,Point3D enemyLocation);
-    T* checkCollisionWithBox(Point3D ray, Point3D camPos);
+    bool detectCollisionWithOBB(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints,Point3D enemyLocation, float& distance);
+    bool detectCollisionWithAABB(Point3D ray, Point3D camPos, Point3D aabbMin, Point3D aabbMax, Point3D enemyLocation, float& distance);
+    T* checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints);
 private:
 	void removeObjectFromBuffer(int index);
 	void clearBuffer();
@@ -53,7 +56,7 @@ bool ObjPicking<T>::detectCollisionWithSphere(float rayX, float rayY, float rayZ
 }
 
 template <class T>
-bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints, Point3D enemyLocation) {
+bool ObjPicking<T>::detectCollisionWithOBB(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints, Point3D enemyLocation, float &distance) {
     float tMin = 0.0f;
     float tMax = 10000000000.0f;
     Point3D delta = enemyLocation - camPos;
@@ -87,16 +90,81 @@ bool ObjPicking<T>::detectCollisionWithBox(Point3D ray, Point3D camPos, std::vec
             if (tMax < tMin)
                 return false;
         }
+        distance = tMin;
     }
     return true;
 }
 template <class T>
-T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos) {
-    for(int i = 0; i < objBuffer.size();i++) {
-        if (detectCollisionWithBox(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation()) &&
-                objBuffer[i]->getHealth() > 0) {
-            return objBuffer[i];
+bool ObjPicking<T>::detectCollisionWithAABB(Point3D ray, Point3D camPos, Point3D aabbMin,Point3D aabbMax, Point3D enemyLocation, float& distance) {
+    float tMin = 0.0f;
+    float tMax = 10000000000.0f;
+    Point3D delta = enemyLocation - camPos;
+    Point3D axis[3];
+
+    axis[0] = Point3D(1, 0, 0);
+    axis[0] = axis[0].normalise();
+
+    axis[1] = Point3D(0, 1, 0);
+    axis[1] = axis[1].normalise();
+
+    axis[2] = Point3D(0, 0, 1);
+    axis[2] = axis[2].normalise();
+    float max[3] = { aabbMax.x, aabbMax.y, aabbMax.z };
+    float min[3] = { aabbMin.x, aabbMin.y, aabbMin.z };
+    for (int i = 0; i < 3; i++) {
+        float t1, t2;
+        float e = axis[i].dot(delta);
+        float f = axis[i].dot(ray);
+        //will crash if dont check for near 0
+        if (abs(f) > 1e-20f)
+        {
+            t1 = ((e + ((max[i] - min[i]) / 2)) / f);
+            t2 = ((e - ((max[i] - min[i]) / 2)) / f);
+            if (t1 > t2) { // if wrong order
+                std::swap(t1, t2);
+            }
+            if (t2 < tMax)
+                tMax = t2;
+            if (t1 > tMin)
+                tMin = t1;
+            if (tMax < tMin)
+                return false;
         }
+        distance = tMin;
+    }
+    return true;
+}
+
+template <class T>
+T* ObjPicking<T>::checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints) {
+    float tempDistance = 0;
+    float obbDistance = FLT_MAX;
+    float wallDistance = FLT_MAX;
+    int index =0;
+    for(int i = 0; i < objBuffer.size();i++) {
+        if (detectCollisionWithOBB(ray, camPos, objBuffer[i]->getAABB(), objBuffer[i]->getLocation(),tempDistance) && objBuffer[i]->getHealth() > 0) {
+            //std::cout << "Distance to enemy is: " << obbDistance << std::endl;
+            if (tempDistance < obbDistance) {
+                obbDistance = tempDistance;
+                index = i;
+               
+            }
+        }
+    }
+    /*
+    for (int i = 0; i < maxPoints.size(); i++) {
+        Point3D center = Point3D(maxPoints[i].x - ((maxPoints[i].x - minPoints[i].x) / 2), maxPoints[i].y - ((maxPoints[i].y - minPoints[i].y) / 2), maxPoints[i].z - ((maxPoints[i].z - minPoints[i].z) / 2));
+        if (detectCollisionWithAABB(ray, camPos, minPoints[i], maxPoints[i], center, tempDistance)) {
+            //std::cout << "Distance to wall is: " << tempDistance << std::endl;
+            if (tempDistance < wallDistance) {
+                wallDistance = tempDistance;
+                
+            }
+        }
+    }
+    */
+    if (wallDistance > obbDistance && obbDistance != 0) {
+        return objBuffer[index];
     }
     return NULL;
 }

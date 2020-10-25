@@ -70,7 +70,8 @@ public:
 	std::vector<Pickups> hPowerup;
 	std::vector<Pickups> sPowerup;
 	std::vector<Pickups> aPowerup;
-
+	std::vector<Point3D> maxWallPoints;
+	std::vector<Point3D> minWallPoints;
 	bool DisplayMap = false;	
 	bool DisplayWelcome = false;
 	bool DisplayExit = false;
@@ -133,6 +134,7 @@ public:
 
 	void drawUI();
 
+	void SetWallPoints();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
@@ -264,6 +266,7 @@ private:
 		* @brief creates bounding boxes for collsion detection
 		*/
 	void CreateBoundingBoxes();
+	
 };
 
 #endif DISPLAYWRATHWORLD_H
