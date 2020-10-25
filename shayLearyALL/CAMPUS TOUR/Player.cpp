@@ -11,14 +11,13 @@ Player::Player()
 
 void Player::incrementAmmo()
 {
-	if (ammo < MAX_AMMO)
-	{
-		ammo++;
+	if (ammoReserve > 60) {
+		setReserveAmmo(90);
 	}
-	else if (ammoReserve < MAX_AMMO_RESERVE)
-	{
-		ammoReserve++;
+	else {
+		ammoReserve + 30;
 	}
+
 }
 
 void Player::decreaseAmmo()
@@ -61,4 +60,9 @@ void Player::reload()
 	else {
 		ammo = 30;
 	}
+}
+
+int Player::getMaxReserveAmmo()
+{
+	return MAX_AMMO_RESERVE;
 }
