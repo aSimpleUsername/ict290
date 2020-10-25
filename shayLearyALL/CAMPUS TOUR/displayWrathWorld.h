@@ -172,6 +172,8 @@ public:
 	void WinState();
 	
 	void LoseState();
+
+	int grabAmmo();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;

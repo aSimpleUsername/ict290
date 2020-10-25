@@ -51,7 +51,14 @@ void Player::setReserveAmmo(int a)
 
 void Player::reload()
 {
-	ammoReserve = ammoReserve - (MAX_AMMO - ammo);
-	
-	ammo = MAX_AMMO;
+	ammoReserve += ammo;
+	ammo = 0;
+	ammoReserve -= 30;
+	if (ammoReserve <= 0) {
+		ammo = 30 + ammoReserve;
+		ammoReserve = 0;
+	}
+	else {
+		ammo = 30;
+	}
 }

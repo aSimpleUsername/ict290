@@ -344,6 +344,11 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
+int DisplayWrathWorld::grabAmmo()
+{
+	return player.getAmmo();
+}
+
 void DisplayWrathWorld::reduceAmmo()
 {
 	player.decreaseAmmo();
