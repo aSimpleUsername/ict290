@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
-	: m_topSpeed(25), m_rotationSpeed(0.035), m_timer(0), m_fireRate(500), m_heading(Point3D(0.0, 0.0, 0.0)),
+	: m_topSpeed(25), m_rotationSpeed(0.035), m_timer(0), m_heading(Point3D(0.0, 0.0, 0.0)),
 	m_state(PATROL), m_scale(150), m_maxHealth(5)
 {
 	m_location = Point3D::randomPointXZ(xmin + 2 * m_scale, xmax - 2 * m_scale, zmin + 2 * m_scale, zmax - 2 * m_scale, y);		// 2*SCALE ensures that the enemy spawns inside the bounds and not on the edge
@@ -18,6 +18,7 @@ Enemy::Enemy(double xmin, double xmax, double zmin, double zmax, double y)
 
 	m_health = m_maxHealth;
 	m_shields = 0;
+	m_fireRate = 400 + Point3D::randomInt(200);
 
 	m_patrolTarget = Point3D(0.0, m_location.y, 0.0);
 	setBounds(xmin, xmax, zmin, zmax);
