@@ -29,7 +29,6 @@ void DisplayShaysWorld::myinit()
 	// set number of bounding boxes required
 	cam.SetNoBoundingBoxes(55);
 
-
 	// set starting position of user
 	cam.Position(3652.0, 10450.0, 42133.0, 90.0);
 

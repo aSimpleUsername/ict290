@@ -17,8 +17,5 @@ class Weapon {
         bool shoot(Point3D ray, Point3D camPos, ObjPicking<Enemy> enemies, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints);
         bool shoot(Point3D ray, Point3D camPos, ObjPicking<EnemyBoss> enemies, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints);
         void reload();
-        void drawWeapon();
-
-        int getAmmo();
 };
 #endif //!WEAPON_H

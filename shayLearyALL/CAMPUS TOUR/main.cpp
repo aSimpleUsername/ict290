@@ -60,6 +60,7 @@ void IncrementFrameCount();
 void timerCallback(int value);
 void setGameMode();
 irrklang::ISoundEngine* engine = irrklang::createIrrKlangDevice();
+irrklang::ISoundSource* music = engine->addSoundSourceFromFile("sounds/metal.mp3");
 //--------------------------------------------------------------------------------------
 //  Main function
 //--------------------------------------------------------------------------------------
@@ -77,6 +78,7 @@ int main(int argc, char **argv)
 	glutKeyboardUpFunc(releaseKey);
 	glutKeyboardFunc(keyPressed);
 	
+
 	glutDisplayFunc(Display);
 	glutMouseFunc(Mouse);
 	// ONLY USE IF REQUIRE MOUSE MOVEMENT
@@ -86,9 +88,9 @@ int main(int argc, char **argv)
 	
 	wrathWorld.engine = engine;
 	shaysWorld.engine = engine;
+	music->setDefaultVolume(0.35);
 	glutReshapeFunc(reshape);
 	glutMainLoop();
-
  	return(0);
 }
 
@@ -219,6 +221,9 @@ void Display()
 	// clear buffers
 	glFlush();
 	glutSwapBuffers();
+	if (!engine->isCurrentlyPlaying(music) && !isShaysWorld) {
+		engine->play2D(music);
+	}
 }
 
 

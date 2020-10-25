@@ -227,7 +227,7 @@ void Enemy::stateMachine(irrklang::ISoundEngine *engine)
 
 		if (glutGet(GLUT_ELAPSED_TIME) > m_timer) {
 			shoot();
-			engine->play2D("sounds/shot.wav", false);
+			engine->play2D("sounds/shot.wav",false);
 		}
 			
 

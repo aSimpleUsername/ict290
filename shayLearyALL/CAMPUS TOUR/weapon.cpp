@@ -41,9 +41,4 @@ void Weapon::reload(){
         magazine = 30;
     }
 }
-void Weapon::drawWeapon(){
-    
-}
-int Weapon::getAmmo(){
-    return totalAmmo;
-}
+
