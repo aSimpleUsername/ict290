@@ -11,3 +11,35 @@ Entity::Entity()
 {
 
 }
+
+void Entity::incrementHealth() 
+{
+	if (m_health < MAX_HEALTH)
+	{
+		m_health++;
+	}
+}
+
+void Entity::incrementShields()
+{
+	if (m_shields < MAX_SHIELD)
+	{
+		m_shields++;
+	}
+}
+
+void Entity::decreaseHealth()
+{
+	if (m_health > 0)
+	{
+		m_health--;
+	}
+}
+
+void Entity::decreaseShields()
+{
+	if (m_shields > 0)
+	{
+		m_shields--;
+	}
+}

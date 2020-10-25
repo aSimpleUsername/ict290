@@ -48,6 +48,7 @@
 #define PORTAL_2					22	
 #define BOSS_FRONT					23
 #define BOSS_BACK					24
+#define GUN							25
 
 	/**
 	* @class displayWrathWorld
@@ -130,6 +131,8 @@ public:
 
 	void collectionCheck();
 
+	void drawUI();
+
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;
@@ -146,11 +149,17 @@ private:
 
 	Player player;
 
-	static int const NUM_ENEMIES = 4;
+	static int const NUM_ENEMIES = 9;
 	Enemy enemies[NUM_ENEMIES] = {	Enemy(7000, 11000, 0, 2500, 10550),				// room 1
-									Enemy(7000, 15000, -3000, 0, 10550),			// room 1
+									Enemy(7000, 15000, -3100, 0, 10550),			// room 1
 									Enemy(11000, 15000, 0, 2500, 10550),			// room 1
-									Enemy(15000, 19000, -3000, 2500, 10550) };		// room 1
+									Enemy(15000, 19000, -3100, 2500, 10550),		// room 1
+									Enemy(9000, 17000, -4500, -3800, 10550),		// server room 
+									Enemy(7000, 9000, -9200, -3800, 10550),			// server room 
+									Enemy(9000, 17000, -9200.0, -8300, 10550),		// server room 
+									Enemy(17000, 19000, -9200, -3800, 10550),		// server room 
+									Enemy(9000, 17000, -7100, -6000, 10550),		// server room 
+									};
 
 	EnemyBoss boss = EnemyBoss(9500, 15500, -49000, -36500, 10550);
 

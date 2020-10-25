@@ -4,6 +4,7 @@
 
 #include <vector>
 #include "point3D.h"
+#include "collision.h"
 
 class Projectile
 {
@@ -15,4 +16,10 @@ public:
 	Projectile();
 	Projectile(Point3D location, Point3D heading);
 	void drawProjectile();
+	inline void setCollision(Collision* collision) { m_collision = collision; }
+
+private:
+	Collision* m_collision;
+
+	//void checkCollision();
 };

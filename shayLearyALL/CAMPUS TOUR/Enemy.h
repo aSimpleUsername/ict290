@@ -27,9 +27,11 @@ public:
 	inline void setEnemyPosition(Point3D* enemyPosition) { m_enemyPosition = enemyPosition; }
 	inline Point3D* getPoints() { return(m_points); }
 	inline int getScale() { return m_scale; }
-	inline void resetHealth() { m_health = MAX_HEALTH; }
+	inline Projectile* getProjectiles(int index) { return &m_projectiles[index]; }
 
+	void reset();
 	void seek(Point3D targetPosition);										//seeks target position															//patrols within given bounds
+	static const int MAX_PROJECTILES = 5;
 	void drawProjectiles();													//TODO: make private
 	void shoot();															//TODO: make private, and add to state machine
 	double m_timer;															//TODO: make private
@@ -42,8 +44,6 @@ protected:
 	float radius = 300;
 	AABBNode hitBox;
 
-	int const MAX_HEALTH = 5;
-
 	int m_scale;
 	Point3D m_heading;
 	double m_topSpeed, m_rotationSpeed;
@@ -53,7 +53,6 @@ protected:
 	Point3D* m_enemyPosition;
 
 	int m_projectileCount;
-	static const int MAX_PROJECTILES = 5;
 	Projectile m_projectiles[MAX_PROJECTILES];
 
 	double m_fireRate;
@@ -78,4 +77,7 @@ protected:
 	// points that make up the 
 	static const int POINTS_SIZE = 8;
 	Point3D m_points[POINTS_SIZE];
+
+private:
+	int const MAX_HEALTH = 5;
 };

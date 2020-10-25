@@ -22,7 +22,7 @@ EnemyBoss::EnemyBoss(double xmin, double xmax, double zmin, double zmax, double 
 	m_points[6] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z - m_scale);
 	m_points[7] = Point3D(m_location.x + m_scale, m_location.y - m_scale, m_location.z + m_scale);
 
-	m_health = 50;
+	m_health = MAX_HEALTH;
 	m_shields = 0;
 
 	m_patrolTarget = Point3D(0.0, m_location.y, 0.0);
