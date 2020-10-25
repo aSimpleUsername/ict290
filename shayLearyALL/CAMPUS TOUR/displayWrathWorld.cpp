@@ -361,6 +361,7 @@ void DisplayWrathWorld::respawn()
 	player.resetHealth();
 	for (int i = 0; i < NUM_ENEMIES; ++i)
 		enemies[i].reset();
+	boss.reset();
 	cam.dead = false;
 }
 
@@ -432,7 +433,7 @@ void DisplayWrathWorld::CreateTextures()
 
 	tp.LoadPNGTexture(GUN, "data/gun.png");
 	
-	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);.
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
 
@@ -461,7 +462,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	ui.ammoCount(1920, 1080, tp.GetTexture(GUN));
 	if (player.getHealth() <= 0)
 	{
-		//cam.dead = true;
+		cam.dead = true;
 		//DisplayExit = true;
 	}
 }
