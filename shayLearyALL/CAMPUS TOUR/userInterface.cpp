@@ -29,7 +29,7 @@ void UserInterface::playerHealth(int playerHealth)
         playerHealth = 0;
 
     glColor3d(0.0, 0.0, 0.0);
-    std::string string = "Health: " + std::to_string(playerHealth * 10);        // I think 100 health looks better than 10 health but up to you guys 
+    std::string string = "Ammo: " + std::to_string(playerHealth);        // I think 100 health looks better than 10 health but up to you guys 
     renderText(10, 20, GLUT_BITMAP_TIMES_ROMAN_24, string);
 }
 
@@ -39,7 +39,7 @@ void UserInterface::playerShield(int playerShield)
         playerShield = 0;
 
     glColor3d(0.0, 0.0, 0.0);
-    std::string string = "Shield: " + std::to_string(playerShield * 10);        // I think 100 health looks better than 10 health but up to you guys 
+    std::string string = "Reserve: " + std::to_string(playerShield);        // I think 100 health looks better than 10 health but up to you guys 
     renderText(10, 60, GLUT_BITMAP_TIMES_ROMAN_24, string);
 }
 

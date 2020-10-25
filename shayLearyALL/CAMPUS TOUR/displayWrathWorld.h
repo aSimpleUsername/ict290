@@ -142,6 +142,14 @@ public:
 	void drawUI();
 
 	void SetWallPoints();
+
+	void reduceAmmo();
+
+	void ammoCheck();
+
+	void reload();
+
+	int reachAmmo();
 private:
 	Portal stepsReturn;
 	Portal serverPortal1;

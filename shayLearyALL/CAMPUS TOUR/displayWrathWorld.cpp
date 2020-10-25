@@ -171,7 +171,7 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	cam.SetAABBMaxX(17, 16550.0);
 	cam.SetAABBMinX(17, 8450.0);
 	cam.SetAABBMaxZ(17, -53950.0);
-	cam.SetAABBMinZ(17, -54150.0);
+	cam.SetAABBMinZ(17, -54550.0);
 
 	cam.SetAABBMaxX(18, 20400.0);
 	cam.SetAABBMinX(18, 16450.0);
@@ -345,6 +345,28 @@ void DisplayWrathWorld::CreateBoundingBoxes()
 	// change array size with cam.SetNoBoundingBoxes() found in myinit()
 }
 
+void DisplayWrathWorld::reduceAmmo()
+{
+	player.decreaseAmmo();
+}
+
+void DisplayWrathWorld::ammoCheck()
+{
+	if (player.getAmmo() == 0) {
+		player.reload();
+	}
+}
+
+void DisplayWrathWorld::reload()
+{
+	player.reload();
+}
+
+int DisplayWrathWorld::reachAmmo()
+{
+	return player.getAmmo();
+}
+
 void DisplayWrathWorld::SetWallPoints() {
 	
 	for (int i = 0; i < cam.m_colDetect.GetNoBoundingBoxes(); i++) {
@@ -352,8 +374,6 @@ void DisplayWrathWorld::SetWallPoints() {
 		minWallPoints.push_back(Point3D(cam.GetAABBMinX(i), cam.GetAABBMinY(i), cam.GetAABBMinZ(i)));
 	}
 }
-
-
 
 void DisplayWrathWorld::respawn()
 {
@@ -467,8 +487,8 @@ void DisplayWrathWorld::DrawBackdrop()
 	displayShields();
 	displayAmmo();
 
-	//ui.playerHealth(player.getHealth());
-	//ui.playerShield(player.getShields());
+	ui.playerHealth(player.getAmmo());
+	ui.playerShield(player.getReserveAmmo());
 	ui.info(cam.getX(), cam.getY(), cam.getZ());
 
 	ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
