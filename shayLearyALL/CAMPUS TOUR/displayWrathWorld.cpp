@@ -531,6 +531,9 @@ void DisplayWrathWorld::DrawBackdrop()
 		ui.transparent(1920, 1080, tp.GetTexture(TRANSPARENT_1));
 		ui.weapon(1920, 1080, tp.GetTexture(GUN));
 		ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
+
+		if (boss.getHealth() <= 0)
+			WinState();
 	}
 }
 
@@ -792,8 +795,10 @@ void DisplayWrathWorld::displayBoss()
 	}
 }
 
-void DisplayWrathWorld::WinState() {
-	
+void DisplayWrathWorld::WinState()
+{
+	for (int i = 0; i < NUM_ENEMIES; ++i)
+		enemies[i].setState(DEAD);
 }
 void DisplayWrathWorld::LoseState() {
 		cam.dead = true;

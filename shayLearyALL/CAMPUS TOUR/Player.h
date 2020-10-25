@@ -24,6 +24,6 @@ private:
 	int ammo;
 	int ammoReserve;
 	int const MAX_AMMO = 30;
-	int const MAX_AMMO_RESERVE = 30;
+	int const MAX_AMMO_RESERVE = 90;
 };
 
