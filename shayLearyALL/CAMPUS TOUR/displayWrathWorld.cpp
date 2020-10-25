@@ -33,10 +33,10 @@ void DisplayWrathWorld::myinit()
 	//NEW
 	setUpPowerups();
 	// set starting position of user 
-	//cam.Position(10000, 10550.0, 12150.0, 180.0);
+	cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	cam.Position(13500, 10550.0, -46820.0, 180.0);
+	//cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -707,8 +707,8 @@ void DisplayWrathWorld::displayEnemies()
 			glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ENEMY_BACK));
 			glCallList(289);		// back
 
-			//if (enemies[i].checkHit(&player))
-				//ui.m_playerHit = true;
+			if (enemies[i].checkHit(&player))
+				ui.m_playerHit = true;
 
 			if (player.GetZ() < -30000)
 				enemies[i].setState(ATTACK);
