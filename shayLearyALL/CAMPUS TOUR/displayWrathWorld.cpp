@@ -33,10 +33,10 @@ void DisplayWrathWorld::myinit()
 	//NEW
 	setUpPowerups();
 	// set starting position of user 
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	//cam.Position(10000, 10550.0, 12150.0, 180.0);
 
 	//Boss room
-	//cam.Position(13500, 10550.0, -46820.0, 180.0);
+	cam.Position(13500, 10550.0, -46820.0, 180.0);
 
 	//electricity room
 	//cam.Position(6780, 10550.0, -20950.0, 180.0);
@@ -513,6 +513,9 @@ void DisplayWrathWorld::DrawBackdrop()
 	{
 		LoseState();
 	}
+	else if (boss.getHealth() <= 0) {
+		WinState();
+	}
 	else
 	{
 		ui.playerHealth(player.getAmmo());
@@ -532,8 +535,7 @@ void DisplayWrathWorld::DrawBackdrop()
 		ui.weapon(1920, 1080, tp.GetTexture(GUN));
 		ui.playerHit(1920, 1080, tp.GetTexture(PLAYER_HIT));
 
-		if (boss.getHealth() <= 0)
-			WinState();
+		
 	}
 }
 
@@ -799,6 +801,7 @@ void DisplayWrathWorld::WinState()
 {
 	for (int i = 0; i < NUM_ENEMIES; ++i)
 		enemies[i].setState(DEAD);
+	cam.DisplayWelcomeScreen(1920, 1080, 0, tp.GetTexture(WIN));
 }
 void DisplayWrathWorld::LoseState() {
 		cam.dead = true;
