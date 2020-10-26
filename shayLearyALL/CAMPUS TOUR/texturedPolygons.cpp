@@ -75,6 +75,16 @@ void TexturedPolygons::SetTextureCount(const int &textureNo)
 //  Clears memory used to store textures when program terminates (very important)
 //--------------------------------------------------------------------------------------
 
+void TexturedPolygons::Clear(int size)
+{
+
+	glDeleteTextures(size, m_texture);
+	//m_texture = NULL;
+	//if (m_texture == NULL)
+	//{
+		//delete [] m_texture;
+	//}
+}
 void TexturedPolygons::Clear()
 {
 	m_texture = NULL;

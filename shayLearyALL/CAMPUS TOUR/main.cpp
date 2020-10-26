@@ -89,6 +89,13 @@ int main(int argc, char **argv)
 	
 	wrathWorld->engine = engine;
 	shaysWorld->engine = engine;
+	//wrathWorld->CreateTextureList();
+	wrathWorld->CreateTextures();
+
+	
+	//shaysWorld->CreateTextureList();
+	shaysWorld->CreateTextures();
+	
 	music->setDefaultVolume(0.35);
 	glutReshapeFunc(reshape);
 	glutMainLoop();
@@ -153,15 +160,6 @@ void Display()
 		// set the movement and rotation speed accordiwng to frame count
 		IncrementFrameCount();
 		shaysWorld->cam.SetMoveSpeed(stepIncrement);
-		if (shaysWorld-> stairsPortal())
-		{
-			isShaysWorld = false;
-			wrathWorld->myinit();
-			wrathWorld->cam.SetAngleUD(shaysWorld->cam.GetAngleUD());
-			wrathWorld->cam.SetXRotateSpeed(xrotationSpeed);
-			wrathWorld->cam.SetYRotateSpeed(yrotationSpeed);
-			wrathWorld->cam.SetMoveSpeed(movementSpeed);
-		}
 		shaysWorld->specialPortal();
 
 		// displays the map
@@ -175,7 +173,15 @@ void Display()
 
 		// display images
 		shaysWorld->DrawBackdrop();
-
+		if (shaysWorld->stairsPortal())
+		{
+			isShaysWorld = false;
+			wrathWorld->myinit();
+			wrathWorld->cam.SetAngleUD(shaysWorld->cam.GetAngleUD());
+			wrathWorld->cam.SetXRotateSpeed(xrotationSpeed);
+			wrathWorld->cam.SetYRotateSpeed(yrotationSpeed);
+			wrathWorld->cam.SetMoveSpeed(movementSpeed);
+		}
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
 	}

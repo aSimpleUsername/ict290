@@ -315,7 +315,7 @@
 #define ENEMY_SIDE					250
 
 #define INFO						251
-// 251 Next
+// 252 Next
 
 	/**
 	* @class DisplayShaysWorld
@@ -379,7 +379,14 @@ public:
 	void SetWallPoints();
 
 	void drawUI();
-
+	/**
+		* @brief calls functions to create display lists (below)
+		*/
+	void CreateTextureList();
+	/*
+		* @brief loads images and creates texture
+		*/
+	void CreateTextures();
 private:
 	Portal steps;
 	Portal toStart;
@@ -526,10 +533,7 @@ private:
 		*/
 	void displayEnemies();
 
-		/**
-		* @brief calls functions to create display lists (below)
-		*/
-	void CreateTextureList();
+		
 
 		/**
 		* @brief draws grass
@@ -673,10 +677,6 @@ private:
 		*/
 	void drawSpecialPortal();
 
-		/*
-		* @brief loads images and creates texture
-		*/
-	void CreateTextures();
 
 		/*
 		* @brief creates bounding boxes for collsion detection

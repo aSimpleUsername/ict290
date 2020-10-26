@@ -41,7 +41,7 @@ void DisplayShaysWorld::myinit()
 
 	// load texture images and create display lists
 	CreateTextureList();
-	CreateTextures();
+	//CreateTextures();
 
 	enemy.setEnemyPosition(player.getPlayerLocationPointer());
 	enemyObjects.addObjectToBuffer(&enemy);			// courtyard

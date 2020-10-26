@@ -131,7 +131,6 @@ public:
 	
 	//portals
 	void elecPortal();
-
 	void postElecPortal();
 
 	void servPortalR();
@@ -146,6 +145,14 @@ public:
 
 	void electricFloorCheck();
 
+	/**
+		* @brief calls functions to create display lists
+		*/
+	void CreateTextureList();
+	/**
+		* @brief loads images and creates texture
+		*/
+	void CreateTextures();
 	// NEW
 	////////////////////////////////////////////////////////////////////////
 	void setUpPowerups();
@@ -294,10 +301,7 @@ private:
 		*/
 	void displayBoss();
 
-		/**
-		* @brief calls functions to create display lists
-		*/
-	void CreateTextureList();
+		
 
 		/**
 		* @brief draws the skybox
@@ -334,10 +338,6 @@ private:
 
 	void drawInnerPortals();
 
-		/**
-		* @brief loads images and creates texture
-		*/
-	void CreateTextures();
 	
 		/**
 		* @brief creates bounding boxes for collsion detection

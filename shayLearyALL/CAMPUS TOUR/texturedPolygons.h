@@ -30,7 +30,7 @@ public:
 
 	TexturedPolygons () {}
     virtual ~TexturedPolygons () {Clear();}
-
+    
 	//----------------------------------------------------------------------------------
 
 	/**
@@ -116,6 +116,9 @@ public:
         * @param yImgSize - z size of image
         * @return void
     */
+
+    void Clear(int size);
+    void Clear();
 	void CreateXtoYWindowList(const int &listNo, const GLdouble &zStart,
 							  const GLdouble &xStart, const GLdouble &xSize,
 							  const GLdouble &yStart, const GLdouble &ySize,
@@ -152,6 +155,7 @@ public:
 							 const int &smallestX, const int &smallestZ);
 
 private:
+    
 	/// pointer to display list
 	GLuint *m_texture;
 	/**
@@ -163,7 +167,7 @@ private:
     */
 	GLubyte* LoadRawImageFile(char* filename, int width, int height);
 
-	void Clear ();
+	
 
 	// creates display list to contain image on X Z axis
 	void CreateXtoZTextureList(const GLdouble &xImgSize, const GLdouble &zImgSize,

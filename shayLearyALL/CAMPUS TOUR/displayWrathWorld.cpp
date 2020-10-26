@@ -27,7 +27,7 @@ void DisplayWrathWorld::myinit()
 
 	// load texture images and create display lists
 	CreateTextureList();
-	CreateTextures();
+	//CreateTextures();
 
 	initEnemies();
 	//NEW
