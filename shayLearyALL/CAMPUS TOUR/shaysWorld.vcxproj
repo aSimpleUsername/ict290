@@ -130,7 +130,6 @@
     <ClCompile Include="debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp" />
     <ClCompile Include="DisplayShaysWorld.cpp" />
     <ClCompile Include="displayWrathWorld.cpp" />
-    <ClCompile Include="EasySound.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="enemyBoss.cpp" />
     <ClCompile Include="Entity.cpp" />
@@ -143,8 +142,6 @@
     <ClCompile Include="point3D.cpp" />
     <ClCompile Include="Portal.cpp" />
     <ClCompile Include="projectile.cpp" />
-    <ClCompile Include="Sound.cpp" />
-    <ClCompile Include="SoundTime.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texturedPolygons.cpp" />
     <ClCompile Include="userInterface.cpp" />
@@ -159,7 +156,6 @@
     <ClInclude Include="collision.h" />
     <ClInclude Include="DisplayShaysWorld.h" />
     <ClInclude Include="displayWrathWorld.h" />
-    <ClInclude Include="EasySound.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="enemyBoss.h" />
     <ClInclude Include="Entity.h" />
@@ -175,8 +171,6 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="resource2.h" />
-    <ClInclude Include="Sound.h" />
-    <ClInclude Include="SoundTime.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texturedPolygons.h" />
     <ClInclude Include="userInterface.h" />

@@ -374,7 +374,10 @@ void DisplayWrathWorld::SetWallPoints() {
 
 void DisplayWrathWorld::respawn()
 {
-	cam.Position(10000, 10550.0, 12150.0, 180.0);
+	if(player.GetZ() < -23500)
+		cam.Position(18000, 10550.0, -27500, 180.0);		//check point boss room
+	else
+		cam.Position(10000, 10550.0, 12150.0, 180.0);
 	player.resetHealth();
 	player.resetShields();
 	for (int i = 0; i < NUM_ENEMIES; ++i)
@@ -553,7 +556,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	{
 		//ui.playerHealth(player.getAmmo());
 		//ui.playerShield(player.getReserveAmmo());
-		//ui.info(cam.getX(), cam.getY(), cam.getZ());
+		ui.info(cam.getX(), cam.getY(), cam.getZ());
 
 		ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
 		ui.healthBar(1920, 1080, tp.GetTexture(PLAYER_HEALTH));
