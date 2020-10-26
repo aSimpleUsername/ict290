@@ -1252,7 +1252,7 @@ void DisplayShaysWorld::DrawBackdrop()
 	if (lightsOn) DisplayLights();
 
 	//ui.playerHealth(player.getHealth());
-	ui.info(player.GetX(), player.GetY(), player.GetZ());
+	//ui.info(player.GetX(), player.GetY(), player.GetZ());
 	//ui.hitmarker();
 	ui.context(1920, 1080, tp.GetTexture(INFO));
 

@@ -247,7 +247,7 @@ private:
 									Enemy(12450, 13800, -34200, -32200, 10550),		// boss room
 									};
 
-	EnemyBoss boss = EnemyBoss(10250, 1400, -48000, -36000, 10550);
+	EnemyBoss boss = EnemyBoss(10250, 14000, -48000, -36000, 10550);
 
 
 		/**
