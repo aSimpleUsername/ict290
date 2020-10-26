@@ -3,7 +3,7 @@
 EnemyBoss::EnemyBoss(double xmin, double xmax, double zmin, double zmax, double y)	// constructs from bound
 {
 	m_topSpeed = 30;
-	m_rotationSpeed = 0.025;
+	m_rotationSpeed = 0.035;
 	m_timer = 0;
 	m_fireRate = 250;
 	m_heading = (Point3D(0.0, 0.0, 0.0));
