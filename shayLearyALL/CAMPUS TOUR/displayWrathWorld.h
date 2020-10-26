@@ -1,4 +1,4 @@
-// displayWrathWorld.cpp - displays the world of Wrath
+// displayWrathWorld.h - displays the world of Wrath
 // Author: Group Team No Name 2
 // 14 Sep 20
 

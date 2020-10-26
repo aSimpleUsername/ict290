@@ -547,7 +547,7 @@ void DisplayWrathWorld::DrawBackdrop()
 	drawUI();
 	if (player.getHealth() <= 0)
 	{
-		//LoseState();
+		LoseState();
 	}
 	else if (boss.getHealth() <= 0) {
 		WinState();
