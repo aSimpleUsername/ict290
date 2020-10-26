@@ -6,14 +6,23 @@
 #include "point3D.h"
 #include "projectile.h"
 
+
+	/**
+	* @class Entity
+	* @brief Class that defines an entity. Mostly just setters and getters
+	* @author Group Team No Name 2
+	* @version 1.0
+	* @date 26 Oct 20
+	*/
 class Entity
 {
 public:
-	//constructors
+	// constructors //
 	Entity(double x, double y, double z);		//constructs entity on the given location
 	Entity();
+	// end constructors //
 
-	//getters & setters
+	//setters and getters //
 	inline int getHealth() { return m_health; }
 	inline int getShields() { return m_shields; }
 	inline void setHealth(int health) { m_health = health; }
@@ -28,6 +37,7 @@ public:
 	inline float GetZ() { return m_location.z; }
 	inline int getMaxHealth() { return MAX_HEALTH; }
 	inline int getMaxShield() { return MAX_SHIELD; }
+	// end setters and getters
 
 protected:
 	Point3D m_location;
