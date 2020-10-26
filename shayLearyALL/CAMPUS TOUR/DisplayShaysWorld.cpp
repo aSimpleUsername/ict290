@@ -30,7 +30,10 @@ void DisplayShaysWorld::myinit()
 	cam.SetNoBoundingBoxes(55);
 
 	// set starting position of user
-	cam.Position(3652.0, 10450.0, 42133.0, 90.0);
+	//cam.Position(3652.0, 10450.0, 42133.0, 90.0);
+
+	// set starting position courtyard
+	cam.Position(-1000, 10450.0, 30000, 180.0);
 
 	CreatePlains();
 
@@ -1249,7 +1252,7 @@ void DisplayShaysWorld::DrawBackdrop()
 	if (lightsOn) DisplayLights();
 
 	//ui.playerHealth(player.getHealth());
-	//ui.info(player.GetX(), player.GetY(), player.GetZ());
+	ui.info(player.GetX(), player.GetY(), player.GetZ());
 	//ui.hitmarker();
 	ui.context(1920, 1080, tp.GetTexture(INFO));
 
