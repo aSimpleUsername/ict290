@@ -318,6 +318,31 @@ void UserInterface::ammoCount2(const int& screenWidth, const int& screenHeight,
     glPopMatrix();
 }
 
+void UserInterface::rAmmoCount0(const int& screenWidth, const int& screenHeight,
+    const GLuint& tempImage)
+{
+    glPushMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0, screenWidth, 0, screenHeight);
+    glScalef(1, -1, 1);
+
+    // move to centre of screen
+    glTranslatef(1620, -150, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    // display sign
+    glBindTexture(GL_TEXTURE_2D, tempImage);
+    // display image
+    glCallList(368);
+    // Reset Perspective Projection
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+}
+
 void UserInterface::rAmmoCount1(const int& screenWidth, const int& screenHeight,
     const GLuint& tempImage)
 {

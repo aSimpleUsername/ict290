@@ -11,8 +11,8 @@ Player::Player()
 
 void Player::incrementAmmo()
 {
-	if (ammoReserve > 60) {
-		setReserveAmmo(90);
+	if (ammoReserve > 120) {
+		setReserveAmmo(150);
 	}
 	else {
 		ammoReserve += 30;

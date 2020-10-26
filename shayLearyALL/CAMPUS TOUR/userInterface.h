@@ -22,6 +22,8 @@ public:
 		const GLuint& tempImage);
 	void ammoCount2(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
+	void rAmmoCount0(const int& screenWidth, const int& screenHeight,
+		const GLuint& tempImage);
 	void rAmmoCount1(const int& screenWidth, const int& screenHeight,
 		const GLuint& tempImage);
 	void rAmmoCount2(const int& screenWidth, const int& screenHeight,
