@@ -588,7 +588,16 @@ void DisplayWrathWorld::ammoLogic()
 
 		int rRemainder = player.getReserveAmmo() % 10;
 
-		ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
+		if (player.getReserveAmmo() >= 100)
+		{
+			ui.rAmmoCount0(1920, 1080, tp.GetTexture(arr[1]));
+			ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - 100 - rRemainder) / 10]));
+		}
+		else {
+			ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
+		}
+	
+		//ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
 		ui.rAmmoCount2(1920, 1080, tp.GetTexture(arr[rRemainder]));
 	}
 	else
@@ -596,6 +605,7 @@ void DisplayWrathWorld::ammoLogic()
 		ui.ammoCount1(1920, 1080, tp.GetTexture(arr[0]));
 		ui.ammoCount2(1920, 1080, tp.GetTexture(arr[0]));
 
+		//ui.rAmmoCount0(1920, 1080, tp.GetTexture(arr[0]));
 		ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[0]));
 		ui.rAmmoCount2(1920, 1080, tp.GetTexture(arr[0]));
 	}
@@ -1795,6 +1805,7 @@ void DisplayWrathWorld::drawUI()
 	//reserve ammo
 	tp.CreateDisplayList(0, 360, 50.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 	tp.CreateDisplayList(0, 361, 50.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
+	tp.CreateDisplayList(0, 368, 50.0, 50.0, 0.0, 0.0, 0.0, 1.0, 1.0);
 }
 
 //--------------------------------------------------------------------------------------
