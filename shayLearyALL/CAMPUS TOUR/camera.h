@@ -13,7 +13,6 @@
 #include "collision.h"
 #include "cameraMap.h"
 #include "PlainLinkedList.h"
-#include "EasySound.h"
 
 //--------------------------------------------------------------------------------------
 /**
@@ -28,7 +27,6 @@ class Camera
 public:
 
 	Camera();
-	virtual ~Camera() {es->Unload(stepSound);}
 	bool dead = false;
 
 	//----------------------------------------------------------------------------------
@@ -380,9 +378,6 @@ private:
 	// objects
 	CameraMap m_map;
 	PlainLinkedList m_Plain;
-
-	CEasySound *es;
-	CSound* stepSound;
 
 	//----------------------------------------------------------------------------------
 

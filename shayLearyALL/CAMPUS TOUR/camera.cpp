@@ -33,10 +33,6 @@ Camera::Camera()
 	m_deltaAngleUD = 0.0;
 
 	m_CollisionDetectionOn = true;
-
-	// sound objects
-	es = CEasySound::Instance();
-	stepSound = es->GetSound(es->Load("sounds/step.wav"));
 }
 
 //--------------------------------------------------------------------------------------

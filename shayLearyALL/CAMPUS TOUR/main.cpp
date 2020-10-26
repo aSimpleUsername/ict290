@@ -28,8 +28,8 @@
 // USE THESE STTEINGS TO CHANGE SPEED (on different spec computers)
 // Set speed (steps)
 
-DisplayShaysWorld shaysWorld;
-DisplayWrathWorld wrathWorld;
+DisplayShaysWorld* shaysWorld = new DisplayShaysWorld();
+DisplayWrathWorld* wrathWorld = new DisplayWrathWorld();
 GLdouble movementSpeed = 15.0;
 GLdouble xrotationSpeed = 0.0015;
 GLdouble yrotationSpeed = 0.0012;	// (speed based on trial and error)
@@ -66,11 +66,12 @@ irrklang::ISoundSource* music = engine->addSoundSourceFromFile("sounds/metal.mp3
 //--------------------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+	shaysWorld = new DisplayShaysWorld();
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	setGameMode();
 	initKeyStates();	//clear keystate array
-	shaysWorld.myinit();
+	shaysWorld->myinit();
 	glutTimerFunc(1000 / 60, timerCallback, 1);
 	if (!engine)
 		return 0; // error starting up the engine
@@ -86,8 +87,8 @@ int main(int argc, char **argv)
 	glutMotionFunc(mouseMove);
 	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
 	
-	wrathWorld.engine = engine;
-	shaysWorld.engine = engine;
+	wrathWorld->engine = engine;
+	shaysWorld->engine = engine;
 	music->setDefaultVolume(0.35);
 	glutReshapeFunc(reshape);
 	glutMainLoop();
@@ -148,70 +149,70 @@ void Display()
 
 	if (isShaysWorld)
 	{
-		shaysWorld.cam.CheckCamera();
+		shaysWorld->cam.CheckCamera();
 		// set the movement and rotation speed accordiwng to frame count
 		IncrementFrameCount();
-		shaysWorld.cam.SetMoveSpeed(stepIncrement);
-		if (shaysWorld.stairsPortal())
+		shaysWorld->cam.SetMoveSpeed(stepIncrement);
+		if (shaysWorld-> stairsPortal())
 		{
 			isShaysWorld = false;
-			wrathWorld.myinit();
-			wrathWorld.cam.SetAngleUD(shaysWorld.cam.GetAngleUD());
-			wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
-			wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
-			wrathWorld.cam.SetMoveSpeed(movementSpeed);
+			wrathWorld->myinit();
+			wrathWorld->cam.SetAngleUD(shaysWorld->cam.GetAngleUD());
+			wrathWorld->cam.SetXRotateSpeed(xrotationSpeed);
+			wrathWorld->cam.SetYRotateSpeed(yrotationSpeed);
+			wrathWorld->cam.SetMoveSpeed(movementSpeed);
 		}
-		shaysWorld.specialPortal();
+		shaysWorld->specialPortal();
 
 		// displays the map
-		if (shaysWorld.DisplayMap) shaysWorld.cam.DisplayMap(width, height, shaysWorld.tp.GetTexture(MAP));
+		if (shaysWorld->DisplayMap) shaysWorld->cam.DisplayMap(width, height, shaysWorld->tp.GetTexture(MAP));
 		// display no exit sign (position check should really be in an object, but didn't have time)
-		if ((shaysWorld.cam.getX() > 35500.0) && (shaysWorld.cam.getZ() < 25344.0) ||
-			(shaysWorld.cam.getX() > 34100.0) && (shaysWorld.cam.getZ() > 41127.0))
+		if ((shaysWorld->cam.getX() > 35500.0) && (shaysWorld->cam.getZ() < 25344.0) ||
+			(shaysWorld->cam.getX() > 34100.0) && (shaysWorld->cam.getZ() > 41127.0))
 		{
-			shaysWorld.cam.DisplayNoExit(width, height, shaysWorld.tp.GetTexture(NO_EXIT));
+			shaysWorld->cam.DisplayNoExit(width, height, shaysWorld->tp.GetTexture(NO_EXIT));
 		}
 
 		// display images
-		shaysWorld.DrawBackdrop();
+		shaysWorld->DrawBackdrop();
 
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
 	}
 	if(!isShaysWorld)
 	{
-		wrathWorld.cam.CheckCamera();
+		wrathWorld->cam.CheckCamera();
 		// set the movement and rotation speed according to frame count
 		IncrementFrameCount();
-		wrathWorld.cam.SetMoveSpeed(stepIncrement);
+		wrathWorld->cam.SetMoveSpeed(stepIncrement);
 
-		if (wrathWorld.stairsReturnPortal())
+		if (wrathWorld->stairsReturnPortal())
 		{
 			isShaysWorld = true;
-			shaysWorld.myinit();
-			shaysWorld.cam.Position(1400, 11234, 39740, 90);
+			shaysWorld->myinit();
+			shaysWorld->cam.Position(1400, 11234, 39740, 90);
 		}
 
 		// display images
-		if (shaysWorld.DisplayExit) shaysWorld.cam.DisplayWelcomeScreen(width, height, 0, shaysWorld.tp.GetTexture(EXIT));
-		if (wrathWorld.DisplayExit) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(EXIT_SCREEN));
+		if (shaysWorld->DisplayExit) shaysWorld->cam.DisplayWelcomeScreen(width, height, 0, shaysWorld->tp.GetTexture(EXIT));
+		if (wrathWorld->DisplayExit) wrathWorld->cam.DisplayWelcomeScreen(width, height, 0, wrathWorld->tp.GetTexture(EXIT_SCREEN));
 
-		if (shaysWorld.DisplayWelcome && isShaysWorld) shaysWorld.cam.DisplayWelcomeScreen(width, height, 1, shaysWorld.tp.GetTexture(WELCOME));
-		if (wrathWorld.DisplayWelcome && !isShaysWorld) wrathWorld.cam.DisplayWelcomeScreen(width, height, 1, wrathWorld.tp.GetTexture(WELCOME_SCREEN));
+		if (shaysWorld->DisplayWelcome && isShaysWorld) shaysWorld->cam.DisplayWelcomeScreen(width, height, 1, shaysWorld->tp.GetTexture(WELCOME));
+		if (wrathWorld->DisplayWelcome && !isShaysWorld) wrathWorld->cam.DisplayWelcomeScreen(width, height, 1, wrathWorld->tp.GetTexture(WELCOME_SCREEN));
 		// displays the exit screen
-		if (wrathWorld.lose) wrathWorld.cam.DisplayWelcomeScreen(width, height, 0, wrathWorld.tp.GetTexture(LOSE));
+		if (wrathWorld->lose) wrathWorld->cam.DisplayWelcomeScreen(width, height, 0, wrathWorld->tp.GetTexture(LOSE));
 
-		wrathWorld.DrawBackdrop();
+		wrathWorld->DrawBackdrop();
 
-		wrathWorld.collectionCheck();
+		wrathWorld->collectionCheck();
 
-		wrathWorld.elecPortal();
-		wrathWorld.postElecPortal();
-		wrathWorld.servPortalL();
-		wrathWorld.servPortalR();
-		wrathWorld.bossPortalL();
-		wrathWorld.bossPortalR();
-		wrathWorld.electricFloorCheck();
+		wrathWorld->elecPortal();
+		wrathWorld->postElecPortal();
+		wrathWorld->servPortalL();
+		wrathWorld->servPortalR();
+		wrathWorld->bossPortalL();
+		wrathWorld->bossPortalR();
+		wrathWorld->electricFloorCheck();
 
 		glPopMatrix();
 		glDisable(GL_TEXTURE_2D);
@@ -258,36 +259,36 @@ void keyPressed(unsigned char key, int x, int y)
 	// display welcome page (space key)
 	if (key == ' ' && isShaysWorld)
 	{
-		if (shaysWorld.DisplayWelcome)		//if info screen is up don't allow player to look around
+		if (shaysWorld->DisplayWelcome)		//if info screen is up don't allow player to look around
 		{
-			shaysWorld.cam.SetXRotateSpeed(xrotationSpeed);
-			shaysWorld.cam.SetYRotateSpeed(yrotationSpeed);
-			shaysWorld.cam.SetMoveSpeed(movementSpeed);
-			shaysWorld.DisplayWelcome = false;
+			shaysWorld->cam.SetXRotateSpeed(xrotationSpeed);
+			shaysWorld->cam.SetYRotateSpeed(yrotationSpeed);
+			shaysWorld->cam.SetMoveSpeed(movementSpeed);
+			shaysWorld->DisplayWelcome = false;
 		}
 		else
 		{
-			shaysWorld.cam.SetXRotateSpeed(0.0f);
-			shaysWorld.cam.SetYRotateSpeed(0.0f);
-			shaysWorld.cam.SetMoveSpeed(0.0f);
-			shaysWorld.DisplayWelcome = true;
+			shaysWorld->cam.SetXRotateSpeed(0.0f);
+			shaysWorld->cam.SetYRotateSpeed(0.0f);
+			shaysWorld->cam.SetMoveSpeed(0.0f);
+			shaysWorld->DisplayWelcome = true;
 		}
 	}
 	else if (key == ' ' && !isShaysWorld)
 	{
-		if (wrathWorld.DisplayWelcome)		//if info screen is up don't allow player to look around
+		if (wrathWorld->DisplayWelcome)		//if info screen is up don't allow player to look around
 		{
-			wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
-			wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
-			wrathWorld.cam.SetMoveSpeed(movementSpeed);
-			wrathWorld.DisplayWelcome = false;
+			wrathWorld->cam.SetXRotateSpeed(xrotationSpeed);
+			wrathWorld->cam.SetYRotateSpeed(yrotationSpeed);
+			wrathWorld->cam.SetMoveSpeed(movementSpeed);
+			wrathWorld->DisplayWelcome = false;
 		}
 		else
 		{
-			wrathWorld.cam.SetXRotateSpeed(0.0f);
-			wrathWorld.cam.SetYRotateSpeed(0.0f);
-			wrathWorld.cam.SetMoveSpeed(0.0f);
-			wrathWorld.DisplayWelcome = true;
+			wrathWorld->cam.SetXRotateSpeed(0.0f);
+			wrathWorld->cam.SetYRotateSpeed(0.0f);
+			wrathWorld->cam.SetMoveSpeed(0.0f);
+			wrathWorld->DisplayWelcome = true;
 		}
 	}
 }
@@ -301,92 +302,92 @@ void releaseKey(unsigned char key, int x, int y)
 void processKeys()
 {
 	int speed = 3;
-	if (!wrathWorld.cam.dead && !shaysWorld.cam.dead) {
+	if (!wrathWorld->cam.dead && !shaysWorld->cam.dead) {
 		if ((keyStates['a'] || keyStates['A']) && isShaysWorld)		//step left
-			shaysWorld.cam.DirectionLR(-speed);
+			shaysWorld->cam.DirectionLR(-speed);
 		if ((keyStates['a'] || keyStates['A']) && !isShaysWorld)		//step left
-			wrathWorld.cam.DirectionLR(-speed);
+			wrathWorld->cam.DirectionLR(-speed);
 
 		if ((keyStates['d'] || keyStates['D']) && isShaysWorld)		//step right
-			shaysWorld.cam.DirectionLR(speed);
+			shaysWorld->cam.DirectionLR(speed);
 		if ((keyStates['d'] || keyStates['D']) && !isShaysWorld)		//step right
-			wrathWorld.cam.DirectionLR(speed);
+			wrathWorld->cam.DirectionLR(speed);
 
 		if ((keyStates['w'] || keyStates['W']) && isShaysWorld) 	//step forward
-			shaysWorld.cam.DirectionFB(speed);
+			shaysWorld->cam.DirectionFB(speed);
 		if ((keyStates['w'] || keyStates['W']) && !isShaysWorld) 	//step forward
-			wrathWorld.cam.DirectionFB(speed);
+			wrathWorld->cam.DirectionFB(speed);
 
 		if ((keyStates['s'] || keyStates['S']) && isShaysWorld)	// step backward
-			shaysWorld.cam.DirectionFB(-speed);
+			shaysWorld->cam.DirectionFB(-speed);
 		if ((keyStates['s'] || keyStates['S']) && !isShaysWorld)	// step backward
-			wrathWorld.cam.DirectionFB(-speed);
+			wrathWorld->cam.DirectionFB(-speed);
 
 		if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && isShaysWorld)	//stops player LR
-			shaysWorld.cam.DirectionLR(0);
+			shaysWorld->cam.DirectionLR(0);
 		if ((!keyStates['a'] && !keyStates['A'] && !keyStates['d'] && !keyStates['D']) && !isShaysWorld)	//stops player LR
-			wrathWorld.cam.DirectionLR(0);
+			wrathWorld->cam.DirectionLR(0);
 
 		if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && isShaysWorld)	//stops player FB
-			shaysWorld.cam.DirectionFB(0);
+			shaysWorld->cam.DirectionFB(0);
 		if ((!keyStates['w'] && !keyStates['W'] && !keyStates['s'] && !keyStates['S']) && !isShaysWorld)	//stops player FB
-			wrathWorld.cam.DirectionFB(0);
+			wrathWorld->cam.DirectionFB(0);
 	}
 	else {
-		wrathWorld.cam.SetMoveSpeed(0);
-		shaysWorld.cam.SetMoveSpeed(0);
+		wrathWorld->cam.SetMoveSpeed(0);
+		shaysWorld->cam.SetMoveSpeed(0);
 	}
 
 	if ((keyStates['m'] || keyStates['M']) && isShaysWorld)	// display campus map
 	{
-		if (shaysWorld.DisplayMap)
+		if (shaysWorld->DisplayMap)
 		{
-			shaysWorld.DisplayMap = false;
+			shaysWorld->DisplayMap = false;
 		}
 		else
 		{
-			shaysWorld.DisplayMap = true;
+			shaysWorld->DisplayMap = true;
 		}
 	}
 
 	if ((keyStates[27]) && isShaysWorld)	// exit tour (escape key)
 	{
-		shaysWorld.cam.SetXRotateSpeed(0.0f);
-		shaysWorld.cam.SetYRotateSpeed(0.0f);
-		shaysWorld.cam.SetMoveSpeed(0.0f);
-		shaysWorld.DisplayExit = true;
+		shaysWorld->cam.SetXRotateSpeed(0.0f);
+		shaysWorld->cam.SetYRotateSpeed(0.0f);
+		shaysWorld->cam.SetMoveSpeed(0.0f);
+		shaysWorld->DisplayExit = true;
 	}
 	if ((keyStates[27]) && !isShaysWorld)	// exit tour (escape key)
 	{
-		wrathWorld.cam.SetXRotateSpeed(0.0f);
-		wrathWorld.cam.SetYRotateSpeed(0.0f);
-		wrathWorld.cam.SetMoveSpeed(0.0f);
-		wrathWorld.DisplayExit = true;
+		wrathWorld->cam.SetXRotateSpeed(0.0f);
+		wrathWorld->cam.SetYRotateSpeed(0.0f);
+		wrathWorld->cam.SetMoveSpeed(0.0f);
+		wrathWorld->DisplayExit = true;
 	}
 
 	// display light fittings
 	if ((keyStates['l'] || keyStates['L']) && isShaysWorld)
 	{
-		if (shaysWorld.lightsOn)
+		if (shaysWorld->lightsOn)
 		{
-			shaysWorld.lightsOn = false;
+			shaysWorld->lightsOn = false;
 		}
 		else
 		{
-			shaysWorld.lightsOn = true;
+			shaysWorld->lightsOn = true;
 		}
 	}
 
 	// Respawn player
 	if ((keyStates['r'] || keyStates['R']) && isShaysWorld)
 	{
-		shaysWorld.respawn();
-		shaysWorld.cam.SetXRotateSpeed(xrotationSpeed);
-		shaysWorld.cam.SetYRotateSpeed(yrotationSpeed);
+		shaysWorld->respawn();
+		shaysWorld->cam.SetXRotateSpeed(xrotationSpeed);
+		shaysWorld->cam.SetYRotateSpeed(yrotationSpeed);
 	}
 	if ((keyStates['r'] || keyStates['R']) && !isShaysWorld)
 	{
-		wrathWorld.reload();
+		wrathWorld->reload();
 		//wrathWorld.respawn();
 		//wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
 		//wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
@@ -394,9 +395,11 @@ void processKeys()
 
 	if ((keyStates['p'] || keyStates['P']) && !isShaysWorld)
 	{
-		wrathWorld.respawn();
-		wrathWorld.cam.SetXRotateSpeed(xrotationSpeed);
-		wrathWorld.cam.SetYRotateSpeed(yrotationSpeed);
+		wrathWorld->respawn();
+		wrathWorld->cam.SetXRotateSpeed(xrotationSpeed);
+		wrathWorld->cam.SetYRotateSpeed(yrotationSpeed);
+		keyStates['p'] = false;		// no effect if button held down
+		keyStates['P'] = false;
 	}
 
 }
@@ -412,34 +415,38 @@ void Mouse(int button, int state, int x, int y)
 	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && isShaysWorld)
 	{
 		
-		if ((shaysWorld.DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
+		if ((shaysWorld->DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
 			&& (y <= height / 2.0 + 256.0) && (y >= height / 2.0 - 256.0))
 		{
-			shaysWorld.DeleteImageFromMemory(shaysWorld.image);
+			shaysWorld->DeleteImageFromMemory(shaysWorld->image);
+			delete shaysWorld;
+			delete wrathWorld;
 			exit(1);
 		}
 	}
 	if (((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN)) && !isShaysWorld)
 	{
 
-		if ((wrathWorld.DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
+		if ((wrathWorld->DisplayExit) && (x <= width / 2.0 + 256.0) && (x >= width / 2.0 - 256.0)
 			&& (y <= height / 2.0 + 256.0) && (y >= height / 2.0 - 256.0))
 		{
-			wrathWorld.DeleteImageFromMemory(wrathWorld.image);
+			wrathWorld->DeleteImageFromMemory(wrathWorld->image);
+			delete shaysWorld;
+			delete wrathWorld; 
 			exit(1);
 		}
 
 		if (canShoot) {
-			if (wrathWorld.grabAmmo() > 0)
+			if (wrathWorld->grabAmmo() > 0)
 			{
 				engine->play2D("sounds/gunshot.wav", false);
-				Point3D ray(wrathWorld.cam.GetLX(), wrathWorld.cam.GetLY(), wrathWorld.cam.GetLZ());
-				Point3D camPos(wrathWorld.cam.getX(), wrathWorld.cam.getY(), wrathWorld.cam.getZ());
-				if (playerWeapon.shoot(ray, camPos, wrathWorld.enemyObjects, wrathWorld.maxWallPoints, wrathWorld.minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld.enemyBossObject, wrathWorld.maxWallPoints, wrathWorld.minWallPoints))
-					wrathWorld.ui.m_hit = true;
-				wrathWorld.cam.RotateCamera(1920 / 2, 530, 1920, 1080);
+				Point3D ray(wrathWorld->cam.GetLX(), wrathWorld->cam.GetLY(), wrathWorld->cam.GetLZ());
+				Point3D camPos(wrathWorld->cam.getX(), wrathWorld->cam.getY(), wrathWorld->cam.getZ());
+				if (playerWeapon.shoot(ray, camPos, wrathWorld->enemyObjects, wrathWorld->maxWallPoints, wrathWorld->minWallPoints) || playerWeapon.shoot(ray, camPos, wrathWorld->enemyBossObject, wrathWorld->maxWallPoints, wrathWorld->minWallPoints))
+					wrathWorld->ui.m_hit = true;
+				wrathWorld->cam.RotateCamera(1920 / 2, 530, 1920, 1080);
 
-				wrathWorld.reduceAmmo();
+				wrathWorld->reduceAmmo();
 
 				// general shoot logic (regardless of hit or miss)
 				canShoot = false;
@@ -461,12 +468,12 @@ void mouseMove(int x, int y)
 {
 	if (isShaysWorld)
 	{
-		shaysWorld.cam.RotateCamera(x, y, width, height);
+		shaysWorld->cam.RotateCamera(x, y, width, height);
 		glutWarpPointer(width / 2, height / 2);
 	}
 	if(!isShaysWorld)
 	{
-		wrathWorld.cam.RotateCamera(x, y, width, height);
+		wrathWorld->cam.RotateCamera(x, y, width, height);
 		glutWarpPointer(width / 2, height / 2);
 	}
 }
