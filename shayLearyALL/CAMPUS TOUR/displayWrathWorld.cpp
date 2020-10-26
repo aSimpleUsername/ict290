@@ -547,15 +547,13 @@ void DisplayWrathWorld::DrawBackdrop()
 	drawUI();
 	if (player.getHealth() <= 0)
 	{
-		LoseState();
+		//LoseState();
 	}
 	else if (boss.getHealth() <= 0) {
 		WinState();
 	}
 	else
 	{
-		//ui.playerHealth(player.getAmmo());
-		//ui.playerShield(player.getReserveAmmo());
 		ui.info(cam.getX(), cam.getY(), cam.getZ());
 
 		ui.hitmarker(1920, 1080, tp.GetTexture(HITMARKER));
@@ -593,11 +591,9 @@ void DisplayWrathWorld::ammoLogic()
 			ui.rAmmoCount0(1920, 1080, tp.GetTexture(arr[1]));
 			ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - 100 - rRemainder) / 10]));
 		}
-		else {
+		else 
 			ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
-		}
 	
-		//ui.rAmmoCount1(1920, 1080, tp.GetTexture(arr[(player.getReserveAmmo() - rRemainder) / 10]));
 		ui.rAmmoCount2(1920, 1080, tp.GetTexture(arr[rRemainder]));
 	}
 	else
@@ -836,7 +832,7 @@ void DisplayWrathWorld::displayBoss()
 		glBindTexture(GL_TEXTURE_2D, tp.GetTexture(BOSS_BACK));
 		glCallList(289);		// back
 
-		//boss.checkHit(&player);
+		boss.checkHit(&player);
 
 		if (player.GetZ() < -30000)
 			boss.setState(ATTACK);
@@ -908,8 +904,8 @@ void DisplayWrathWorld::drawGroundPlane()
 	tp.CreateDisplayList(XZ, 3, 1000, 1000, 7000, 10000.0, 8500, 6, 4);					// groundPlane 
 	tp.CreateDisplayList(XZ, 87, 1000, 2000, 7000, 11500.0, 8500, 6, 2);				// ceiling
 
-	tp.CreateDisplayList(XZ, 400, 1000, 1000, 9000, 10000.0, 2500, 3, 6);				// groundPlane 
-	tp.CreateDisplayList(XZ, 401, 1000, 2000, 9000, 11500.0, 2500, 3, 3);				// ceiling
+	tp.CreateDisplayList(XZ, 400, 1000, 1000, 9000, 10000.0, 2500, 2, 6);				// groundPlane 
+	tp.CreateDisplayList(XZ, 401, 1000, 2000, 9000, 11500.0, 2500, 2, 3);				// ceiling
 
 	tp.CreateDisplayList(XZ, 402, 1000, 1000, 7000, 10000.0, -3500, 12, 6);				// groundPlane 
 	tp.CreateDisplayList(XZ, 403, 1000, 2000, 7000, 11500.0, -3500, 12, 3);				// ceiling
@@ -1729,7 +1725,7 @@ void DisplayWrathWorld::collectionCheck()
 	{
 		if (player.getHealth() < player.getMaxHealth())
 		{
-			hPowerup[i].checkCollision(cam.getX(), cam.getZ());
+			hPowerup[i].checkCollision(*player.getPlayerLocationPointer());
 
 			if (hPowerup[i].getGath())
 			{
@@ -1743,7 +1739,7 @@ void DisplayWrathWorld::collectionCheck()
 	{
 		if (player.getShields() < player.getMaxShield())
 		{
-			sPowerup[i].checkCollision(cam.getX(), cam.getZ());
+			sPowerup[i].checkCollision(*player.getPlayerLocationPointer());
 
 			if (sPowerup[i].getGath())
 			{
@@ -1757,7 +1753,7 @@ void DisplayWrathWorld::collectionCheck()
 	{
 		if (player.getReserveAmmo() < player.getMaxReserveAmmo())
 		{
-			aPowerup[i].checkCollision(cam.getX(), cam.getZ());
+			aPowerup[i].checkCollision(*player.getPlayerLocationPointer());
 
 			if (aPowerup[i].getGath())
 			{

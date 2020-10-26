@@ -1,5 +1,6 @@
 //Stores various pickups and powerup locations
 #include <string>
+#include "point3D.h"
 
 class Pickups
 {
@@ -22,7 +23,7 @@ public:
 
 	void setPickup(double xValue, double yValue, double zValue, int sizeValue);
 
-	void checkCollision(double xPos, double zPos);
+	void checkCollision(Point3D playerPos);
 
 private:
 	//NEW

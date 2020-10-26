@@ -50,13 +50,8 @@ void Pickups::setPickup(double xValue, double yValue, double zValue, int sizeVal
 	size = sizeValue;
 }
 
-void Pickups::checkCollision(double xPos, double zPos)
+void Pickups::checkCollision(Point3D playerPos)
 {
-	if (zPos < z && zPos > (z - size))
-	{
-		if (xPos < (x + size) && xPos > x)
-		{
-			setGathT();
-		}
-	}
+	if(playerPos.distance(Point3D(x, playerPos.y, z)) < 350)
+		setGathT();
 }
