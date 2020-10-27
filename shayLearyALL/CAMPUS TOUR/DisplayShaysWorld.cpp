@@ -351,7 +351,7 @@ void DisplayShaysWorld::respawn()
 {
 	cam.Position(10000, 10550.0, 12150.0, 180.0);
 	player.resetHealth();
-	player.setReserveAmmo(90);
+	player.setReserveAmmo(150);
 	player.setAmmo(30);
 }
 
