@@ -374,7 +374,7 @@ void DisplayWrathWorld::SetWallPoints() {
 
 void DisplayWrathWorld::respawn()
 {
-	if(player.GetZ() < -23500)
+	if(player.GetZ() < -23500 && boss.getHealth() > 0)
 		cam.Position(18000, 10550.0, -27500, 180.0);		//check point boss room
 	else
 		cam.Position(10000, 10550.0, 12150.0, 180.0);
@@ -383,7 +383,7 @@ void DisplayWrathWorld::respawn()
 	for (int i = 0; i < NUM_ENEMIES; ++i)
 		enemies[i].reset();
 	boss.reset();
-	player.setReserveAmmo(90);
+	player.setReserveAmmo(150);
 	player.setAmmo(30);
 	hPowerup.clear();
 	sPowerup.clear();
