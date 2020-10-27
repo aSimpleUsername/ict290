@@ -470,7 +470,7 @@ void DisplayShaysWorld::CreateTextures()
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
 	// set texture count
-	tp.SetTextureCount(255);
+	tp.SetTextureCount(256);
 
 	// load and create textures
 	image = tp.LoadTexture("data/abovechanctext.raw", 128, 1024);
