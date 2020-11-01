@@ -1,8 +1,8 @@
 /*
 Author: Vlad Kennebury
-Date: 11/09/2020
+Date: 31/10/2020
 
-ICT290 Assignment 1
+ICT290 Assignment 2
 Portal Class Header - Sets the location and dimesnions of a portal, and checks whether 
 a collision between the player and the portal is made.
 
@@ -14,7 +14,7 @@ a collision between the player and the portal is made.
 			a collision between the player and the portal is made.
 	* @author Group Team No Name 2
 	* @version 1
-	* @date 14/09/2020
+	* @date 31/10/2020
 */
 
 #ifndef PORTAL_H

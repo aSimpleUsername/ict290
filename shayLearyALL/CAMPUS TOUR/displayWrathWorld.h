@@ -1,6 +1,6 @@
 // displayWrathWorld.h - displays the world of Wrath
 // Author: Group Team No Name 2
-// 14 Sep 20
+// 31 October 2020
 
 #ifndef DISPLAYWRATHWORLD_H
 #define DISPLAYWRATHWORLD_H
@@ -79,28 +79,42 @@
 	* @class displayWrathWorld
 	* @brief Class that defines how the wrath world will be displayed
 	* @author Group Team No Name 2
-	* @version 1.0
-	* @date 14 Sep 20
+	* @version 2.0
+	* @date 31 October 2020
 	*/
 class DisplayWrathWorld
 {
 public:
+	/// Camera object for movement
 	Camera cam;		
+	/// Object to store textures
 	TexturedPolygons tp;
-	Pickups pick;
+	/// Object for all user interface displays
 	UserInterface ui;
+	/// Stores all wrath enemies
 	ObjPicking<Enemy> enemyObjects;
+	/// Stores wrath boss
 	ObjPicking<EnemyBoss> enemyBossObject;
 	unsigned char* image = NULL;
+	/// Stores all health powerups
 	std::vector<Pickups> hPowerup;
+	/// Stores all shield powerups
 	std::vector<Pickups> sPowerup;
+	/// Stores all ammo powerups
 	std::vector<Pickups> aPowerup;
+	/// Stores all max bounding box walls vertices
 	std::vector<Point3D> maxWallPoints;
+	/// Stores all min bounding box walls vertices
 	std::vector<Point3D> minWallPoints;
+	/// Stores state for displaying the map
 	bool DisplayMap = false;	
+	/// Stores state for displaying the welcome splash screen
 	bool DisplayWelcome = false;
+	/// Stores state for displaying the exit splash screen
 	bool DisplayExit = false;
+	/// Stores loss state
 	bool lose = false;
+	/// Sound engine pointer
 	irrklang::ISoundEngine *engine;
 		/**
 		* @brief initialises Wrath World
@@ -129,20 +143,48 @@ public:
 		*/
 	bool stairsReturnPortal();
 	
-	//portals
+		/**
+		* @brief Checks for collision between the player and electricity portal
+		*/
 	void elecPortal();
+
+	/**
+		* @brief Checks for collision between the player and portal before the boss
+		*/
 	void postElecPortal();
 
+	/**
+		* @brief Checks for collision between the player and right server portal
+		*/
 	void servPortalR();
 
+	/**
+		* @brief Checks for collision between the player and left server portal
+		*/
 	void servPortalL();
 
+	/**
+		* @brief Checks for collision between the player and left boss room portal
+		*/
 	void bossPortalL();
 
+	/**
+		* @brief Checks for collision between the player and right boss room portal
+		*/
 	void bossPortalR();
 
+	/**
+		* @brief Checks for collision between the player and electricity floor
+		* @param maxX - Passes maximum value
+		* @param minX - Passes minimum value
+		* @param maxZ - Passes maximum value
+		* @param minZ - Passes minimum value
+		*/
 	void electricFloor(float maxX, float minX, float maxZ, float minZ);
 
+	/**
+		* @brief Sets the locations needed to be checked for the electricity floor
+		*/
 	void electricFloorCheck();
 
 	/**
@@ -153,42 +195,87 @@ public:
 		* @brief loads images and creates texture
 		*/
 	void CreateTextures();
-	// NEW
-	////////////////////////////////////////////////////////////////////////
+	
+	/**
+		* @brief Sets the position of each pickup
+		*/
 	void setUpPowerups();
 
+	/**
+		* @brief displays health pickups
+		*/
 	void displayHealth();
 
+	/**
+		* @brief displays shield pickups
+		*/
 	void displayShields();
 
+	/**
+		* @brief displays ammo pickups
+		*/
 	void displayAmmo();
 
+	/**
+		* @brief Calls a check for collision between the player and pickups
+		*/
 	void collectionCheck();
 
+	/**
+		* @brief Draws user interface
+		*/
 	void drawUI();
 
+	/**
+		* @brief Collects the coordinates of all bounding boxes
+		*/
 	void SetWallPoints();
 
+	/**
+		* @brief Calls reduction to ammo when firing
+		*/
 	void reduceAmmo();
 
-	void ammoCheck();
-
+	/**
+		* @brief Calls function to refill ammo
+		*/
 	void reload();
 
+	/**
+		* @brief Contains logic for keeping ammo amount consistent on reloads and showing the
+		*		correct textures on UI for magazine size and reserves
+		*/
 	void ammoLogic();
 	
+	/**
+		* @brief Stops enemy aggression and congratulates player on beating the game. Display
+		*		a splash screen to exit or restart
+		*/
 	void WinState();
 	
+	/**
+		* @brief Displays a splash screen to exit or restart the game, when player health reaches 0
+		*/
 	void LoseState();
 
+	/**
+		* @brief Getter to return the amount of ammo the player currently has from Player class
+		*/
 	int grabAmmo();
 private:
+	/// Portal from wrath to Shay's
 	Portal stepsReturn;
+	/// Portal 1 in server
 	Portal serverPortal1;
+	/// Portal 2 in server
 	Portal serverPortal2;
+	/// Portal in electricity
 	Portal electricityPortal;
+	/// Portal before boss room
 	Portal postElectricityPortal;
+	/// Portal 1 inside boss room
 	Portal bossPortal1;
+	/// Portal 2 inside boss room
 	Portal bossPortal2;
 
 	//Enemy can be changed for whatever class
@@ -281,14 +368,19 @@ private:
 		*/
 	void displayServerWalls();
 
+		/**
+		* @brief displays power walls
+		*/
 	void displayPowerWalls();
 
+	/**
+	* @brief displays boss room
+	*/
 	void displayBossRoom();
 
-	////////////////////////////////////////////////////////////////////
-
-	////////////////////////////////////////////////////////////////////
-
+		/**
+		* @brief displays portals inside wrath
+		*/
 	void displayInnerPortals();
 
 		/**
@@ -300,8 +392,6 @@ private:
 		* @brief displays boss
 		*/
 	void displayBoss();
-
-		
 
 		/**
 		* @brief draws the skybox
@@ -328,24 +418,34 @@ private:
 		*/
 	void drawServerWalls();
 
+		/**
+		* @brief draws the power walls
+		*/
 	void drawPowerWalls();
 
+	/**
+	* @brief draws the boss walls
+	*/
 	void drawBossRoom();
 
-	////////////////////////////////////////////////////////////////////
-
-	////////////////////////////////////////////////////////////////////
-
+		/**
+		* @brief draws portals inside wrath
+		*/
 	void drawInnerPortals();
-
 	
 		/**
 		* @brief creates bounding boxes for collsion detection
 		*/
 	void CreateBoundingBoxes();
 
+		/**
+		* @brief draws the windows in game world
+		*/
 	void drawWindows();
 
+	/**
+	* @brief displays windows in game world
+	*/
 	void displayWindows();
 };
 
