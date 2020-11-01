@@ -352,13 +352,6 @@ void DisplayWrathWorld::reduceAmmo()
 	player.decreaseAmmo();
 }
 
-void DisplayWrathWorld::ammoCheck()
-{
-	if (player.getAmmo() == 0) {
-		player.reload();
-	}
-}
-
 void DisplayWrathWorld::reload()
 {
 	player.reload();

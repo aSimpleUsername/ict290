@@ -164,6 +164,7 @@ void Display()
 
 		// displays the map
 		if (shaysWorld->DisplayMap) shaysWorld->cam.DisplayMap(width, height, shaysWorld->tp.GetTexture(MAP));
+		if (shaysWorld->DisplayWelcome && isShaysWorld) shaysWorld->cam.DisplayWelcomeScreen(width, height, 1, shaysWorld->tp.GetTexture(WELCOME));
 		// display no exit sign (position check should really be in an object, but didn't have time)
 		if ((shaysWorld->cam.getX() > 35500.0) && (shaysWorld->cam.getZ() < 25344.0) ||
 			(shaysWorld->cam.getX() > 34100.0) && (shaysWorld->cam.getZ() > 41127.0))
@@ -200,10 +201,10 @@ void Display()
 		}
 
 		// display images
-		if (shaysWorld->DisplayExit) shaysWorld->cam.DisplayWelcomeScreen(width, height, 0, shaysWorld->tp.GetTexture(EXIT));
+		//if (shaysWorld->DisplayExit) shaysWorld->cam.DisplayWelcomeScreen(width, height, 0, shaysWorld->tp.GetTexture(EXIT));
 		if (wrathWorld->DisplayExit) wrathWorld->cam.DisplayWelcomeScreen(width, height, 0, wrathWorld->tp.GetTexture(EXIT_SCREEN));
 
-		if (shaysWorld->DisplayWelcome && isShaysWorld) shaysWorld->cam.DisplayWelcomeScreen(width, height, 1, shaysWorld->tp.GetTexture(WELCOME));
+		//if (shaysWorld->DisplayWelcome && isShaysWorld) shaysWorld->cam.DisplayWelcomeScreen(width, height, 1, shaysWorld->tp.GetTexture(WELCOME));
 		if (wrathWorld->DisplayWelcome && !isShaysWorld) wrathWorld->cam.DisplayWelcomeScreen(width, height, 1, wrathWorld->tp.GetTexture(WELCOME_SCREEN));
 		// displays the exit screen
 		if (wrathWorld->lose) wrathWorld->cam.DisplayWelcomeScreen(width, height, 0, wrathWorld->tp.GetTexture(LOSE));

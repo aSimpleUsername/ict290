@@ -9,9 +9,6 @@ Pickups::Pickups()
 	gath = false;
 }
 
-//NEW
-//////////////////////////////////////////////////
-
 int Pickups::getSize()
 {
 	return size;
