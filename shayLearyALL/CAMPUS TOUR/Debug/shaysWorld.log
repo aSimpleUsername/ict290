@@ -1,3 +1,18 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1044,5): warning MSB8027: Two or more files with the name of .NETFramework,Version=v4.0.AssemblyAttributes.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp, Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cpp.
-  shaysWorld.vcxproj -> C:\Users\charl\OneDrive - Murdoch University\ICT290\Project\ict290\shayLearyALL\CAMPUS TOUR\\Executeable\Wrath.exe
+  main.cpp
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(35,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(36,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\Entity.h(37,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(51,1): warning C4005: 'ENEMY_FRONT': macro redefinition
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(313): message : see previous definition of 'ENEMY_FRONT'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(52,1): warning C4005: 'ENEMY_BACK': macro redefinition
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(314): message : see previous definition of 'ENEMY_BACK'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\displayWrathWorld.h(53,1): warning C4005: 'ENEMY_SIDE': macro redefinition
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\DisplayShaysWorld.h(315): message : see previous definition of 'ENEMY_SIDE'
+C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\main.cpp(99,30): warning C4305: 'argument': truncation from 'double' to 'irrklang::ik_f32'
+  AABB.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  AABB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
+DisplayShaysWorld.obj : warning LNK4248: unresolved typeref token (0100001B) for 'GLUquadric'; image may not run
+  shaysWorld.vcxproj -> C:\Users\Vladislav Kennebury\Desktop\ICT290A1\ict290\shayLearyALL\CAMPUS TOUR\\Executeable\Wrath.exe
