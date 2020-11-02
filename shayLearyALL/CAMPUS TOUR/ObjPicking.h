@@ -6,7 +6,13 @@
 #include "point3D.h"
 #include "AABBNode.h"
 #include "camera.h"
-//this comment is to make shit work
+/**
+    * @class ObjPicking
+    * @brief Class that handles the ray casting to differant objects
+    * @author Group Team No Name 2
+    * @version 1.0
+    * @date 26 Oct 20
+    */
 template <class T>
 class ObjPicking {
 public:
@@ -15,17 +21,73 @@ public:
     virtual ~ObjPicking() {
         clearBuffer();
     }
+    /**
+        * @brief returns size of buffer
+        * @return int
+     */
     int size();
-
+    /**
+        * @brief adds an object to the buffer
+     */
     void addObjectToBuffer(T* object);
+    /**
+        * @brief gets a pointer to object from the buffer
+        * @param object
+        * @return T*
+     */
     T* getObjectFromBuffer(int index) { return objBuffer[index]; }
+    /**
+        * @brief Detects collision with sphere
+        * @param rayX
+        * @param rayY
+        * @param rayZ
+        * @param camX
+        * @param camY
+        * @param camZ
+        * @return bool
+     */
     bool detectCollisionWithSphere(float rayX, float rayY, float rayZ, float camX, float camY, float camZ);
+    /**
+        * @brief Detects collisions with OBB
+        * @param ray
+        * @param camPos
+        * @param obbPoints
+        * @param enemyLocation
+        * @param distance
+        * @return bool
+        */
     bool detectCollisionWithOBB(Point3D ray, Point3D camPos, std::vector<Point3D> obbPoints, Point3D enemyLocation, float& distance);
+    /**
+        * @brief Detects collisions with AABB
+        * @param ray
+        * @param camPos
+        * @param abbMin
+        * @param abbMax
+        * @param enemyLocation
+        * @param distance
+        * @return bool
+        */
     bool detectCollisionWithAABB(Point3D ray, Point3D camPos, Point3D aabbMin, Point3D aabbMax, Point3D enemyLocation, float& distance);
+    /**
+        * @brief Detects collisions with boxes
+        * @param ray
+        * @param camPos
+        * @param maxPoints
+        * @param minPoints
+        * @return bool
+        */
     T* checkCollisionWithBox(Point3D ray, Point3D camPos, std::vector<Point3D> maxPoints, std::vector<Point3D> minPoints);
 private:
+    /**
+        * @brief removes an object to the buffer
+        * @param index
+     */
     void removeObjectFromBuffer(int index);
+    /**
+        * @brief clears the buffer
+     */
     void clearBuffer();
+    ///object buffer 
     std::vector<T*> objBuffer;
 
 };

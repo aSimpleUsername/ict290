@@ -133,7 +133,6 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="enemyBoss.cpp" />
     <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pickups.cpp" />
     <ClCompile Include="PlainLinkedList.cpp" />
@@ -159,7 +158,6 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="enemyBoss.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="lodepng.h" />
     <ClInclude Include="ObjPicking.h" />
     <ClInclude Include="Pickups.h" />
     <ClInclude Include="PlainLinkedList.h" />
